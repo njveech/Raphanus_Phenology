@@ -1,0 +1,158 @@
+---
+title: "ClimateNA_data_pull"
+author: "Julia Harenčár"
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    toc: true
+    number-sections: true
+theme:
+  light: minty
+  dark: superhero
+editor_options: 
+  chunk_output_type: console
+---
+
+## Pulling ClimateNA Data
+
+This script is modified from XXX . It uses GPS coordinates and a calculated 'lived climate' time period for each specimen to pull data for each herbarium specimen independently.
+
+First, set working directory and load packages.
+
+```{r}
+#| include: false
+
+# set working directory
+setwd("/Users/juliaharencar/Documents/Github/Raphanus_climateNA")
+
+# load packages
+library(tidyverse)
+library(cowplot) # for plot aesthetics
+library(magrittr)
+```
+
+### Generate ClimateNA input file
+
+Then, we load the specimen data and make a new csv with coordinates and IDs in the format required by ClimateNA.
+
+```{r}
+#| echo: false
+
+# load the data
+specimens <- read.csv(" ", header = T)
+
+# make specific dataframe for pulling data from climateNA
+# ClimateNA requires an input csv containing the columns ID1, ID2, lat, long, and (optionally) el.
+# ID1 and ID2 can be anything you want 
+# currently not including elevation, but could calculate this from the gps and add it in later
+
+locs <- specimens %>% 
+  mutate(id2 = NA,
+         elev = NA) %>% # add a blank ID2 col
+  select(id1 = id, id2, lat = decimalLatitude, long = decimalLongitude, elev)
+
+head(locs) # peak at the new df to check; looks good!
+
+# Write out the new df as a csv for input into the ClimateNA program
+write.csv(locs[,], "climateNA_locations.csv", row.names = FALSE, quote = FALSE)
+# NOTE!! This csv does NOT work for pulling the location data because it is in Mac not windows format. I solved by copying all the data EXCEPT the last, empty line (using sublime) from this saved .csv location file into a copy of the test location file included in the ClimateNA download. Hypothetically I should be able to convert the format of my file, but my one attempt failed and the copy paste worked.
+```
+
+#### Get ClimateNA data
+
+I downloaded the ClimateNA program and wine to run on mac. I run the below command line prompt to
+
+```{bash}
+# open ClimateNA gui on my mac
+  # arch -x86_64 wine Z:\\Users\\juliaharencar\\Documents\\Software\\ClimateNA_v760\\ClimateNA_v7.60.exe
+```
+
+To get the data, I select "Historical time series" in the dropdown menu under "multiple locations". Select "monthly all variables (180)". Specify the input file we just created above and an output file. Generate monthly climate data for the time window of interest. Save output file. [Definitions of each variable acronym can be found here.](https://climatebc.ca/help/climateBC/help.htm#_Toc410137604)
+
+Note, growing degree days marked as days \> 5°C: DD5_01 – DD5_12     January - December degree-days above 5°C
+
+```{r}
+# Import climate data
+tmp <- read.csv("raw_outputs/Raph_locs_1901-2024MP.csv")
+```
+
+### Reformat ClimateNA data
+
+PICKUP - directly copied code below.
+
+```{r}
+#| label: reformat data
+#| eval: false
+#| include: false
+
+# 3. Reformat ClimateNA data ----------------------------------------------
+
+# Data is formatted with one row per site/year, one column per variable/month
+
+all_data <- read_csv("raw_outputs/Raph_locs_1901-2024MP.csv") %>%
+  select(-id2,-Elevation) %>%
+  # Make data tall (one row per variable/site/month/year)
+  gather(variable, value, -Year, -id1, -Latitude, -Longitude) %>%
+  # Split month from variable name
+  separate(variable, -2, into = c("variable", "month"), convert = TRUE) %>%
+  # Spread again so that there is one row per site/year/month, one column per variable type
+  spread(variable, value) %>%
+  # Make a climate date column
+  mutate(Year = as.numeric(Year),
+         month = as.numeric(month),
+         month_pad = str_pad(month, 2, pad = "0"),
+         clim_date = as.numeric(paste0(Year, month_pad))) %>%
+  # Drop unnecessary columns
+  select(-month_pad) %>%
+  # Rename to standard variable names
+  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax)
+
+# Rearrange columns
+all_data %<>%
+  select(-latitude,-longitude) %>%
+  select(id, clim_year, clim_month, clim_date, everything())
+
+# Now save this data
+write.csv(all_data, "climateNA_partial_data_tall.csv", row.names = FALSE)
+
+```
+
+### Lived climate calculation
+
+```{r}
+# subset to keep just the columns we need (for now, including more than maybe necessary)
+specimens <- specimens %>% select(id, institutionCode, specificEpithet, year, month, day, county, locality, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters)
+```
+
+## Extra code
+
+Code for pulling climateNA data with R - untested, but might work now by using the correctly formatted input file.
+
+```{r}
+# setwd("/Users/juliaharencar/Documents/Software/ClimateNA_v760 "); # set the ClimateNA root directory as the working directory 
+# exe <- "/Users/juliaharencar/Documents/Software/ClimateNA_v760/ClimateNA_v7.60.exe" 
+# inputFile = '/C:\\ InputFiles \\input_test.csv' 
+# outputFile = '/C:\\test_normal.csv' 
+# yearPeriod = '/C:\\ Perioddat \\Normal_1991_2020.nrm' 
+# system2(exe,args= c('/Y', yearPeriod, inputFile, outputFile),wait=T) 
+# dat <- read.csv(' C:/test_normal.csv'); head(dat) 
+# 
+# 
+# 
+# 
+# # how I installed the package:
+# devtools::install_github("burnett-m/climatenaR",build_vignettes = TRUE)
+# library(climatenaR)
+# 
+# # try pulling data 
+```
+
+```{bash}
+# use wine and rosetta with the 86_64 to call ClimateNA and download data
+# didn't work before, might now with the fixed .csv file
+# arch -x86_64 wine /Users/juliaharencar/Documents/Software/ClimateNA_v760/ClimateNA_v7.60.exe \
+#   /Users/juliaharencar/Documents/Github/Raphanus_phenology/climateNA_locations.csv \
+#   /Users/juliaharencar/Documents/Github/Raphanus_phenology/ClimateNA_outputt #Periods.txt
+```
