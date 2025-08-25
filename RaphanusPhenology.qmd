@@ -1,0 +1,88 @@
+---
+title: "RaphanusPhenology"
+author: "Natalie Veech"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    toc: true
+    number-sections: true
+theme:
+  light: yeti
+  dark: superhero
+editor_options:
+  chunk_output_type: console
+editor: visual
+---
+
+# Methods
+
+All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. \~70 (get exact number?!?!?!?) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment(more specificity here?) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
+
+```{r}
+library(tidyverse)
+```
+
+## Specimen Exclusions
+
+Many of the exclusions applied to the data were guided by the exclusion criteria described in the methods of Love and Mazer (2021). 1 specimen was excluded due to the blurriness of the image. 12 images were excluded for having a poor date range recorded for the time of collection. A date range was considered unusable if it spanned more than a month due to the frequently changing nature of *Raphanus* reproductive stages. Any specimens that were collected off of islands (e.g. Channel Islands) were excluded due to the unique climatic setting and lack of gene flow. 45 island specimens were removed from the data set based on this criterion. 2 specimens were deemed unfit for imaging, defined here as specimens that had an envelope containing plant matter on the specimen sheet, but no actual sample that could provide counts of reproductive structures. 71 specimens were excluded for having unreliable location data that was either difficult to assign coordinates to (see Assigning GPS Coordinates and Uncertainty) or too broad to draw accurate and precise climate data from. 5 specimens were excluded for having no listed collection date. 21 specimens were excluded on the basis of having poor metadata, lacking several pieces of information that are necessary understanding the spatial, temporal, and climatic context of the specimen. Lastly, 246 specimens were removed for possessing a spatiotemporal duplicate in the remaining data set, removing any repetition for a more cohesive data set.
+
+## Assigning GPS Coordinates and Uncertainty
+
+Any specimens without previously entered GPS coordinates were assigned GPS coordinates by hand. The locality data provided was used to narrow down a precise geographic position in Google Maps, occasionally with the assistance of ChatGPT or local records and articles to provide historical context. The coordinates were then taken from Google Maps and entered into a program that allows for visualizing uncertainty radii around a specified point. The uncertainty radius was hand-picked and cautiously selected to encompass the extent to which the locality description would logically still apply, similar to the approach described in the Georeferencing methodology in Bontrager et. al 2025. The coordinate system was for all hand-determined GPS coordinates was marked as World Geodetic System 1984 (WGS84), as used by both Google Maps and the map radius software (calcmaps.com).
+
+WGS 84 was selected as the coordinate system to standardize all samples against due to its prevalence in location data following its introduction in 1987. Based on information gathered from NOAA, the one to two meter difference between coordinates in NAD83 and WGS84, the two coordinate systems are considered equal for the purposes of the Raphanus data. However, the differences between NAD27 and WGS84 are often greater, so any NAD27 points were converted to WGS84. The calculations were primarily conducted en masse by ChatGPT while spot checking using the calculator provided by the West Virginia Department of Environmental Protection. The variance between coordinates in NAD27 and WGS84 was on the scale of 10^-3^ or 10^-4^, correlating to a 10-100m discrepancy between the points.
+
+Specimens with coordinates that were listed as NAD27 in the CCH2 data were converted to CCH2. There were two subsequent pathways for specimens with coordinates that were listed as "preprocessed" or "unknown", or were otherwise unlisted. For specimens collected prior to 1987, NAD27 was broadly assumed to be the coordinate system. For specimens collected after WGS84, it was assumed that any modern GPS devices, computers, or phones operate in WGS84. Due to the uncertainty associated with these assumptions, all original coordinate and geodetic datum data was saved separately.
+
+An additional protocol was developed for examining and assigning missing uncertainty radii entries in the CCH2 data, all of which included coordinates that served as the starting judgement point. Based on the Love and Mazer (2021) protocol, 4000 meters was deemed the ceiling cutoff for assigning uncertainty radii at this stage. For specimens that had narrowly defined, "good" locality data, the specificity of location and inclusion of coordinates generated the assumption that the uncertainty was greater than 4000 meters and the specimen's uncertainty was labeled as 3999. If a specimen was determined to have broad, "bad" location data, the specimen label was then read to determine the origin of the coordinates. If the coordinates were present on the original label, it was assumed that the coordinates are accurate and that the location data was poorly recorded, earning the specimen an uncertainty radius assignment of 3999. However, if there were no coordinates present on the label, it was assumed that they were added at a later time based on the poor location and it cannot be safely assumed that the uncertainty radius is less than 4000 meters; these specimens were then assigned an uncertainty radius of 4001. The binomial nature of this distribution can eventually be reanalyzed and assigned a more specific uncertainty value depending on the nature of the climate data that is used.
+
+By using the 111.1 kilometer \~ 1 degree conversion, it was decided that any specimen with an original latitudinal or longitudinal coordinate that was rounded to the nearest 0.1 degree (\~11 km) should be reexamined to determine whether the coordinates or uncertainty radii could be adjusted to more precisely fall on either side of the previously set 4000 meter uncertainty radius cutoff. Specimens with location descriptions that were determined to be broader in extent than 4000 meters, were assigned an uncertainty radius of 4001 if their previously listed uncertainty radius was not already greater than 4000. Specimens with location data that was deemed more specific than 4000 meters (e.g. parks, specific intersections, street addresses) then received adjusted, more precise coordinates in WGS84 and were reassigned a fitting uncertainty radius using the map radius software found at calcmaps.com.
+
+## Choosing the Right Machine Learning Program
+
+Many previously published scientific papers have also utilized images from various herbaria or citizen science platforms such as iNaturalist to study phenological trends. These papers were examined to get a sense of the software options available to annotate images, build models, and subsequently train machine learning programs to apply the model to a larger data set. There were many possible paths that varied in coding language, accessibility, complexity, and suitability for the needs of the project. Eventually, Roboflow was selected as the most practical choice for conducting the study, as the software provides the ease of completing annotation and training models in the same location. Additionally, Roboflow provides model evaluations with specific feedback such asprecision and recall metrics as well as confusion matrices to easily visualize errors in the model and coding prompts to deploy the model to other sets of images.
+
+## Selecting Specimens for Model Training
+
+It was initially decided that 100 specimens, slight greater than ten percent of the full data set, would be selected to be annotated and used to train the phenology models. The first consideration made was to include at least one specimen from each of the 31 herbaria that are represented by the complete specimen data set. Afterwards, specimens were added in to be relatively proportional to the distribution of the data set. When continuing to add in specimens after initial herbarium representation was accounted for, three factors received the majority of focus: time of collection, reproductive stage, and complexity of specimens. The time of collection was critical to creating a diverse, representative training set. While most specimens are collected during the spring and summer months, when flowering and fruiting is widespread, specimens collected during both the very beginning and the later months of the calendar year were fairly represent. Additionally, a majority of specimens possess both flowering and fruiting structures, so training set selection was carefully done to also include specimens that had not yet begun to fruit or that only had fruit left. Lastly, due to the many different conditional circumstances that can occur in herbarium specimens, such as image quality, age, human error, etc., both complex, overlapping specimens and well-defined clear cut specimens were selected for annotation to prepare the model for any unusual specimen appearances.
+
+## Annotating Herbarium Specimens
+
+## Training Model Versions
+
+## Deploying Model from Roboflow
+
+## Converting Model Data into a Usable Format
+
+## Extracting Climate Data
+
+## Trial Plots:
+
+![](images/clipboard-2428802079.png)
+
+![](images/clipboard-3749884537.png)
+
+![](images/clipboard-1602755941.png)
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

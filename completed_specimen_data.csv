@@ -1,0 +1,940 @@
+"id","Bud.Cluster","Flower","Fruit","institutionCode","specificEpithet","recordedBy","eventDate","year","month","day","verbatimEventDate","county","locality","decimalLatitude","decimalLongitude","geodeticDatum","coordinateUncertaintyInMeters"
+73443,1,1,2,"SBBG","raphanistrum","Ralph Hoffmann","4/3/30",1930,4,3,"4/3/30","Santa Barbara","Veronica Springs Rd, Santa Barbara",34.413,"-119.742","NAD83",500
+202451,0,10,8,"OBI","raphanistrum","R. L. Hoover","4/11/68",1968,4,11,"11-Apr-68","Napa","One block W of hwy 1 on Palm Ave, Marina",36.68435,"-121.80524","WGS84",500
+469033,2,7,3,"SD","sativus","Carrie Schneider","4/4/04",2004,4,4,"4/4/04","San Diego","San Diego Canyon: Switzer Canyon, east of 30th St; near the border of North Park and Golden Hill; North of Hwy94 and East of I-805",32.7341,"-117.1285","WGS84",3999
+1368041,1,10,0,"DAV","sativus","M. J. Teiman","11/5/78",1978,11,5,"5-Nov-78","Santa Barbara","Santa Barbara County: by Peoples Park on Embarcadero del Norte.",34.409986,"-119.850936","WGS84",3999
+1695490,0,3,16,"UCR","sativus","Mitch Provance","6/4/11",2011,6,4,"6/4/11","San Bernardino","Santa Ana River and adjacent flood plain, just W of the La Loma Hills",34.03464,"-117.35422","WGS84",3999
+2866505,1,2,1,"MACF","sativus","Barbara Gittins","3/30/63",1963,3,30,"Mar. 30, 1963","San Diego","5 mi. S of Fallbrook near Valley Fort Restaurant",33.322923,"-117.236082","WGS84",476
+2401356,1,7,23,"CAS","sativus","McGregor, E. A.","8/25/21",1921,8,25,"Aug. 25, 1921","Del Norte County","Extending southwards from mouth of Klamath River.",41.48253,"-124.03334","WGS84",8000
+3275642,3,6,4,"UCJEPS","raphanistrum","Barbara Ertter","2/28/98",1998,2,28,"1-Mar-98","Contra Costa","Diablo Foothills Regional Park, just south end of Shell Ridge Loop Trail southeast of Old Borges Ranch.",37.88732,"-121.99801","WGS84",300
+3232355,3,10,4,"UCJEPS","sativus","G. Thomas Robbins","3/26/37",1937,3,26,"Mar 26 1937","Sonoma","along road to Bodega (just e of Bodega)",38.357744,"-122.931016","WGS84",3980
+202452,1,9,18,"OBI","raphanistrum","R. L. Hoover","4/20/68",1968,4,20,"20-Apr-68","Napa",".25 mi from Pope Valley jctn, E on Chiles & Pope Valley Rd, in field E of service station",38.61737,"-122.4237","WGS84",250
+232773,1,7,7,"UCSC","sativus","unknown","6/3/93",1993,6,3,"3-Jun-93","Santa Cruz","Santa Cruz, UCSC: meadow at top of bike path, Meyer Drive",37.0008,"-122.062","WGS84",3999
+6008220,0,6,16,"OBI","sativus","Ray Cardwell","4/17/82",1982,4,17,"4/17/82","San Luis Obispo","Morro Bay salt marsh, 1/4 mile N of Turri Rd and S. Bay Blvd. junction",35.33922,"-120.82336","WGS84 ",300
+304555,4,14,16,"UCSB","sativus","Woodbury, Kevin","3/13/78",1978,3,13,"3/13/78","Santa Barbara","On Devereux bluffs on west end of Del Playa Rd., 1/2 mile in and about 150 feet away from Devereux School",34.4099,"-119.8698","NAD83",200
+317992,3,13,7,"UCSB","raphanistrum","Kaplan, Lisa","3/7/79",1979,3,7,"3/7/79","Santa Barbara","El Colegio and Los Carneros Rds. Isla Vista",34.434282,"-119.85365","WGS84",1500
+3828689,1,3,11,"CHSC","raphanistrum","Lowell Ahart","5/10/19",2019,5,10,"10-May-19","Butte","About 5 yards west of Jordan Hill Road, about 1/2 mile north of the Madre De Oro Gold Mine, west of Concow Reservoir, east of Paradise. T22N, R4E, northwest 1/4 Section 17.",39.763056,"-121.555167","WGS84",3999
+469055,5,4,2,"SD","sativus","Jolynn Robbins","7/5/04",2004,7,5,"7/5/04","San Diego","Damon Lane County Park in south El Cajon. South on Jamacha, right on Fury. Then right on Wieghorst, left on Calle Albara.",32.754,"-116.942","WGS84",3999
+202453,1,6,15,"OBI","sativus","B. A. Smith","5/18/66",1966,5,18,"18-May-66","San Luis Obispo","Along hwy 1 at Oceano",35.098865,"-120.612393","WGS84",2410
+394165,2,15,26,"SDSU","sativus","Stilson, Barbara","4/17/12",2012,4,17,"4/17/12","San Diego","Mission Trails Regional Park, west of Old Mission Dam, San Diego, about 75 ft northeast of bridge, start of Oak Canyon trail.",32.83893,"-117.04566","WGS84",3999
+631768,2,7,6,"IRVC","sativus","L. Aldis (HS)","3/27/65",1965,3,27,"27-Mar-65","Orange","Irvine Park",33.796309,"-117.750118","WGS84",986
+468962,2,11,14,"SD","sativus","unknown","1884-04-25",1884,4,25,"04/25/1884","San Diego","Chollas Valley",32.72173,"-117.10117","WGS84",2414
+1294396,0,4,9,"CSUSB","sativus","Sally Bell","5/10/64",1964,5,10,"10-May-64","Orange","Corona Del Mar, at the State Park Beach, growing at bottom of steps in sandy soil along with Mesembryanthemum crystallinum.",33.59324,"-117.87584","WGS84",400
+1368052,0,9,22,"DAV","sativus","M. R. Wanzer","5/6/48",1948,5,6,"6-May-48","Napa","Napa County: Putah Canyon, 8.5 miles west of Winters.",38.62579,"-122.29099","WGS84",1000
+1657455,3,3,18,"UCR","raphanistrum","George K. Helmkamp","2/11/04",2004,2,11,"2/11/04","San Luis Obispo","Nipomo Mesa, Pomeroy Rd, 0.2 mi north of Willow Rd.",35.05167,"-120.525","WGS84",3999
+2866605,0,3,6,"MACF","raphanistrum","Martha McCarthy","3/20/60",1960,3,20,"20-Mar-60","Orange","1/4 mile west of Highway 91, 1/4 mile from Santa Ana Riverbed.",33.8475,"-117.84332","WGS84",5000
+1630048,3,6,4,"UCR","sativus","A.C. Sanders","3/12/10",2010,3,12,"3/12/10","Los Angeles","Madrona Marsh, Torrance",33.82611,"-118.34278","WGS84",3999
+3801173,2,3,25,"CSLA","sativus","James Henrickson","3/10/72",1972,3,10,"10-Mar-72","San Diego","ca. 3 mi. SE of La Mesa, 200 ft. So. of jct. of Sweetwater Springs Blvd. & Jamacha Blvd. at Sweetwater Springs",32.7251,"-116.969","WGS84",50
+631762,0,2,5,"IRVC","raphanistrum","Janet Bryant (HS)","3/14/65",1965,3,14,"14-Mar-65","Orange","Newport Beach: Redlands Drive and Santa Isabel Street",33.65144,"-117.894274","WGS84",200
+5799408,2,17,4,"LOB","sativus","Andrea Orozco","4/13/23",2023,4,13,"4/13/23","Orange","San Juan Capistrano, end of Oso Rd, 15 m south on the Shea Equestrian trail 5 m east of the Arroyo Trabuco.",33.516,"-117.612","WGS84",3999
+6072327,1,3,0,"RSA","sativus","Gary Wallace","9/16/92",1992,9,16,"16-Sep-92","Los Angeles","Willow St. access to LA River.",34.03972,"-118.23026","WGS84",300
+3425410,2,10,8,"UCJEPS","sativus","Gary W. Zamzow","1/26/73",1973,1,26,"Jan 26 1973","Contra Costa","300 m. s. of Central Ave. overpass & 100 m. w. of Hoffman Blvd. Richmond (landfill at edge of Bay)",37.898448," −122.313558","WGS84",174
+202472,3,14,22,"OBI","sativus","Joan Coffey","5/16/72",1972,5,16,"16-May-72","San Luis Obispo","1400 River Rd, Atascadero",35.50601,"-120.65526","WGS84",400
+1368030,4,13,21,"DAV","sativus","E. W. Lathrop","3/30/66",1966,3,30,"30-Mar-66","Riverside","Riverside County: Main Divide Truck. Trail between El Carriso and Santiago Peak, Cleveland National Forest.",33.71,"-117.5194444","WGS84",10000
+468982,0,0,4,"SD","sativus","Frank F. Gander","12/22/37",1937,12,22,"12/22/37","San Diego","1 mile north of Salt Works, National City.",32.61615,"-117.1001","WGS84",402
+469135,1,4,21,"SD","raphanistrum","Jon P. Rebman","5/31/11",2011,5,31,"5/31/11","San Diego","San Miguel Ranch: East of Bonita and south of the Sweetwater Reservoir; south of the hill called Gobblers Nob, east of Highway 125 and just north of Proctor Valley Road",32.66451,"-116.9877","WGS84",3999
+1793219,1,2,9,"HSC","raphanistrum","Mark Flippo","4/26/78",1978,4,26,"26-Apr-78","Humboldt","McKinleyville, Bella Vista Rd.",40.91944929,"-124.0922906","WGS84 ",969
+1655769,1,8,19,"UCR","sativus","Jon P. Rebman","5/30/12",2012,5,30,"5/30/12","San Diego","Camp Pendleton: Training Area Echo; west of Santa Margarita Peak, east of Case Springs Road, around Case Springs Lake. Square: B4",33.44969,"-117.42031","WGS84",3999
+2197161,0,1,2,"DAV","sativus","Nellie Coffey","4/3/31",1931,4,3,"3-Apr-31","Solano","Vallejo.",38.09821761,"-122.2549335","WGS84 ",4001
+3212192,1,6,8,"UCJEPS","sativus","H. M. Hall","4/1/02",1902,4,1,"Apr-02","Riverside","vicinity of Riverside; Southern California",33.750022,"-117.300864","WGS84",10000
+291609,3,16,17,"UCSB","sativus","Kelly P. Steele","9/2/81",1981,9,2,"9/2/81","Santa Barbara","More Mesa; along the Pacific Ocean, south of Atascadero Creek, adjacent to and west of Hope Ranch Park, ca. 3 km. southeast of Goleta; southeastern arm of Central Basin (Area 3a)",34.422,"-119.795","WGS84",1500
+3563575,4,13,32,"UCJEPS","sativus","Gordon H. True, Jr.","3/18/35",1935,3,18,"Mar 18 1935","Riverside","Pigeon Pass",33.980016,"-117.280866","WGS84",6000
+3792159,4,14,6,"FSC","raphanistrum","Chas. H. Quibell","3/17/53",1953,3,17,"17-Mar-53","Fresno","Fields along Hiway 41 just s. of pt. where rd. starts downgrade to San Joaquin R.",36.87135,"-119.77546","WGS84",10000
+3792170,0,9,41,"FSC","raphanistrum","Bob Round","3/28/74",1974,3,28,"28-Mar-74","Fresno","Plant Community at Cedar and Herndon Avenue",36.83739,"-119.75426","WGS84",300
+304538,1,3,10,"UCSB","raphanistrum","Pruss, N.","2/8/83",1983,2,8,"2/8/83","Santa Barbara","NW corner of Hollister and Storke Road, Goleta",34.43007,"-119.8697","WGS84",200
+1547140,2,7,6,"UCR","sativus","George K. Helmkamp","7/31/03",2003,7,31,"7/31/03","San Luis Obispo","west edge of Nipomo Hill at junction of Cienaga Rd and Valley View Road",35.09833,"-120.57667","WGS84",3999
+3792181,4,13,2,"FSC","sativus","Ray C. Reinhard","4/17/57",1957,4,17,"17-Apr-57","Fresno","Ca 2 miles east of Centerville in river bottom between Kings Canyon Road and Trimmer Road, a meadow 20 yards east of Rio Vista Ave.",36.73912,"-119.46995","WGS84",900
+2286564,5,18,17,"CAS","sativus","Dudley, W. R.","1897-05-24",1897,5,24,"May 24, 1897.","Santa Clara County","Santa Cruz Peninsula. Near Lake Lagunita, Stanford University.",37.42241,"-122.17629","WGS84",750
+4567198,5,9,7,"SFSU","sativus","S.L. Billeb","3/13/60",1960,3,13,"13-Mar-60","San Francisco","near Handball courts at east end of Cox Stadium, San Francisco State College Campus, San Francisco",37.722859,"-122.484542","WGS84",301
+5084121,0,1,18,"RSA","raphanistrum","Paul H. Wood","4/20/41",1941,4,20,"20-Apr-41","Los Angeles","Whittier.",33.97499,"-118.03605","WGS84",6500
+2288164,0,1,1,"CAS","raphanistrum","Smith, L. S.","3/31/26",1926,3,31,"31-Mar-26","Nevada County","Tahoe Forest. Near Central House, top of ridge.",39.325833,"-120.880278","WGS84",5000
+2386302,2,13,14,"CAS","sativus","Wolf, Carl B.","7/12/27",1927,7,12,"12-Jul-27","San Francisco County","San Francisco. Back of ""The Beach"".",37.75716,"-122.50732","WGS84",3000
+2439512,1,3,0,"CAS","sativus","Ahart, Lowell","3/24/73",1973,3,24,"24-Mar-73","Butte County","Peter Ahart Ranch, Honcut.",39.33955,"-121.5218","WGS84",2000
+2772139,7,11,9,"CAS","sativus","Griffith, Gerald","4/10/37",1937,4,10,"10-Apr-37","Kern County","Bakersfield - City Lot, San Joaquin Valley watershed",35.37042,"-119.01736","WGS84",6000
+5569855,8,15,6,"CAS","sativus","Allen, Robert C.","4/23/66",1966,4,23,"4/23/66","San Mateo County","Highway 1, Half Moon Bay",37.46362,"-122.42975","WGS84",4000
+148536,1,12,61,"SBBG","raphanistrum","Henry M. Pollard","5/25/67",1967,5,25,"5/25/67","Ventura","W of Ventura River estuary",34.276,"-119.308","NAD83",750
+2328808,2,6,20,"CAS","sativus","Randall, Alice D.","3/28/10",1910,3,28,"Mch. 28, 1910","Monterey County","Monterey Peninsula. Carmel-By-The-Sea.",36.55431,"-121.91422","WGS84",3000
+202455,0,1,11,"OBI","sativus","Betty Sheehan","10/11/57",1957,10,11,"11-Oct-57","San Luis Obispo","Science Bldg. Cal Poly Campus",35.3007,"-120.66164","WGS84",487
+202476,2,11,1,"OBI","sativus","Laura Wells","2/1/70",1970,2,1,"1-Feb-70","San Mateo","Half Moon Bay about 14 mi W of San Mateo",37.46362,"-122.42975","WGS84",4000
+5569674,4,10,6,"CAS","sativus","Neil, Garry A.","4/22/67",1967,4,22,"22-Apr-67","Alameda County","Lake Chabot",37.72569,"-122.11042","WGS84",2000
+215180,1,5,9,"OBI","sativus","Monika Richardson","7/12/17",2017,7,12,"7/12/17","Santa Cruz","Growing off of Swanton Road",37.059761,"-122.225633","WGS84",3999
+2393898,0,6,22,"CAS","sativus","Wetzel, Cherie L.","7/19/67",1967,7,19,"19-Jul-67","Alameda County","Niles Canyon and vicinity. Between Old Niles Canyon Road and Alameda Creek.",37.59701,"-121.93344","WGS84",4500
+202493,2,1,0,"OBI","sativus","Sharon Jochums","2/17/74",1974,2,17,"17-Feb-74","San Luis Obispo","W of hwy 1 just S of Arroyo de la Cruz",35.70715,"-121.306318","WGS84",200
+238791,1,12,0,"UCSC","sativus","D. Styer, J. Styer","5/12/15",2015,5,12,"5/12/15","Monterey","Ft. Ord National Monument (Region K6, Eucalyptus Road)",36.6294,"-121.7277","WGS84",1420
+202485,2,2,12,"OBI","sativus","Mike Wemp","3/29/72",1972,3,29,"29-Mar-72","San Luis Obispo","1/4 mi NW of Montana de Oro State Park campground",35.27698,"-120.88632","WGS84",87
+304546,0,1,34,"UCSB","sativus","P. Welton","7/28/83",1983,7,28,"28 July, 1983","Santa Barbara","20 m. south of Carneros Dam, Goleta; Lake Los Carneros County Park.",34.434282,"-119.85365","WGS84",1500
+304572,1,9,27,"UCSB","sativus","Stoppel, Gordon","4/14/58",1958,4,14,"4/14/58","Santa Barbara","Near Goleta Campus beach, Goleta",34.41448,"-119.84196","WGS84",2000
+304549,0,0,25,"UCSB","sativus","Wayne R. Ferren","5/12/80",1980,5,12,"5/12/80","Santa Barbara","W of Apple Rd., Carpinteria Salt Marsh",34.4032,"-119.5343","NAD83",300
+304575,4,17,31,"UCSB","sativus","Hurd, Richard","2/27/56",1956,2,27,"2/27/56","Santa Barbara","Refugio Canyon",34.505401,"-120.065555","WGS84",5000
+304607,2,9,16,"UCSB","sativus","Oberholtzer, M.","1/22/80",1980,1,22,"1/22/80","Santa Barbara","SE corner of Embarcadero del Mar and Segovia Road, Goleta",34.41417,"-119.85663","WGS84",50
+375720,2,19,3,"SDSU","sativus","Hunsaker, D.","4/10/62",1962,4,10,"4/10/62","Riverside","Three miles SSW from Temecula.",33.453031,"-117.173858","WGS84",3000
+468961,7,6,2,"SD","sativus","unknown","1884-02-26",1884,2,26,"02/26/1884","San Diego","San Diego",32.731,"-117.1371","WGS84",2500
+304569,2,19,17,"UCSB","sativus","Richard Wilson","5/4/58",1958,5,4,"5/4/58","Santa Barbara","2 miles W of Lompoc on Road to Surr",34.64508,"-120.52339","WGS84",4000
+468994,2,3,7,"SD","sativus","Edith A. Purer","8/25/32",1932,8,25,"8/25/32","Santa Barbara","Northwest Guadalupe.",34.96896,"-120.58147","WGS84",4001
+469053,1,4,15,"SD","sativus","Jon P. Rebman","7/25/03",2003,7,25,"7/25/03","San Diego","Rancho Jamul Ecological Reserve: west of Hwy. 94, south of Jamul & north of Otay Lakes Road; along Jamul Creek near old cement kiln",32.66472,"-116.86694","WGS84",3999
+469021,2,15,11,"SD","raphanistrum","Skip Stone","4/1/52",1952,4,1,"4/1/52","San Diego","National City",32.67811,"-117.09919","WGS84",3218
+469106,5,25,20,"SD","sativus","Jon P. Rebman","6/19/08",2008,6,19,"6/19/08","San Diego","Camp Pendleton Marine Corps Base: near North River Road, east of Stuart Mesa Road in the southwestern portion of the base; in the Santa Margarita River bed along the water pipe that crosses the river",33.27553,"-117.37658","WGS84",3999
+631758,0,7,10,"IRVC","raphanistrum","Jim Pierce (HS)","4/16/65",1965,4,16,"16-Apr-65","Orange","Corona Del Mar",33.596934,"-117.86985","WGS84",3028
+610289,4,11,4,"SFV","sativus","C. Gasser","3/9/56",1956,3,9,"9-Mar-56","Los Angeles","Santa Monica Mountains; Highway 101 by Malibu Canyon Road cutoff.",34.13195,"-118.70812","WGS84 ",3500
+304566,3,1,0,"UCSB","sativus","Mrs. R. F. Bingham","1882-07-00",1882,7,0,"1882-07","Santa Barbara","Montecito",34.4367,"-119.6311","NAD83",5700
+631770,0,5,0,"IRVC","sativus","HS","3/15/65",1965,3,15,"15-Mar-65","Orange","Costa Mesa, Dover Road",33.625595,"-117.903673","WGS84",979
+632655,0,0,6,"IRVC","sativus","A. B. McGee","5/1/81",1981,5,1,"1-May-81","Orange","U. C. Irvine: Ecological Preserve, NE area, E of trailer Park.",33.637961,"-117.845897","WGS84",650
+375693,0,3,8,"SDSU","sativus","Thompson, D.","7/6/64",1964,7,6,"7/6/64","San Diego","Aldine Drive Canyon.",32.76101,"-117.09635","WGS84",402
+631780,0,8,20,"IRVC","sativus","Ray Nesheim (HS)","4/10/65",1965,4,10,"10-Apr-65","Orange","Bayside Drive near Balboa Island.",33.608359,"-117.891647","WGS84",941
+684420,1,12,0,"RSA","sativus","Sarah J. De Groot","7/5/16",2016,7,5,"7/5/16","Ventura","The Nature Conservancy (TNC). The Nature Conservancy Banman - Prairie Pacific property; south of Santa Paula and Highway 126. Along the Santa Clara River between South Mountain and Sulphur Mountain, just downstream/west of South Mountain Road.; Santa Paula 7.5'",34.34803,"-119.05617","NAD83",3999
+632993,0,14,26,"IRVC","raphanistrum","J.W. Johnson","2/17/75",1975,2,17,"17-Feb-75","Orange","Santiago Canyon Road between Silverado and Modjeska Canyons, Santa Ana Mts.",33.723186,"-117.647695","WGS84",3500
+1087030,2,4,9,"RSA","sativus","Virginia Guthrie","5/7/83",1983,5,7,"7-May-83","San Diego","In University City on the southwest corner of Genesee Ave. and La Jolla Village Dr.",32.8723,"-117.2144","WGS84",162
+1294393,2,8,11,"CSUSB","sativus","Mike Simmons","5/15/70",1970,5,15,"15-May-70","San Diego","Lorraine Ave., Leucadia",33.06718,"-117.30607","WGS84",1610
+1311269,0,1,3,"DAV","sativus","Lloyd P. Tevis","8/1/02",1902,8,1,"Aug-02","El Dorado","El Dorado County: Tallac. Lake Tahoe. (elevation estimated by label-maker)",38.936111,"-120.051944","WGS84",439
+1305691,0,2,38,"DAV","sativus","Beecher Crampton","7/12/73",1973,7,12,"12-Jul-73","Solano","Solano County, marsh north of Suisun Bay, 2 1/2 miles north of Teal.",38.1679,"-122.15541","WGS84",3500
+1310405,0,0,47,"DAV","sativus","Beecher Crampton","4/8/64",1964,4,8,"8-Apr-64","Yolo","3 miles west of Winters Hwy. 128.",38.494871,"-122.026567","WGS84",2500
+1312145,1,5,0,"DAV","raphanistrum","Lloyd P. Tevis","7/1/02",1902,7,1,"Jul-02","El Dorado","El Dorado County: Tallac. Lake Tahoe. (elevation estimated by label-maker)",38.936111,"-120.051944","WGS84",439
+1368025,3,1,0,"DAV","sativus","D. R. Kaplan","2/26/61",1961,2,26,"26-Feb-61","Santa Cruz","Santa Cruz County: just east of State Highway 156, 6.4 miles south and east of Watsonville.",36.86019,"-121.574386","WGS84",3000
+1368049,0,15,15,"DAV","sativus","K. Twitchell","5/4/96",1996,5,4,"4-May-96","Yolo","Yolo County: Davis, UC Davis Experimental Garden.",38.55,"-121.752778","WGS84",3999
+1480899,1,6,0,"UCR","sativus","Mitch Provance","4/4/99",1999,4,4,"4/4/99","San Bernardino","Colton, S Pellisier Rd., near the corner of W Center St. and Orange St.; W La Loma Hills",34.02033,"-117.3485","WGS84",3999
+1483561,1,6,15,"UCR","sativus","Mitch Provance","7/4/98",1998,7,4,"7/4/98","San Bernardino","Colton, South Old Pellisier Rd., near the corner of W Center St. and Orange St.; W La Loma Hills",34.02033,"-117.3485","WGS84",3999
+1544580,0,18,31,"UCR","raphanistrum","Mark A. Elvin","5/3/03",2003,5,3,"5/3/03","San Diego","SE side of Otay Mtn., Marron Valley, along Cottonwood Creek c. 1 km north of the Mexican border",32.57278,"-116.75778","WGS84",3999
+1459132,1,9,30,"UCR","sativus","A.C. Sanders","4/9/93",1993,4,9,"4/9/93","San Bernardino","Between Oak Glen and Cherry Valley, at intersection of Oak Glen Road with Wildwood Canyon Road",34.0075,"-116.965","WGS84",3999
+1601338,4,18,27,"UCR","sativus","George K. Helmkamp","10/23/06",2006,10,23,"10/23/06","Amador","along Calif. Hwy 16, 0.2 mile east of Waits Station, southwest of Plymouth",38.44972,"-120.89361","WGS84",3999
+1368028,3,2,2,"DAV","sativus","P. B. Kennedy","3/15/14",1914,3,15,"15-Mar-14","Alameda","Alameda County: west Berkeley.",37.86969,"-122.28876","WGS84",3000
+1615905,2,10,1,"UCR","sativus","George K. Helmkamp","3/22/08",2008,3,22,"3/22/08","Calaveras","along CA-26, 3.7 miles southwest of Valley Springs at Lime Creek Road",38.15528,"-120.85306","WGS84",3999
+1623574,3,8,0,"UCR","sativus","George K. Helmkamp","3/11/09",2009,3,11,"3/11/09","Colusa","along CA-20, 9.7 miles southwest of Williams, on the north side of Salt Creek",39.10444,"-122.32722","WGS84",3999
+1667093,0,0,27,"UCR","sativus","Jon P. Rebman","6/19/12",2012,6,19,"6/19/12","San Diego","Daley Ranch, northeast of Escondido, west of County Hwy S6, and north of Dixon Lake; along creek Crossing Trail in canyon of Jack Creek. Square: H11",33.169,"-117.04769","WGS84",3999
+1767307,0,5,14,"HSC","sativus","Steve Dorei","10/26/70",1970,10,26,"26-Oct-70","Humboldt","Arcata, South G st.",40.860072,"-124.08919","WGS84",193
+1368040,0,7,9,"DAV","sativus","Clifton F. Smith","1/9/44",1944,1,9,"9-Jan-44","Santa Barbara","Santa Barbara County: west of Botanic Garden in Santa Barbara.",34.454,"-119.711","NAD83",1000
+1777873,0,4,0,"HSC","sativus","J.P. Smith","4/21/73",1973,4,21,"21-Apr-73","Trinity","Along Coffee Creek Rd. leading to Coffee Creek Ranch.",41.084616,"-122.742399","WGS84",2500
+1829694,1,12,12,"HSC","sativus","F. Bowcutt","5/20/89",1989,5,20,"20-May-89","Mendocino","2.5 mi. SE of Needle Rock, 4 mi. SSE of Four Corners, near Bear Harbor Beach off Lost Coast Trail",39.914155,"-123.935684","WGS84 ",969
+2034914,2,2,0,"CHSC","raphanistrum","M. S. Taylor","3/25/75",1975,3,25,"3/25/75","Butte","In fields between 11th and 12th Ave, at end of Citrus Ave, Chico.",39.748056,"-121.8575","NAD83",402
+1619773,3,19,2,"UCR","sativus","George K. Helmkamp","10/14/08",2008,10,14,"10/14/08","Colusa","along River Road (generally following the Sacramento River), 8.4 miles north of Colusa",39.31944,"-122.01528","WGS84",3999
+2049536,3,6,1,"CHSC","raphanistrum","R. E. Preston","11/13/82",1982,11,13,"11/13/82","Butte","At roadside, n side of Hwy 70 at Wicks Corner, ca. 5 1/2 mi nw of Oroville. T20N R03E S15 S border USGS Quadrangle: Oroville 1:24,000",39.581944,"-121.621667","NAD83",402
+2046466,3,14,62,"CHSC","raphanistrum","R. E. Preston","1/1/82",1982,1,1,"1/1/82","Tehama","On e side of Hwy 99 across from Halle Rd, ca. 1 mi n of Butte/Tehama Co. line. Roadside. T24N R01W S33 USGS Quadrangle: Richardson Springs 1:24,000",39.892222,"-121.984444","NAD83",402
+2061578,1,5,14,"CHSC","sativus","S. Westerberg","3/9/38",1938,3,9,"3/9/38","San Bernardino","Highland.",34.128611,"-117.208889","NAD83",8047
+2062093,3,4,0,"CHSC","raphanistrum","M. Bailey","3/8/91",1991,3,8,"3/8/91","Butte","North side of Butte Campus Drive, across from the Fire Training facility, Butte College Campus. Roadside.",39.642778,"-121.65","NAD83",805
+2051858,0,0,65,"CHSC","raphanistrum","Pauleen Broyles","6/18/82",1982,6,18,"6/18/82","Tehama","The Nature Conservancy Vina Plains Preserve. Near barn in s pasture. T24N R01W S28 SW1/4",39.9025,"-121.988056","NAD83",402
+2085275,1,6,1,"CHSC","sativus","Colby J. Boggs","4/5/97",1997,4,5,"4/5/97","Mendocino","Found in Manchester State Park campground. T13N R17W S USGS Quadrangle: Point Arena 1:24,000",38.981944,"-123.699722","NAD83",805
+2262517,0,13,35,"LOB","sativus","Martha Hawkins","5/10/52",1952,5,10,"10-May-52","Orange","Costa Mesa",33.641132,"-117.918669","WGS84",5882
+1666111,8,23,12,"UCR","sativus","George K. Helmkamp","3/1/13",2013,3,1,"3/1/13","Sutter","Sacramento River levee along Cranmore Road, 0.7 mile south of Seymour Road via an unnamed road, 2 miles due west of Robbins",38.87167,"-121.74694","WGS84",3999
+3183749,0,11,54,"UCJEPS","raphanistrum","C. M. Belshaw","4/6/36",1936,4,6,"Apr 6 1936","Mariposa","1.8 mi nnw of Santa Cruz",37.467719,"-120.238504","WGS84",925
+2866841,1,12,24,"MACF","sativus","J. Fraser","5/8/70",1970,5,8,"5/8/70","Mendocino","27 miles S from Big Sur on highway 1 at Nacimiento Rd.",35.988616,"-121.493819","WGS84",352
+2866761,1,10,4,"MACF","sativus","Ira L. Wiggins","2/12/66",1966,2,12,"2/12/66","Orange","N. side of La Palma Ave. near Harbor Blvd.",33.84972,"-117.9242","WGS84",300
+3258364,1,7,25,"UCJEPS","sativus","E. R. Drew","1882-04-01",1882,4,1,"April 1882","Sacramento","Elk Grove",38.399887,"-121.361025","WGS84",4001
+3464512,1,5,17,"UCJEPS","sativus","Jos. Burtt Davy","12/28/00",1900,12,28,"Dec 28 1900","Alameda","Berkeley, College Avenue Berkeley; , College Avenue",37.852821,"-122.252541","WGS84",1857
+3737681,0,2,1,"SCFS","sativus","B. A. Trowbridge","7/24/70",1970,7,24,"7/24/70","Nevada","Across Sagehen Creek from Tool Shed, University of California Sagehen Creek Wildlife Field Station.",39.430993,"-120.240807","WGS84",69
+3584664,0,13,16,"BSCA","sativus","Hendrickson, Larry","2/17/05",2005,2,17,"17-Feb-05","San Diego County","Anza-Borrego Desert State Park. South side of San Felipe Wash about 0.1 mi west of the intersection with County Hwy S-3 near emergency call box #78-671.",33.1349,"-116.3841","WGS84",3999
+3479651,1,1,15,"UCJEPS","sativus","S. B. Parish","8/1/17",1917,8,1,"Aug 1 1917","Monterey","Pacific Grove; Monterey Peninsula, Pacific Grove",36.618388,"-121.929596","WGS84",4841
+3792166,2,7,33,"FSC","raphanistrum","Sharron Timmings","3/26/65",1965,3,26,"26-Mar-65","Fresno","found along the roadside off of fruit between Dakota and Ashlan",36.79006,"-119.81756","WGS84",450
+3753225,1,13,7,"SDSU","sativus","Jon Rebman","1/21/00",2000,1,21,"21-Jan-00","San Diego","San Diego Urban Canyons, North Park/Golden Hill: Cedar Ridge Park area, canyon area along I-15",32.7225,"-117.1175","WGS84",80
+3792196,4,16,14,"FSC","sativus","Chas. H. Quibell","8/13/29",1929,8,13,"13-Aug-29","Monterey","Pacific Grove. This was found on plowed ground at the High School athletic field.",36.61746,"-121.92296","WGS84",2000
+3792190,3,11,5,"FSC","sativus","Stephanie Yakura","4/21/80",1980,4,21,"21-Apr-80","Tulare","Collected on the northeast corner of Caldwell and County Center, Visalia",36.29884,"-119.32203","WGS84",100
+3801194,3,11,24,"CSLA","sativus","Peter J. Mehringer Jr.","2/21/58",1958,2,21,"21-Feb-58","Los Angeles","Griffith Park",34.131,"-118.3088","WGS84",3200
+3801195,0,10,29,"CSLA","sativus","William Holbrook","5/14/67",1967,5,14,"14-May-67","Los Angeles","Venice at the corner of Trask and Century Blvds., along the edge of the L.A. Airport in sand dunes",33.9507,"-118.4433","WGS84",400
+3830630,2,6,15,"RSA","","Wesley O. Griesel","1/29/86",1986,1,29,"29-Jan-86","Los Angeles","Behind Bear Divide Ranger [Fire] Station, above Santa Clara Divide Road. San Gabriel Mts.",34.35849,"-118.3964","WGS84",500
+3904081,2,25,48,"LA","sativus","A. K. Khudairi","4/21/51",1951,4,21,"21-Apr-51","Los Angeles","Santa Monica Mountains; Westwood, UCLA campus. ""Faculty Hill""",34.0738744,"-118.4550659","WGS84 ",1000
+4058869,4,14,0,"UNLV","sativus","G.K. Helmkamp","3/9/12",2012,3,9,"9-Mar-12","Yolo","Sacramento Valley, East Main Street (Co. Rd. 22), Woodland (parallel to I-5), 1.7 mile west of the Sacramento River",38.677222,"-121.670278","WGS84",100
+4471174,0,6,6,"PUA","sativus","Marvin Butler","9/11/70",1970,9,11,"9/11/70","Napa","Local landmark: Angwin. St. Helena Quad.",38.56820726,"-122.4410561","WGS84 ",3999
+4892287,4,16,13,"US","sativus","W. F. Schmitt","7/12/13",1913,7,12,"7/12/13","Alameda","Berkeley.",37.87055,"-122.26989","WGS84",5000
+4404154,1,17,26,"SOC","sativus","Kevin Webb","7/13/70",1970,7,13,"7/13/70","Sonoma","Noland Rd.",38.47811,"-122.89719","WGS84",400
+4981056,2,2,9,"US","raphanistrum","H. E. Brown","1897-06-01",1897,6,1,"1897-6-1","Siskiyou","Collected near Sisson, Siskiyou County.",41.3116,"-122.31362","WGS84",4000
+4564847,0,15,9,"SFSU","sativus","S. Gregori","3/25/69",1969,3,25,"25-Mar-69","Marin","Bolinas Lagoon",37.918476,"-122.67908","WGS84",2400
+5009796,3,5,1,"US","sativus","H. Henshaw","1893-04-05",1893,4,5,"1893-4-5","San Diego","San Ysabel.",33.11668,"-116.6756","WGS84",3000
+5217104,1,3,10,"LA","sativus","Anthony Baniaga","11/11/21",2021,11,11,"11/11/21","Los Angeles","LA; West Los Angeles. Westwood Neighborhood Greenway. Between Westwood Blvd. and Overland Ave. adjacent to railroad tracks and Exposition Bike Path.",34.037157,"-118.42322","WGS84",100
+5723178,3,2,0,"PINN","sativus","BJORNERUD, CECILIA","1982-06-00",1982,6,0,"6/1/82","SAN BENITO","NW 1/4 OF SW 1/4 OF SEC 4, N FACING SLOPE BELOW CHAPARRAL ENTRANCE",36.4773,"-121.2263","WGS84",800
+5934188,2,9,21,"SD","sativus","Margaret R. Mulligan","5/26/23",2023,5,26,"5/26/23","San Diego","Marine Corps Base Camp Pendleton, open field on east side of Del Mar gate, just NE of the intersection of Harbor Dr. and Santa Fe Ave.",33.2084,"-117.3899","WGS84",3999
+6003808,1,3,1,"DAV","raphanistrum","Kyle Elshoff","3/3/24",2024,3,3,"3.3.2024","Yolo","2 map km NW of Winters on the west side of County Road 88, about 0.5 map km N of the intersection of County Road 88 and Moody Slough Road. Immediately east of a presumed wastewater treatment pond.",38.53652,"-121.98978","WGS84",5
+5840437,3,9,1,"MBNHM","sativus","Barrett Anderson","3/18/71",1971,3,18,"18-Mar-71","San Luis Obispo","MontaÒa de Oro State Park, bluffs above the ocean south of Spooners Cove.",35.273216,"-120.891528","WGS84",301
+3873443,5,3,0,"UCSC","sativus","Hugh Leonard","1/23/20",2020,1,23,"1/23/20","Santa Cruz","approx 10 ft W off footpath from marine wildlife research center (151 McAllister Way)",36.9544,"-122.065","WGS84",3999
+6008224,1,23,24,"OBI","sativus","Rick Frelinger","4/20/82",1982,4,20,"4/20/82","San Luis Obispo","San Luis Creek between US Hwy 101 and lower Higuera St, San Luis Obispo",35.24899,"-120.67986","WGS84",2000
+2271679,0,2,0,"CAS","sativus","Carruth, W. W.","1902-04-00",1902,4,0,"Apr. 1902","Alameda County","East Oakland Hills.",37.82996,"-122.19844","WGS84",10000
+2272859,4,1,0,"CAS","sativus","Wetzel, Cherie L.","3/1/69",1969,3,1,"1-Mar-69","Alameda County","Niles Canyon and vicinity. East end of sand bag levee.",37.59701,"-121.93344","WGS84",4000
+2290954,3,10,22,"CAS","sativus","Wetzel, Cherie L.","10/8/68",1968,10,8,"8-Oct-68","Alameda County","Niles Canyon and vicinity. William's Ranch.",37.54676,"-121.98527","WGS84",500
+2315912,3,7,9,"CAS","sativus","Thomas, J. H.","3/31/49",1949,3,31,"31-Mar-49","Santa Clara County","Stanford University Campus.",37.42756,"-122.17152","WGS84",1500
+2367740,4,2,13,"CAS","sativus","Carlson, John I.","4/10/18",1918,4,10,"10-Apr-18","San Diego County","El Granito Springs.",32.77721,"-116.95947","WGS84",1000
+2404723,4,13,14,"CAS","sativus","Winfield, T.","5/3/75",1975,5,3,"3-May-75","Riverside County","Perris Dam - Base of Dam.",33.85688,"-117.17078","WGS84",3000
+2411987,0,4,4,"CAS","sativus","Bush, Dr. Mildred","10/17/52",1952,10,17,"Oct. 17, 1952","San Francisco County","San Francisco. Lake Merced.",37.7183,"-122.4881","WGS84",1700
+5504846,3,9,6,"CAS","raphanistrum","Yaffe, Patty","6/16/73",1973,6,16,"16-Jun-73","Santa Cruz County",".8 miles north of Santa Cruz city",36.98358,"-122.02971","WGS84",4000
+5569676,7,7,17,"CAS","sativus","Bozza, W. M.","4/30/63",1963,4,30,"30-Apr-63","Alameda County","Oakland",37.81211,"-122.24704","WGS84",8000
+5142612,6,19,26,"A","sativus","P. Moyer","11/7/71",1971,11,7,"7/11/71-8/6/71","Butte County","Lot between stadium and parking lot",39.73072,"-121.85202","WGS84",350
+4929046,3,16,12,"US","sativus","W. H. Brewer","1864-04-00",1864,4,0,"1864-4","Alameda","Oakland.",37.8203,"-122.26074","WGS84",10000
+4848896,1,3,7,"US","sativus","W. H. Brewer","1862-04-30",1862,4,30,"1862-4-30","Contra Costa","Camp 69, Walnut Creek.",37.90364,"-122.06169","WGS84",3000
+468970,1,2,12,"SD","sativus","Frank F. Gander","2/6/36",1936,2,6,"2/6/36","San Diego","1 mile west of San Marcos.",33.13653,"-117.18212","WGS84",402
+3351467,0,7,16,"UCJEPS","sativus","Willis L. Jepson","1884-06-10",1884,6,10,"Jun 10 1884","Solano","Vacaville",38.35655217,"-121.9877413","WGS84 ",4001
+3400832,0,0,11,"UCJEPS","sativus","D. G. Kelch","6/10/04",2004,6,10,"10-Jun-04","Solano","Vallejo on side road along at side of I-80 between Sequoia Road exit and Columbus Parkway exit",38.131389,"-122.223333","WGS84",100
+3366602,5,3,28,"UCJEPS","raphanistrum","Fr. Denicke","1893-04-01",1893,4,1,"Apr 1893","San Francisco","at San Francisco San Francisco",37.7514,"-122.4413","WGS84",8000
+2278606,5,8,13,"CAS","raphanistrum","Stone, Karen A.","10/30/78",1978,10,30,"30-Oct-78","Fresno County","Sierra Nevada. 0.1 mile east of Fowler.",36.63031,"-119.68011","WGS84",2000
+979678,3,10,25,"RSA","sativus","Susan Carter","5/5/81",1981,5,5,"5/5/81","San Luis Obispo","Vandenberg Air Force Base, south of Taurus Road near Pega Road.",34.71267,"-120.46783","WGS84",1000
+2275918,7,13,8,"CAS","sativus","Cohen, Daniel","4/5/53",1953,4,5,"Apr. 5, 1953","Santa Clara County","West of Anatomy Building. Stanford Campus.",37.42756,"-122.17152","WGS84",1500
+3511149,2,8,3,"UCJEPS","sativus","Willis L. Jepson","1897-06-25",1897,6,25,"Jun 25 1897","Alameda","Berkeley",37.87155879,"-122.2727118","WGS84 ",4001
+3330781,0,0,33,"UCJEPS","sativus","T. S. Brandegee","1895-04-07",1895,4,7,"Apr 7 1895","San Diego","San Diego",32.73409,"-117.12945","WGS84",9654
+2282381,1,3,3,"CAS","sativus","Thomas, J. H.","4/10/54",1954,4,10,"Apr 10 1954","Santa Cruz County","Northern end of Hilton Airport between airstrip and highway.",37.15657076,"-122.1626958","WGS84 ",3999
+3452051,0,6,22,"UCJEPS","raphanistrum","J. P. Tracy","5/18/00",1900,5,18,"May 18 1900","Alameda","Berkeley, Telegraph Avenue, near Dwight Way Berkeley; , Telegraph Avenue",37.865135,"-122.258331","WGS84",818
+229779,0,8,9,"UCSC","sativus","Pupils of Los Angeles High School","1901-06-00",1901,6,0,"Jun-01","Los Angeles","Los Angeles. Specimen recd from Dr. Hall Univ. Cal. Herbarium",34.052234,"-118.243685","WGS84",43952
+3322372,3,2,9,"UCJEPS","raphanistrum","H. M. Hall","5/17/01",1901,5,17,"May 17, 1901-June 1, 1901","Riverside","San Jacinto Valley, (journey) from Riverside to Santa Rosa Peak and Palomar San Jacinto Valley",33.800023,"-116.950855","WGS84",10000
+4821653,4,0,19,"US","raphanistrum","E. Braunton","5/10/02",1902,5,10,"5/10/02","Los Angeles","Los Angeles County, Rivera.",33.9831,"-118.0967","WGS84",3000
+3542265,1,8,0,"UCJEPS","sativus","N. K. Berg","3/8/04",1904,3,8,"Mar 8 1904","Los Angeles","Redondo",33.853562,"-118.383203","WGS84",4461
+2283873,0,8,9,"CAS","sativus","Applegate, Elmer I.","1895-04-06",1895,4,6,"April 6, 1895.","Santa Clara County","Stanford University. Above Stock Farm.",37.42654,"-122.18328","WGS84",1000
+3245328,0,7,13,"UCJEPS","sativus","T. S. Brandegee","6/1/02",1902,6,1,"Jun-02","San Diego","Mission Valley",32.77479,"-117.132","WGS84",6437
+3400958,1,15,33,"UCJEPS","sativus","H. M. Hall","6/1/05",1905,6,1,"June, 1905","Los Angeles","Wiseburn near Los Angeles; Wiseburn",33.92408,"-118.37802","WGS84",2400
+3468200,1,9,5,"UCJEPS","sativus","unknown","4/16/06",1906,4,16,"Apr 16 1906","San Luis Obispo","California Polytechnic School",35.30075,"-120.66102","NAD83",418
+3489775,0,5,16,"UCJEPS","sativus","J. P. Tracy","4/29/06",1906,4,29,"Apr 29 1906","Humboldt","immediate vicinity of Eureka",40.791222,"-124.164636","WGS84",3392
+3290499,1,13,29,"UCJEPS","sativus","Alice King","3/1/08",1908,3,1,"March, 1908","Los Angeles","Santa Ana",33.74932,"-117.87007","WGS84",5000
+5001849,2,2,20,"US","sativus","A. Hitchcock","7/7/13",1913,7,7,"7/7/13","Santa Clara","Beach near Wrights. Santa Cruz Mountains.",37.13894,"-121.94787","WGS84",1000
+3430357,0,3,9,"UCJEPS","sativus","A. A. Heller","3/16/14",1914,3,16,"Mar 16 1914","Butte","8 mi n of Oroville",39.612691,"-121.607000","WGS84",6450
+1368029,1,14,7,"DAV","sativus","P. B. Kennedy","4/19/14",1914,4,19,"19-Apr-14","Marin","Marin County: Mill Valley.",37.91318,"-122.55606","WGS84",3000
+1367990,2,6,23,"DAV","","P. B. Kennedy","4/29/17",1917,4,29,"29-Apr-17","Alameda","Alameda County: Northbrae, Berkeley.",37.88752,"-122.27646","WGS84",1000
+3904090,0,5,2,"LA","sativus","Carl Epling","3/26/21",1921,3,26,"3/26/21","Alameda","Berkeley. Strawberry Creek",37.873341,"-122.238895","WGS84",900
+3499442,10,19,5,"UCJEPS","sativus","Carl V. Meyer","5/1/27",1927,5,1,"May-27","San Diego","Escondido",33.12177,"-117.06739","WGS84",4827
+1368002,0,8,1,"DAV","sativus","Morris Halperin","3/23/29",1929,3,23,"23-Mar-29","Alameda","Alameda County: Craigmont Hills, Berkeley.",37.89552,"-122.26519","WGS84",750
+3792158,6,7,8,"FSC","raphanistrum","C. H. Quibell","8/13/29",1929,8,13,"13-Aug-29","Monterey","Monterey, on Monterey Bay. Near high school.",36.59489,"-121.90056","WGS84",750
+2285742,1,0,3,"CAS","sativus","Raven, Peter H.","1/17/55",1955,1,17,"Jan. 17, 1955","San Francisco County","Along 19th Avenue near Lawton Street, San Francisco.",37.75789,"-122.47677","WGS84",200
+2286003,0,6,14,"CAS","sativus","Randall, Alice D.","4/26/10",1910,4,26,"26-Apr-10","Monterey County","Monterey Peninsula. Carmel Valley.",36.4807,"-121.73367","WGS84",10000
+1368057,4,8,11,"DAV","sativus","R. S. Woglum","5/3/30",1930,5,3,"3-May-30","San Diego","San Diego County: Rancho Santa Fe, in west-central park of county.",33.02028,"-117.20278","WGS84",3218
+3224405,6,11,2,"UCJEPS","sativus","Beryl O. Schreiber","8/3/32",1932,8,3,"Aug 3 1932","Marin","Tomales Bay, Avalis Beach Avalis Beach; Tomales Bay, Avalis Beach",38.231626,"-122.981535","WGS84",818
+3904069,5,13,15,"LA","raphanistrum","Joseph Andorfer Ewan","4/30/32",1932,4,30,"30-Apr-32","Los Angeles","Above Ballona Creek, Baldwin Hills",34.02357,"-118.34302","WGS84",5000
+1368035,1,12,1,"DAV","sativus","R. N. Raynor","4/12/33",1933,4,12,"12-Apr-33","Alameda","Alameda County: UC Berkeley campus.",37.87291,"-122.25191","WGS84",1500
+3792171,1,12,27,"FSC","raphanistrum","A. Hawbecker","4/24/34",1934,4,24,"24-Apr-34","Alameda","Berkeley campus, between Life Sciences Bld, & Mining Bldg.",37.87231,"-122.26005","WGS84",500
+2287008,1,2,16,"CAS","sativus","Howell, John Thomas","6/17/56",1956,6,17,"17-Jun-56","San Francisco County","San Francisco. Summit ridge of Bayview Hills.",37.71441,"-122.39249","WGS84",500
+3492727,0,10,8,"UCJEPS","sativus","Joseph A. Ewan","9/2/33",1933,9,2,"Sep 2 1933","Alameda","Berkeley Hills, Strawberry Canyon Strawberry Canyon; Berkeley Hills, Strawberry Canyon",37.873417,"-122.238851","WGS84",1120
+3550026,1,12,4,"UCJEPS","sativus","G. E. Sindel","3/12/34",1934,3,12,"Mar 12 1934","Alameda","1/2 mi n of extreme e end of Lake Chabot",37.736774,"-122.093915","WGS84",1200
+3377055,0,9,24,"UCJEPS","sativus","Lincoln Constance","5/27/34",1934,5,27,"May 27 1934","Humboldt","South Fork Eel River, s end of Dyerville Bridge South Fork Eel River; Bull Creek Region, South Fork Eel River",40.355941,"-123.924873","WGS84",1622
+3444193,3,9,4,"UCJEPS","raphanistrum","R. F. Hoover","1/6/35",1935,1,6,"Jan 6 1935","Stanislaus","Oakdale",37.7665732,"-120.8471132","WGS84 ",4001
+3417594,0,5,26,"UCJEPS","sativus","Charles M. Belshaw","9/18/34",1934,9,18,"Sep 18 1934","Alameda","refilled ground 100 yds. e. of U.C. stadium on Strawberry rd. Berkeley",37.876342,"-122.238971","WGS84",1254
+3262100,2,7,18,"UCJEPS","raphanistrum","Robert F. Hoover","1/10/35",1935,1,10,"Jan 10 1935","Stanislaus","Modesto",37.6390744,"-120.9968354","WGS84 ",4001
+2287409,1,8,9,"CAS","sativus","Genetti, Cathy","4/30/82",1982,4,30,"30-Apr-82","Monterey County","Santa Lucia Mountains. Gamboa Point Section. Landels-Hill Big Creek Reserve. Along the caretaker's driveway near Hwy 1.",36.07749,"-121.59769","WGS84",2000
+2289763,1,4,23,"CAS","sativus","Howell, John Thomas","9/24/61",1961,9,24,"Sept. 24, 1961.","Plumas County","Sierra Nevada. Beckwourth.",39.82126,"-120.37849","WGS84",1500
+2290218,1,9,28,"CAS","sativus","Kawahara, Saichi","5/28/69",1969,5,28,"28-May-69","Marin County","East end of Limantour Spit, Drakes Bay.",38.02764,"-122.89197","WGS84",1000
+3335398,0,4,0,"UCJEPS","sativus","Robert F. Hoover","2/8/35",1935,2,8,"Feb 8 1935","Stanislaus","Modesto",37.6390744,"-120.9968354","WGS84 ",4001
+3366934,0,10,16,"UCJEPS","sativus","F. W. Embree","2/9/35",1935,2,9,"Feb 9 1935","Santa Barbara","El Estero Swamp",34.417289,"-119.522628","WGS84",805
+2061482,3,8,11,"CHSC","raphanistrum","V. Holt","3/27/35",1935,3,27,"3/27/35","Butte","Sandy Gulch, Chico.",39.730278,"-121.901111","NAD83",201
+3525429,0,5,9,"UCJEPS","sativus","F. W. Embree","4/16/35",1935,4,16,"Apr 16 1935","Santa Barbara","1 1/2 mi n of Coromar (Santa Barbara National Forest); Santa Barbara National Forest",34.446285,"-119.854537","WGS84",805
+3462399,1,3,0,"UCJEPS","sativus","Allison Krames","3/24/35",1935,3,24,"Mar 24 1935","Kern","between Wasco and Famosa",35.601536,"-119.274250","WGS84",6048
+2288810,0,2,23,"CAS","raphanistrum","Pollard, Henry M.","2/16/47",1947,2,16,"Feb. 16, 1947","Ventura County","Ventura River Basin. Fairview Road.",34.4565,"-119.27986","WGS84",5000
+2292239,1,4,7,"CAS","raphanistrum","Merkel, Terrence J.","5/20/50",1950,5,20,"20-May-50","San Francisco County","West side of Lone Mountain, San Francisco.",37.77988,"-122.47448","WGS84",3000
+2291878,0,6,1,"CAS","sativus","Gallup, A. H.","3/17/49",1949,3,17,"3/17/49","Los Angeles County","Near north-central portion of the property, LASCA.",34.1432,"-118.05502","WGS84",700
+2293307,1,12,19,"CAS","raphanistrum","Browne, Ashley C.","6/11/36",1936,6,11,"11-Jun-36","Humboldt County","Patrick's Point State Park.",41.1408,"-124.14619","WGS84",2500
+2296541,0,1,10,"CAS","raphanistrum","Braunton, Ernest","1904-09-00",1904,9,0,"September, 1904","Amador County","Vicinity of Ione.",38.359692,"-120.932716","WGS84",6000
+2299319,5,12,17,"CAS","sativus","Bracelin, Nina Floy","4/4/43",1943,4,4,"4-Apr-43","Alameda County","The Garden of Anson and Anita Blake. Berkeley.",37.9134,"-122.2851","WGS84",200
+2298121,0,6,14,"CAS","raphanistrum","True, Gordon H.","8/13/61",1961,8,13,"Aug. 13, 1961","Nevada County","Indian Springs.",39.179444,"-121.193889","WGS84",3000
+3562157,1,5,7,"UCJEPS","sativus","G. E. Sindel","3/10/35",1935,3,10,"Mar 10 1935","Santa Barbara","1 mi s of Surf",34.673674,"-120.578258","WGS84",805
+2291266,4,7,33,"CAS","raphanistrum","Thomas, John H.","6/16/76",1976,6,16,"June 16-17, 1976","Sonoma County","Southern part of Sea Ranch, northwestern part of county, about 7 miles south of Gualala.",38.71498,"-123.45498","WGS84",1000
+2308947,2,19,42,"CAS","raphanistrum","Ahart, Lowell","4/19/80",1980,4,19,"19-Apr-80","Butte County","Peter Ahart Ranch, Honcut.",39.33955,"-121.5218","WGS84",2000
+3433650,0,11,16,"UCJEPS","sativus","R. C. Wilson","4/29/35",1935,4,29,"Apr 30 1935","Santa Cruz","2 mi n of Table Rock",36.9975,"-122.1356","WGS84",600
+2300993,1,2,15,"CAS","sativus","Rose, Lewis S.","10/6/57",1957,10,6,"Oct. 6, 1957","San Francisco County","San Francisco. Russian Hill, north slope.",37.80246,"-122.41967","WGS84",500
+2300919,2,2,16,"CAS","sativus","Patterson, Miss.; Wiltz","7/1/07",1907,7,1,"July 1, 1907.","Monterey County","Monterey Peninsula. Chinatown. Pacific Grove.",36.61798,"-121.91838","WGS84",3000
+2311023,0,6,10,"CAS","sativus","Kennedy, P. B.","5/7/25",1925,5,7,"7-May-25","Alameda County","Schmidt Tract, Berkeley.",37.87366,"-122.23283","WGS84",1500
+2302311,1,6,20,"CAS","sativus","McMurphy, James","1903-06-00",1903,6,0,"Jun-03","Mendocino County","Kaisen District.",39.3066,"-123.80618","WGS84",700
+468975,0,8,5,"SD","sativus","Frank F. Gander","3/27/36",1936,3,27,"3/27/36","San Diego","Buena, 7 miles north of Escondido on U. S. 395.",33.17337,"-117.20865","WGS84",1609
+3440200,0,13,25,"UCJEPS","sativus","N. K. Carlson","3/18/36",1936,3,18,"Mar 18 1936","San Luis Obispo",".2 mi s of Nipomo Hill",35.098215,"−120.579118","WGS84",475
+3489238,0,3,34,"UCJEPS","raphanistrum","G. T. Nordstrom","3/31/36",1936,3,31,"Mar 31 1936","Mariposa","At Webb's",37.602511,"-120.309387","WGS84",805
+3293792,0,6,0,"UCJEPS","sativus","P. L. Johannsen","3/21/36",1936,3,21,"Mar 21 1936","San Luis Obispo","1 1/2 mi se of Terrace Hill",35.26672,"-120.624855","WGS84",1223
+2311342,3,19,16,"CAS","raphanistrum","Rubtzoff, Peter","5/29/52",1952,5,29,"May 29, 1952.","San Francisco County","San Francisco. Sand dunes at 37th Avenue between Ortega and Quintara Streets. Eastern edge of area.",37.74949,"-122.4956","WGS84",300
+2315373,5,8,4,"CAS","sativus","Thomas, John H.","4/20/81",1981,4,20,"20-Apr-81","Sutter County","Sutter Buttes. Near Dean Place.",39.22023,"-121.79563","WGS84",4000
+2316628,1,14,22,"CAS","sativus","Howell, John Thomas","5/26/57",1957,5,26,"May 26, 1957.","San Francisco County","San Francisco. North base of Lone Mountain.",37.78074,"-122.45322","WGS84",500
+2314219,3,17,26,"CAS","sativus","Ahart, Lowell","3/22/80",1980,3,22,"22-Mar-80","Butte County","Peter Ahart Ranch, Honcut.",39.33955,"-121.5218","WGS84",2000
+2317066,1,2,13,"CAS","sativus","Zeile, E. M.","9/15/21",1921,9,15,"9/15-'21","Alameda County","Berkeley, Campus.",37.87291,"-122.25191","WGS84",1500
+3306212,2,40,39,"UCJEPS","sativus","N. K. Carlson","5/15/35",1935,5,15,"May 15 1935","Santa Cruz","3 mi n of Davenport",37.053074,"-122.194561","WGS84",1400
+3523645,5,23,27,"UCJEPS","raphanistrum","Willis L. Jepson","5/6/36",1936,5,6,"May 6 1936","Merced","3 1/2 mi n of Snelling (Dry Creek); Dry Creek",37.57066,"-120.439190","WGS84",5259
+2318818,4,11,10,"CAS","raphanistrum","de Nevers, Greg","12/17/86",1986,12,17,"17 Dec. 1986","Sonoma County","Pepperwood Ranch Natural Preserve, 3500 Franz Valley Road, Santa Rosa.",38.56666667,"-122.69149","WGS84",300
+3539396,2,3,19,"UCJEPS","sativus","Donald G. Nelson","5/29/36",1936,5,29,"May 29 1936","Orange","e of Buena Park (on n side of West Commonwealth Avenue, on edge of Fullerton Municipal airport); Fullerton Municipal airport, West Commonwealth Avenue",33.870014,"-117.980883","WGS84",805
+3281522,2,10,2,"UCJEPS","sativus","P. L. Johannsen","4/9/36",1936,4,9,"Apr 9 1936","Tuolumne","1 mi w of Standard",37.969528,"-120.333865","WGS84",1000
+3534929,0,3,41,"UCJEPS","sativus","Willis L. Jepson","7/22/36",1936,7,22,"Jul 22 1936","Mendocino","Albion, Mendocino coast Albion; , Mendocino coast",39.22396,"-123.768750","WGS84",810
+468978,0,3,18,"SD","raphanistrum","Frank F. Gander","4/15/37",1937,4,15,"4/15/37","San Diego","San Onofre",33.38114,"-117.5731","WGS84",805
+3477178,0,6,18,"UCJEPS","sativus","G. T. Nordstrom","6/4/37",1937,6,4,"Jun 4 1937","San Luis Obispo","1.9 mi nw of Mammoth Rock School",35.565649,"-120.987979","WGS84",805
+108810,0,5,15,"SBBG","raphanistrum","P. Bartholomew","5/15/39",1939,5,15,"5/15/39","Santa Barbara","Los Padres National Forest; upper Camuesa Camp Rd",34.50872,"-119.57732","WGS84",402
+1368058,0,6,11,"DAV","sativus","R. S. Woglum","8/29/38",1938,8,29,"29-Aug-38","Del Norte","Del Norte County: south of Crescent City in north-central part of county.",41.675229,"-123.933082","WGS84",14000
+610288,0,0,19,"SFV","raphanistrum","L. R. Abrams","7/17/39",1939,7,17,"17-Jul-39","Santa Clara","Santa Cruz Mountains; Railway at Laurel.",37.11665,"-121.96668","WGS84",500
+2321963,10,26,9,"CAS","sativus","Howitt, Beatrice F.","3/6/55",1955,3,6,"6-Mar-55","Monterey County","Monterey Peninsula. Yankee Point.",36.49076,"-121.94054","WGS84",600
+3792179,0,0,12,"FSC","raphanistrum","J. P. Eich","4/2/40",1940,4,2,"2-Apr-40","Madera","Yosemite rd. 2 mi NE of Laves Bridge.",36.876597,"-119.791727","WGS84",7000
+468983,1,7,11,"SD","sativus","Frank F. Gander","5/7/38",1938,5,7,"5/7/38","San Diego","South end of San Diego Bay.",32.59102,"-117.11158","WGS84",1609
+1368038,0,16,16,"DAV","sativus","Bob Rodin","5/14/43",1943,5,14,"14-May-43","Alameda","Alameda County: Strawberry Canyon, University of California, Berkeley campus.",37.876339,"-122.238971","WGS84",1255
+3904091,0,24,3,"LA","sativus","N. C. Cooper","4/23/44",1944,4,23,"4/23/44","Los Angeles","Pomona.",34.05548096,"-117.7499985","WGS84 ",3218
+2322749,2,12,15,"CAS","sativus","Ahart, Lowell","4/24/82",1982,4,24,"24-Apr-82","Sutter County","Near the dirt road that leads to the gravel pit, about 0.25 mile southwest of the Myers home, Myers Ranch, Sutter Buttes",39.271111,"-121.817222","NAD83",201
+2324050,0,0,16,"CAS","raphanistrum","Howell, John Thomas","5/16/54",1954,5,16,"May 16, 1954.","El Dorado County","Sierra Nevada. Shingle Springs.",38.6654,"-120.93198","WGS84",2000
+2328064,2,7,6,"CAS","sativus","Wetzel, Cherie L.","1/18/68",1968,1,18,"18-Jan-68","Alameda County","Niles Canyon and vicinity. Vallejo Mills Park.",37.57855,"-121.97074","WGS84",250
+2324177,3,11,16,"CAS","raphanistrum","Kolts, Barbara","7/27/46",1946,7,27,"27-Jul-46","Santa Clara County","Around Stanford.",37.42689,"-122.1708","WGS84",1500
+2324744,0,1,36,"CAS","sativus","Howell, John Thomas","5/25/66",1966,5,25,"25-May-66","Marin County","Tiburon. John Thomas Howell Botanical Garden. Just north of garden area.",37.88017,"-122.46111","WGS84",2000
+2331781,2,9,27,"CAS","sativus","Zeile, E. M.","8/13/21",1921,8,13,"8/13-'21","Santa Cruz County","Brooksdale to Santa Cruz.",37.04177,"-122.0622","WGS84",10000
+1367984,2,9,15,"DAV","raphanistrum","H. W. Grinnell","1942-04",1942,4,0," Apr 6-9, 1942","Monterey","Monterey County: Berglund Ranch near Corralitos.",37.006941,"-121.837128","WGS84",660
+1368036,0,7,45,"DAV","sativus","R. N. Raynor","5/20/41",1941,5,20,"20-May-41","Stanislaus","Stanislaus County: Montpelier.",37.54302,"-120.7076","WGS84",7000
+1367988,1,7,33,"DAV","raphanistrum","Clifton F. Smith","5/5/44",1944,5,5,"5-May-44","Santa Barbara"," Tunnel Road, Mission Canyon. City of Santa Barbara.",34.454,"-119.71","NAD83",3000
+98493,1,7,20,"SBBG","raphanistrum","Clifton F. Smith","7/17/45",1945,7,17,"7/17/45","Santa Barbara","West Beach, Santa Barbara",34.403,"-119.698","NAD83",500
+304556,1,4,36,"UCSB","sativus","Lyman Benson","5/21/45",1945,5,21,"5/21/45","Los Angeles","1300 feet Pacific Slope Drainage",34.115,"-117.7133333","NAD83",3999
+1368004,0,20,5,"DAV","sativus","Chas. Heiser","3/7/47",1947,3,7,"7-Mar-47","Yolo","Yolo County: Davis.",38.553154,"-121.751816","WGS84",3553
+304543,1,7,33,"UCSB","sativus","Kamb, Peter","2/1/48",1948,2,1,"2/1/48","Riverside","Valley in the Jurupa Mts. west of Colton, San Bernardino/Riverside County",34.030014,"-117.416870","WGS84",5000
+2334928,1,8,3,"CAS","raphanistrum","Smith, L. E.","5/19/13",1913,5,19,"19-May-13","Shasta County","Anderson.",40.453011,"-122.298523","WGS84",6000
+1368003,1,11,32,"DAV","sativus","W. A. Harvey","6/28/48",1948,6,28,"28-Jun-48","San Mateo","San Mateo County: 3 miles north of Pescadero.",37.28107,"-122.37898","WGS84",5000
+375714,2,6,16,"SDSU","sativus","Beckett, G.D.","3/12/51",1951,3,12,"3/12/51","San Diego","Bonita.",32.65783,"-117.03003","WGS84",1609
+375726,0,2,21,"SDSU","sativus","Collier, Gerald","4/7/51",1951,4,7,"4/7/51","Los Angeles","About 2 miles west of U.S Hwy 101. 100 yards from road.",34.00137,"-118.80715","WGS84",2000
+2332340,3,13,5,"CAS","sativus","Twisselmann, Ernest C.","3/27/57",1957,3,27,"March 27, 1957.","Kern County","Eastern San Joaquin Valley. Bear Mountain Boulevard, 5.3 miles east of Arvin.",35.21552,"-118.72846","WGS84",5000
+2332455,2,2,45,"CAS","raphanistrum","Pollard, Henry M.","6/16/67",1967,6,16,"16-Jun-67","Ventura County","Side of Maricopa Road north of and near Fairview Road crossing, Meiners Oaks.",34.45636,"-119.27823","WGS84",1000
+2336172,1,10,12,"CAS","sativus","Patterson, Miss.; Wiltz","6/6/07",1907,6,6,"June 6, 1907.","Monterey County","Monterey Peninsula. Near bath house. Pacific Grove.",36.61798,"-121.91838","WGS84",3000
+3904070,1,1,0,"LA","sativus","Elwood Fordham","3/20/51",1951,3,20,"20-Mar-51","Los Angeles","Santa Monica Mountains; UCLA Campus, Faculty Hill",34.07443638,"-118.4555499","WGS84 ",500
+2336537,1,8,5,"CAS","sativus","Eastwood, Alice","4/17/16",1916,4,17,"Apr. 17, 1916","Ventura County","Ventura. Along Beach.",34.27006,"-119.2944","WGS84",3000
+375708,1,8,5,"SDSU","sativus","Coop, Wm E.","5/1/52",1952,5,1,"5/1/52","San Diego","Leucadia.",33.07216,"-117.29556","WGS84",1609
+2262518,1,13,10,"LOB","sativus","Don Nead","5/24/52",1952,5,24,"24-May-52","Los Angeles","Palos Verde Hills",33.766672,"-118.364114","WGS84",6902
+3476616,1,8,18,"UCJEPS","raphanistrum","Rimo Bacigalupi, Alex D. Hawkes","4/22/51",1951,4,22,"Apr 22 1951","Merced","between Merced Falls and Snelling",37.516956,"-120.384758","WGS84",4841
+3514143,0,1,2,"UCJEPS","sativus","J. H. Thomas","2/1/53",1953,2,1,"Feb 1 1953","Santa Cruz","about 1/2 mi inland from Sea Cliff Beach State Park (which is between Santa Cruz and Watsonville)",36.9707433,"-121.8926866","WGS84 ",3999
+468972,1,9,26,"SD","raphanistrum","Frank F. Gander","3/12/36",1936,3,12,"3/12/36","San Diego","Sweetwater River Bridge, Campo Road.",32.73339,"-116.94197","WGS84",402
+921047,2,7,2,"RSA","sativus","D. M. McF","2/17/53",1953,2,17,"2/17/53","San Luis Obispo","Pecho Ranch. On the ocean.",35.26519,"-120.849","WGS84",5000
+2262519,2,6,8,"LOB","sativus","James D. Milne","2/28/53",1953,2,28,"28-Feb-53","Los Angeles","Campus, west of Palo Verde Avenue",33.784505,"-118.114478","WGS84",1253
+3792160,0,11,17,"FSC","raphanistrum","Simon Simonian","4/4/53",1953,4,4,"4-Apr-53","Fresno","Kaiser Ditch, w-e sect. at Shields & Westlawn Ave. about 3 m. n. of Rolinda.",36.77867,"-119.95207","WGS84",3000
+3751457,0,7,30,"SD","sativus","Jon Rebman","5/21/19",2019,5,21,"5/21/19","San Diego","Camp Pendleton: west-central portion of Base; south of San Onofre Peak in Las Pulgas Canyon; Training Area Oscar Two; in riparian area just south of Las Pulgas Canyon Road",33.31783,"-117.43864","WGS84",3999
+304537,3,15,19,"UCSB","raphanistrum","Isabelle McElwain","3/29/53",1953,3,29,"3/29/53","Los Angeles","N of 18000 Bull Canyon Rd., Granada Hills",34.29362,"-118.522631","WGS84",500
+304571,2,7,7,"UCSB","sativus","Norman Haller","4/18/53",1953,4,18,"4/18/53","Los Angeles","Two lots up from Tri-Delt house, Hilgard Ave., University of Calif. at Los Angeles",34.06469,"-118.4407","WGS84",500
+2423571,1,3,15,"CAS","sativus","Thomas, J. H.","5/23/53",1953,5,23,"23-May-53","Santa Cruz County","Saint Mary of the Palms, summer girls' camp near Glenwood.",37.10823995,"-121.9860239","WGS84 ",3999
+2342281,0,6,15,"CAS","sativus","Parish, S. B.","1898-05-25",1898,5,25,"25 May 1898","San Bernardino County","West Riverside.",34.00372,"-117.43835","WGS84",4790
+3792176,1,2,2,"FSC","raphanistrum","Simon Simonian","4/10/54",1954,4,10,"10-Apr-54","Fresno","Enterprise Canal. e-w sect. xing Sanger-academy Rd. at Gettysburg Ave. About 9 n. nw. of Centerville. Main Canal",36.80095,"-119.55605","WGS84",800
+1367996,1,10,21,"DAV","sativus","Beecher Crampton","4/27/53",1953,4,27,"27-Apr-53","Yolo","Yolo County: 3 miles west of Winters.",38.53247,"-121.89637","WGS84",5000
+2334980,1,8,32,"CAS","sativus","Thomas, John H.","3/30/50",1950,3,30,"30-Mar-50","Santa Cruz County","Vacant lot at Capitola.",36.98015,"-121.95641","WGS84",2500
+2338864,0,1,25,"CAS","sativus","Dudley, Chester","1936-07-00",1936,7,0,"July 1936.","San Luis Obispo County","Morro.",35.36771,"-120.84492","WGS84",2000
+2342720,1,7,5,"CAS","raphanistrum","Wiggins, Ira L.","9/19/72",1972,9,19,"19 Sept. 1972","Tuolumne County","Northeast side of Herring Creek ca. 1 km. above dam at Herring Creek Reservoir.",38.25214,"-119.92675","WGS84",1500
+3792168,1,1,3,"FSC","raphanistrum","Simon Simonian","4/16/54",1954,4,16,"16-Apr-54","Fresno","Forkner Ditch, e-2 sect. xing of Friant Rd. s. of Shepherd Ave. 1 1/2 m. ne of Pinedale. Fresno Irrigation District",36.86649,"-119.77946","WGS84",1000
+2262516,4,11,9,"LOB","sativus","David Willis","4/14/54",1954,4,14,"14-Apr-54","Orange","Lower Silverado Canyon, Santa Ana Mtns.",33.745987,"-117.609957","WGS84",2432
+2345323,2,0,1,"CAS","sativus","Twisselmann, Ernest C.","9/19/62",1962,9,19,"September 19, 1962.","Tulare County","Sierra Nevada. Kern Plateau. Kennedy Meadow.",36.05382,"-118.12583","WGS84",8000
+2262522,5,11,6,"LOB","sativus","Bob House","1954-05-00",1954,5,0,"May-54","Los Angeles","Long Beach",33.798101,"-118.126467","WGS84",7736
+3792180,0,2,6,"FSC","sativus","Simon Simonian","5/15/54",1954,5,15,"15-May-54","Fresno","Thompson Canal. n-s sect. North & Bishop Aves. About 3 m se. of Kerman, Main Canal.",36.69184,"-120.0065","WGS84",1000
+2355201,2,18,31,"CAS","raphanistrum","Howell, John Thomas; Menzies, Barbara T.; Shockey, Barbara","6/25/78",1978,6,25,"25-Jun-78","Calaveras County","Sierra Nevada. Dorrington.",38.29998,"-120.26668","WGS84",3000
+2355178,2,5,4,"CAS","sativus","Wheeler, Clare R.","4/1/78",1978,4,1,"1-Apr-78","Mendocino County","Highway 128 at intersection with Highway 1, along Navarro River.",39.19776,"-123.74826","WGS84",700
+202470,0,10,25,"OBI","sativus","Jim Heaston","10/13/55",1955,10,13,"13-Oct-55","San Luis Obispo","Cal Poly San Luis Obispo",35.3008,"-120.6607","WGS84",559
+2358602,1,3,11,"CAS","sativus","Pollard, Henry M.","8/23/51",1951,8,23,"Aug. 23, 1951.","Fresno County","Huntington Lake and vicinity. Big Creek.",37.23186,"-119.20288","WGS84",5000
+2359565,6,7,11,"CAS","raphanistrum","True, Gordon H.; Howell, John Thomas","8/30/66",1966,8,30,"30-Aug-66","Nevada County","Sierra Nevada. Willow Valley on Upper Castle Creek, 0.3 mile north of Highway 80 and 1.5 mile north of Norden.",39.34222,"-120.36663","WGS84",4000
+304597,1,6,13,"UCSB","sativus","Ballard","4/18/54",1954,4,18,"4/18/54","San Diego","Rancho Rincon del Diablo, Escondido",33.1188,"-117.0846","WGS84",8000
+304594,2,7,6,"UCSB","sativus","Goeschl, John","2/18/57",1957,2,18,"2/18/57","Santa Barbara","Lemon grove 1 mi. N of Hwy. 101, 2 mi. S.E. of Goleta",34.42872,"-119.77998","WGS84",5000
+304567,1,1,3,"UCSB","sativus","Ralph Philbrick","3/1/55",1955,3,1,"3/1/55","Los Angeles","South of La Verne, Puddingstone Dam, San Jose Mts.",34.087141,"-117.798379","WGS84",3000
+1310159,2,6,19,"DAV","sativus","Beecher Crampton","1/7/58",1958,1,7,"7-Jan-58","Yolo","West Sacramento.",38.58045,"-121.54703","WGS84",202
+304595,3,14,10,"UCSB","sativus","Pete Atsatt","2/15/58",1958,2,15,"2/15/58","Santa Barbara","Behind Apt. House at 744 Embarcadero Del Mar, Goleta",34.4167,"-119.8566","NAD83",300
+304578,3,11,8,"UCSB","sativus","Richard E. Broder","1958-03-00",1958,3,0,"1958-03","Santa Barbara","2 blocks north on Patterson Ave. from Hollister Ave., one mile east of Goleta",34.438465,"-119.809271","WGS84",242
+304570,4,15,0,"UCSB","sativus","Koran, John","3/1/58",1958,3,1,"3/1/58","Santa Barbara","Two miles west of Goleta, on the south side of the slough, behind the Las Casitas residence halls, Sequoia Hall",34.41124,"-119.84612","WGS84",750
+3386031,3,12,23,"UCJEPS","sativus","H. W. Johansen","5/17/58",1958,5,17,"18-May-58","Monterey","Salinas by side of road.",36.706576,"-121.666736","WGS84",4001
+304552,1,15,9,"UCSB","sativus","Glenn Keator","6/17/58",1958,6,17,"6/17/58","Mendocino","Just north of Elk on Highway 1",39.13279,"-123.71853","WGS84",1500
+2359386,2,8,8,"CAS","sativus","Twisselmann, Ernest C.","5/6/64",1964,5,6,"May 6, 1964.","San Bernardino County","Mojave Desert. South end of Kramer Hills.",34.8682,"-117.4748","WGS84",3000
+304598,4,10,1,"UCSB","sativus","Robert H. Gill","3/7/59",1959,3,7,"7-Mar-59","Los Angeles","Corner of Baseline and Mills Ave.",34.121676,"-117.707205","WGS84",500
+3801191,1,3,16,"CSLA","sativus","Robert J. Fortlage","4/3/59",1959,4,3,"3-Apr-59","Los Angeles","Bel Air",34.1012,"-118.4595","WGS84",800
+2363992,1,1,16,"CAS","sativus","Stinchfield, Roxana","7/11/16",1916,7,11,"11-Jul-16","Colusa County","Stinchfield Ranch near Sycamore.",39.13277,"-121.95056","WGS84",3000
+3792167,6,12,12,"FSC","raphanistrum","T. Collins","5/1/59",1959,5,1,"1-May-59","Fresno","Found on canal ditch one mile west of Clovis Avenue on North Avenue.",36.77813,"-119.7866","WGS84",10000
+304574,1,1,2,"UCSB","sativus","Lloyd, Robert","4/6/59",1959,4,6,"4/6/59","Kern","8 miles East of Arvin on the Bear Mt. Road; Tehachapi Mt. Range; San Joaquin Valley",35.23995,"-118.68919","WGS84",3000
+304551,3,6,24,"UCSB","sativus","Greenlee, Alice","7/10/59",1959,7,10,"7/10/59","Santa Barbara","Santa Ynez River, near U.S. 101, 1/2 mile S of Buellton",34.60645,"-120.19087","WGS84",1000
+3963071,3,13,12,"SD","sativus","Jerry Green","4/11/19",2019,4,11,"4/11/19","San Diego","Poway; Kumeyaay Ipai Interpretive Center; 0.10 miles south of Poway Road; near southern terminus of Silver Lake Dr.",32.9535,"-117.056","WGS84",3999
+304605,0,7,9,"UCSB","sativus","Elizabeth Bowker","7/2/59",1959,7,2,"7/2/59","Santa Barbara","UCSB campus",34.412583,"-119.847697","WGS84",1000
+304582,4,14,19,"UCSB","sativus","Cline, C.","3/19/60",1960,3,19,"3/19/60","Santa Barbara","San Benito Canyon, 2 1/2 mi. N of Hwy. 101",34.477424,"-120.055174","WGS84",3000
+3792191,6,17,6,"FSC","sativus","N. Mastin","6/19/60",1960,6,19,"19-Jun-60","San Luis Obispo","2 miles south of Pismo Beach on west side of highway 101 on Sierra Hill.",35.129598,"-120.609636","WGS84",1700
+1368032,1,9,12,"DAV","sativus","Gordon Pilone","4/18/60",1960,4,18,"18-Apr-60","San Bernardino","San Bernardino County: 0.125 mile west of Archibald on Sixth Street in Cucamonga.",34.0847,"-117.5936","WGS84",300
+2358623,1,10,38,"CAS","raphanistrum","Pawek, Jean L.","4/18/58",1958,4,18,"18-Apr-58","Amador County","On road to Ione.",38.34057,"-120.9333","WGS84",7000
+610291,3,25,4,"SFV","sativus","K. A. Wilson","3/1/61",1961,3,1,"1-Mar-61","Los Angeles","San Fernando Valley; Tarzana. Topham Street, corner of Etiwanda Ave. Weed patch near railroad tracks.",34.18000212,"-118.5309","WGS84 ",3999
+2366615,0,0,14,"CAS","sativus","Wiggins, Ira L.","4/16/27",1927,4,16,"16-Apr-27","San Diego County","Grade 5 miles below Descanso.",32.8067,"-116.61255","WGS84",5000
+2368640,0,1,21,"CAS","raphanistrum","Quayle, E. H.","1920-05-00",1920,5,0,"May-20","Santa Clara County","Santa Cruz Mountain Peninsula. Arboretum. Stanford University.",37.43791,"-122.16684","WGS84",750
+2369059,2,3,6,"CAS","sativus","Kirby, F. J.","1958-07-00",1958,7,0,"July, 1958","Mendocino County","South of Point Arena.",38.90969,"-123.69301","WGS84",5000
+2370292,2,2,0,"CAS","raphanistrum","Raven, Peter H.","6/30/54",1954,6,30,"30-Jun-54","Fresno County","Sierra Nevada. Mono Hot Springs.",37.32667,"-119.01763","WGS84",1000
+2369553,5,14,5,"CAS","sativus","Wells, Mary P.","5/26/85",1985,5,26,"26-May-85","Sonoma County","Ca. 0.5 mile north of Stewart's Point, along Highway #1.",38.65969,"-123.4042","WGS84",800
+2371446,0,2,14,"CAS","sativus","McClintock, Elizabeth; Knight, Walter; Knight, Irja","9/2/63",1963,9,2,"Sept. 2, 1963","San Mateo County","San Bruno Mountains. Ridge above Brisbane.",37.6903,"-122.40977","WGS84",2000
+2377415,2,3,6,"CAS","sativus","Thomas, John H.","6/26/58",1958,6,26,"26-Jun-58","San Francisco County","Vacant lot at intersection of Davidson Ave. and 3rd Street.",37.74359,"-122.38769","WGS84",75
+2378472,0,3,32,"CAS","sativus","Twisselmann, Ernest C.","6/11/70",1970,6,11,"June 11, 1970.","Monterey County","Salinas River, ca. 1 mile above its mouth.",36.75891,"-121.80125","WGS84",1000
+2373106,0,7,11,"CAS","sativus","True, Gordon H.","5/11/62",1962,5,11,"11-May-62","Nevada County","Sierra Nevada. On Bridgeport-French Corral Road, about 1 mile southeast of Bridgeport.",39.28978,"-121.19337","WGS84",3000
+2378585,1,10,5,"CAS","sativus","Lindholm, Raymond","2/3/61",1961,2,3,"2/3/61","Los Angeles County","Near Laverne.",34.10183,"-117.76775","WGS84",3000
+2380407,1,13,9,"CAS","sativus","Thomas, J. H.","5/26/54",1954,5,26,"May 26 1954","Santa Cruz County","Northern end of Hilton Airport between airstrip and highway.",37.15657076,"-122.1626958","WGS84 ",3999
+2385124,0,4,13,"CAS","raphanistrum","Quayle, E. H.","1920-05-00",1920,5,0,"May 1920.","San Mateo County","Lomitas School near Menlo Park.",37.43726,"-122.21245","WGS84",1000
+2385707,2,16,9,"CAS","sativus","Thomas, J. H.","3/27/50",1950,3,27,"Mar. 27, 1950","Santa Cruz County","Davenport Landing.",37.02490636,"-122.2176954","WGS84 ",3999
+2387538,1,3,18,"CAS","raphanistrum","Bartholomew, Bruce","5/17/92",1992,5,17,"17-May-92","Modoc County","Pasture ca. 2 km NW of Day.",41.24,"-121.4136111","WGS84",3999
+2388759,0,0,7,"CAS","sativus","Howell, John Thomas","11/19/63",1963,11,19,"Nov. 19, 1963","Monterey County","Near Southern Pacific Station, Monterey.",36.60151,"-121.89128","WGS84",300
+2390205,1,18,32,"CAS","sativus","Randall, Josephine D.","6/21/07",1907,6,21,"21-Jun-07","Santa Clara County","Santa Cruz Peninsula. Near Lake Lagunita, Stanford University.",37.42241,"-122.17629","WGS84",750
+2393459,1,9,50,"CAS","raphanistrum","Pollard, Henry M.","4/30/58",1958,4,30,"Apr. 30, 1958","Santa Barbara County","Area of Devereaux Dunes, Goleta.",34.41657,"-119.83167","WGS84",5500
+2395018,9,7,12,"CAS","sativus","Howell, John Thomas","10/11/24",1924,10,11,"Oct. 11, 1924","Alameda County","Euclid Avenue, Berkeley.",37.88885,"-122.2633","WGS84",1500
+2395241,1,6,0,"CAS","sativus","Martineau, Robert","4/22/74",1974,4,22,"22-Apr-74","Santa Clara County","Foothills Park. Foothills of the eastern side of the Santa Cruz Mountains. Five miles south of center of Palo Alto. At Maintenance Yard.",37.36263,"-122.18439","WGS84",3000
+2395595,0,3,11,"CAS","sativus","Pollard, Henry M.","10/5/44",1944,10,5,"Oct. 5, 1944.","Ventura County","Ojai Valley. Ojai, School garden, California Prep. School.",34.45412,"-119.2427","WGS84",5000
+2398571,0,1,0,"CAS","raphanistrum","Duncan, C. D.","3/17/20",1920,3,17,"17-Mar-20","Santa Clara County","Between Inn and Library Campus.",37.42559,"-122.16571","WGS84",1000
+2397709,1,11,16,"CAS","raphanistrum","Shannon, Mary","2/26/69",1969,2,26,"2/26/69","Fresno County","Sequoia National Park. 0.25 mile from Junction of Willow and Copper avenues.",36.8226,"-119.53094","WGS84",1000
+2399359,3,7,4,"CAS","sativus","Thomas, John H.","4/3/56",1956,4,3,"Apr. 3, 1956.","Santa Clara County","Stanford University Campus. Near intersection of Stanford Avenue and Columbia Street.",37.41989876,"-122.1560325","WGS84 ",3999
+2406304,1,15,21,"CAS","sativus","Ruckert, Elsa G.","3/23/60",1960,3,23,"23-Mar-60","San Francisco County","19th Avenue, opposite San Francisco State College, San Francisco.",37.72442,"-122.47508","WGS84",1000
+2405523,6,4,17,"CAS","raphanistrum","Covel, Paul F.","10/1/37",1937,10,1,"Oct I '37","Alameda County","Oakland Hills.",37.8096,"-122.15752","WGS84",8000
+2403101,4,25,26,"CAS","sativus","Emmel, John F.","5/14/70",1970,5,14,"14-May-70","Marin County","Between Yellow Bluff and Cavallo Point, south southeast of Sausalito.",37.83456,"-122.47351","WGS84",300
+2406880,2,4,8,"CAS","sativus","Pitelka, Lous F.","4/30/73",1973,4,30,"30-Apr-73","San Mateo County","Bolsa Point, about 1 mile north of Pigeon Point and about 39 miles south of San Francisco.",37.19693,"-122.40246","WGS84",1000
+2409497,1,15,1,"CAS","sativus","PeÒalosa, Javier","4/1/61",1961,4,1,"April 1, 1961.","Marin County","Tiburon Peninsula. Tiburon. Near intersection of Blackfield Drive and Tiburon Boulevard. (ca. 1 mile from US 101).",37.89866,"-122.50135","WGS84",150
+2411397,6,10,7,"CAS","raphanistrum","Pollard, Henry M.","3/24/45",1945,3,24,"24-Mar-45","Ventura County","Ventura River Basin. Fairview Road.",34.4565,"-119.27986","WGS84",5000
+2405194,1,6,19,"CAS","raphanistrum","Howell, John Thomas","8/8/88",1988,8,8,"Aug. 8, 1988","Marin County","Terra Linda Vegetable Garden. San Rafael.",37.99843,"-122.55028","WGS84",100
+2414047,1,22,41,"CAS","sativus","Wetzel, Cherie L.","9/6/67",1967,9,6,"6-Sep-67","Alameda County","Niles Canyon and vicinity. Vallejo Mills Park.",37.57855,"-121.97074","WGS84",250
+2414894,1,4,6,"CAS","sativus","Wheeler, Clare R.; Smith, Gladys L.","2/6/79",1979,2,6,"6-Feb-79","Mendocino County","Highway 128, 0.5 mile east of intersection with Highway 1.",39.19224,"-123.73987","WGS84",500
+2415893,1,4,1,"CAS","sativus","Knight, Walter","3/1/65",1965,3,1,"3/1/65","Contra Costa County","Antioch Dunes.",38.01391,"-121.7911","WGS84",1000
+2412262,4,14,12,"CAS","sativus","Rubtzoff, Peter","4/6/57",1957,4,6,"April 6, 1957.","San Francisco County","San Francisco. San Miguel Hills. Bottom of canyon east of O'Shaughnessy Boulevard.",37.739,"-122.44043","WGS84",500
+2424544,2,22,47,"CAS","raphanistrum","Raven, Peter H.","4/19/64",1964,4,19,"19-Apr-64","Merced County","3 miles southwest of Livingston.",37.38388,"-120.72488","WGS84",7000
+2420423,1,5,35,"CAS","sativus","Howell, John Thomas","5/17/57",1957,5,17,"17-May-57","San Francisco County","San Francisco. Bayview Hills.",37.71441,"-122.39249","WGS84",500
+2425563,1,3,9,"CAS","sativus","Howell, John Thomas","4/18/66",1966,4,18,"18-Apr-66","Marin County","Tiburon. Just north of John Thomas Howell Botanical Garden.",37.88017,"-122.46111","WGS84",2000
+2433969,0,9,16,"CAS","raphanistrum","Frenkel, R. E.","8/28/64",1964,8,28,"28-Aug-64","Tuolumne County","Near manure dump at White Wolf Stables, Yosemite National Park.",37.8691,"-119.64865","WGS84",1000
+2437632,2,1,8,"CAS","sativus","Howell, John Thomas","10/28/56",1956,10,28,"Oct. 28, 1956.","San Francisco County","San Francisco. Mountain Lake, Presidio.",37.78821,"-122.47095","WGS84",150
+2431017,1,8,22,"CAS","sativus","Applegate, Elmer I.","8/15/27",1927,8,15,"August 15, 1927.","Del Norte County","Crescent City.",41.76295,"-124.20235","WGS84",3000
+2437901,4,3,13,"CAS","sativus","Dows, Barbara","7/12/07",1907,7,12,"12-Jul-07","Sonoma County","Sebastopol.",38.40299,"-122.8247","WGS84",2000
+2438182,1,4,15,"CAS","sativus","Cahill, Ned","4/30/74",1974,4,30,"30-Apr-74","San Mateo County","Near the intersection of Canada and Edgewood roads, about 3 miles westward from Redwood City",37.4636,"-122.29811","WGS84",500
+1367997,0,6,2,"DAV","sativus","Beecher Crampton","3/13/61",1961,3,13,"13-Mar-61","Yolo","Yolo County: Woodland.",38.678516,"-121.773297","WGS84",2460
+1368055,1,9,6,"DAV","sativus","Kenneth A. Wilson","3/12/61",1961,3,12,"12-Mar-61","Los Angeles","Los Angeles County: Point Dume, Cliffside Drive and Fernhill Drive.",34.00782,"-118.80065","WGS84 ",200
+3414522,0,3,12,"UCJEPS","raphanistrum","Perry Allen","4/21/61",1961,4,21,"Apr 21 1961","Stanislaus","vicinity of La Grange (just n of old dredge camp)",37.664138,"-120.461382","WGS84",806
+2262508,2,5,21,"LOB","raphanistrum","B.W. Massey","4/6/61",1961,4,6,"6 April 1961 [but likely 1971 based on other specimens by this collector]","Marin","Muir Meadows, 1/2 mile S of jct. of Mt. Tamalpais Rd. on Route 1",37.890243,"-122.632355","WGS84",504
+2440492,2,13,42,"CAS","sativus","Wheeler, Louis C.","3/25/32",1932,3,25,"25-Mar-32","Los Angeles County","Pomona near Fairgrounds.",34.08832,"-117.76815","WGS84",1500
+2447532,5,2,0,"CAS","sativus","PeÒalosa, Javier","2/23/63",1963,2,23,"February 23, 1963.","San Mateo County","San Bruno Mountain. Ravine south of Crocker Avenue.",37.69062,"-122.43971","WGS84",1500
+2442814,10,6,1,"CAS","sativus","Thomas, John H.","7/19/61",1961,7,19,"19-Jul-61","Tuolumne County","Yosemite National Park. Vicinity of Camp White Wolf.",37.86657799,"-119.6509729","WGS84 ",3999
+304601,1,16,5,"UCSB","sativus","Dennis E. Breedlove","7/23/61",1961,7,23,"7/23/61","Santa Barbara","Along the Alamo Pintado Creek from 7-8 miles north of Los Olivos; base of Figueroa Mountain, Birabent Canyon, San Rafael Range",34.748,"-120.053","NAD83",1000
+2448284,2,9,17,"CAS","sativus","Parish, S. B.","1893-04-05",1893,4,5,"5 Apr 1893.","San Bernardino County","Rialto.",34.10614,"-117.36956","WGS84",5000
+304535,0,26,25,"UCSB","raphanistrum","Wisehart, Karen","3/30/62",1962,3,30,"3/30/62","Santa Barbara","At Madrid and Embarcadero del Mar, Isla Vista District, Goleta",34.417415,"-119.861133","WGS84",3000
+2449627,1,7,11,"CAS","sativus","Wheeler, Louis C.","1/8/32",1932,1,8,"Jan. 8. 1932","Los Angeles County","2 miles southwest of Glendora.",34.11712,"-117.86652","WGS84",2500
+2960499,2,15,5,"IRVC","sativus","Phil Rundel","4/10/62",1962,4,10,"10-Apr-62","Santa Clara","open fields one half mile west of Stanford shopping center",37.43258,"-122.1646","WGS84",800
+2960568,0,6,30,"IRVC","sativus","P. Rundel","4/15/62",1962,4,15,"15-Apr-62","San Mateo","1/4 mi east of Dunes Beach",37.48773,"-122.45227","WGS84",1000
+2450089,2,0,33,"CAS","raphanistrum","Thomas, J. H.","6/10/50",1950,6,10,"10-Jun-50","Santa Cruz County","North end of Cliff Drive, Santa Cruz.",36.95788,"-122.02942","WGS84",3500
+2450948,2,12,8,"CAS","raphanistrum","Ferris, Roxana S.","4/11/19",1919,4,11,"April 11-16, 1919","Tuolumne County","Near Rawhide.",37.96139,"-120.44917","WGS84",2000
+2456431,0,7,22,"CAS","sativus","Raven, Peter H.; Thompson, Henry J.","6/4/59",1959,6,4,"June 4, 1959.","Los Angeles County","Santa Monica Mountains. Point Dume.",34.00000477,"-118.800905","WGS84 ",4001
+2457183,0,5,1,"CAS","sativus","Hemphill, Fred","3/9/73",1973,3,9,"9-Mar-73","San Mateo County","San Carlos. North of Malabar Road and Melendy Drive.",37.49378508,"-122.2790923","WGS84 ",3999
+2457381,2,15,8,"CAS","sativus","Newell, Gwendolan","7/8/14",1914,7,8,"July 8, 1914.","Monterey County","Pacific Grove.",36.62246,"-121.9227","WGS84",2000
+375702,1,2,21,"SDSU","sativus","Bigelow, Ronald H.","5/4/62",1962,5,4,"5/4/62","San Diego","1/4 mile North of College Avenue on Mallard Rd.",32.72954,"-117.05541","WGS84",403
+2462821,0,1,12,"CAS","sativus","Howell, John Thomas","5/18/63",1963,5,18,"18-May-63","Monterey County","2.5 miles south of Aromas.",36.85902,"-121.64139","WGS84",3000
+375701,0,3,27,"SDSU","sativus","Bigelow, Ronald H.","5/10/62",1962,5,10,"5/10/62","San Diego","10 feet from main road along section of dead end road De Mar Slough, Del Mar.",32.97235,"-117.25407","WGS84",162
+2460390,1,10,10,"CAS","sativus","Thomas, J. H.","6/24/54",1954,6,24,"Jun 24 1954","Santa Cruz County","Northern end of Hilton Airport between airstrip and highway.",37.15657076,"-122.1626958","WGS84 ",3999
+2464854,1,10,25,"CAS","sativus","Howell, John Thomas","6/29/64",1964,6,29,"29-Jun-64","San Luis Obispo County","Cambria.",35.56407,"-121.07961","WGS84",2000
+4567195,1,3,8,"SFSU","sativus","G. Batzli","6/27/62",1962,6,27,"27-Jun-62","San Francisco","19th Ave and Winston Dr., San Francisco",37.726958,"-122.474821","WGS84",301
+1367998,2,17,16,"DAV","sativus","Gerald Dickinson","5/15/62",1962,5,15,"15-May-62","Los Angeles","Los Angeles County: Pierce College, Woodland Hills.",34.18337,"-118.57946","WGS84",400
+376201,3,4,19,"SDSU","sativus","King, J.","7/2/62",1962,7,2,"7/2/62","San Diego","2600 Block of ?D? Avenue, National City.",32.66014,"-117.09626","WGS84",241
+375700,2,13,8,"SDSU","sativus","Franks, Samuel R.","5/26/62",1962,5,26,"5/26/62","San Diego","Alvarado Canyon.",32.7783,"-117.054","WGS84",805
+375690,0,5,23,"SDSU","sativus","Barber, C.C.","7/9/62",1962,7,9,"7/9/62","San Diego","About 6 miles north of U.S. Highway 80 on Mission Gorge Road. Near Mission Dam in Mission Gorge.",32.84199,"-117.04059","WGS84",402
+4567200,0,8,4,"SFSU","sativus","Gary Fry","3/12/63",1963,3,12,"Mar. 12, 1963","San Mateo","San Bruno Mts. on Guadalupe Rd.",37.687401,"-122.435661","WGS84",1807
+2500762,3,14,12,"CAS","sativus","Sanders, A. C.","3/25/05",2005,3,25,"25-Mar-05","San Diego County","South Coast: Batiquitos Lagoon Ecological Reserve, north side east of the I-5 Fwy Elev. given as 0-20ft.",33.09194444,"-117.2991667","WGS84",3999
+2465925,0,3,15,"CAS","raphanistrum","Twisselmann, Ernest C.","4/1/59",1959,4,1,"April 1, 1959.","Kern County","Eastern San Joaquin Valley. Greenfield Road, 1.5 mile east of Pumpkin Center.",35.26677,"-119.0027","WGS84",2500
+2465901,0,4,20,"CAS","sativus","Randall, Josephine D.","6/5/07",1907,6,5,"June 5th 1907","Santa Clara County","Santa Cruz Peninsula. Page Mill Road. Near Stanford University.",37.40652,"-122.15379","WGS84",5000
+2767670,2,3,25,"CAS","raphanistrum","Stebbins, G. Ledyard","6/28/77",1977,6,28,"28-Jun-77","El Dorado County","Along El Dorado Road, 1/2 mi S of US Hwy 50 [exact location unknown]",38.69849707,"-120.8585164","WGS84 ",3999
+1097620,1,19,31,"RSA","sativus","Geo. E. Julian","4/19/63",1963,4,19,"4/19/63","Los Angeles","Voorhis Campus, Cal Poly, San Dimas.",34.1105,"-117.80597","WGS84",4000
+2866856,0,4,2,"MACF","sativus","Barbara Gittins","4/18/63",1963,4,18,"Apr. 18, 1963","Orange","West of L and M Nursery, Baker St. Between Fairview and Britstol",33.67995,"-117.89681","WGS84",1000
+2767898,0,17,7,"CAS","raphanistrum","Webster, Grady L.; Pollak, Oren","3/22/92",1992,3,22,"22 Mar. 1992","Sacramento County","Cosumnes River Preserve Plant Inventory, Area 6, just E of Southern Pacific tracks; Willow Slough, #9",38.26666667,"-121.4333333","WGS84",3999
+1367986,2,17,3,"DAV","raphanistrum","Gordon J. Pilone","4/15/63",1963,4,15,"15-Apr-63","Los Angeles","Los Angeles County: Diamond Bar Ranch, Brea Canyon. Santa Ana Mountain Range.",34.022725,"-117.829608","WGS84",4000
+3904072,6,19,17,"LA","sativus","Harold Pirie","4/27/63",1963,4,27,"27-Apr-63","Los Angeles","Pierce College; Near Topham entrance of Pierce College, Woodland Hills",34.18337,"-118.57946","WGS84",400
+2771952,4,3,8,"CAS","sativus","Griffith, Gerald","5/18/37",1937,5,18,"18-May-37","Kern County","S.P. Yards, San Joaquin Valley watershed",35.37721,"-118.99144","WGS84",300
+202469,2,27,13,"OBI","sativus","Franscioni & Muscio","4/28/63",1963,4,28,"28-Apr-63","Monterey","5 mi SW of Gonzales on S. Franscioni ranch",36.440688,"-121.394921","WGS84",800
+375691,0,1,21,"SDSU","sativus","Kasch, F.M.","5/9/63",1963,5,9,"5/9/63","San Diego","Carrol Rd., 5 miles from Miramar Rd.",32.88892,"-117.20278","WGS84",1610
+3904071,1,10,56,"LA","raphanistrum","Harold Pirie","5/12/63",1963,5,12,"12-May-63","Los Angeles","Open grass field in disturbed soil just N of Desoto and Ventura in Woodland Hills",34.16961,"-118.58789","WGS84",2000
+2772133,6,10,3,"CAS","sativus","Griffith, Gerald","3/22/37",1937,3,22,"22-Mar-37","San Luis Obispo County","National Guard Training Camp, Coast mountain range, Pacific Coast watershed",35.32574,"-120.73412","WGS84",750
+2771954,3,1,2,"CAS","sativus","Griffith, Gerald","6/14/37",1937,6,14,"14-Jun-37","Kern County","S.P. Yards, San Joaquin Valley watershed",35.37721,"-118.99144","WGS84",300
+375692,0,1,4,"SDSU","sativus","Waggoner, M.","7/15/63",1963,7,15,"7/15/63","San Diego","North of 9441 Alto Drive, Mount Helix area.",32.76991,"-116.99528","WGS84",161
+5504845,0,2,14,"CAS","raphanistrum","Roos, John C.","4/22/52",1952,4,22,"22-Apr-52","San Bernardino County","Loma Linda; San Bernardino Valley.",34.05533,"-117.26123","WGS84",5500
+202487,2,16,22,"OBI","sativus","R. D. Brister","2/29/64",1964,2,29,"29-Feb-64","San Luis Obispo","3 mi SE of San Luis Obispo on Johnson Ave",35.27418,"-120.64338","WGS84",1500
+5504847,1,7,19,"CAS","raphanistrum","Fenstermaker, G.","4/15/63",1963,4,15,"15-Apr-63","Alameda County","Hayward campus site",37.6553,"−122.0567","WGS84",2000
+5504849,1,1,3,"CAS","raphanistrum","Marshall , Lurlie E","7/23/66",1966,7,23,"23-Jul-66","Alameda County","27797 Mandarin Avenue, Hayward",37.62734,"-122.08066","WGS84",50
+2960498,0,18,28,"IRVC","sativus","Joseph Scott","3/7/64",1964,3,7,"7-Mar-64","Santa Barbara","Area between southern beach and eastern finger of lagoon on campus of University of California at Santa Barbara, Goleta.",34.4069,"-119.84541","WGS84",300
+5043016,2,11,17,"CAS","sativus","Riensche, David L.","5/10/84",1984,5,10,"5/10/84","Alameda County","Garin woods, Hayward.",37.63710551,"-122.0308122","WGS84 ",2239
+1032722,0,2,1,"RSA","sativus","G. Wallace","4/18/64",1964,4,18,"4/18/64","San Bernardino","Victorville area.",34.53595,"-117.29436","WGS84",7000
+5504850,2,13,10,"CAS","sativus","Hammond , L.","4/7/74",1974,4,7,"4/7/74","Humboldt County","McKinleyville, near Redwood Forest",40.93925,"-124.09243","WGS84",5000
+3792161,0,7,24,"FSC","raphanistrum","James Hodge","5/3/64",1964,5,3,"3-May-64","Fresno","Copper Avenue 4 miles north of Fresno State College, at edge of cultivated field. One mile east of Willow Avenue.",36.82267,"-119.53091","WGS84",2000
+3792169,0,3,17,"FSC","raphanistrum","Jake Krahn","5/7/64",1964,5,7,"7-May-64","Fresno","Growing on a vacant lot on the West side of Chestnut Avenue. Between Butler and Ventura Avenues.",36.7323,"-119.74061","WGS84",500
+5504852,3,22,9,"CAS","sativus","Oliver, John","4/12/70",1970,4,12,"4/12/70","Marin County","Stinson Beach",37.9004,"-122.65133","WGS84",3000
+5504853,0,5,1,"CAS","sativus","Rodrigues, Bob","4/19/70",1970,4,19,"19-Apr-70","Marin County","Olema Marsh",38.05675,"-122.81299","WGS84",1000
+5504851,3,9,9,"CAS","sativus","Bullock, Barbara","4/18/62",1962,4,18,"18-Apr-62","Los Angeles County","San Pedro",33.72113,"-118.29113","WGS84",4000
+5504854,3,10,4,"CAS","sativus","Booth, Ernest","3/16/65",1965,3,16,"16-Mar-65","San Diego County","Escondido, Mt. Isreal Road",33.06171,"-117.13397","WGS84",1000
+5504855,2,11,5,"CAS","sativus","Hobson, Jean","4/8/62",1962,4,8,"4/8/62","San Joaquin County","Holt, California",37.93485,"-121.4269","WGS84",2000
+5504856,3,6,15,"CAS","sativus","King, David L.","4/27/62",1962,4,27,"4/27/62","San Joaquin County","Stockton",37.95998,"-121.28977","WGS84",8000
+5504859,3,5,8,"CAS","sativus","Kennedy, Edith C.","5/11/69",1969,5,11,"11-May-69","Alameda County","Walpert Ridge",37.63615,"-121.97336","WGS84",7000
+5504857,2,11,18,"CAS","sativus","Avale, Tom","5/5/62",1962,5,5,"5/5/62","San Joaquin County","Clements",38.19025,"-121.0873","WGS84",1500
+5504861,0,14,6,"CAS","sativus","Kopperdahl, F.","5/18/63",1963,5,18,"5/18/63","Alameda County","Hayward Avenue, Hayward",37.65171,"-122.04049","WGS84",2500
+304568,0,2,19,"UCSB","sativus","Myrick, Donald","7/27/64",1964,7,27,"27-Jul","Mendocino","Rockport on Highway #1",39.739,"-123.815","NAD83",1000
+2866858,3,5,18,"MACF","sativus","Marsha A. Miller","10/16/64",1964,10,16,"Oct. 16, 1964","Los Angeles","South of Leffingwell Road near the intersection of Stamy Rd. on the R. E. Miller Property. Near edge of bank in front of house.",33.9274,"-118.0062","WGS84",150
+3792174,2,5,19,"FSC","raphanistrum","Susan Walker","10/17/64",1964,10,17,"17-Oct-64","Sonoma","Off of a dirt road past a young vineyard on the righ-hand side of Highway 116, 0.5 mile east of Rio Nido.",38.50885,"-122.94911","WGS84",4000
+2866696,1,4,12,"MACF","sativus","Ted Mills","11/1/64",1964,11,1,"11/1/64","Orange","3 miles north of the town El Toro by El Toro Blvd.",33.66312,"-117.63587","WGS84",5000
+2866560,0,5,13,"MACF","sativus","Patricia Sawyer","12/13/64",1964,12,13,"12/13/64","Orange","Paralleling the Santa Ana Freeway between Brookhurst Rd and Euclid ave.",33.84006,"-117.95069","WGS84",1000
+2866720,0,4,5,"MACF","sativus","Lanny Southard","1964-12-00",1964,12,0,"Dec., 1964","Orange","Near Cal. State at Fullerton",33.883275,"-117.885513","WGS84",1233
+5504862,0,4,12,"CAS","sativus","","5/17/64",1964,5,17,"17-May-64","Alameda County","Grizzly Peak Blvd., Berkeley",37.85376,"-122.2329","WGS84",7000
+631791,2,2,0,"IRVC","sativus","M. Savage (HS)","2/20/65",1965,2,20,"20-Feb-65","Orange","Corona del Mar, Irvine Terrace",33.605916,"-117.880434","WGS84",427
+5504863,1,17,3,"CAS","sativus","Harvey, B.","5/6/62",1962,5,6,"6-May-62","Alameda County","Hayward",37.66883,"-122.08045","WGS84",3000
+5504865,4,6,2,"CAS","sativus","Blankinship, Tom","5/20/70",1970,5,20,"5/20/70","Alameda County","Washington Blvd., Fremont.",37.53143,"-121.93933","WGS84",2000
+202499,0,6,2,"OBI","sativus","V. L. Holland","3/19/65",1965,3,19,"19-Mar-65","Santa Barbara","8 mi N of Lompoc on hwy 1",34.78277,"-120.46492","WGS84",4000
+1443133,5,26,3,"UCR","sativus","Ronald H. Sauer","3/1/65",1965,3,1,"3/1/65","Riverside","west end of Big Springs Road",33.9750161,"-117.3175365","WGS84 ",4001
+2960501,1,1,6,"IRVC","sativus","Janet Morgan (HS)","3/20/65",1965,3,20,"20-Mar-65","Orange","Costa Mesa, 17th St. and Irvine",33.628483,"-117.908642","WGS84",3999
+631782,0,2,5,"IRVC","sativus","B. Mawdsley (HS)","3/21/65",1965,3,21,"21-Mar-65","Orange","Pacific Coast highway between Laguna and San Clemente",33.4888,"-117.69884","WGS84",10000
+5504866,3,1,0,"CAS","sativus","Erickson, Randy","5/17/71",1971,5,17,"5/17/71","Alameda County","Dollar Ct and Harder Road, Hawyard",37.65082,"-122.06834","WGS84",100
+631769,2,7,13,"IRVC","sativus","L. Aldis (HS)","3/27/65",1965,3,27,"27-Mar-65","Orange","Huntington Beach; Brookhurst and Victoria",33.650482,"-117.953823","WGS84",301
+5504867,0,10,13,"CAS","sativus","Wilcox, Mary Lou","5/26/64",1964,5,26,"26-May-64","Alameda County","2 miles south of Pleasanton, California.",37.62601,"-121.86659","WGS84",3000
+631773,0,2,0,"IRVC","sativus","M. Cadnum (HS)","4/1/65",1965,4,1,"1-Apr-65","Orange","COSTA MESA, Knowell Pl.",33.649652,"-117.923363","WGS84",136
+631787,2,8,4,"IRVC","sativus","Dan Orr (HS)","3/27/65",1965,3,27,"27-Mar-65","Orange","Trabuco road, 3 miles east of el toro marine base",33.64307915,"-117.6857627","WGS84 ",3500
+2061832,1,4,13,"CHSC","raphanistrum","P. Delaplane","4/3/65",1965,4,3,"4/3/65","Shasta","Ca 4 mi SW of Bella Vista on Bella Vista cut-off.",40.624722,"-122.303889","NAD83",402
+631784,1,4,4,"IRVC","sativus","Bruce Reynolds (HS)","4/3/65",1965,4,3,"3-Apr-65","Orange","Corona Del Mar, Lincoln Jr. High-school",33.609924,"-117.86169","WGS84",306
+1808949,0,8,3,"HSC","sativus","S.J. Hawks","4/3/65",1965,4,3,"3-Apr-65","Humboldt","W of Eureka City Airport",40.80478,"-124.1298","WGS84",750
+631766,0,5,6,"IRVC","sativus","S. Gilbert (HS)","4/3/65",1965,4,3,"3-Apr-65","Orange","Costa Mesa: 2472 Elden Ave.",33.657804,"-117.89849","WGS84",3999
+1808960,0,5,10,"HSC","sativus","W.F. Nickel","4/3/65",1965,4,3,"3-Apr-65","Humboldt","1 mi. N of Orick on Hwy. 101",41.299604,"-124.051035","WGS84",795
+2960494,0,3,5,"IRVC","raphanistrum","C. Hooven (HS)","4/10/65",1965,4,10,"10-Apr-65","Orange","Spruce and Palisades",33.658094,"-117.870085","WGS84",300
+631783,1,9,13,"IRVC","sativus","Pat Rolfe (HS)","4/7/65",1965,4,7,"7-Apr-65","Orange","Newport Beach, Back Bay",33.637985,"-117.890384","WGS84",3000
+2061760,1,3,6,"CHSC","raphanistrum","P. Delaplane","3/27/65",1965,3,27,"3/27/65","Butte","In field at corner of Cactus and Manzanita. W. side of Cactus. Chico.",39.760833,"-121.810833","NAD83",402
+631763,0,8,7,"IRVC","sativus","Polly Brecht (HS)","4/3/65",1965,4,3,"3-Apr-65","Orange","NEWPORT BEACH, Redlands Dr. and Cherry Tree Lane",33.650341,"-117.895398","WGS84",100
+631790,3,5,18,"IRVC","sativus","L. Stilgenbauer (HS)","4/10/65",1965,4,10,"10-Apr-65","Orange","Corona Del Mar, 339 Milford Dr. (In canyon)",33.59064,"-117.86229","WGS84",93
+631778,1,23,18,"IRVC","sativus","Robin Hobson (HS)","4/10/65",1965,4,10,"10-Apr-65","Orange","Santa Ana Heights, 2431 Mesa Drive",33.652324,"-117.874754","WGS84",3999
+1808927,4,11,21,"HSC","sativus","D.A. Shally","4/10/65",1965,4,10,"10-Apr-65","San Joaquin","0.25 mi. W of Oak Grove Resort, Hwy. 26, Linden Rd.",38.02034,"-121.08489","WGS84",3000
+2960497,0,7,0,"IRVC","sativus","John Schram","4/11/65",1965,4,11,"11-Apr-65","Santa Barbara","Santa Ynez.",34.61437943,"-120.0808444","WGS84 ",3000
+5504868,3,25,14,"CAS","sativus","Hoppes, Bill","5/12/73",1973,5,12,"12-May-73","Alameda County","Coyote Hills Regional Park",37.55184,"-122.09995","WGS84",3000
+610287,0,6,37,"SFV","raphanistrum","M. L. Vincent","4/16/65",1965,4,16,"16-Apr-65","Butte","Sierra Nevada; Pentz Road, 0.5 miles south of Pentz store.",39.64986365,"-121.5910498","WGS84 ",1000
+5504869,2,3,1,"CAS","sativus","Stone, Robert E.","4/16/82",1982,4,16,"17-Apr-82","Alameda County","1 mile south of Alvarado-Niles Blvd, Fremont",37.58082,"-122.02926","WGS84",4000
+631772,1,5,1,"IRVC","sativus","E. P. Cowper (HS)","4/14/65",1965,4,14,"14-Apr-65","Orange","Newport Beach, Corona del Mar High School",33.634224,"-117.877951","WGS84",307
+631760,0,2,6,"IRVC","raphanistrum","L. McCabe (HS)","4/17/65",1965,4,17,"17-Apr-65","Orange","Laguna Canyon",33.590824,"-117.761681","WGS84",6000
+631761,0,1,12,"IRVC","sativus","P. McClellan (HS)","4/23/65",1965,4,23,"23-Apr-65","Orange","Newport Beach, Back bay",33.63597,"-117.8908","WGS84",2500
+631786,0,0,1,"IRVC","sativus","Don Pfirrmann (HS)","4/28/65",1965,4,28,"28-Apr-65","Orange","Costa Mesa, Delmar and Fairview Dr.",33.663828,"-117.907472","WGS84",200
+3792175,0,2,15,"FSC","raphanistrum","Daniel Brown","5/22/65",1965,5,22,"22-May-65","Fresno","This plant was found along ditch on Barstow Street just west of Fresno State College.",36.81548,"-119.7464","WGS84",3000
+631777,1,1,1,"IRVC","sativus","C. Hooven (HS)","4/17/65",1965,4,17,"17-Apr-65","Orange","Santa Ana Heights, Spruce and Palisades",33.658274,"-117.86989","WGS84",100
+2960503,0,2,9,"IRVC","sativus","Bob Savage (HS)","5/15/65",1965,5,15,"15-May-65","Orange","Newport Beach",33.62863,"-117.874702","WGS84",7500
+375694,0,6,16,"SDSU","sativus","Hanshaw, Pat R.","5/7/65",1965,5,7,"5/7/65","San Diego","Adjacent to Montezuma Rd. and E. of Fallview Dr. at corner of lower parking lot of State College Campus.",32.77113,"-117.06547","WGS84",161
+3792177,0,4,14,"FSC","raphanistrum","Alma Toroian","7/3/65",1965,7,3,"3-Jul-65","Fresno","Corner of Copper and Peach in Fresno.",36.89586,"-119.72026","WGS84",300
+1808970,0,9,20,"HSC","sativus","David Porter","5/22/65",1965,5,22,"22-May-65","Santa Barbara","Junction of Hwy. 154 and Foothill Rd.",34.45136,"-119.76234","WGS84",400
+2866502,1,1,0,"MACF","sativus","L. Fountain","2/18/66",1966,2,18,"2/18/66","Orange","Field on the northwest corner of State College Blvd., and Rolling Hills Dr., Fullerton.",33.90395,"-117.89038","WGS84",100
+5504870,5,2,5,"CAS","sativus","Langewis, Johan","4/8/75",1975,4,8,"8-Apr-75","Alameda County","1/2 mile south of California State University, Hayward",37.64615,"-122.05346","WGS84",800
+1294395,2,10,19,"CSUSB","sativus","Steve Stadler","3/2/66",1966,3,2,"2-Mar-66","Riverside","Riverside city. Found in open field west of the corner of Blain Street and Canyon Crest. 50 yards from corner in back of a house.",33.98288889,"-117.3311944","WGS84",250
+2030475,2,6,1,"CHSC","raphanistrum","Lowell Ahart","3/15/66",1966,3,15,"3/15/66","Butte","Peter Ahart Ranch, Honcut.",39.351111,"-121.520556","NAD83",402
+610293,1,6,6,"SFV","sativus","W. A. Kelley","3/2/66",1966,3,2,"2-Mar-66","Los Angeles","Los Angles Basin; Los Angeles, West Los Angeles. Lot north of Sunset Blvd. on Sepulveda.",34.07000538,"-118.4708973","WGS84 ",1000
+3428915,1,15,5,"UCJEPS","sativus","John T. Doyen","3/27/66",1966,3,27,"Mar 27 1966","Marin","1 mi s of Alpine Dam",37.938578,"-122.647592","WGS84",1703
+5504871,4,12,7,"CAS","sativus","Brack, Regina Chong","4/27/66",1966,4,27,"27-Apr-66","Alameda County","Castro Valley, 5 miles from Cal State College",37.69466,"-122.08583","WGS84",2000
+202456,1,8,2,"OBI","sativus","Bill Arbaugh","3/30/66",1966,3,30,"30-Mar-66","Los Angeles","Pierce College Native Arboritum",34.18337,"-118.57946","WGS84",400
+1808938,1,13,18,"HSC","sativus","F. Demostene","4/1/66",1966,4,1,"1-Apr-66","Sonoma","2 mi. E of Healdsburg",38.623969,"-122.827155","WGS84",684
+5504872,3,2,0,"CAS","sativus","Allen, Robert C.","4/1/66",1966,4,1,"4/1/66","Alameda County","East Avenue Park, East Avenue, Hayward",37.66681,"-122.04432","WGS84",300
+5504874,1,4,18,"CAS","sativus","Duran, Eddon","6/30/66",1966,6,30,"30-Jun-66","Alameda County","A street, Hayward. Evelation near sea level.",37.67098,"-122.094","WGS84",2500
+5569673,0,25,2,"CAS","sativus","Ferguson, Virginia","4/23/63",1963,4,23,"23-Apr-63","Alameda County","Alameda State College Campus, Hayward",37.65687,"-122.05417","WGS84",650
+3801169,2,9,10,"CSLA","sativus","Kell Jensen","5/15/66",1966,5,15,"15-May-66","Orange","1/3 mi N of San Juan Capistrano.",33.5058,"-117.6643","WGS84",200
+5569675,2,4,5,"CAS","sativus","Nuddleman, M. Edward","4/20/62",1962,4,20,"4/20/62","Alameda County","Oakland",37.81211,"-122.24704","WGS84",8000
+375695,0,2,15,"SDSU","raphanistrum","Morgan, Charlie E.","6/3/66",1966,6,3,"6/3/66","San Diego","Collected on south side of Federal Blvd., below KOGO towers.",32.72035,"-117.0997","WGS84",241
+5504875,6,7,8,"CAS","sativus","Chan, Peggy","5/18/64",1964,5,18,"18-May-64","Alameda County","Tennyson Road, Hayward",37.6315,"-122.07886","WGS84",2500
+5569678,0,2,0,"CAS","sativus","Justino, Nikki","8/6/66",1966,8,6,"6-Aug-66","Alameda County","Lake Chabot, Castro Valley",37.72569,"-122.11042","WGS84",2000
+5569681,2,11,3,"CAS","sativus","Butler, Rene","4/18/82",1982,4,18,"18-Apr-82","Contra Costa County","San Pablo Dam Road, San Pablo",37.9336,"-122.26983","WGS84",6000
+3792163,1,9,32,"FSC","raphanistrum","Dennis Hill","7/4/66",1966,7,4,"4-Jul-66","Kings","Collected at the corner of Twelfth and Fargo Avenues in Hanford. Growing on the northwest side of the intersection on the edge of the road and in the field itself.",36.35717,"-119.67288","WGS84",100
+5569677,2,13,3,"CAS","sativus","Mello, Duane D","4/7/64",1964,4,7,"7-Apr-64","Alameda County","Castro Valley",37.69466,"-122.08583","WGS84",2000
+5569849,1,8,7,"CAS","sativus","Moody, Sharie","7/1/66",1966,7,1,"7/1/66","Contra Costa County","Morrow Drive on Hillcrest Road, San Pablo",37.95892,"-122.32615","WGS84",300
+5569850,2,5,8,"CAS","sativus","Johnson Jr., Ralph R.","5/15/62",1962,5,15,"5/15/62","Contra Costa County","Byron",37.86882,"-121.63941","WGS84",3000
+5569853,2,2,2,"CAS","sativus","Rusley, Eleanor","8/18/72",1972,8,18,"8/18/72","San Mateo County","Ana Nuevo Pt",37.12545,"-122.32609","WGS84",2000
+5569682,2,16,8,"CAS","sativus","Damm, Gwendolyn","4/3/64",1964,4,3,"3-Apr-64","Contra Costa County","Crow Canyon Road",37.77712,"-121.97539","WGS84",5000
+304592,1,7,3,"UCSB","sativus","Burns, Pat","1/28/67",1967,1,28,"1/28/67","Santa Barbara","60 yards west of corner of Abrego and Camino Corto in Goleta",34.4144,"-119.868","NAD83",300
+3801178,3,7,4,"CSLA","sativus","Tennie B. Rogers","2/25/67",1967,2,25,"25-Feb-67","Los Angeles","about 1 mile from Long Beach, east of the city.",33.7693,"-118.1772","WGS84",200
+2866648,2,5,0,"MACF","raphanistrum","W. Bodlander","3/26/67",1967,3,26,"26-Mar-67","Los Angeles","Border of Pasadena and Eagle Rock, residential area closer to Eagle Rock",34.139982,"-118.18723","WGS84",1385
+2051496,3,15,23,"CHSC","raphanistrum","Sadie Gaultieri","3/12/67",1967,3,12,"3/12/67","Shasta","Collected: E. Redding, Tehama St. across Sac. River S. to Hilltop Drive, E. on Mistletoe Lane in a field at corner Mis. Lane & Dusty Lane, N.",40.578056,"-122.343056","NAD83",8047
+3801196,2,5,4,"CSLA","sativus","F. Mills","4/7/67",1967,4,7,"7-Apr-67","Los Angeles","Playa Del Rey.",33.9656,"-118.4407","WGS84",800
+3792172,4,16,23,"FSC","raphanistrum","Jonh Shive","4/2/67",1967,4,2,"2-Apr-67","Fresno","Near the corner of Shaw and Fowler Avenues.",36.80858,"-119.682","WGS84",500
+4564849,2,5,10,"SFSU","sativus","J. Reddehase","4/17/67",1967,4,17,"17-Apr-67","Marin","Audubon Canyon Ranch",37.93017001,"-122.6824802","WGS84 ",1000
+3792184,2,0,13,"FSC","sativus","Carole Sowers","4/22/67",1967,4,22,"22-Apr-67","Los Angeles","Bradburry Road and Lemon Avenue, Monrovia.",34.14688,"-117.98198","WGS84",100
+5569854,1,10,8,"CAS","sativus","Lewis, Lynn","5/10/70",1970,5,10,"10 May, 1970","San Mateo County","Half Moon Bay",37.46362,"-122.42975","WGS84",4000
+468985,1,6,4,"SD","sativus","Frank F. Gander","3/30/40",1940,3,30,"3/30/40","San Diego","Hormiguero Ranch,",33.39493,"-117.0338","WGS84",1609
+1563687,0,19,38,"UCR","raphanistrum","Louis C. Wheeler","5/13/67",1967,5,13,"5/13/67","Los Angeles","mesa between Little Dalton and Englewild Canyons",34.15472775,"-117.843942","WGS84 ",3999
+304606,0,12,2,"UCSB","sativus","Art Whistler","4/25/67",1967,4,25,"4/25/67","Santa Barbara","Purisima Hills locality is 0.7 miles (via a dirt road) from State Hwy. 1, 0.6 miles south of the Hwy's intersection with the Los Alamos-Casmalia Road",34.753,"-120.416","NAD83",1000
+5697344,0,10,8,"CAS","sativus","Guest, Catherine","4/11/71",1971,4,11,"11-Apr-71","Santa Clara County","Atrascedero Road, Los Altos Hills",37.39375,"-122.15587","WGS84",3500
+3791446,0,4,15,"RSA","sativus","A. S. Boughey","8/15/67",1967,8,15,"8/15/67","Orange","Laguna Canyon, 4.5 miles NE of Laguna Beach.",33.57487,"-117.76454","WGS84",5000
+202489,1,12,24,"OBI","sativus","R. R. LaBelle","10/10/67",1967,10,10,"10-Oct-67","San Luis Obispo","Laguna Lake, San Luis Obispo",35.26831,"-120.688872","WGS84",1100
+304600,0,4,17,"UCSB","sativus","Strong, Carol","11/3/67",1967,11,3,"11/3/67","Santa Barbara","North of Campus Sports Stadium",34.4234,"-119.85441","WGS84",500
+3792164,2,10,13,"FSC","raphanistrum","Jerry L. Casey","2/29/68",1968,2,29,"29-Feb-68","Fresno","Along Auberry Road, 1 mile E. of junction with Millerton Road.",36.975,"-119.61285","WGS84",2000
+3792162,1,12,14,"FSC","raphanistrum","John Shive","2/21/68",1968,2,21,"21-Feb-68","Los Angeles","Corner of Big Rock Drive and Pinnacle Way, just south of Malibu, 1 /2 mile from ocean.",34.04127,"-118.61934","WGS84",150
+5872887,4,11,21,"CHSC","raphanistrum","R. Barrett","4/2/68",1968,4,2,"2-Apr-68","Tehama","The Nature Conservancy Dye Creek Preserve. Cone Grove Road.",40.10608,"-122.05309","WGS84",1000
+1209922,3,24,8,"RSA","sativus","W. M. Arbaugh","3/20/68",1968,3,20,"3/20/68","San Luis Obispo","Shell Beach.",35.15639,"-120.67284","WGS84",1000
+202488,2,12,9,"OBI","sativus","R. L. Hoover","4/11/68",1968,4,11,"11-Apr-68","Monterey","Marina Beach",36.689066,"-121.810485","WGS84",526
+5872878,3,9,12,"CHSC","raphanistrum","R. Barrett","6/18/68",1968,6,18,"18-Jun-68","Tehama","The Nature Conservancy Dye Creek Preserve. Cone Grove Road.",40.10608,"-122.05309","WGS84",1000
+4459069,1,8,0,"PUA","sativus","Millie Brown","6/19/68",1968,6,19,"6/19/68","Mendocino","Local landmark: Albion. Navarro Quad.",39.21818389,"-123.7377666","WGS84 ",3999
+1485142,2,5,26,"UCR","raphanistrum","Louis C. Wheeler","4/13/68",1968,4,13,"4/13/68","Los Angeles","ridge south of mouth of Big Dalton Canyon",34.15278789,"-117.8311616","WGS84 ",3999
+1368000,1,9,0,"DAV","sativus","J. Doty","1/20/69",1969,1,20,"20-Jan-69","Santa Barbara","Santa Barbara County: vacant lot on Segovia Road, opposite the Alpha Chi Omega house in Goleta.",34.414251,"-119.855136","WGS84",386
+2866834,0,6,18,"MACF","sativus","William V. Apton","3/14/69",1969,3,14,"3/14/69","Orange","10680 Orange Park Drive",33.80726,"-117.781566","WGS84",69
+4472711,0,7,2,"PUA","sativus","Neal Wearner","4/29/69",1969,4,29,"4/29/69","Napa","Local landmark: Angwin. St. Helena Quad.",38.56820726,"-122.4410561","WGS84 ",3999
+375689,0,3,10,"SDSU","raphanistrum","Oshel, Thomas W.","4/26/69",1969,4,26,"4/26/69","San Diego","Near 67th and Amherst.",32.76756,"-117.04849","WGS84",161
+3801199,1,12,14,"CSLA","sativus","Steven P. Lynch","5/24/69",1969,5,24,"24-May-69","San Luis Obispo","weed along roadside. Perfumo Canyon, 3 mi. s. west of San Luis Obispo",35.2626,"-120.7125","WGS84",800
+202468,0,20,17,"OBI","sativus","Felice C. Movich","4/30/69",1969,4,30,"30-Apr-69","San Luis Obispo","Grand Ave and Abbott St, San Luis Obispo",35.29142,"-120.65317","WGS84",100
+4458927,1,14,14,"PUA","sativus","E.E. Ground","2/6/70",1970,2,6,"2/6/70","Napa","Local landmark: Napa River. Napa Quad.",38.37487901,"-122.3043828","WGS84 ",3999
+1176,2,37,16,"LA","sativus","Jonathan Sauer","5/30/69",1969,5,30,"30-May-69","Los Angeles","Santa Monica Mountains; Tuna Canyon; lower portion of canyon",34.03974,"−118.589581","WGS84",400
+202498,1,9,0,"OBI","sativus","T. W. Niilus","2/14/70",1970,2,14,"14-Feb-70","Orange","1 mi E of Yorba Linda on Imperial hwy on road cut",33.874836,"-117.80505","WGS84",896
+2866594,1,1,3,"MACF","sativus","G. Fall","2/22/70",1970,2,22,"2/22/70","Orange","50 yards N. of Birch Rd. on Valencia Blvd. 0.7 mi from Imerial Highway, collected from within 5 yards on both sides of Valencia Blvd.",33.9188,"-117.84784","WGS84",50
+4564845,0,5,11,"SFSU","sativus","B. Shervanick","3/16/70",1970,3,16,"3/16/70","Marin","Tomales Bay State Park. Indian Beach",38.137001,"-122.89677","WGS84",500
+5840581,2,1,0,"MBNHM","sativus","Donna Olmstead","4/2/70",1970,4,2,"4/2/70","San Luis Obispo","Waste field, Santa Maria",34.953034,"-120.435719","WGS84",7563
+254946,2,24,39,"LOB","sativus","J. B. Hall","4/1/70",1970,4,1,"1-Apr-70","Los Angeles","NE of Long Beach Marine Stadium, weedy lot.",33.778948,"-118.159023","WGS84",9527
+4465868,4,2,0,"PUA","sativus","J.G. Nanney","4/20/70",1970,4,20,"4/20/70","Napa","Local landmark: Deer Park. St. Helena Quad.",38.5498743,"-122.4727237","WGS84 ",3999
+2866491,2,6,17,"MACF","sativus","John L. Stevens","5/12/70",1970,5,12,"5/12/70","Orange","Vacant field adjacent to the San Diego Freeway, Just East of the Westminster Ave turn off.",33.75907,"-118.01989","WGS84",1000
+1294392,0,3,16,"CSUSB","raphanistrum","Penny Stead","4/14/70",1970,4,14,"14-Apr-70","Riverside","Found in vacant behind A. & I. dorm at University of California, Riverside.",33.973287,"-117.328111","WGS84",1000
+4457537,4,9,18,"PUA","sativus","H. Paul Buchheim","5/17/70",1970,5,17,"5/17/70","Mendocino","Local landmark: Albion. Albion Quad.",39.22485041,"-123.7761007","WGS84 ",3999
+2262523,2,18,31,"LOB","sativus","M.H. Cienfuegos","4/2/70",1970,4,2,"2-Apr-70","Orange","Huntington Beach, Magnolia Ave and Newland St.",33.703825,"-117.999227","WGS84",13070
+4485099,2,4,16,"PUA","sativus","J.L. Kraemer","9/7/70",1970,9,7,"9/7/70","El Dorado","Local landmark: Camino. Camino Quad.",38.69322069,"-120.6693443","WGS84 ",3999
+2262524,0,7,11,"LOB","sativus","I. Schutz","7/7/70",1970,7,7,"7-Jul-70","Los Angeles","R. & R. track and Los Angeles River at 37th St., Long Beach",33.798101,"-118.126467","WGS84",7736
+3801184,0,0,26,"CSLA","sativus","James Henrickson","7/24/70",1970,7,24,"24-Jul-70","Orange","1 1/2 miles NW of Huntington Beach along NW facing base of Huntington Beach Mesa bordering Bolsa Chica Salt Marsh",33.6834,"-118.0284","WGS84",100
+1767614,3,11,30,"HSC","sativus","Jana Kattenhorn","10/17/70",1970,10,17,"17-Oct-70","Del Norte","Crescent City, outskirts of town, S of Hwy. 199-Hwy. 101 junction, on Hwy. 101",41.75109796,"-124.0518731","WGS84 ",969
+1776466,0,10,39,"HSC","raphanistrum","Thomas W. Nelson","12/5/70",1970,12,5,"5-Dec-70","Humboldt","Eureka, 3300 block of Williams St.",40.779849,"-124.166868","WGS84",100
+3801183,4,16,7,"CSLA","sativus","J. Hall","4/15/71",1971,4,15,"15-Apr-71","Los Angeles","North of Science Bldg on campus of Cal. State College L.A.",34.0666,"-118.1682","WGS84",100
+304579,1,3,3,"UCSB","sativus","Carol Boyce","2/13/71",1971,2,13,"2/13/71","Santa Barbara","Coal Oil Point Reserve, West Campus of UCSB",34.4095,"-119.8786","NAD83",1000
+4460311,0,4,36,"PUA","sativus","L.D. Londagin","4/25/71",1971,4,25,"4/25/71","Napa","Local landmark: Lake Hennessey. St. Helena Quad.",38.50320898,"-122.3810536","WGS84 ",3999
+1777507,3,9,2,"HSC","sativus","Thomas W. Nelson","4/12/71",1971,4,12,"12-Apr-71","Humboldt","Hookton Rd. at the junction of Copenhagen Rd.",40.686761,"-124.254039","WGS84",100
+304577,3,19,19,"UCSB","sativus","Ann M. Howald","3/28/71",1971,3,28,"3/28/71","Santa Barbara","Refugio Canyon, 18.5 miles north of Santa Barbara",34.5022,"-120.0659","NAD83",2900
+2866494,8,7,3,"MACF","sativus","Larry J. Colin","4/30/71",1971,4,30,"4/30/71","Los Angeles","Off the Pomona Freeway westbound between Brea Canyon Rd and Water St. off ramp",33.97627,"-117.83733","WGS84",2000
+2262509,0,4,31,"LOB","raphanistrum","J.V. Olmstead","5/10/71",1971,5,10,"10-May-71","Orange","intersection of Santiago Cny. Rd. and Silverado Cyn. Rd.",33.7485,"-117.673","WGS84",2000
+304593,2,14,27,"UCSB","sativus","MacKay, Shelley","5/11/71",1971,5,11,"5/11/71","Orange","0.1 mile west of Bloomfield Avenue, Cypress",33.82089,"-118.06455","WGS84",3000
+202466,0,0,11,"OBI","sativus","Elizabeth Rudd","5/23/71",1971,5,23,"23-May-71","San Luis Obispo","3 mi NE of Santa Margarita",35.418043,"-120.568649","WGS84",1486
+3801172,1,17,34,"CSLA","sativus","J. Hall","5/28/71",1971,5,28,"28-May-71","Orange","Newport, Newport Back Bay, along roadbanks and N-facing bluffs.",33.6383,"-117.8887","WGS84",800
+1804476,0,2,7,"HSC","sativus","J.P. Smith","10/6/71",1971,10,6,"6-Oct-71","Humboldt","End of Murray Rd. in McKinleyville.",40.956446,"-124.126317","WGS84",450
+4488222,0,3,4,"PUA","raphanistrum","G.L. Clifton","7/1/71",1971,7,1,"7/1/71","Plumas","Local landmark: Amer Valley. Quincy Quad.",39.95319795,"-120.9260366","WGS84 ",3999
+202497,0,6,8,"OBI","sativus","Susan Hopkins","4/22/72",1972,4,22,"22-Apr-72","San Luis Obispo","1.5 mi from Los Osos Valley rd",35.28867,"-120.75559","WGS84",9000
+202478,0,7,12,"OBI","sativus","Lynch","5/21/71",1971,5,21,"21-May-71","San Luis Obispo","On E bank of Smith Reservoir; Cal Poly Campus",35.30831,"-120.6664","WGS84",50
+3792187,1,8,22,"FSC","sativus","Beverly Fosterman","4/8/73",1973,4,8,"8-Apr-73","Santa Barbara","About 15 miles north west of University of California, Santa Barbara, near the coast by the intersection of Del Playa Drive and Camine Majorca",34.40983,"-119.86997","WGS84",350
+202471,3,18,18,"OBI","sativus","Jim Pollard","8/27/72",1972,8,27,"27-Aug-72","San Luis Obispo","Laguna Lake. On the edge of a lawn approx 25 ft from the edge of the lake",35.26561,"-120.69097","WGS84",1000
+202467,0,8,44,"OBI","sativus","Eric & Milanne Sundell","5/11/73",1973,5,11,"11-May-73","Santa Barbara","Lompoc",34.64528,"-120.45928","WGS84",4000
+202454,1,6,18,"OBI","sativus","Barbara Mannon","8/26/72",1972,8,26,"26-Aug-72","San Luis Obispo","1/2 mi N of Los Osos in vacant lot",35.3213,"-120.83198","WGS84",1000
+1294389,0,13,15,"CSUSB","sativus","R.C. Smith","5/16/73",1973,5,16,"16-May-73","San Bernardino","Greenspot near Highway 38, above Mentone.",34.07166667,"-117.0998333","WGS84",600
+2866599,0,3,17,"MACF","raphanistrum","Jean Johnson","3/7/73",1973,3,7,"3/7/73","Riverside","9.7 miles north of Lake Elsinore.",33.808818,"-117.327262","WGS84",1111
+1777902,0,7,6,"HSC","sativus","Thomas W. Nelson","8/14/73",1973,8,14,"14-Aug-73","Napa","E of Napa",38.297587,"-122.207657","WGS84",3000
+3792198,2,13,13,"FSC","sativus","Peggy Smith; Joyce H. Hall","1/25/74",1974,1,25,"25-Jan-74","Fresno","Lost Lake Park along the east boundary fence north of entrance.",36.96866,"-119.72434","WGS84",2500
+5737995,0,6,5,"CHSC","raphanistrum","Hervey Perkins","7/30/73",1973,7,30,"30-Jul-73","Nevada","Tahoe National Forest. Soda Springs (town).",36.03911,"-118.75816","WGS84",1000
+3801164,1,4,85,"CSLA","raphanistrum","James Henrickson","6/15/73",1973,6,15,"15-Jun-73","Los Angeles","City of Long Beach, in open hillsides S of State University.",33.7834,"-118.1132","WGS84",800
+3792195,4,7,4,"FSC","sativus","Bob Round","3/18/74",1974,3,18,"18-Mar-74","Fresno","in a valley grassland plant community at Teague and Willow road",36.85958,"-119.72984","WGS84",200
+3792183,1,12,7,"FSC","sativus","Rod Anderson","3/12/74",1974,3,12,"12-Mar-74","Fresno","Found at the corner of Shaw and Academy.",36.80814,"-119.55586","WGS84",300
+610290,5,14,17,"SFV","sativus","C. Ferguson","5/13/74",1974,5,13,"13-May-74","Los Angeles","San Gabriel Mountains; Placerita Canyon Natural Area. Parking area.",34.37779,"-118.46919","WGS84",400
+304591,2,10,3,"UCSB","sativus","Fairfax, Jennifer","1/19/74",1974,1,19,"1/19/74","Santa Barbara","Tecolote Canyon, 1/4 mi. west of Hollister 101 overpass, 1 mi. into canyon on west side of creek",34.4352,"-119.9163","NAD83",400
+4001616,5,31,29,"UNLV","raphanistrum","P.J. Leary","10/25/74",1974,10,25,"25-Oct-74","Riverside","near Ryan Mtn, in washes & their immediate benches, Joshua Tree NM",33.98461,"-116.13418","WGS84",2500
+1781883,2,16,6,"HSC","sativus","Scott M. Kruse","4/9/75",1975,4,9,"9-Apr-75","Humboldt","Old Arcata Rd. and Chester Way, Arcata",40.86087828,"-124.0731931","WGS84 ",969
+4458930,2,3,1,"PUA","sativus","Shelley Wagner","4/13/75",1975,4,13,"4/13/75","Butte","Local landmark: Bidwell River Park. Richardson Quad.",39.76485994,"-121.8010572","WGS84 ",500
+1368005,3,16,26,"DAV","sativus","Mary M. Hektner","6/21/74",1974,6,21,"21-Jun-74","Sonoma","Sonoma County: near Sea Ranch Lodge, Unit 2 Owners' Map, Sea Ranch, near State Highway 1.",38.71519,"-123.454453","WGS84",1000
+4564840,1,7,7,"SFSU","sativus","B. Trowbridge","1974-06-00",1974,6,0,"Jun-74","San Francisco","near sidewalk, 19th Avenue, S.F.S.U. Campus area, San Francisco",37.723394,"-122.475377","WGS84",301
+1367995,0,15,32,"DAV","sativus","Cay Collette","5/10/75",1975,5,10,"10-May-75","Yolo","Yolo County: Knight's Landing. Approximately 100 feet from the Sacramento River.",38.80182,"-121.72264","WGS84",182
+4480533,1,9,9,"PUA","sativus","G.L. Clifton","4/30/76",1976,4,30,"4/30/76","Yuba","Local landmark: Cummings Ranch. Challenge Quad.",39.45320291,"-121.2427046","WGS84 ",3999
+1294394,2,6,2,"CSUSB","sativus","Rita Gibbons","6/5/75",1975,6,5,"5-Jun-75","Riverside","1/2 mile north of Highway 60, on Heacock Ave., Sunnymead",33.94863889,"-117.2443611","WGS84",246
+1786214,1,1,19,"HSC","raphanistrum","Linda M. Barker","7/5/76",1976,7,5,"5-Jul-76","Humboldt","3 mi. W of Arcata",40.883693,"-124.148922","WGS84",627
+4460478,1,11,9,"PUA","sativus","Mark Parsons","3/12/77",1977,3,12,"3/12/77","Fresno","Local landmark: Lost Lake Recreation Area. Friant Quad.",36.97131739,"-119.7251304","WGS84 ",3999
+1784768,6,14,12,"HSC","sativus","Peter Sorensen","6/14/76",1976,6,14,"14-Jun-76","Humboldt","North spit",40.78526,"-124.208265","WGS84",1000
+778436,1,10,8,"RSA","sativus","R. F. Thorne","5/4/77",1977,5,4,"5/4/77","Orange","Santa Ana Mountains: Trabuco Canyon.",33.66689,"-117.5884","WGS84",1500
+2056948,3,11,11,"CHSC","raphanistrum","Lowell Ahart","5/22/77",1977,5,22,"5/22/77","Butte","Pasture field, Peter Ahart Ranch, about 2 miles north and 1 1/4 miles east of Honcut, about 12 miles south of Oroville.",39.3575,"-121.512222","NAD83",805
+1800936,1,9,7,"HSC","sativus","George Kirn","9/10/77",1977,9,10,"10-Sep-77","Humboldt","Eureka, G and 1st St.",40.805469,"-124.165696","WGS84",86
+202503,0,8,34,"OBI","raphanistrum","Kamran Alavi","8/19/77",1977,8,19,"19-Aug-77","San Luis Obispo","1330 8th St, Baywood Park",35.32752,"-120.83408","WGS84",25
+2866661,2,18,15,"MACF","raphanistrum","Trudy R. Erickson","4/24/78",1978,4,24,"24-Apr-78","Orange","Campus, California State University, Fullerton, on Arboretum grounds.",33.88647,"-117.88327","WGS84",266
+2040704,3,12,11,"CHSC","raphanistrum","Eric J. Miller","4/24/78",1978,4,24,"4/24/78","Tehama","Ca. 1 km w of Sacramento River at Woodson Bridge.",39.909444,"-122.103611","NAD83",4828
+304550,1,3,13,"UCSB","sativus","Lestak, Leanne","6/2/78",1978,6,2,"6/2/78","Santa Barbara","Travelling west on El Colegio marshlands on right side of road just past Los Carneros",34.434282,"-119.85365","WGS84",1500
+304561,2,22,29,"UCSB","sativus","Martinez, L.","1/27/79",1979,1,27,"1/27/79","Santa Barbara","Corner of Sabado Tarde and Camino Corto, vacant lot, Isla Vista",34.417415,"-119.861133","WGS84",3000
+304558,0,7,16,"UCSB","sativus","Mead, K.","2/8/79",1979,2,8,"2/8/79","Santa Barbara","100 meters west of lagoon, University of California at Santa Barbara campus, Goleta",34.412046,"-119.847642","WGS84",1000
+2044164,2,8,3,"CHSC","raphanistrum","J. D. Jokerst","3/25/79",1979,3,25,"3/25/79","Butte","At edge of Table Mountain, E edge of mountain N of Cherokee Rd. T20N R04E S17 USGS Quadrangle: Oroville 1:24,000",39.596667,"-121.54","NAD83",402
+304548,2,13,16,"UCSB","sativus","Wayne R. Ferren","3/22/79",1979,3,22,"3/22/79","Santa Barbara","Margin of Apple Rd.; Carpinteria Salt Marsh, Carpinteria",34.4009,"-119.5346","NAD83",700
+304560,5,8,11,"UCSB","sativus","Kathleen Aste","2/18/79",1979,2,18,"2/18/79","Santa Barbara","North side of Estero Rd., between Camino Corto and Camino Del Sur Roads, Isla Vista",34.417415,"-119.861133","WGS84",3000
+304596,0,2,30,"UCSB","sativus","Paul Reisentz","4/22/79",1979,4,22,"4/22/79","Ventura","Mirror Lake, 1/2 mile south of intersection of Hwy. 150 and Hwy. 33, 3 miles SW of Ojai, 12 miles N of Ventura",34.423,"-119.2903","WGS84",200
+4460519,0,7,14,"PUA","sativus","Bill Grummer","4/11/79",1979,4,11,"4/11/79","Napa","Local landmark: Bothe Napa Valley State Park. Calistoga Quad.",38.55254081,"-122.521558","WGS84 ",3999
+1806660,0,7,6,"HSC","sativus","Melany Seacat","6/6/79",1979,6,6,"6-Jun-79","Mendocino","Big River Estuary, N side of river at mouth",39.30668298,"-123.7813161","WGS84 ",969
+202457,1,5,2,"OBI","sativus","Chris Hopkins","4/2/79",1979,4,2,"2-Apr-79","San Luis Obispo","Adj to Mustang Village parking lot",35.29689,"-120.66738","WGS84",300
+304547,1,14,23,"UCSB","sativus","Wayne R. Ferren","6/4/79",1979,6,4,"6/4/79","Santa Barbara","Along western margin of Sandyland Cove Rd., Carpinteria Salt Marsh, Carpinteria",34.3991,"-119.5298","NAD83",800
+304608,4,4,19,"UCSB","sativus","Stout, Bob","2/7/80",1980,2,7,"2/7/80","Santa Barbara","Large field across mobile home park at 7465 Hollister Avenue, Goleta",34.42648,"-119.88769","WGS84",150
+1443128,2,16,46,"UCR","sativus","David J. Keil","3/27/80",1980,3,27,"3/27/80","San Luis Obispo","Calif. Hwy 166, 1 mi. east of U.S. Hwy 101",34.99529737,"-120.4175673","WGS84 ",3999
+3726377,5,13,21,"UCSB","raphanistrum","Jeff C. Barrett","2/21/80",1980,2,21,"2/21/80","Santa Barbara","1/4 mi. inshore 1/4 mi. west of Coal Oil Pt. on western edge Coal Oil Pt. Reserve.",34.414536,"-119.880431","WGS84",400
+202474,1,23,24,"OBI","sativus","Kathlene Henry","7/26/79",1979,7,26,"26-Jul-79","San Luis Obispo","Shell Beach. 500 ft from the Pacific Ocean",35.15555,"-120.67293","WGS84",700
+304540,3,15,7,"UCSB","raphanistrum","Martin Fletcher","3/29/80",1980,3,29,"3/29/80","Santa Barbara","100 feet north of Rancho Real, 0.2 mile west of Las Panochas.",34.469008,"-120.322582","WGS84",1000
+4567197,4,14,8,"SFSU","sativus","R.H. Gin","4/9/80",1980,4,9,"4/9/80","San Francisco","Mount Lake W. Pac. Ave., San Francisco",37.788034,"-122.470936","WGS84",301
+304545,3,7,7,"UCSB","sativus","Sue L. Fritzke","3/10/80",1980,3,10,"3/10/80","Santa Barbara","NW corner of Trigo Rd. and Camino Corto, in empty lot, In Isla Vista",34.417415,"-119.861133","WGS84",3000
+202482,2,10,3,"OBI","sativus","Melody Dickens","4/16/80",1980,4,16,"16-Apr-80","San Luis Obispo","Morro Rock, Morro Bay",35.36914,"-120.86781","WGS84",385
+1368039,9,33,9,"DAV","sativus","Clinton C. Shock","4/20/80",1980,4,20,"20-Apr-80","Solano","Solano County: 0.2 mile south of Hastings Road on Cook Lane.",38.26,"-121.84736","WGS84",4000
+4567196,4,11,9,"SFSU","sativus","R.H. Gin","5/9/80",1980,5,9,"5/9/80","San Francisco","Land's End, on main path; along side of road, San Francisco",37.78781,"-122.505743","WGS84",301
+4564846,1,5,13,"SFSU","sativus","D. White","6/30/80",1980,6,30,"6/30/80","Marin","Tiburon freshwater marsh, along S edge",37.87718,"-122.4596","WGS84",125
+304553,7,0,1,"UCSB","sativus","Steele, Kelly; Koehler, D.; Gordon, Patricia","4/30/80",1980,4,30,"4/30/80","Santa Barbara","Southwest of intersection of Storke Road and El Colegio, and adjacent to Isla Vista, on northern portion of West Campus, UCSB",34.416,"-119.8705","NAD83",500
+4564843,2,7,12,"SFSU","sativus","M.N. Josselyn, R.J. Perez","1981-05-00",1981,5,0,"May-81","San Mateo","Hayward Regional Shoreline, Hayward, ca. 1.5 km north of the San Mateo bridge; on levees",37.57067,"-122.288806","WGS84",301
+304544,1,4,12,"UCSB","sativus","Thomson, Jean","5/3/81",1981,5,3,"5/3/81","Santa Barbara","Coastal mesa ca. 2 km. west of Isla Vista and 1 km. south of Ellwood Station, Goleta",34.4224,"-119.8873","NAD83",500
+330070,0,2,38,"UCSB","sativus","Paul Reisentz","8/3/80",1980,8,3,"8/3/80","Ventura","Mirror Lake, 0.5 mile south of intersection of Hwy 150 and Hwy 33, 3 miles SW of Ojai, 12 miles N of Ventura",34.423,"-119.2903","WGS84",200
+4564844,1,7,17,"SFSU","sativus","Katherine Culligan","5/14/81",1981,5,14,"5/14/81","Alameda","roadside between Redwood Gate and main parking lot",37.80448,"-122.14649","WGS84",400
+202483,2,12,21,"OBI","sativus","Melody Dickens","5/30/80",1980,5,30,"30-May-80","San Luis Obispo","Black Hill, Morro Bay state park",35.358455,"-120.831472","WGS84",1000
+1443129,5,17,16,"UCR","sativus","P. Tomlinson","5/15/81",1981,5,15,"5/15/81","Riverside","University of California property South of Pennsylvania Ave. (now Martin Luther King Blvd) and east of Chicago Ave. Along the water canal (now mostly dry) 0.1 mi. south of Pennsylvania Ave.",33.96668614,"-117.3425371","WGS84 ",3999
+202462,5,9,22,"OBI","sativus","David J. Keil","5/16/81",1981,5,16,"16-May-81","San Luis Obispo","Area around Arroyo de la Cruz near its crossing of Calif hwy 1",35.708335,"-121.304","WGS84",200
+202481,1,10,48,"OBI","sativus","Melissa Luckow","6/25/81",1981,6,25,"25-Jun-81","San Luis Obispo","Just N of San Simeon Beach",35.591763,"-121.122132","WGS84",1876
+2046467,4,11,1,"CHSC","raphanistrum","R. E. Preston","1/1/82",1982,1,1,"1/1/82","Butte","In almond orchard, e side of River Rd. ca. 1 mi s of Sacramento Ave.; Chico Landing site, ca. 5 mi w of Chico. T22N R01W S35 USGS Quadrangle: Chico 1:64,000",39.711944,"-121.944444","NAD83",402
+1443125,2,10,31,"UCR","sativus","Melody Lardner","5/19/81",1981,5,19,"5/19/81","Riverside","Main Street Canyon, 3.5 mi. south of Hwy 91 at the end of Main Street.",33.81668837,"-117.5758716","WGS84 ",3999
+202477,3,10,45,"OBI","sativus","Lorraine Vinland","7/3/81",1981,7,3,"3-Jul-81","San Luis Obispo","On side of hwy 101, near the Marsh St turnoff",35.27446,"-120.67089","WGS84",500
+304563,4,5,18,"UCSB","sativus","Keppeler, E.","3/10/82",1982,3,10,"3/10/82","Santa Barbara","Field across from University Children's Center and adjacent to stable facilities, West Campus, UCSB",34.4163,"-119.8707","NAD83",500
+1459126,0,4,5,"UCR","sativus","Michael Theroux","3/30/82",1982,3,30,"3/30/82","Kern","One mile SW of Cottonwood Creek at Breckenridge Rd., 2 miles east of Comanche Drive",35.37633066,"-118.8165605","WGS84 ",3999
+943444,1,1,20,"RSA","sativus","Mary Duke","5/15/82",1982,5,15,"15-May-82","Riverside","CA Hwy 74, just off highway E of Elsinore, 1 mi W of Hwy 15.",33.68679,"-117.35599","WGS84",2000
+202494,5,14,24,"OBI","sativus","Smeltzer/Turnquist","4/6/82",1982,4,6,"6-Apr-82","San Luis Obispo","SE side of Laguna Lake Park",35.26395,"-120.68245","WGS84",357
+2049534,2,3,7,"CHSC","raphanistrum","R. E. Preston","11/5/82",1982,11,5,"11/5/82","Butte","At roadside, n side of Cana Hwy, 100 yds e of Cana-Pine Creek Rd, Cana. T23N R01W S16 SSW border USGS Quadrangle: Nord 1:24,000",39.840556,"-121.993056","NAD83",805
+2050542,0,0,10,"CHSC","raphanistrum","M. S. Taylor","11/11/82",1982,11,11,"11/11/82","Monterey","Along RR tracks opposite Hopkins Marine Station, at Pt Cabrillo, Pacific Grove. T15S R01W S USGS Quadrangle: Monterey",36.619722,"-121.905","NAD83",402
+2049551,3,14,31,"CHSC","raphanistrum","R. E. Preston","1/9/83",1983,1,9,"1/9/83","Butte","On levee of irrigation ditch, w side of Aguas Frias Rd ca. 0.9 mi n of Richvale Rd, ca. 6 mi w of Richvale. T19N R01E S16 NE corner USGS Quadrangle: Nelson 1:24,000",39.503333,"-121.857778","NAD83",402
+2049538,1,3,4,"CHSC","raphanistrum","R. E. Preston","11/13/82",1982,11,13,"11/13/82","Butte","Along sides of Chico-Butte City Hwy, ca. 13 1/2 mi ssw of Chico. T20N R01E S31 NW1/4 USGS Quadrangle: Llano Seco 1:24,000",39.551667,"-121.908611","NAD83",402
+2049904,2,8,18,"CHSC","raphanistrum","Vernon Oswald","12/28/82",1982,12,28,"12/28/82","Butte","Upper Bidwell Park, Chico, at the w end of Horseshoe Lake near Parking Area C.",39.771944,"-121.783611","NAD83",402
+2049555,5,5,12,"CHSC","sativus","R. E. Preston","2/16/83",1983,2,16,"2/16/83","Butte","At the SW corner of the intersection of Notre Dame Blvd & Forest Ave, Chico. T22N R02E S31 USGS Quadrangle: Chico 1:24,000",39.716389,"-121.795","NAD83",402
+632879,2,11,13,"IRVC","sativus","Robert Lee Allen","2/12/83",1983,2,12,"12-Feb-83","Orange","Fullerton; Hillcrest Park",33.882612,"-117.921964","WGS84",334
+4011670,1,2,3,"UNLV","sativus","C.R. Annable","3/30/83",1983,3,30,"30-Mar-83","Inyo","Funeral Mts, Furnace Creek, disturbed rdside, Death Valley NM",36.448637,"-116.858505","WGS84",250
+2211615,2,2,8,"OBI","sativus","Dave Ouimette","4/17/83",1983,4,17,"17-Apr-83","San Bernardino","immediately east of Highway 330, a quarter of a mile north of Highland Avenue",34.13982,"-117.18875","WGS84",400
+4064454,0,11,26,"UCSC","sativus","Susan Fox","5/22/83",1983,5,22,"5/22/83","Santa Cruz","near east entrance into Natural Bridges State Park",36.952736,"-122.058317","WGS84",352
+1202028,1,9,29,"RSA","sativus","Margaret Murphy","5/1/83",1983,5,1,"5/1/83","Riverside","Dry riverwash located in the north section of parcel 475-090-006, lot 20 Moreno Acres of the unincorporated area known as Sunnymead.",33.960017,"-117.233864","WGS84",5000
+202479,3,6,22,"OBI","sativus","M. J. Erwin","11/11/83",1983,11,11,"11-Nov-83","San Mateo","Around Daggett residence, 100 yds W of Old Canada Rd, within property limits of Filoli Center, Canada Rd, Woodside",37.47017,"-122.31277","WGS84",1000
+1089689,0,6,19,"RSA","sativus","Ruben R. Flores","4/23/83",1983,4,23,"23-Apr-83","San Diego","One mile inland from the ocean in Pacific Beach, San Diego. In a canyon north of the cul de sac of Dawes Ave. Just off Ingrahm Blvd. The canyon runs NE-SW for about a mile.",32.80406,"-117.24253","WGS84",3000
+202459,0,7,5,"OBI","sativus","Dan Harrington","2/7/84",1984,2,7,"7-Feb-84","San Luis Obispo","1/4 mi up Montecito Rd, Cayucos, off hwy 1, side of rd",35.440693,"-120.869456","WGS84",1024
+202492,6,15,3,"OBI","sativus","S. M. Inman","5/25/83",1983,5,25,"25-May-83","San Luis Obispo","Pecho Study Site, Los Osos. 1/2 mi on Pecho Valley Rd past jctn of Pecho Rd. Rt on dirt road after 'deer' sign, to S of dirt rd",35.307721,"-120.858154","WGS84",500
+292926,1,10,23,"UCSB","raphanistrum","Wayne R. Ferren","5/7/83",1983,5,7,"5/7/83","Santa Barbara","La Purisima Mission State Historic Park; 2 km. NE of Lompoc City Limit; in cultivated field",34.67821,"-120.42949","WGS84",3999
+3792194,12,22,22,"FSC","sativus","Kay Woods","4/16/84",1984,4,16,"16-Apr-84","Fresno","On Montana de Oro bench above bluff at cove.",35.27447,"-120.89102","WGS84",400
+4567199,1,7,3,"SFSU","sativus","L. Fry","2/19/84",1984,2,19,"19-Feb-84","San Mateo","Half Moon Bay at Pillar Point Harbor; field next to parking lot",37.503058,"-122.48389","WGS84",301
+637694,0,12,35,"RSA","sativus","Robert MacGregor","5/19/84",1984,5,19,"19-May-84","Riverside","Lake Elsinore, CA Hwy 74, 1 mi W of junction with 15E Freeway, N side of road.",33.7038029,"-117.3513246","WGS84 ",3999
+2866542,0,0,1,"MACF","sativus","Gary Sampson","2/10/85",1985,2,10,"10-Feb-85","San Bernardino","Bane Canyon",33.93626539,"-117.700295","WGS84 ",2213
+1826642,3,28,23,"HSC","sativus","M. Roantree","6/11/85",1985,6,11,"11-Jun-85","Humboldt","E side of Trinidad Head, near entrance",41.056309,"-124.148895","WGS84",75
+633444,5,14,5,"IRVC","raphanistrum","F. M. Roberts","4/11/85",1985,4,11,"11-Apr-85","Orange","Dana Point Headlands: Weyerhaeuser Horticultural Research Station property",33.46264477,"-117.7105745","WGS84 ",3999
+2057404,2,21,33,"CHSC","raphanistrum","R. A. Schlising","3/23/85",1985,3,23,"3/23/85","Butte","Richvale Vernal Pools, 1/4 mile s of junction Hwy 162 to Oroville and Hwy 99; along the latter and across from Thermalito Afterbay. T19N R02E S24",39.490833,"-121.687778","NAD83",402
+1826582,1,5,16,"HSC","sativus","P.A. Daly","3/12/86",1986,3,12,"12-Mar-86","Humboldt","Trinidad Head",41.0541,"-124.1503","WGS84",453
+202484,4,11,16,"OBI","sativus","Mike Stiles","5/21/86",1986,5,21,"21-May-86","San Luis Obispo","1 mi S of Tefft Ave on S Oakglen ave, Nipomo",35.02532,"-120.46438","WGS84",2000
+633454,0,2,17,"IRVC","sativus","F. M. Roberts","4/3/85",1985,4,3,"3-Apr-85","Orange","Irvine: Irvine Ranch, just east of McArthur, 1.4 km W UCI campus center",33.645769,"-117.857968","WGS84",2600
+1459130,1,14,20,"UCR","sativus","G.R. Ballmer","3/25/86",1986,3,25,"3/25/86","Los Angeles","El Segundo Dunes, back edge of the beach just west of Los Angeles International Airport",33.94000898,"-118.4386751","WGS84 ",3999
+1299035,5,21,6,"DAV","sativus","Steve Daniel","4/13/86",1986,4,13,"13-Apr-86","Colusa","California: Colusa Co. Bear Valley, 7.6 mi N of hwy 20 along Bear Valley rd. elev. ca. 1300 ft.",39.174874,"-122.455656","WGS84",5210
+4020835,1,9,18,"UNLV","sativus","Misquez E","5/16/87",1987,5,16,"16-May-87","Riverside","Santa Ana Mts, Walker Basin, 2 mi on Avenida de Oro from Jct with Rancho CA Rd & 4.7 mi W of I-15",33.49968,"-117.20393","WGS84",1500
+2079339,1,6,39,"CHSC","sativus","Roger Thom","5/26/87",1987,5,26,"5/26/87","Contra Costa","2800 block of Buena Vista Ave. Walnut Creek.",37.925,"-122.073611","NAD83",402
+634125,2,7,13,"IRVC","raphanistrum","Fred M. Roberts Jr.","1/11/88",1988,1,11,"11-Jan-88","Orange","Laguna Beach: Temple Hill, rim of Park Canyon, Temple Hills Drive, 2.4km NNE Cactus Point",33.54672,"-117.760917","WGS84",600
+2107639,1,10,22,"CHSC","sativus","Richard R. Halse","2/22/87",1987,2,22,"2/22/87","Sonoma","Along State Hwy. 121, .4 mile E of its junction with State Hwy. 116 at Big Bend in the Sonoma Valley. T05N R05W S",38.238611,"-122.455","NAD83",402
+202496,4,17,12,"OBI","sativus","Steve Myers","2/1/88",1988,2,1,"1-Feb-88","Riverside","Boulder Springs dev, immed SE of intersection ofhwy 60 and Nason St, Moreno Valley",33.933333,"-117.183333","WGS84 ",3999
+304590,4,18,18,"UCSB","sativus","Pang, Benton","5/8/88",1988,5,8,"5/8/88","Ventura","Emma Wood State Beach picnic area, mid dunes 200 yards west of railroad tracks, 1/2 mile from entrance kiosk",34.278536,"-119.311455","WGS84",1000
+304562,0,4,4,"UCSB","sativus","Moles, R.","5/15/88",1988,5,15,"5/15/88","Santa Barbara","Corner of Hollister Ave. and Los Carneros Rd., Goleta",34.434282,"-119.85365","WGS84",1500
+1459128,4,38,35,"UCR","sativus","A.C. Sanders","5/18/88",1988,5,18,"5/18/88","Los Angeles","El Segundo Dunes, immediately west of Los Angeles International Airport & Pershing Drive, & east of Vista Del Mar Blvd.",33.93333,"-118.43333","WGS84 ",3999
+388921,0,4,3,"SDSU","sativus","Reiser, Craig H.","3/24/89",1989,3,24,"3/24/89","San Diego","Camp Joseph Pendleton MCB. San Diego County, California. Base Section: Margarita.",33.2375,"-117.39583","WGS84 ",1609
+4567202,2,11,7,"SFSU","raphanistrum","Sharon Hampton","4/27/91",1991,4,27,"27-Apr-91","Marin","Ca 2 mi e of Lagunitas; along shdr Sir Francis Drake Blvd, hwy marker A103/10.26",38.01443,"-122.666008","WGS84",500
+4564841,0,4,8,"SFSU","sativus","Sharon Hampton","5/18/91",1991,5,18,"18-May-91","Marin","Tiburon Peninsula, bordering Tiburon Blvd, 30 m se of junc. w/ Rockhill Dr.",37.888303,"-122.477348","WGS84",50
+3503027,1,1,0,"UCJEPS","sativus","Tim Ross","2/23/91",1991,2,23,"Feb 23 1991","Los Angeles","Whittier Hills (Puente Hills), Upper Turnbull Canyon, 1/5 air mi wnw of Turnbull Canyon Road x Skyline Drive Upper Turnbull Canyon; Whittier Hills (Puente Hills), Upper Turnbull Canyon",33.997511,"-118.002684","WGS84",805
+4567201,1,2,4,"SFSU","raphanistrum","L. Ngim","3/15/92",1992,3,15,"15-Mar-92","Contra Costa","on 1/3 acre plot, San Miguel Drive and El Camino Corto, 47 m from street to yard",37.89098,"-122.04648","WGS84",100
+202475,0,1,35,"OBI","sativus","Larry Kelly","10/1/88",1988,10,1,"1-Oct-88","San Luis Obispo","Pismo marsh between Pismo State Beach campground and Grand Ave",35.11692,"-120.62917","WGS84",661
+3270997,5,5,7,"UCJEPS","raphanistrum","Tim Ross, Annette H. Ross","7/29/91",1991,7,29,"Jul 29 1991","Los Angeles","Elephant Hill, n-most point of the Puente Hills, West Pomona Elephant Hill; West Pomona, Puente Hills, Elephant Hill",34.055411,"-117.793080","WGS84",805
+1367983,0,3,2,"DAV","raphanistrum","G. F. Hrusa","3/22/92",1992,3,22,"22-Mar-92","San Joaquin","San Joaquin County: Caswell Memorial State Park.",37.695299,"-121.183039","WGS84",1000
+468986,1,4,9,"SD","sativus","Frank F. Gander","4/18/40",1940,4,18,"4/18/40","San Diego","Herron Ranch near DeLuz.",33.43751,"-117.32043","WGS84",4001
+1320905,1,13,16,"DAV","sativus","C. DeCrona and R. Davis","4/5/92",1992,4,5,"5-Apr-92","Sacramento","Sacramento Co.: Cosumnes River Preserve Plant Inventory; east of Point Meadow.",38.266549,"-121.427985","WGS84",2872
+1000363,4,8,8,"RSA","sativus","Andrew Haimov","5/23/92",1992,5,23,"5/23/92","Riverside","20 meters west of Davis Road, 1 1/2 miles north of Ramona Expressway, San Jacinto Wildlife area.",33.87012,"-117.12441","WGS84",2000
+3904095,1,8,2,"LA","sativus","Barry A. Prigge","5/7/92",1992,5,7,"7-May-92","San Bernardino","Mojave Desert; Apple Valley; NW end of flats E of Upper Mojave River Narrows and S of granite hills",34.533002,"−117.283871","WGS84",100
+610294,3,24,18,"SFV","sativus","R. K. Stachelek","4/14/92",1992,4,14,"14-Apr-92","Los Angeles","San Gabriel Mountains; Sylmar. Stetson Ranch Park.",34.33,"-118.48","WGS84",1000
+1828885,1,2,2,"HSC","raphanistrum","D. Atwood","3/29/93",1993,3,29,"29-Mar-93","Orange","Huntington Beach along Beach Blvd., 0.5 mi. N of the beach",33.6563,"-117.9884","WGS84",400
+304565,1,4,1,"UCSB","sativus","Rubenstein, R.","2/5/93",1993,2,5,"2/5/93","Santa Barbara","Abandoned Devereux Estate field",34.412326,"-119.877539","WGS84",1000
+202464,0,28,25,"OBI","sativus","Debora Guillot","7/8/93",1993,7,8,"8-Jul-93","San Luis Obispo","San Simeon State Park. W section of San Simeon State Park",35.5914,"-121.1186","WGS84",486
+1537502,5,20,2,"UCR","sativus","G.P. Schultz","4/1/94",1994,4,1,"4/1/94","Monterey","Jade Cove near Los Padres National Forest",35.90694,"-121.4625","WGS84",3999
+6040951,1,6,0,"CAS","sativus","Vasey, M.; Assistants, SFSU Student","4/29/93",1993,4,29,"4/29/93","San Francisco County","Along Arguello Blvd across from Inspiration Point",37.79171,"-122.45966","WGS84",200
+3941717,3,5,20,"RSA","sativus","J. Berkley","4/19/94",1994,4,19,"4/19/94","Orange","Yorba Linda, off of Bastuchury Rd. about 50 yds from Casa Loma Ave.",33.89937,"-117.82461","WGS84",100
+610298,2,3,6,"SFV","sativus","J. C. Liu","5/21/94",1994,5,21,"21-May-94","Ventura","Santa Monica Mountains; Rancho Sierra Vista, Wendy Trail, Newbury Park. Where Wendy Road ends on Potrero Road, 0.5 miles south of Lynn Road.",34.15451,"-118.95031","WGS84",150
+5764054,7,30,20,"UCR","sativus","Christine Perala","4/25/93",1993,4,25,"4/25/93","Riverside","March Air Force Base [near Box Springs Siding]",33.93667,"-117.28694","WGS84",3999
+374522,5,3,1,"SDSU","sativus","Burton, Darren H.","4/19/94",1994,4,19,"4/19/94","San Diego","Mission Trails Regional Park.",32.83861,"-117.045","WGS84",3999
+384334,0,14,10,"SDSU","sativus","Gibson, Doug R.","5/10/94",1994,5,10,"5/10/94","San Diego","San Elijo State Park, Cardiff. Location found by GIS Madellion.",33.00806,"-117.26556","WGS84",3999
+231694,0,9,5,"UCSC","sativus","S. Levy","5/22/94",1994,5,22,"May 22 1994","Santa Cruz","east side of Younger Lagoon Reserve",36.950879,"−122.066217","WGS84",174
+231367,1,8,8,"UCSC","sativus","unknown","4/23/95",1995,4,23,"23-Apr-95","Monterey","Fort Ord, UC Reserve, Site P2",36.68245,"-121.77185","WGS84",150
+1333957,4,4,25,"DAV","raphanistrum","J. E. Sandoval","4/23/95",1995,4,23,"23-Apr-95","Merced","Merced Co.: Great Valley Grasslands State Park (encompasses the former Fremont Ford State Recreation Area). South of the town of Stevinson, 1 mi. south of Hwy 140 on Hwy 165.",37.29106,"-120.85946","WGS84",3000
+2070005,2,8,10,"CHSC","raphanistrum","Vernon H. Oswald","4/10/95",1995,4,10,"4/10/95","Tehama","Cascade Range Foothills. Dales Lake Ecological Reserve. W side of Manton Rd. (A6) ca. 1 mi n of Dales Station on Hwy. 36, ca. 14 mi ne of Red Bluff. Along the edge of Manton Rd. s of Inks Creek Rd. T29N R02W S35 SW1/4 of NW1/4",40.323889,"-122.065","NAD83",201
+202463,0,15,8,"OBI","sativus","David J. Keil","4/6/95",1995,4,6,"6-Apr-95","Santa Barbara","Vandenberg AFB. South Base. Along Honda ridge rd, 2.3 mi E from Coast Rd",34.5907,"-120.604","NAD83",500
+1620584,2,14,16,"UCR","sativus","Denise Woodard","8/21/95",1995,8,21,"8/21/95","Riverside","300 acre parcel at west end of Domenigoni Valley, c. 3 miles south of Winchester on the west side of Winchester Rd.",33.65833,"-117.09167","WGS84",3999
+1474359,3,13,32,"UCR","sativus","Scott D. White","4/9/96",1996,4,9,"4/9/96","Los Angeles","Marina del Rey area, Ballona Creek floodplain and adjacent N-facing slope, west of Lincoln Blvd. and south of Jefferson Blvd",33.96667,"-118.43333","WGS84",3999
+1368047,1,5,6,"DAV","sativus","K. Twitchell","4/21/96",1996,4,21,"21-Apr-96","Yolo","Yolo County: Davis, Road 96 near Russell Boulevard.",38.55,"-121.752778","WGS84",3999
+3278418,0,15,24,"UCJEPS","raphanistrum","Vernon H. Oswald, Lowell Ahart","4/15/96",1996,4,15,"Apr 15 1996","Tehama","at the w boundary 1 mi s of Gyle Road (nw of Corning, nw side Sacramento Valley, Thomes Creek Ecological Reserve, CDFG parcel on s side of Gyle Road); Thomes Creek Ecological Reserve, Sacramento Valley",39.994952,"-122.237772","WGS84",805
+2137472,0,11,26,"CHSC","sativus","E. Neese","4/22/96",1996,4,22,"4/22/96","Monterey","Fort Hunter Liggett (Cantonment). Rancho Milpitas Housing Area, ca. 2.0 air km due E of San Antonio River, ca. 2.5 air km due W of Ruby Canyon. UTMs (NAD 27, map estimate): zone 10S, 659400 to 659500 E, 3985900 to 3986100 N.",36.00456,"-121.23139","WGS84",3999
+1474365,2,7,6,"UCR","sativus","B.G. Pitzer","4/28/96",1996,4,28,"4/28/96","Los Angeles","Harbor City / City of Wilmington, Ken Malloy Harbor Regional Park, at intersection of Pacific Coast Hwy (CA Hwy 1) with Vermont Avenue",33.79028,"-118.29194","WGS84",3999
+1467990,2,10,16,"UCR","sativus","B.G. Pitzer","4/30/96",1996,4,30,"4/30/96","Orange","Upper Newport Bay, CA Dept. Fish & Game Ecological Reserve, west of Jamboree Road; Upper Newport Bay",33.64833,"-117.87","WGS84",3999
+2071627,0,9,35,"CHSC","raphanistrum","Vernon H. Oswald","5/20/96",1996,5,20,"5/20/96","Tehama","Cascade Range Foothills. Hog Lake Plateau. BLM parcel along Hwy. 36 NE of Red Bluff. On the flood plain of Paynes Creek. T28N R02W S08 NE1/4 of NW1/4",40.298611,"-122.114444","NAD83",402
+1474364,1,7,11,"UCR","sativus","George K. Helmkamp","9/22/96",1996,9,22,"9/22/96","San Luis Obispo","along San Simeon Creek, c. 0.2 mile east of CA Hwy 1",35.59472,"-121.12194","WGS84",3999
+1474363,6,37,14,"UCR","sativus","A.C. Sanders","4/20/96",1996,4,20,"4/20/96","Riverside","Moreno Valley, north of the San Jacinto Wildlife Area, W side of Davis Road at intersection with Allesandro Blvd.",33.91667,"-117.13333","WGS84",3999
+3324477,5,6,2,"UCJEPS","raphanistrum","Barbara Ertter","2/10/97",1997,2,10,"11-Feb-97","Contra Costa","North base of Mount Diablo, vacant lot on Regency Drive (en route to Donner Canyon trailhead).",37.92229,"-121.92622","WGS84",700
+1474360,5,16,5,"UCR","sativus","Scott D. White","2/2/97",1997,2,2,"2/2/97","Los Angeles","San Dimas/Pomona area: Bonelli Regional Park, just northwest of Puddingstone Reservoir, south of San Dimas Ave, and east of the I-210 Fwy",34.09167,"-117.81667","WGS84",3999
+1474357,1,6,15,"UCR","raphanistrum","Scott D. White","4/4/97",1997,4,4,"4/4/97","Fresno","Kings River Area, east of Centerville, just south of State Hwy 180 (Kings Canyon Road), just north of existing gravel quarry, near Collins Creek",36.725,"-119.475","WGS84",3999
+610295,1,13,17,"SFV","sativus","J. N. Hogue","6/13/97",1997,6,13,"13-Jun-97","Los Angeles","Los Angeles, Eagle Rock.",34.13444,"-118.21073","WGS84",2000
+1339126,1,4,0,"DAV","raphanistrum","M. Tu","7/16/97",1997,7,16,"16-Jul-97","Sacramento","Sacramento County: Collected from west side of small dirt road approximately 350 m southeast of the Equipment Pad. This road runs adjacent to the east side of the Tall Forest, near the Levee Break area.",38.25,"-121.166667","WGS84",3999
+3776580,1,5,21,"DAV","sativus","Buu Huynh","4/28/97",1997,4,28,"28-Apr-97","Sacramento","City of Sacramento, found on a levee along the American River, about 1/2 mile N/W of J Street.",38.57409,"-121.46998","WGS84",4500
+1583074,2,6,29,"UCR","raphanistrum","Suzanne Bell","4/8/97",1997,4,8,"4/8/97","San Diego","Mother Grundy Truck Trail",32.66278,"-116.75139","WGS84",3999
+202458,1,9,3,"OBI","sativus","D. R. Miller","7/25/97",1997,7,25,"25-Jul-97","San Luis Obispo","Pine Mt Region. In orchard/garden area at 1st gate, San Simeon drainage",35.65391,"-121.042207","WGS84",55
+3776588,5,23,29,"DAV","raphanistrum","B. Lamp","5/13/97",1997,5,13,"13-May-97","Yolo","City of Davis. Along Covell Blvd approximately 2 road mi west of the intersection of Covell Blvd. and Sycamore Ln.",38.561535,"-121.800591","WGS84",250
+202450,1,17,14,"OBI","raphanistrum","Mary Lea","11/25/97",1997,11,25,"25-Nov-97","San Luis Obispo","Property of Shepherds of Leg bourne, Noyes Rd, Arroyo Grande",35.15377,"-120.58528","WGS84",700
+3373130,0,10,30,"UCJEPS","raphanistrum","Jake Ruygt","3/28/98",1998,3,28,"29-Mar-98","Napa","Jameson Canyon, north side near bottom of ridge. Cordelia 7.5' Qua.",38.2211,"-122.2355","WGS84",3999
+3544281,0,9,56,"UCJEPS","raphanistrum","Barbara Ertter","5/2/98",1998,5,2,"3-May-98","Contra Costa","Pine Canyon/Stage Road upstream from Dusty Road junction, southwest flank of Mount Diablo.",37.86884,"-121.96555","WGS84",500
+387226,0,12,18,"SDSU","sativus","Steinberg, J. Jill","4/5/98",1998,4,5,"4/5/98","Riverside","Ca. 1/4 mile along northern border of Santa Margarita (SDSU) Field Station north of gorge. Specimen was taken from a large patch of plants most of which were tamped down, perhaps by a deer or other large animal.",33.4625,"-117.17139","WGS84",3999
+1088339,0,14,38,"RSA","raphanistrum","Barbara Ertter","5/13/98",1998,5,13,"5/13/98","Contra Costa","North Gate Road on west side of Mount Diablo, hairpin turn opposite Angel Kerley trailhead.",37.87205,"-121.94265","WGS84",150
+3544438,0,9,34,"UCJEPS","sativus","Barbara Ertter, Susan D'Alcamo","6/12/98",1998,6,12,"12-Jun-98","Contra Costa","North Gate Road on west flank of Mount Diablo, dogleg in road above ranches opposite Angel Kerley trailhead.",37.87205,"-121.94268","WGS84",250
+202448,5,12,11,"OBI","raphanistrum","David J. Keil","6/5/98",1998,6,5,"5-Jun-98","San Luis Obispo","Hwy 58, just E of Santa Margarita cemetery.",35.389925,"-120.585056","WGS84",450
+1300530,2,12,17,"DAV","raphanistrum","Ellen Dean","3/18/00",2000,3,18,"18-Mar-00","Napa","Napa County. McLaughlin Reserve. North of Knoxville -- Berryessa Rd., along road from Knoxville to Clover Valley, just E of site of old town of Knoxville. Near old Osage orange tree by creek.",38.826944,"-122.339722","WGS84",3999
+1327836,2,7,7,"DAV","sativus","J. Buck","3/23/00",2000,3,23,"23-Mar-00","Sacramento","Cosumnes River Preserve: lower preserve, located near the Visitor's Center, east of Franklin Boulevard and south of Twin Cities.",38.2646,"-121.43738","WGS84",3900
+3239401,1,7,20,"UCJEPS","sativus","Barbara Ertter","6/20/98",1998,6,20,"20-Jun-98","Contra Costa","Shell Ridge Open Space on NW side of Mount Diablo, roadside near Old Borges Ranch.",37.88167,"-121.91278","WGS84",1807
+1546416,1,5,11,"UCR","sativus","Alison Lipman","5/6/98",1998,5,6,"5/6/98","Los Angeles","Los Angeles, San Pedro area, Defense Fuel Support Point (Naval Reservation) 3171 North Gaffey St.",33.76944,"-118.29444","WGS84",3999
+2085539,1,8,46,"CHSC","sativus","D. Tellefson","4/23/00",2000,4,23,"4/23/00","Placer","Shockley Woods, Shockley Rd, Auburn. T 12N R 8E.",38.899722,"-121.073056","NAD83",805
+1367985,1,17,34,"DAV","raphanistrum","J. V. Peconom","5/21/00",2000,5,21,"21-May-00","Sacramento","Sacramento County: city of Rancho Cordova, Mather Regional Park, along dirt road with telephone poles that heads west from Eagles Nest Road, approx. 2.25 road miles So of Douglas Blvd.",38.541667,"-121.291667","WGS84",3999
+3507606,0,8,19,"UCJEPS","raphanistrum","Barbara Ertter","7/15/00",2000,7,15,"16-Jul-00","Contra Costa","Little Pine Creek Road on west side of Mount Diablo.",37.88157,"-121.97411","WGS84",750
+76355,0,2,21,"SBBG","sativus","R. Burgess","9/19/01",2001,9,19,"9/19/01","Ventura","Olivas Adobe Rd adjacent to Olivas Adobe Park Golf Course; Ventura",34.243,"-119.2489","WGS84",750
+293450,4,15,10,"UCSB","sativus","David L. Magney","4/2/01",2001,4,2,"4/2/01","Santa Barbara","Outer South Coast Ranges; Orcutt Quad., T9N, R35W, Punta De La Laguna, San Bernardino Bm; between Solomon & Black Roads (~280-ac site); N of SR1, S of Santa Maria Airport, W of Orcutt, along farm road near SR1",34.88,"-120.4816667","WGS84",3999
+611759,2,7,5,"SFV","sativus","J. M. Keefe","1/24/01",2001,1,24,"24-Jan-01","Los Angeles","San Rafael Hills; Pasadena. East side of Arroyo Seco, 2 m west of curb, across street from 1590 Arroyo Blvd at Howard Street.",34.17422222,"-118.1671111","WGS84",3999
+1337204,0,3,2,"DAV","","J. Shepard","4/22/02",2002,4,22,"22-Apr-02","Solano","Solano Co.: From I-80 west, Leisure Town Rd. exit to Vaca Valley Parkway .3 mi west, to SW of Kaiser medical facility.",38.386111,"-121.941944","WGS84",3999
+202449,1,5,3,"OBI","raphanistrum","David J. Keil","5/3/01",2001,5,3,"3-May-01","San Luis Obispo","Campus of California Polytechnic State University. Chorro Creek Ranch south of Highway 1, west of Cuesta College campus. Ca. 35.32604∞N x 120.75759∞W",35.32604,"-120.75759","WGS84",75
+330069,2,9,13,"UCSB","sativus","Brent Miller","5/4/02",2002,5,4,"5/4/02","Santa Barbara","Isla Vista, empty lot N of El Colegio Rd",34.417415,"-119.861133","WGS84",3000
+388498,1,10,17,"SDSU","sativus","Mabs, David","4/20/02",2002,4,20,"4/20/02","Riverside County","Santa Margarita Ecological Reserve. About a hundred yards up river from where Tornado Road crosses.",33.45639,"-117.16944","WGS84",3999
+388460,1,20,21,"SDSU","sativus","Grimm, Jennifer","5/3/02",2002,5,3,"5/3/02","San Diego","North of USD campus. On the side of the trail 1/2 mile from enterance.",32.77556,"-117.18833","WGS84",3999
+1635838,0,3,0,"UCR","sativus","Mark A. Elvin","1/26/03",2003,1,26,"1/26/03","Orange","Irvine, UC Irvine Open Space Preserve, NE side, between core of UCI campus (E Peltason Dr.) and Hwy 73",33.63972,"-117.84528","WGS84",3999
+3475357,7,19,1,"UCJEPS","raphanistrum","G. Smick","4/8/03",2003,4,8,"4/8/03","Contra Costa","Mt. Wanda; Martinez; John Muir National Historic Site; Mt. Wanda, John Muir National Historic Site",37.979923,"-122.12844","WGS84",3999
+389892,4,1,24,"SDSU","sativus","Estrella, D.C.","4/3/03",2003,4,3,"4/3/03","San Diego","Point Loma Naval Facility, SPAWAR. Water Treatment Facility, Woodward St. entrance. Growing along roadside, in front of building #306, west of Gatchell Rd.",32.69028,"-117.24917","WGS84",3999
+1585505,1,7,6,"UCR","sativus","M. Georgiady","4/10/03",2003,4,10,"4/10/03","San Diego","Encinitas, Park & Ride lot at I-5 and La Costa Ave, adjacent to Batiquitos Lagoon Ecological Reserve",33.08556,"-117.29806","WGS84",3999
+1562530,1,12,35,"UCR","sativus","Jon P. Rebman","4/15/03",2003,4,15,"4/15/03","San Diego","Crestridge Ecological Reserve: west of La Cresta between Alpine and El Cajon. Atlas Square P15",32.82361,"-116.865","WGS84",3999
+1655005,1,3,10,"UCR","sativus","Mark A. Elvin","4/22/03",2003,4,22,"4/22/03","Los Angeles","Newhall Ranch, bee site on open former oil well pad just east of Grapevine Mesa, S of Santa Clara River and Hwy 126, c. 4 mi. east of Ventura Co. line",34.41689,"-118.62697","WGS84",3999
+1548194,1,17,6,"UCR","sativus","Michael D. Wilcox","5/13/03",2003,5,13,"5/13/03","Riverside","French Valley, ""Greenway site"" along Tucalota Creek c. 1 mile east of Murrieta Hot Springs",33.56556,"-117.11833","WGS84",3999
+4418728,1,13,20,"SBBG","sativus","R. Burgess","4/2/04",2004,4,2,"2-Apr-04","Ventura","Lake Piru area, Dominguez Cyn, in vicinity of Rodeo Flat within Piru Burn, Los Padres National Forest",34.4803,"-118.8101","WGS84",750
+468997,2,8,5,"SD","sativus","Edith A. Purer","7/15/32",1932,7,15,"7/15/32","Monterey","Del Monte",36.60643,"-121.86748","WGS84",4001
+1560057,0,18,12,"UCR","sativus","George K. Helmkamp","3/15/04",2004,3,15,"3/15/04","San Luis Obispo","edge of Nipomo Mesa overlooking Cienaga Valley, along CA Hwy 1 (Mesa View Dr.), 0.3 mile north of Halcyon Rd",35.08333,"-120.585","WGS84",3999
+1302899,1,0,18,"DAV","","Joe Di Tomaso","7/15/03",2003,7,15,"15-Jul-03","Yolo","University Farm. Grass flats, Field A.",38.54011,"-121.76696","WGS84",500
+202480,5,9,5,"OBI","sativus","Margaret Przybylski","4/3/04",2004,4,3,"3-Apr-04","Alameda","The Oakland Zoo, E of main parking lot in rolling hills. Near gate to upper zoo land",37.751459,"-122.144718","WGS84",688
+469007,0,5,16,"SD","sativus","Jack L. Reveal","4/23/67",1967,4,23,"4/23/67","San Diego","Proctor Valley",32.68073,"-116.92162","WGS84",2414
+468963,3,13,20,"SD","sativus","Daniel Cleveland","1875-05-24",1875,5,24,"05/24/1875","San Diego","Sweetwater",32.7089,"-116.9682","WGS84",5000
+390689,0,7,17,"SDSU","sativus","Stein, Ashley","3/11/05",2005,3,11,"3/11/05","San Diego","San Luis Rey River bed off of Old River Road, Bonsall CA. Near Little Gopher Canyon Road cross. 300 feet off of the road.",33.2675,"-117.23306","WGS84",3999
+1582894,8,13,4,"UCR","sativus","George K. Helmkamp","4/6/05",2005,4,6,"4/6/05","Santa Barbara","Santa Ynez Mountains, near NW side of Sudden Peak; c. mile 7 of San Miguelito Road at junction with Sudden Road",34.575,"-120.51667","WGS84",3999
+2120835,0,4,22,"CHSC","raphanistrum","Lowell Ahart","4/14/05",2005,4,14,"4/14/05","Butte","Bottom of a deep drain ditch, about 200 feet east of the railroad tracks, north of Spruce Street, Gridley. T18N R02E S36 SE1/4",39.370278,"-121.696389","WGS84",3999
+1591452,0,7,19,"UCR","sativus","Jon P. Rebman","4/19/05",2005,4,19,"4/19/05","San Diego","Sycuan Peak Ecological Reserve (California Dept. of Fish & Game): southeast of Dehesa, southwest of Loveland Reservoir; on the lower northeast side of Sycuan Peak, just northeast of the Sloan Ranch. San Diego Atlas Square R16",32.77194,"-116.79722","WGS84",3999
+391803,3,15,2,"SDSU","sativus","Dernetz, Liz","4/7/05",2005,4,7,"4/7/05","San Diego","Special Dist., Cities of Del Mar & San Diego, .1 mi. S of San Dieguito Lagoon on path E of Racetrack View Dr., 1 mi. S of DM Racetrack, SE of (outside) E rim Crest Canyon, .8 mi E of coastline.",32.9631,"-117.25","WGS84",80
+1602409,4,0,12,"UCR","sativus","Mitch Provance","5/27/05",2005,5,27,"5/27/05","Riverside","Riverside, Sycamore Canyon, just east of the corner of Canyon Crest Drive and Via Vista",33.94028,"-117.33111","WGS84",3999
+1575247,1,11,44,"UCR","sativus","A.C. Sanders","6/17/05",2005,6,17,"6/17/05","San Diego","Boden Canyon Ecological Reserve at E end of San Pasqual Valley, along entrance road from Hwy 78 to Clevenger Canyon",33.08528,"-116.90167","WGS84",3999
+1896191,1,6,9,"UCSB","sativus","CCBER Staff","6/30/05",2005,6,30,"6/30/05","Santa Barbara","UCSB Campus, Manzanita Village.",34.409149,"-119.852117","WGS84",200
+1578414,0,12,31,"UCR","sativus","A.C. Sanders","6/22/05",2005,6,22,"6/22/05","San Diego","Buena Vista Lagoon Ecological Reserve (DFG), Carlsbad, north side of lagoon between Carlsbad Blvd. (S-21) and the RR, south of Eaton St.",33.16861,"-117.35833","WGS84",3999
+1588191,0,5,25,"UCR","sativus","A.C. Sanders","6/24/05",2005,6,24,"6/24/05","San Diego","San Dieguito Lagoon Ecological Reserve (DFG), north edge of reserve along Palm Lane (closed/abandoned) east of San Dieguito Dr. near old airport site",32.96806,"-117.25417","WGS84",3999
+1576181,0,8,37,"UCR","sativus","Jon P. Rebman","6/1/04",2004,6,1,"6/1/04","San Diego","Otay Mountain Ecological Reserve (California Dept. of Fish & Game): Southeast of Otay Lake; near the gate just south of the bridge on Otay Lakes Road",32.63583,"-116.88389","WGS84",3999
+1590780,7,20,7,"UCR","sativus","George K. Helmkamp","2/9/06",2006,2,9,"2/9/06","Placer","Clark Tunnel Road and Calif. Highway 193, east of Lincoln",38.88611,"-121.20917","WGS84",3999
+469015,0,10,19,"SD","sativus","Barry A. Prigge","6/7/86",1986,6,7,"6/7/86","San Diego","San Mateo Creek: S of San Clemente. Between agricultural field and I-5. Disturbed areas along edge of dirt road.",33.39337,"-117.58991","WGS84",241
+1591165,5,25,52,"UCR","sativus","George K. Helmkamp","3/19/06",2006,3,19,"3/19/06","Amador","Along Calif. Highway 49 just south of Plymouth",38.47056,"-120.85278","WGS84",3999
+1603927,1,16,6,"UCR","sativus","George K. Helmkamp","3/14/07",2007,3,14,"3/14/07","Sacramento","Latrobe Rd at Michigan Bar Rd, about 3.5 mi west of Latrobe and 0.3 mi west of the El Dorado County line",38.54,"-121.04389","WGS84",3999
+3235156,0,12,26,"UCJEPS","","Richard Halse","3/22/07",2007,3,22,"Mar 22 2007","Colusa","Williams, by the junction of 5th Street and B Street",39.1591,"-122.1494","WGS84",25
+2124078,1,9,9,"CHSC","raphanistrum","Lowell Ahart","4/13/07",2007,4,13,"4/13/07","Placer","Open pasture fields, about 1/2 mile south of the Manzanita Cemetery, about 1/2 mile west of Gladding Road, about 2 3/4 miles north of Lincoln. T13N R06E S34 NW1/4",38.937222,"-121.302778","WGS84",3999
+469019,3,8,23,"SD","raphanistrum","Jerilyn Hirshberg","8/31/93",1993,8,31,"8/31/93","San Diego","Laguna Mountains, Escondido Creek, º mile west of Sunrise Highway, near creek.",32.86473,"-116.42396","WGS84",241
+1606153,1,7,0,"UCR","sativus","T.B. Salvato","3/28/07",2007,3,28,"3/28/07","Los Angeles","Santa Anita Reservoir, proposed 4-acre sediment placement site, east side of the channel and 0.4 mi south of the Elkins Avenue entrance gate",34.16389,"-118.02194","WGS84",3999
+80367,1,8,31,"SBBG","raphanistrum","L. Emard","5/27/07",2007,5,27,"5/27/07","Santa Barbara","Santa Ynez Mtns: 55 yards N of parking lot, 20 ft W of rd; Arroyo Hondo Preserve",34.4778,"-120.1417","WGS84",200
+5776205,0,10,5,"DAV","sativus","G.L. Clifton","4/17/07",2007,4,17,"4/17/07","San Mateo","Pigeon Point, Pigeon Point Quad.",37.181002,"-122.383001","WGS84",3999
+1613574,2,5,18,"UCR","raphanistrum","George K. Helmkamp","10/13/07",2007,10,13,"10/13/07","San Joaquin","along Hwy CA-88, 1.0 mile southwest of Clements at Disch Road",38.17667,"-121.115","WGS84",3999
+1607550,3,4,14,"UCR","sativus","George K. Helmkamp","9/30/07",2007,9,30,"9/30/07","Sutter","Sacramento Ave. on the east side of CA-99, junction 1.4 miles north of the Feather River",38.91667,"-121.60472","WGS84",3999
+617784,2,5,6,"SFV","sativus","J. R. Holt","4/12/08",2008,4,12,"12-Apr-08","Riverside","Riverside. Banks of Santa Ana River adjacent to Rancho Jarupa Park.",33.98,"-117.41","WGS84",1000
+1616502,6,19,6,"UCR","sativus","George K. Helmkamp","3/6/08",2008,3,6,"3/6/08","Sutter","Sutter Basin; junction of CA-20 and South Butte Rd, west of Yuba City",39.14306,"-121.69833","WGS84",3999
+1613581,1,10,10,"UCR","raphanistrum","George K. Helmkamp","10/28/07",2007,10,28,"10/28/07","Placer","along Nicolaus Road 5.8 miles west of Lincoln",38.89722,"-121.42111","WGS84",3999
+2146635,4,24,28,"CHSC","raphanistrum","Lowell Ahart","4/13/08",2008,4,13,"4/13/08","Merced","Along the fence, about 50 yards west of the wire gate on the south side of Sandy Mush Road, 3.7 miles west of Highway 99, about 8.5 miles south-southeast of Merced. T09S R14E S01 NW1/4 USGS Quadrangle: El Nido",37.185278,"-120.3975","WGS84",3999
+469029,0,4,38,"SD","sativus","Steve Boyd","5/19/92",1992,5,19,"5/19/92","Orange","Southern Santa Ana Mountains; western edge of the wilderness in Alixo Canyon at the confluence with Lucas Canyon, upstream to the Lucas Canyon Trail crossing.",33.5701,"-117.50743","WGS84",3999
+1612297,4,24,4,"UCR","sativus","A.C. Sanders","5/13/08",2008,5,13,"5/13/08","Orange","Lomas de Santiago, Santiago Canyon above (S of) mouth of Hangman Tree Canyon, just below Modjeska Canyon confluence",33.71778,"-117.64806","WGS84",3999
+1619748,1,5,16,"UCR","raphanistrum","George K. Helmkamp","10/6/08",2008,10,6,"10/6/08","Yuba","Ostrom #3 Road, 1.2 miles east of junction with CA-65, southeast of Olivehurst",39.07056,"-121.4975","WGS84",3999
+1620243,5,7,13,"UCR","sativus","George K. Helmkamp","10/9/08",2008,10,9,"10/9/08","San Joaquin","junction of Collier Road and CA-88, 1.1 miles north of the junction of CA-12 and CA-88, NE of Lodi",38.21361,"-121.06889","WGS84",3999
+1623528,7,22,2,"UCR","sativus","George K. Helmkamp","1/31/09",2009,1,31,"1/31/09","Colusa","along River Road, 0.9 mile north of the city of Colusa",39.22556,"-121.99528","WGS84",3999
+1635613,5,13,9,"UCR","sativus","R.G. Swinney","3/6/09",2009,3,6,"3/6/09","Los Angeles","Azusa, east of Irwindale Ave. and north of I-210 Fwy",34.13111,"-117.93028","WGS84",3999
+469032,4,1,8,"SD","sativus","Margaret Fillius","4/6/04",2004,4,6,"4/6/04","San Diego","Rose Canyon, alongside the road through the south of the canyon, West of Galloway trail",32.8558,"-117.2219","WGS84",3999
+469043,3,8,9,"SD","sativus","Nancy Nenow","2/15/05",2005,2,15,"2/15/05","San Diego","Balboa Park, Vermont St. canyon at Cypress St.",32.7439,"-117.1533","WGS84",3999
+1895626,2,21,16,"UCSB","sativus","Heather Liu","6/1/09",2009,6,1,"06.01.09","Santa Barbara","South Parcel Open Space, UC Santa Barbara. Between Ocean Meadows Golf Course to the north and Devereux Slough and Coal Oil Point Reserve to the south.",34.418182,"-119.883056","WGS84",250
+1336457,1,3,19,"DAV","raphanistrum","Ellen Dean","4/1/09",2009,4,1,"1-Apr-09","Yolo","Yolo County: city of Woodland. Mavis Henson field property on the east side of County Road 102, just south of County Road 25. Property owned by city of Woodland.",38.64144812,"-121.7218696","NAD83",3999
+2134739,0,2,0,"CHSC","sativus","M. Beyers","11/17/09",2009,11,17,"11/17/09","Sacramento","Sacramento; in an empty lot behind residential housing on 32nd Street, just north of Ellwood Avenue and just west of Wainscott Way. Adjacent to the Light Rail Station off of Meadowview Road.",38.4825,"-121.470278","WGS84",3999
+1675351,1,11,30,"UCR","sativus","R.G. Swinney","2/27/10",2010,2,27,"2/27/10","Los Angeles","Hansen Dam Flood Control Basin, from east end of Orcas Park to 0.5 mile east, and from the I-210 Fwy south to Big Tujunga Wash",34.27222,"-118.36583","WGS84",3999
+1650071,3,10,2,"UCR","sativus","George K. Helmkamp","3/26/10",2010,3,26,"3/26/10","Amador","low foothills along CA-16, 6.8 miles west of Plymouth near Forest Home Rd.",38.46528,"-120.96583","WGS84",3999
+1675381,0,10,42,"UCR","sativus","R.G. Swinney","3/16/10",2010,3,16,"3/16/10","Los Angeles","Confluence of Little Tujunga Wash and Big Tujunga Wash at I-210 crossing, within 50 m on north and south sides of I-210",34.27417,"-118.37306","WGS84",3999
+393682,1,7,1,"SDSU","sativus","Azuma, Adam","5/4/10",2010,5,4,"5/4/10","San Diego","Mission Trails Regional Park, San Diego, Oak Canyon Trail, next to fence post 200 feet east of taped off patch of Toxicodendron diversilobum.",32.83988,"-117.04476","WGS84",3999
+1660287,0,18,35,"UCR","sativus","George K. Helmkamp","4/14/10",2010,4,14,"4/14/10","Solano","Tremont Road, 0.8 mile west of Mace Blvd, 3.8 mi. (air) SE of Davis",38.495,"-121.70917","WGS84",3999
+1660267,4,13,9,"UCR","sativus","George K. Helmkamp","4/3/10",2010,4,3,"4/3/10","Amador","Willow Creek Road, 1.2 miles north of its junction with CA-124, 3.7 mi. NE (22∞) of Ione",38.40694,"-120.9075","WGS84",3999
+613793,0,10,11,"SFV","sativus","J. N. Hogue","3/1/11",2011,3,1,"1-Mar-11","Los Angeles","Los Angeles Basin; Los Angeles, Eagle Rock.",34.136,"-118.194","WGS84",3999
+1635523,2,3,20,"UCR","raphanistrum","George K. Helmkamp","5/31/10",2010,5,31,"5/31/10","Amador","Church Street, becoming Sutter Creek-Volcano Road, 0.2 mile east of the village of Sutter Creek",38.3925,"-120.79556","WGS84",3999
+1648787,4,23,5,"UCR","sativus","George K. Helmkamp","3/12/11",2011,3,12,"3/12/11","San Joaquin","between Lodi and Galt, Forest Lake Road just west of CA-99",38.22194,"-121.27361","WGS84",3999
+1652556,1,4,17,"UCR","sativus","George K. Helmkamp","11/17/11",2011,11,17,"11/17/11","El Dorado","1.6 miles west of Latrobe on South Shingle Road",38.55472,"-121.00167","WGS84",3999
+236400,0,10,6,"UCSC","sativus","Andrew Weitz","5/12/11",2011,5,12,"12-May-11","Santa Cruz","Great Meadow, University of California, Santa Cruz",36.987944,"-122.065972","WGS84",3999
+1652583,10,29,14,"UCR","sativus","George K. Helmkamp","11/28/11",2011,11,28,"11/28/11","Sutter","Worth Road, 0.2 mile east of its junction with Garden Highway, 4 miles southwest of Nicolaus",38.85583,"-121.6225","WGS84",3999
+235906,2,5,0,"UCSC","sativus","Hilary Walecka","4/25/11",2011,4,25,"25-Apr-11","Santa Cruz","2855 E. Cliff Dr. at Schwan Lake Park",36.9649506,"-121.9949615","WGS84",3999
+1679520,6,17,18,"UCR","sativus","George K. Helmkamp","12/9/11",2011,12,9,"12/9/11","Placer","Sunset Blvd. West, 5.8 miles west of its junction with Fiddyment Road",38.82389,"-121.45556","WGS84",3999
+1654191,8,15,8,"UCR","sativus","George K. Helmkamp","2/23/12",2012,2,23,"2/23/12","Sutter","east end of Kirkville Road at the west edge of Sutter Bypass Causeway",38.90889,"-121.64278","WGS84",3999
+1655697,3,15,4,"UCR","sativus","George K. Helmkamp","2/9/12",2012,2,9,"2/9/12","Glenn","along Road Z, 0.9 mile north of its junction with CA-162",39.47583,"-121.93","WGS84",3999
+1654175,6,17,9,"UCR","sativus","George K. Helmkamp","2/17/12",2012,2,17,"2/17/12","Sacramento","along Scott Road, 2.67 miles south of its junction with White Rock Road, south of Folsom Lake and Hwy 50",38.57083,"-121.13056","WGS84",3999
+1655320,1,17,6,"UCR","sativus","George K. Helmkamp","4/4/12",2012,4,4,"4/4/12","Calaveras","along CA-26, 0.6 mile northeast of its junction with Paloma Road, 4.5 km SW (213∞) of Mokelumne Hill",38.26639,"-120.73528","WGS84",3999
+1372819,1,15,15,"DAV","raphanistrum","Ellen Dean","4/14/12",2012,4,14,"14-Apr-12","Merced","Merced County: NE of the town of Planada. Flying M Ranch. Dr. Bob's Power Mosey camp area. On bluff above creek on west side of encampment.",37.381667,"-120.281389","NAD83",3999
+1670844,1,6,8,"UCR","raphanistrum","George K. Helmkamp","10/30/12",2012,10,30,"10/30/12","Placer","South Dowd Road, 0.1 mile south of its junction with Moore Road, southwest of Lincoln",38.86556,"-121.37694","WGS84",3999
+2132998,2,4,1,"CHSC","raphanistrum","Lowell Ahart","5/10/12",2012,5,10,"5/10/12","Butte","On disturbed soil, on the east side of the horse path, about 100 yards north of the paved park road, west side of the old walnut orchard, south of Vallombrosa Avenue, about 1/4 mile west of Peterson Drive, Lower Bidwell Park, Chico. T22N R02E S19 NW 1/4",39.750833,"-121.801389","WGS84",3999
+1667960,9,15,8,"UCR","sativus","George K. Helmkamp","3/9/13",2013,3,9,"3/9/13","Sutter","North Butte Road, 0.2 mile east of its junction with West Butte Road, NW foot of Sutter Buttes",39.28889,"-121.85444","WGS84",3999
+202500,2,6,5,"OBI","sativus","Kristen M. Nelson","2/9/13",2013,2,9,"2/9/13","San Luis Obispo","Ca. 8 miles SW of downtown San Luis Obispo, ca. 1 driving mile southeast of CA-227 on Corbett Canyon Road. Along disturbed roadside, full sun.",35.16357,"-120.5648","WGS84",5000
+1654256,0,14,26,"UCR","sativus","George K. Helmkamp","4/14/12",2012,4,14,"4/14/12","Butte","Robinsons Corner, Simpson Rd, just east of junction of East Gridley Road and CA-70",39.36472,"-121.60556","WGS84",3999
+1669580,2,25,4,"UCR","sativus","Jon P. Rebman","3/26/13",2013,3,26,"3/26/13","San Diego","Lake Hodges area, south of Escondido; southeast of intersection of Lake Drive and Beech Lane; along north side of lake south of the boat ramp parking lot; Square K10",33.06289,"-117.10389","WGS84",3999
+1392578,2,5,2,"DAV","sativus","Ellen Dean","4/6/13",2013,4,6,"6-Apr-13","Sutter","Sutter County; Sutter Buttes. Dean Ranch. Along undeveloped road between Willaston Flat and residence.",39.224444,"-121.785833","NAD83",3999
+2133518,3,9,1,"CHSC","raphanistrum","Lowell Ahart","4/26/13",2013,4,26,"4/26/13","Mendocino","North Coast. Base of eroding cliffs, above the sand beach, 1.1 miles (air) southeast of Anchor Bay, 2.0 miles (air) northwest of mouth of Gualala River. T11N R15W S20 SW1/4",38.789167,"-123.561111","WGS84",3999
+236311,0,5,9,"UCSC","raphanistrum","Preza, Mizael","4/26/13",2013,4,26,"26-Apr-13","Santa Cruz","University of Santa Cruz",36.988889,"-122.050556","WGS84",3999
+3798671,0,12,9,"OBI","sativus","George K. Helmkamp","3/28/13",2013,3,28,"3/28/13","Yuba","Eastern Sacramento Valley; northbound exit road from CA-65, connecting with Forty Mile Road",39.06583,"-121.51222","WGS84",100
+1671045,5,12,43,"UCR","sativus","George K. Helmkamp","11/29/13",2013,11,29,"11/29/13","El Dorado","Along CA-193, Georgetown Rd., 5.5 miles east of CA-49 in Cool",38.89861,"-120.93889","WGS84",3999
+950503,4,18,5,"RSA","sativus","George K. Helmkamp","1/4/14",2014,1,4,"1/4/14","Colusa","Sacramento Valley: along CA-20 at Sycamore Cutoff, 1.3 miles west of the Sacramento River crossing.; Meridian 7.5'",39.14583,"-121.94194","WGS84",3999
+2252335,0,3,2,"OBI","sativus","David Keil","2/25/14",2014,2,25,"25-Feb-14","San Luis Obispo","Los Osos. El Morro Elfin Forest. West of South Bay Blvd. and north of Santa Ysabel Ave.; in weedy strip along South Bay Blvd.",35.333888,"-120.823404","WGS84",3999
+1687752,5,16,11,"UCR","sativus","George K. Helmkamp","3/14/14",2014,3,14,"3/14/14","Amador","along Hwy E-16, 0.6 mile southwest of the junction with CA-49, c. 2.5 miles southwest of Plymouth",38.45278,"-120.87639","WGS84",3999
+1671086,5,7,6,"UCR","sativus","George K. Helmkamp","3/18/14",2014,3,18,"3/18/14","San Joaquin","along Hwy CA-88 on the southwest side of the border with Calaveras County, 7.1 mi. SW (220∞) of Ione",38.27444,"-121.0175","WGS84",3999
+1674069,3,16,10,"UCR","sativus","George K. Helmkamp","3/21/14",2014,3,21,"3/21/14","Sutter","Along CA-20 (Colusa Hwy), 0.3 mile west of South Tarke Road, 3.75 miles east of Meridian",39.14278,"-121.84472","WGS84",3999
+3840150,1,11,19,"RSA","sativus","R. Burgess","3/25/14",2014,3,25,"Mar 25 2014","Ventura","Arroyo Conejo Cr. City of Camarillo. Vicinity of Camarillo Sewage Treatment Plant.",34.19744,"-118.9999","WGS84",3999
+1399261,1,10,13,"DAV","raphanistrum","Steve Wathan","3/10/15",2015,3,10,"10-Mar-15","Napa","Napa County: McLaughlin UC Reserve. Knoxville Mine site, ca. 7 miles south of McLaughlin Field Station.",38.825278,"-122.336111","WGS84",3999
+3805929,1,6,26,"RSA","sativus","Jim M. AndrÈ","3/4/15",2015,3,4,"3/4/15","San Diego","Unknown0.2 mi. south of Otay Lakes Rd, east of Chula Vista, NE end of Otay Lake (Harvey's Arm), NW of Otay Mtn.; Jamul Mountains 7.5'",32.6333,"-116.9237167","NAD83",3999
+790470,0,2,52,"RSA","sativus","Jon P. Rebman","5/8/14",2014,5,8,"5/8/14","San Diego","Camp Pendleton: Training Area India: eastern portion of Base; along the Santa Margarita River just southwest of the De Luz Road crossing.",33.36119,"-117.32249","WGS84",3999
+1031022,0,5,0,"RSA","sativus","LeRoy Gross","3/17/15",2015,3,17,"3/17/15","Ventura","The Nature ConservancyOrmond Beach at end of McWane Blvd., west of Arcturus Ave. South of Port Hueneme, Oxnard.",34.14013,"-119.17538","WGS84",3999
+395477,2,19,12,"SDSU","sativus","Ayala, Anthony J.","4/15/14",2014,4,15,"4/15/14","San Diego","Mission Trails Regional Park, San Diego. About 1/8 mile west along Mission Gorge from Jackson Drive trail junction.",32.81756,"-117.0605","WGS84",3999
+1002700,1,6,10,"RSA","sativus","Naomi Fraga","5/27/15",2015,5,27,"5/27/15","Ventura","The Nature Conservancy (TNC). Totolcam I owned by The Nature Conservancy, Santa Clara River.; Oxnard",34.2367,"-119.2369","NAD83",3999
+1191094,2,4,21,"RSA","sativus","Jon P. Rebman","5/27/15",2015,5,27,"5/27/15","San Diego","Camp Pendleton: southeastern portion of Base; Juliet Training Area; near Bonsall & Fallbrook; riparian area along the perimeter of the Base.",33.327,"-117.2664","WGS84",3999
+5980225,2,13,1,"FSC","raphanistrum","Barnes, Rusty","2/6/16",2016,2,6,"2/6/16","Madera","b/t Rd 36 and Rd 35 1/2 N",36.9458881,"-119.8986654","WGS84",3999
+3841582,4,3,17,"RSA","raphanistrum","R. G. Swinney","3/28/15",2015,3,28,"28-Mar-15","Los Angeles","San Gabriel Mountains: Glendora, Big Dalton Wilderness Park, Wren Cyn. on Wren-Meacham Trail, 0.2-0.4 mile east of Big Dalton Canyon. Flood Control Channel.; Glendora 7.5",34.1527778,"-117.8313889","WGS84",100
+216778,1,29,3,"OBI","sativus","David Keil","3/24/16",2016,3,24,"24-Mar-16","San Luis Obispo","Southern foothills of San Luis Range. Wild Cherry Ranch west of Avila Beach.",35.187084,"-120.746349","WGS84",3999
+3349335,4,3,14,"UCJEPS","raphanistrum","Lowell Ahart, Josephine Guardino","4/18/16",2016,4,18,"19-Apr-16","Contra Costa","1.4 miles (air) northwest of Los Vaqueros Reservoir Marina, 1.9 miles (air) southwest of Los Vaqueros Reservoir Dam, approximately 25 miles (air) southwest of Stockton. Undesignated section of Canada de Los Vaqueros Land Grant, Byron Hot Spring USGS 7.5' Quad.",37.825822,"-121.759406","WGS84",3999
+395628,1,18,11,"SDSU","sativus","Billings, Emma","4/26/16",2016,4,26,"4/26/16","San Diego","San Diego State University Ecological Reserve, north of I-8 from campus, adjacent to creek area, very sun-exposed, on an inclining hill.",32.78112,"-117.07425","WGS84",3999
+3669165,3,5,37,"HSC","sativus","Trudy Terres","9/17/17",2017,9,17,"17-Sep-17","Humboldt","Arcata, Marsh, along trail near Gearheartís Marsh.",40.858819,"-124.09501","WGS84",422
+5509705,1,8,11,"UCJEPS","sativus","H. Forbes, B. Anderson, C. Al-Witri","6/20/16",2016,6,20,"21-Jun-16","Mendocino","City Hall. California Coastal National Monument. Point Arena/Stornetta Unit Voucher.",38.91507,"-123.66137","WGS84",3999
+3964300,0,12,15,"UCSB","raphanistrum","Kedrina Garcia","5/30/17",2017,5,30,"30-May-17","Santa Barbara","UCSB, W of Harder Stadium, N of Lot 38; 34.4201N, -119.85645W",34.4201,"-119.85645","WGS84",3999
+1699178,1,16,20,"UCR","sativus","Dan S. Cooper","3/8/17",2017,3,8,"3/8/17","Los Angeles","Cahuenga Pass, Cahuenga Blvd. near Wonder View Dr.",34.12569,"-118.34367","WGS84",3999
+3771777,0,7,8,"SBBG","sativus","Jon Rebman","3/29/18",2018,3,29,"29-Mar-18","San Diego","Fallbrook Naval Weapons Station: W of Fallbrook; along Fallbrook Creek, E-central part of station just S of Ammunition Rd in vicinity of Building 351 and along the creek",33.36711,"-117.26121","WGS84",100
+2264695,1,9,32,"SBBG","sativus","Kelly Hildner","3/1/19",2019,3,1,"3/1/19","Santa Barbara","Storke Ranch Open Space; west side of eastern vernal pool fenced area.",34.421134,"-119.86677","WGS84",3999
+1702201,1,11,32,"UCR","raphanistrum","Angelique Herman","3/22/18",2018,3,22,"3/22/18","Fresno","South of Fresno, between north and south-bound lanes of Freeway 41, south of East Floral Ave.",36.57614,"-119.78611","WGS84",3999
+4562413,2,11,32,"OBI","sativus","C. I. Motta","12/20/17",2017,12,20,"20-Dec-17","Santa Barbara","Goleta, North Campus Open Space.",34.421881,"-119.879608","WGS84",50
+4588064,1,5,9,"UCSB","sativus","E. Balderas","4/26/19",2019,4,26,"26-Apr-19","Santa Barbara","Camino Corto Vernal Pools.",34.4153,"-119.8668","WGS84",50
+3590276,3,11,15,"UCSC","sativus","Sierra Stromberg","4/12/19",2019,4,12,"4/12/19","Santa Cruz","Approximately 30 meters north of coastal campus building, adjacent to the north side of the parking lot entrance and bike path.",36.95338,"-122.06525","WGS84",3999
+3630484,2,8,6,"OBI","sativus","David Keil","5/9/19",2019,5,9,"9-May-19","Santa Barbara","Santa Ynez Mountains. Phytojog 2019 trip to The Nature Conservancy's Jack and Laura Dangermond Preserve. Cojo Ranch side. Point Conception, Point Conception Rd. 0.21 miles north of Point Conception Lighthouse, on edge of cliffs.",34.45277158,"-120.4708787","WGS84",3999
+6026439,1,22,31,"RSA","sativus","Kristy Snyder","5/13/20",2020,5,13,"13-May-20","Los Angeles","LAX Dunes, North Dune, by large oak tree near Pershing.",33.95189,"-118.44","WGS84",3999
+3641757,3,23,53,"OBI","raphanistrum","Reed Kenny","7/11/19",2019,7,11,"7/11/19","Santa Cruz","Swanton Pacific Ranch",37.04521,"-122.224","WGS84",3999
+4060635,0,3,7,"SBBG","sativus","Sean Carson","5/14/20",2020,5,14,"5/14/20","San Luis Obispo","West side of Price Canyon Rd.",35.191,"-120.616","WGS84",3999
+3873464,1,4,3,"UCSC","sativus","Anita Pothukuchi","2/4/20",2020,2,4,"2/4/20","Santa Cruz","Approx 5 meters west of the Seymour Center parking lot and approx. 10 meters east of the walking path.",36.9497549,"-122.0646511","WGS84",3999
+2963303,2,7,3,"DAV","sativus","Konshau Duman","4/20/19",2019,4,20,"20-Apr-19","Glenn","Bird Haven Ranch, Butte City, On edge of trail near riparian area.",39.431517,"-121.90649","WGS84",3999
+5365196,1,11,7,"SBBG","sativus","C. M. Guilliams","2/18/22",2022,2,18,"2/18/22","Ventura","Point Mugu Naval Air Station: northwest corner of the base in a low channel adjacent to road, at southeast intersection of Perimeter Road and National Guard taxiway.",34.13297,"-119.10996","WGS84",3999
+5549192,2,19,27,"SDSU","sativus","R. G. Swinney","4/1/21",2021,4,1,"4/1/21","Los Angeles","Golden Hills Wilderness Park, 2300 Golden Hills Rd., Glendora Quad 7.5'",34.143611,"-117.75833","WGS84",100
+5371810,1,6,8,"LA","sativus","Hannah Lechtzin","4/15/22",2022,4,15,"15-Apr-22","Los Angeles","Santa Monica Mountains; University of California, Los Angeles; Sage Hill next to hitch driveway",34.0732491,"-118.4543334","WGS84",3999
+5540556,2,13,20,"SBBG","sativus","C. M. Guilliams","4/12/22",2022,4,12,"4/12/22","Ventura","Point Mugu Naval Air Station: In disturbed areas near restroom, Building 7024; across from yurts.",34.09977,"-119.10156","WGS84",3999
+469064,3,11,5,"SD","sativus","Darlene Ward","3/5/05",2005,3,5,"3/5/05","San Diego","City of San Diego, Ruffin Canyon Open Space, west of Taft Middle School in Serra Mesa, 30 feet south of Gramercy Drive, on a south-facing slope at the edge of a trail.",32.8022,"-117.1331","WGS84",3999
+6053255,1,9,28,"DAV","raphanistrum","Shane Hanofee","4/11/24",2024,4,11,"April 11 2024","Nevada","Spenceville Rd near Penn Valley. 1500' south of intersection with Indian Springs Rd.",39.174924,"-121.196615","WGS84",3999
+5760426,2,10,12,"OBI","sativus","Caitlyn Shank","2/18/22",2022,2,18,"2/18/22","San Luis Obispo","San Luis Obispo. Laguna Lake Park. South-west side of lake edge. Small patch of grass near the main path looping around lake. Patches of flowers bordering path lakeside and field side.",35.26449,"-120.68484","WGS84",3999
+468964,0,0,1,"SD","sativus","Frank F. Gander","2/19/35",1935,2,19,"2/19/35","San Diego","Mahogany Canyon, East San Diego.",32.76805,"-117.09675","WGS84",1207
+469073,0,2,3,"SD","sativus","Andrew C. Sanders","5/28/04",2004,5,28,"5/28/04","San Diego","Carlsbad, Agua Hedionda Ecological Reserve, near El Camino Real and Cannon Rd., along lower Agua Hedionda Creek",33.14917,"-117.29833","WGS84",80
+469074,5,4,0,"SD","sativus","Judy Carlstrom","3/6/05",2005,3,6,"3/6/05","San Diego","Poway. A field at the end of Meadowbrook Lane, W of Meadowbrook Middle School, W of Pomerado Rd.",32.964,"-117.0705","WGS84",3999
+469090,0,7,15,"SD","sativus","Cindy L Christ","6/28/06",2006,6,28,"6/28/06","San Diego","El Cajon, Flynn Springs, Flynn Springs County Park, Old Hwy 80, 1 mile east of its intersection with Lake Jennings Park Rd, south side of Los Coches Creek.",32.8479,"-116.8612","WGS84",3999
+469079,4,6,30,"SD","sativus","Margaret R. Mulligan","7/26/05",2005,7,26,"7/26/05","San Diego","McGinty Mountain Ecological Reserve (California Fish & Game). SE of city El Cajon. SE of intersection of Willow Glen Dr and Hillsdale Rd, near old gravel pits in the Sweetwater River Floodplain.",32.7553,"-116.9015","WGS84",3999
+469110,2,6,2,"SD","sativus","Margaret R. Mulligan","3/15/07",2007,3,15,"3/15/07","San Diego","Camp Pendleton Marine Corps Base, Skull Canyon in the Uniform Training Area. 0.6 mi NW of I-5 at La Flores (41 Area).",33.30302,"-117.47482","WGS84",3999
+468965,0,0,7,"SD","sativus","Frank F. Gander","6/15/35",1935,6,15,"6/15/35","San Diego","Ocean Beach",32.73946,"-117.24245","WGS84",1609
+469121,0,10,7,"SD","sativus","Margaret R. Mulligan","3/26/08",2008,3,26,"3/26/08","San Diego","Camp Pendleton Marine Corps Base, along NW side of Pulgas Lake, Papa One Training Area.",33.3466,"-117.4378","WGS84",3999
+469122,4,16,7,"SD","sativus","Margaret R. Mulligan","4/9/09",2009,4,9,"4/9/09","San Diego","Camp Pendleton Marine Corps Base, Juliet Training Area, along tributary of San Luis Rey River, just E of San Luis Rey Housing Area.",33.29185,"-117.29161","WGS84",3999
+469123,1,21,23,"SD","sativus","Margaret R. Mulligan","5/12/09",2009,5,12,"5/12/09","San Diego","Camp Pendleton Marine Corps Base, Hotel Training Area, along Camp De Luz Road which runs along De Luz Creek, ca. 2 mi N of Camp De Luz.",33.39612,"-117.32063","WGS84",3999
+469134,3,2,0,"SD","sativus","Jeannie Gregory","3/31/09",2009,3,31,"3/31/09","San Diego","Santee, just W of terminus of Mast Blvd, Ω mile NNW of intersection Riverford Road and Hwy 67, N of San Diego River, E side of a hill with a water tank",32.85761,"-116.95495","WGS84",3999
+469125,2,12,42,"SD","sativus","Victoria Marshall","4/17/08",2008,4,17,"4/17/08","San Diego","Sycamore Canyon Preserve, Poway. Ca. 1 mi SW of intersection Scripps Poway Pkwy and Hwy 67 and 0.25 miles SE of Sycamore Canyon Road and Calle de Rob",32.93944,"-116.97886","WGS84",3999
+5996911,0,8,20,"SD","sativus","Anna Arft","5/3/23",2023,5,3,"5/3/23","San Diego","Torrey Pines State Reserve",32.915,"-117.24139","WGS84",3999
+469152,3,6,18,"SD","sativus","Jon P. Rebman","4/22/14",2014,4,22,"4/22/14","San Diego","Camp Pendleton: northwestern portion of Base; San Mateo Creek just west of Guacamole Road and near the convergence with Cristianitos Creek",33.42007,"-117.57031","WGS84",3999
+6014478,1,5,22,"SD","sativus","Dick Swinney","5/31/19",2019,5,31,"5/31/19","Los Angeles","Glendora, Little Dalton Canyon Debris Basin, L.A. Co. Flood Control, along abandoned trail on the w. side of the basin, Glendora Quad",34.1608,"-117.8392","WGS84",3999
+468967,1,1,1,"SD","sativus","Frank F. Gander","1/16/36",1936,1,16,"1/16/36","San Diego","1 mile east of Solano Beach in valley.",32.99464,"-117.25219","WGS84",402
+468968,1,7,22,"SD","sativus","Frank F. Gander","1/28/36",1936,1,28,"1/28/36","San Diego","Tiajuana River near Monument School.",32.55134,"-117.08282","WGS84",402
+468971,4,11,2,"SD","sativus","Frank F. Gander","2/20/36",1936,2,20,"2/20/36","San Diego","San Pasqual Battlefields.",33.08208,"-116.99193","WGS84",805
+468974,0,1,2,"SD","sativus","Frank F. Gander","3/17/36",1936,3,17,"3/17/36","San Diego","1 mile south of San Onofre on U. S. 101.",33.37199,"-117.55808","WGS84",805
+468977,0,5,4,"SD","sativus","Frank F. Gander","1/18/37",1937,1,18,"1/18/37","San Diego","Mar Vista at Pacific Beach.",32.80427,"-117.24817","WGS84",4001
+468966,0,1,1,"SD","sativus","Frank F. Gander","6/16/36",1936,6,16,"6/16/36","San Diego","0.3 miles north of Ponto Station on ocean bluff (mak 8/06)",33.10041,"-117.31867","WGS84",161
+468987,0,2,13,"SD","sativus","Frank F. Gander","5/2/40",1940,5,2,"5/2/40","San Diego","O'Neill Lake",33.33047,"-117.32216","WGS84",1609
+468984,2,11,9,"SD","sativus","Catharine M. Wood","3/19/27",1927,3,19,"3/19/27","San Diego","El Cajon",32.79489,"-116.96238","WGS84",4001
+468988,1,4,0,"SD","sativus","Edith A. Purer","2/21/31",1931,2,21,"2/21/31","Los Angeles","Palos Verdes",33.75995,"-118.36373","WGS84",6500
+468980,1,21,20,"SD","sativus","Frank F. Gander","4/15/37",1937,4,15,"4/15/37","San Diego","San Luis Rey",33.23198,"-117.32365","WGS84",1609
+468990,1,3,3,"SD","sativus","Edith A. Purer","3/26/34",1934,3,26,"3/26/34","San Diego","Field near Jamul",32.71699,"-116.87613","WGS84",3218
+468991,1,11,30,"SD","sativus","Edith A. Purer","2/15/35",1935,2,15,"2/15/35","San Diego","Mesa, east of East San Diego",32.7693,"-117.0824","WGS84",4001
+468993,0,6,11,"SD","sativus","Edith A. Purer","8/15/33",1933,8,15,"8/15/33","San Francisco","Sand dunes, near ocean, San Francisco.",37.7645,"-122.5082","WGS84",4001
+468996,0,3,1,"SD","sativus","Edith A. Purer","4/8/31",1931,4,8,"4/8/31","Los Angeles","El Segundo",33.92241,"-118.42313","WGS84",3000
+468995,1,6,5,"SD","sativus","Edith A. Purer","3/15/32",1932,3,15,"3/15/32","San Diego","Silver Strand,along roadside.",32.64633,"-117.15096","WGS84",4023
+468998,3,11,10,"SD","sativus","Edith A. Purer","7/25/32",1932,7,25,"7/25/32","Mendocino","Near mouth of Big River, south of Mendocino.",39.3021,"-123.7927","WGS84",4001
+469002,3,5,4,"SD","sativus","Reid Moran","5/18/62",1962,5,18,"5/18/62","San Diego","Canyon south of Natural History Museum, Balboa Park.",32.72822,"-117.14954","WGS84",402
+469006,2,25,38,"SD","sativus","Helen V. Witham","5/18/71",1971,5,18,"5/18/71","San Diego","San Onofre Bluffs State Beach.",33.36028,"-117.54147","WGS84",1609
+469010,0,13,10,"SD","raphanistrum","Darley F. Howe","2/16/41",1941,2,16,"2/16/41","San Diego","Near Otay",32.58927,"-117.053","WGS84",4001
+469011,0,8,3,"SD","sativus","Darley F. Howe","4/1/15",1915,4,1,"4/1/15","Los Angeles","Claremont",34.11293,"-117.71584","WGS84",3500
+469012,0,6,8,"SD","sativus","Darley F. Howe","7/21/44",1944,7,21,"7/21/44","San Diego","Cultivated ground 1.0 mile north of Otay.",32.61009,"-117.06784","WGS84",4001
+469028,6,3,6,"SD","sativus","Jon Rebman","3/3/00",2000,3,3,"3/3/00","San Diego","San Diego Urban Canyons, North Park: Juniper Canyon",32.72917,"-117.12083","WGS84",80
+469026,4,23,20,"SD","sativus","Edith A. Purer","3/29/35",1935,3,29,"3/29/35","San Diego","Shady slope, Young's Caves Canyon, Mission Valley",32.77353,"-117.09519","WGS84",241
+469031,3,10,25,"SD","sativus","Jeannie Gregory","5/17/03",2003,5,17,"5/17/03","San Diego","Roland Reed's Mine on Pala Chief Mountain",33.38917,"-117.05083","WGS84",3999
+469036,1,15,8,"SD","sativus","Molly Sarkisian","4/10/90",1990,4,10,"4/10/90","Monterey","Camino Real and Santa Lucia, adjacent to Carmel River Marsh Reserve",36.545,"-121.926","WGS84",50
+469040,5,5,10,"SD","sativus","Joe Barth","8/24/04",2004,8,24,"8/24/04","San Diego","Chula Vista Wildlife Reserve: in southeast SanDiego Bay; access via electrical power plant. (CVWR was constructed as mitigation for the adjacent J St. marina construction).",32.614,"-117.11","WGS84",3999
+469046,1,12,20,"SD","sativus","Jerilyn Hirshberg","4/17/05",2005,4,17,"4/17/05","San Diego","0.5 mile SE of entrance to Inaja picnic area on Highway 78/79 between Santa Isabel and Wynola",33.096,"-116.6624","WGS84",3999
+469058,1,6,10,"SD","raphanistrum","Jon P. Rebman","5/25/04",2004,5,25,"5/25/04","San Diego","Rancho Jamul Ecological Reserve: west of Hwy. 94, south of Jamul & north of Otay Lakes Road; southwest part of reserve on a north-facing slope just southwest of the old cement furnace",32.66389,"-116.86806","WGS84",3999
+469062,1,1,1,"SD","sativus","Aimee E. Kessler","11/24/04",2004,11,24,"11/24/04","San Diego","Beacon's Beach, Leucadia, Encinitas. On beach, north of public beach access at Neptune Avenue and Leucadia Blvd.",33.0656,"-117.3054","WGS84",3999
+469065,0,7,12,"SD","sativus","Nancy Nenow","3/11/05",2005,3,11,"3/11/05","San Diego","City of San Diego, Balboa Park, Florida Canyon. 1 mi SE of inters of Washington St and St Rt 163, on SW corner of the inters of Upas and Florida Streets, at bottom of the canyon.",32.7411,"-117.1439","WGS84",3999
+469063,3,10,7,"SD","sativus","Jon P. Rebman","3/4/05",2005,3,4,"3/4/05","San Diego","City of La Mesa, east of San Diego; northwest side of Lake Murray on City MSCP property",32.78722,"-117.04972","WGS84",3999
+469066,0,6,6,"SD","sativus","Phillip Roullard","6/10/05",2005,6,10,"6/10/05","San Diego","Tijuana Slough National Wildlife Refuge, Rivermouth trail. 0.6 mi SWS of trailhead at intersection of 5th St and Iris Ave, just W of SW section of Imperial Beach Naval Air Station.",32.5616,"-117.1235","WGS84",3999
+469067,2,15,24,"SD","sativus","Larry Hendrickson","5/5/05",2005,5,5,"5/5/05","San Diego","Los Caballos equestrian campground, Cuyamaca Rancho State Park. Approx. 0.8 air mile north of Stonewall Peak and 0.4 mile east of interesection of State Hwy 79 and paved access road to Stonewall Mine. Along loop road at metal horse corrals..",32.972,"-116.5693","WGS84",3999
+469078,0,4,0,"SD","sativus","Mark A. Elvin","12/20/04",2004,12,20,"12/20/04","San Diego","Southern Coast: Carlsbad; along Pacific Coast Highway 1; 0.8 km north of Batiquitos Lagoon, Encinitas 7.5' quad.",33.09528,"-117.31444","WGS84",80
+469069,1,18,28,"SD","raphanistrum","Larry Hendrickson","5/18/04",2004,5,18,"5/18/04","San Diego","Los Caballos Horse Camp, Cuyamaca Rancho State Park. Around pipe corrals on loop road.",32.9734,"-116.5727","WGS84",3999
+469091,2,5,1,"SD","sativus","Mary Blanchette","4/2/06",2006,4,2,"4/2/06","San Diego","Spring Valley/La Presa; North Shore of Sweetwater Reservoir, directly north of Gum Tree Cove.",32.7031,"-116.9936","WGS84",3999
+469095,1,15,15,"SD","sativus","Jeannie Gregory","5/31/05",2005,5,31,"5/31/05","San Diego","San Diego, Balboa Park Golf Club, N of Club House in ravine between 28th St and Pershing Drive",32.7271,"-117.1372","WGS84",3999
+469072,0,9,10,"SD","sativus","Michael Wells","3/17/90",1990,3,17,"3/17/90","El Dorado","Prairie City SVRA",38.64306,"-121.15313","WGS84",3999
+469085,2,6,0,"SD","sativus","Rachel Wilson","4/10/05",2005,4,10,"4/10/05","San Diego","SW of Descanso, Double D Ranch, approx 1º mile W on Bell Bluff Truck Trail from Japatul Valley Rd, S of Hwy 8.",32.8081,"-116.6589","WGS84",3999
+469096,0,8,21,"SD","sativus","Elizabeth P. Lowe","5/26/06",2006,5,26,"5/26/06","San Diego","San Marcos. E of La Moree Park, just NW of the bend of the road on Sandy Lane, N of La Moree Rd and S of Hwy 78.",33.1296,"-117.1477","WGS84",3999
+469105,0,4,21,"SD","sativus","Hal Goforth","6/21/06",2006,6,21,"6/21/06","San Diego","El Cajon, canyon at end of Boyington Pl, West of Fletcher Hills and East of Grossmont College, Northeast of Navajo Rd.",32.808,"-116.9969","WGS84",3999
+469111,1,15,23,"SD","sativus","Ian Cain","5/11/07",2007,5,11,"5/11/07","San Diego","City of Solana Beach. San Elijo Ecological Reserve, E of Hwy 101, W of Interstate 5, S of Manchester Ave, SW section. 230 meters north north east of north end of Canyon Place",33.0053,"-117.2621","WGS84",3999
+469107,3,12,27,"SD","sativus","Lorna Prelipp","5/6/07",2007,5,6,"5/6/07","San Diego","San Marcos, SE corner of intersect of San Marcos Blvd. and Discovery Street, N of San Marcos Creek, open lot",33.13111,"-117.19833","WGS84",3999
+469114,6,4,13,"SD","sativus","Fred Roberts","7/6/06",2006,7,6,"7/6/06","San Diego","Oceanside: San Luis Rey River Valley, adjacent to SR76 at SE corner of SR76 and Loretta St., about 0.9km E Interstate 5.",33.21111,"-117.37611","WGS84",3999
+469115,0,21,10,"SD","sativus","Mike D. Angel","5/14/06",2006,5,14,"5/14/06","San Diego","City of San Diego in Urban Canyon just N of Mission Valley. Mission Center Road where it cuts under I-805 about half a mile North of Murray Ridge Road exit.",32.7836,"-117.1525","WGS84",3999
+469119,1,10,47,"SD","sativus","Margaret R. Mulligan","4/18/08",2008,4,18,"4/18/08","San Diego","Camp Pendleton Marine Corps Base, San Onofre Creek area, Alpha Two Training Area, º mi south of Basilone Road, ca. Ω mi east of San Onofre Mobile Home Park.",33.38691,"-117.5534","WGS84",3999
+469126,3,9,30,"SD","sativus","Carolyn Martus","5/24/06",2006,5,24,"5/24/06","San Diego","Camp Pendleton, 100 yds W of the intersection of Las Pulgas and Stuart Mesa Road, Ω mi E of Interstate 5.",33.2903,"-117.4442","WGS84",3999
+469129,1,13,17,"SD","sativus","Carrie Schneider","4/27/08",2008,4,27,"4/27/08","San Diego","Chollas Radio Canyon, N of Market St, between Euclid and Merlin.",32.71083,"-117.08139","WGS84",3999
+469136,2,5,3,"SD","sativus","Jon P. Rebman","2/17/12",2012,2,17,"2/17/12","San Diego","Border Field State Park: west of San Ysidro border crossing; south of Monument Road; just north of the USA/Mexico border fence; west-facing slope of Bunker Hill",32.53637,"-117.1076","WGS84",3999
+469137,1,8,3,"SD","sativus","Joe Barth","2/21/10",2010,2,21,"2/21/10","San Diego","Eucalyptus County Park outside SE edge of city of La Mesa at Bancroft Dr and Edgewood Dr. Collected from perimeter of park (outside irrigated zones).",32.76069,"-117.00169","WGS84",3999
+469128,1,9,4,"SD","sativus","John LaGrange","4/4/09",2009,4,4,"4/4/09","San Diego","Cleveland National Forest, Temescal Valley, æ mi N of Esmeralda Mine, 3æ mi SW of Lake Henshaw Dam, along Lusardi Canyon Truck Trail 1/4 mile S of the divide and bench mark 3041",33.22695,"-116.82572","WGS84",3999
+469138,1,17,23,"SD","sativus","Jon P. Rebman","2/16/12",2012,2,16,"2/16/12","San Diego","Camp Pendleton: along the Santa Margarita River; northwest of Lake O'Neill and southwest of the hospital; just east of Santa Margarita Road in the vicinity of the dry ponds",33.3326,"-117.33208","WGS84",3999
+469139,2,6,6,"SD","sativus","Jon P. Rebman","4/19/12",2012,4,19,"4/19/12","San Diego","Sweetwater Reservoir property: South of Jamacha Blvd. and just west of Reservoir Dr.; northeast side of the Reservoir",32.71373,"-116.97712","WGS84",3999
+469147,0,3,12,"SD","sativus","Jon P. Rebman","5/7/13",2013,5,7,"5/7/13","San Diego","Camp Pendleton: northeast portion of Base; Training Area Hotel; northwest of Fallbrook, just south of De Luz Road along the Santa Margarita River",33.39675,"-117.26296","WGS84",3999
+469151,2,9,13,"SD","sativus","John Groth","5/27/11",2011,5,27,"5/27/11","San Diego","Cleveland National Forest, Cuyamaca Mountains, along Boulder Creek Road, 2.7 miles WNW of Cuyamaca Peak, 0.9 mile WSW of Sill Hill, 4.0 mile ESE Eagle Peak, 0.25 mile NW of junction with Tule Springs Road",32.9583,"-116.6516","WGS84",3999
+469160,0,11,35,"SD","sativus","Nancy Nenow","3/13/12",2012,3,13,"3/13/12","San Diego","Rancho Santa Fe; on the south side of San Dieguito County Park; just N of Highway S-8 (Loma Santa Fe Drive) east of baseball field along trail",32.99681,"-117.23397","WGS84",3999
+469157,1,2,7,"SD","sativus","Andy Mauro","5/1/08",2008,5,1,"5/1/08","San Diego","Rancho Santa Fe; Ewing Preserve; 0.13 mile E of intersection La Glorieta & Linea del Cielo (S-8); just N of La Sencilla.",33.0151,"-117.214","WGS84",3999
+469163,0,9,12,"SD","sativus","Nancy Nenow","2/4/12",2012,2,4,"2/4/12","San Diego","Pacific Beach; La Jolla Mesa; SW of Mt.Soledad in the canyon at the end of Van Nuys Way off Van Nuys Street; 80 yards W of Caminito Bayo",32.8143,"-117.25377","WGS84",3999
+469164,2,9,1,"SD","sativus","Joe Barth","1/26/12",2012,1,26,"1/26/12","San Diego","City of La Mesa; S of I-8; N side of Alvarado Rd; 0.14 mi NNW of junction Saranac Avenue and Commanche Drive; where creek flows under road",32.77306,"-117.03604","WGS84",3999
+469113,5,15,27,"SD","sativus","Jeannie Gregory","5/5/07",2007,5,5,"5/5/07","San Diego","Oceanside, 7 miles inland at Guajome County Park, directly E of the intersection of Mission Ave (Hwy 76) and North Santa Fe Ave",33.24587,"-117.27584","WGS84",3999
+469165,3,21,10,"SD","sativus","Joe Barth","2/5/12",2012,2,5,"2/5/12","San Diego","Sweetwater River bikepath; between National City and Chula Vista; N of river channel; near overpass Highway 54 and railroad tracks; just Eof I-5",32.6528,"-117.1026","WGS84",3999
+469173,1,3,1,"SD","sativus","Nancy Nenow","2/11/12",2012,2,11,"2/11/12","San Diego","Carlsbad; in vacant lot near east side of N Coast Hwy 101 (S-21); just north of La Costa Ave. and west of railroad tracks.",33.08363,"-117.30874","WGS84",3999
+469174,0,3,0,"SD","sativus","Joe Barth","2/11/12",2012,2,11,"2/11/12","San Diego","Sweetwater River valley; near National City and Chula Vista; N side of Bonita Rd; N side of intersection with Randy Lane, W of Willow Rd and E of 805",32.6522,"-117.0495","WGS84",3999
+469176,4,8,38,"SD","sativus","Jon Rebman","4/12/16",2016,4,12,"4/12/16","San Diego","Camp Pendleton: eastern portion of Base; Juliet Training Area; southwest of Fallbrook & west of Bonsall; near Pilgrim's Creek just inside the Base boundary to the south of Fallbrook Weapons Station",33.32722,"-117.26621","WGS84",3999
+3620051,1,14,13,"SD","sativus","Nancy Nenow","4/16/17",2017,4,16,"4/16/17","San Diego","Rancho Santa Fe; western edge of Puerta del Sol Road; south of Linea Del Cielo in vacant lot; 0.25 mile N of junction with Las Palomas.",33.00921,"-117.2255","WGS84",3999
+3700296,3,2,6,"SD","sativus","R Burgess","2/14/10",2010,2,14,"2/14/10","Ventura","Villanova Prep. Scool; On S side of campusS-facing slope",34.42711,"-119.26089","WGS84",3999
+3700299,6,10,28,"SD","sativus","Nancy Nenow","5/26/17",2017,5,26,"5/26/17","San Diego","South San Pasqual Valley; along dirt trail parallel to Bandy Canyon Road; near 90 yards east of junction Bandy Canyon Road and Santa Ysabel Creek Road; near parking lot",33.07737,"-116.98685","WGS84",3999
+3963072,5,17,12,"SD","sativus","Mary Ellen Walther","3/24/17",2017,3,24,"3/24/17","San Diego","La Jolla; Soledad National Park; near 75 yards NW of parking lot on Soledad Park Road",32.84053,"-117.2472","WGS84",3999
+4665582,1,4,16,"SD","sativus","John Brown","5/10/95",1995,5,10,"5/10/95","San Diego","Near drainage south of warehouses on south of Fallbrook Road.",33.36667,"-117.26389","WGS84",3999
+4665583,0,1,8,"SD","sativus","John Brown","8/12/94",1994,8,12,"8/12/94","San Diego","South of warehouses, west of east entrance to Base, south of Fallbrook Road.",33.36667,"-117.26389","WGS84",3999
