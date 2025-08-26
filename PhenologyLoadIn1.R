@@ -6,19 +6,19 @@
 #Install Tidyverse package into R for access to stringr, dplyr
 #install.packages("tidyverse")
 
-#Load tidyverse into R from Library
+#Load tidyverse package into R from Library
 library(tidyverse)
 
-#Simplify CCH2 data to only be columns with variables of interest
+#Simplify CCH2 data down to the columns of interest
 important_specimen_data <- read.csv("FullSpecimenCCH2Data.csv") %>% select(id, 
 institutionCode, specificEpithet, recordedBy, eventDate, year:day, 
 verbatimEventDate, county, locality, 
 decimalLatitude:coordinateUncertaintyInMeters)
 
-#Change "id" column from integer to character in CCH2 data frame
+#Change "id" column from integer class to character class in CCH2 data frame
 important_specimen_data$id <- as.character(important_specimen_data$id)
 
-#Combine Annotated and Unannotated Class data into a combined data frame
+#Combine Annotated and Unannotated phenology count data into one big data frame
 ann <- read.csv("annotated_inference_counts.csv")
 unann <- read.csv("inference_counts_RETRY.csv")
 entire_class_dataset <- bind_rows(ann, unann)

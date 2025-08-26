@@ -1,5 +1,34 @@
 #Histogram Practice 8.19-??.25------------------------------------------------
 
+#Bud Clusters
+hist(fulldata$Bud.Cluster, breaks = 10, freq = TRUE, col = "darkorchid3", 
+     border = "white", main = "Bud Cluster Frequency in California Raphanus 
+     Herbarium Specimens", ylab = "Frequency", xlab = "# of Bud Clusters")
+
+#Flowers
+hist(fulldata$Flower, breaks = 40, freq = TRUE, col = "firebrick3", 
+     border = "white", main = "Flower Frequency in California Raphanus 
+     Herbarium Specimens", ylab = "Frequency", xlab = "# of Flowers")
+
+#Fruits
+hist(fulldata$Fruit, breaks = 25, freq = TRUE, col = "seagreen1", 
+     border = "black", main = "Fruit Frequency in California Raphanus 
+     Herbarium Specimens", ylab = "Frequency", xlab = "# of Fruits")
+
+#Flowering and Months
+flowering <- fulldata %>% filter(Flower > 0)
+hist(flowering$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
+     border = "white", main = "Frequency of Specimens Collected While Flowering
+     for Each Month", xlab = "Month", ylab = "Frequency")
+
+#Fruits and Months
+fruiting <- fulldata %>% filter(Fruit > 0)
+hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
+     border = "black", main = "Frequency of Specimens Collected While Fruiting
+     for Each Month", xlab = "Month", ylab = "Frequency")
+
+#Miscellaneous------------------------------------------------------------------
+
 #Read in Complete Data CSV
 fulldata<- read.csv("completed_specimen_data.csv")
 

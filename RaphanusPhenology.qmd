@@ -18,7 +18,7 @@ editor: visual
 
 # Methods
 
-All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. \~70 (get exact number?!?!?!?) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment(more specificity here?) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
+All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. \~70 (**get exact number?!?!?!?**) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment (**more specificity here?**) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
 
 ```{r}
 library(tidyverse)
@@ -50,32 +50,144 @@ It was initially decided that 100 specimens, slight greater than ten percent of 
 
 ## Annotating Herbarium Specimens
 
+**Insert text here about the procedures for annotating specimens and the subsequent additions of specimens to the training set**
+
+```{bash}
+#Insert Julia's code for resizing images, I think it was in bash?
+```
+
 ## Training Model Versions
+
+**Insert text here about how we picked different models to train, how each version did, the 70-20-10 distribution, model metrics and evaluations, etc.**
 
 ## Deploying Model from Roboflow
 
+**Insert Julia's codes to get the JSONS and get JSONS to data frame**
+
+```{bash}
+#eventual code here
+```
+
 ## Converting Model Data into a Usable Format
+
+The following code was created to achieve two purposes. The first was to combine the JSON information on phenology (reproductive structure counts) after running both the original 155 annotated specimen images and the remaining 782 unannotated specimen images through the Roboflow model. The second was to combine all then phenology data with a subset of the data provided by CCH2. Intermediate steps were incorporated as needed to ensure compatibility when merging data frames.
+
+```{r}
+#Load tidyverse package into R from Library
+library(tidyverse)
+
+#Simplify CCH2 data down to the columns of interest
+#Columns of interest were determined based on what would be necessary to identify each specimen and what would be necessary for using climate data to understand the effects of climate variables on flowering time
+important_specimen_data <- read.csv("FullSpecimenCCH2Data.csv") %>% select(id, 
+institutionCode, specificEpithet, recordedBy, eventDate, year:day, 
+verbatimEventDate, county, locality, 
+decimalLatitude:coordinateUncertaintyInMeters)
+
+#Change "id" column from integer class to character class in CCH2 data frame
+important_specimen_data$id <- as.character(important_specimen_data$id)
+
+#Combine Annotated and Unannotated phenology class data into one big data frame
+ann <- read.csv("annotated_inference_counts.csv")
+unann <- read.csv("inference_counts_RETRY.csv")
+entire_class_dataset <- bind_rows(ann, unann)
+
+#Change the name of "image" column in phenology class data frame to "id" to align with CCH2 data frame
+entire_class_dataset <- entire_class_dataset %>% rename(id = image)
+
+#Images that were larger than Roboflow's maximum upload size of 20MB were resized via code and given the prefix "SML_" in the filename to discern the edited image. However, this prefix appeared in the id column of the phenology class data and needed to be removed in order to combine the ohenology class and CCH2 data frames
+entire_class_dataset$id <- str_replace(entire_class_dataset$id, "^SML_", "")
+
+#Remove any observation (e.g. duplicates) that is in phenology class, but not CCH2 data
+rm <- setdiff(entire_class_dataset$id, important_specimen_data$id)
+entire_class_dataset <- entire_class_dataset %>% filter(!entire_class_dataset$id 
+                                                        %in% rm)
+
+#Merge the CCH2 data frame and the full phenology class data frame into one large data frame, matching based on the id column with a precautionary full join
+totalinfo <- full_join(entire_class_dataset, important_specimen_data, by = "id")
+
+#Export the full combined data frame into a CSV for further uses
+write.csv(totalinfo, "completed_specimen_data.csv", row.names = FALSE)
+
+```
+
+At a later time, it was discovered that, when running the code for the model on specimens, there was one previously hand-annotated specimen that was given counts of 0 bud clusters, 0 flowers, and 0 fruits. After hand checking this image, it was clear that all three reproductive structures could be found on the specimen. The original hand-annotation counts from Roboflow were assigned to the specimen using the following code:
+
+```{r}
+#Read in full complete data CSV
+fulldata<- read.csv("completed_specimen_data.csv")
+
+
+#Fix the specimen that was falsely determined to have no assigned reproductive structure counts by individually assigning the accurate counts from the original annotations done by hand in Roboflow
+fulldata <- fulldata %>%
+     mutate(
+           Bud.Cluster = if_else(id == 1368028, 3, Bud.Cluster),
+        Flower = if_else(id == 1368028, 2, Flower),
+         Fruit = if_else(id == 1368028, 2, Fruit))
+
+#Export this adjusted change back into the CSV
+write.csv(fulldata, "completed_specimen_data.csv", row.names = FALSE)
+```
 
 ## Extracting Climate Data
 
-## Trial Plots:
+**Add in text here about how climate NA was Chosen and how we sourced data, lots of credit to Bontrager, etc.**
 
-Instructions for additional phenology plots: \
+```{r}
+#EVENTUAL BONTRAGER + Additional to us code here... unless we somehow link the entire other markdown into here if that's a thing
+```
+
+# Trial Plots
+
+SEE BELOW NOTE UNDER ALL CHUNKS OF CODE: Instructions for additional phenology plots:\
 Write the code for eahc plot in it's own chunk, and make sure the plots show up in the rendered html. (try both plots in same chunk vs separate chunks, and see which output html style you like better!)\
-\
+
+I THINK I DID THIS BELOW:\
 1) First R chunk: Filter to only include specimens in flower, then create a histogram by month. SO the final plot should show the number of specimens collected in flower for a given month.
 
 2\) Second R chunk: Do the same for Fruit
 
-![](images/clipboard-2428802079.png)
+**Basic Frequency Plots:**
 
-![](images/clipboard-3749884537.png)
+```{r}
+#Bud Clusters
+hist(fulldata$Bud.Cluster, breaks = 10, freq = TRUE, col = "darkorchid3", 
+     border = "white", main = "Bud Cluster Frequency in California Raphanus 
+     Herbarium Specimens", ylab = "Frequency", xlab = "# of Bud Clusters")
+```
 
-![](images/clipboard-1602755941.png)
+```{r}
+#Flowers
+hist(fulldata$Flower, breaks = 40, freq = TRUE, col = "firebrick3", 
+     border = "white", main = "Flower Frequency in California Raphanus 
+     Herbarium Specimens", ylab = "Frequency", xlab = "# of Flowers")
+```
 
-## Quarto
+```{r}
+#Fruits
+hist(fulldata$Fruit, breaks = 25, freq = TRUE, col = "seagreen1", 
+     border = "black", main = "Fruit Frequency in California Raphanus 
+     Herbarium Specimens", ylab = "Frequency", xlab = "# of Fruits")
+```
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+**Histograms for Frequency of Structure Per Month:**
+
+```{r}
+#Flowering and Months
+flowering <- fulldata %>% filter(Flower > 0)
+hist(flowering$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
+     border = "white", main = "Frequency of Specimens Collected While Flowering
+     for Each Month", xlab = "Month", ylab = "Frequency")
+```
+
+```{r}
+#Fruits and Months
+fruiting <- fulldata %>% filter(Fruit > 0)
+hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
+     border = "black", main = "Frequency of Specimens Collected While Fruiting
+     for Each Month", xlab = "Month", ylab = "Frequency")
+```
+
+NOTE FOR JULIA: I was having trouble rendering, it's giving me an error message in Background Jobs
 
 ## Running Code
 
