@@ -80,7 +80,7 @@ tmp <- read.csv("raw_outputs/Raph_locs_1901-2024MP.csv")
 
 ### Reformat ClimateNA data
 
-PICKUP - directly copied code below.
+NOTE - need to redo with full climate variables once climate subsetting is figured out.
 
 ```{r}
 #| label: reformat data
