@@ -124,6 +124,15 @@ write.csv(all_data, "climateNA_partial_data_tall.csv", row.names = FALSE)
 ```{r}
 # subset to keep just the columns we need (for now, including more than maybe necessary)
 specimens <- specimens %>% select(id, institutionCode, specificEpithet, year, month, day, county, locality, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters)
+
+## WORK FOR NATALIE:
+# Determine the first month in each year that had greater than 25mm of precip
+# below is example code from Bontrager et al. Modify the code for our data. 
+
+
+# First we need to calculate a consistent number representing collection date. For now, we will do it as the Bontrager paper did and use Sept 01 as the start of the day count, then the date of collection as the last date. 
+
+
 ```
 
 ## Extra code
