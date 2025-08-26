@@ -60,6 +60,13 @@ It was initially decided that 100 specimens, slight greater than ten percent of 
 
 ## Trial Plots:
 
+Instructions for additional phenology plots: \
+Write the code for eahc plot in it's own chunk, and make sure the plots show up in the rendered html. (try both plots in same chunk vs separate chunks, and see which output html style you like better!)\
+\
+1) First R chunk: Filter to only include specimens in flower, then create a histogram by month. SO the final plot should show the number of specimens collected in flower for a given month.
+
+2\) Second R chunk: Do the same for Fruit
+
 ![](images/clipboard-2428802079.png)
 
 ![](images/clipboard-3749884537.png)
