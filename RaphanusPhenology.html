@@ -93,9 +93,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#deploying-model-from-roboflow" id="toc-deploying-model-from-roboflow" class="nav-link" data-scroll-target="#deploying-model-from-roboflow"><span class="header-section-number">1.7</span> Deploying Model from Roboflow</a></li>
   <li><a href="#converting-model-data-into-a-usable-format" id="toc-converting-model-data-into-a-usable-format" class="nav-link" data-scroll-target="#converting-model-data-into-a-usable-format"><span class="header-section-number">1.8</span> Converting Model Data into a Usable Format</a></li>
   <li><a href="#extracting-climate-data" id="toc-extracting-climate-data" class="nav-link" data-scroll-target="#extracting-climate-data"><span class="header-section-number">1.9</span> Extracting Climate Data</a></li>
-  <li><a href="#trial-plots" id="toc-trial-plots" class="nav-link" data-scroll-target="#trial-plots"><span class="header-section-number">1.10</span> Trial Plots:</a></li>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="header-section-number">1.11</span> Quarto</a></li>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">1.12</span> Running Code</a></li>
+  </ul></li>
+  <li><a href="#trial-plots" id="toc-trial-plots" class="nav-link" data-scroll-target="#trial-plots"><span class="header-section-number">2</span> Trial Plots</a>
+  <ul class="collapse">
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">2.1</span> Running Code</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -129,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="methods" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Methods</h1>
-<p>All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within <em>R. raphanistrum</em> and <em>R. sativus</em> that were collected within California and had corresponding. ~70 (get exact number?!?!?!?) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment(more specificity here?) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (*<strong>this number may be wrong and not include SD</strong>*.)</p>
+<p>All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within <em>R. raphanistrum</em> and <em>R. sativus</em> that were collected within California and had corresponding. ~70 (<strong>get exact number?!?!?!?</strong>) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment (<strong>more specificity here?</strong>) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (*<strong>this number may be wrong and not include SD</strong>*.)</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -170,39 +171,201 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="annotating-herbarium-specimens" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="annotating-herbarium-specimens"><span class="header-section-number">1.5</span> Annotating Herbarium Specimens</h2>
+<p><strong>Insert text here about the procedures for annotating specimens and the subsequent additions of specimens to the training set</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Insert Julia's code for resizing images, I think it was in bash?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="training-model-versions" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="training-model-versions"><span class="header-section-number">1.6</span> Training Model Versions</h2>
+<p><strong>Insert text here about how we picked different models to train, how each version did, the 70-20-10 distribution, model metrics and evaluations, etc.</strong></p>
 </section>
 <section id="deploying-model-from-roboflow" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="deploying-model-from-roboflow"><span class="header-section-number">1.7</span> Deploying Model from Roboflow</h2>
+<p><strong>Insert Julia’s codes to get the JSONS and get JSONS to data frame</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#eventual code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="converting-model-data-into-a-usable-format" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="converting-model-data-into-a-usable-format"><span class="header-section-number">1.8</span> Converting Model Data into a Usable Format</h2>
+<p>The following code was created to achieve two purposes. The first was to combine the JSON information on phenology (reproductive structure counts) after running both the original 155 annotated specimen images and the remaining 782 unannotated specimen images through the Roboflow model. The second was to combine all then phenology data with a subset of the data provided by CCH2. Intermediate steps were incorporated as needed to ensure compatibility when merging data frames.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load tidyverse package into R from Library</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Simplify CCH2 data down to the columns of interest</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns of interest were determined based on what would be necessary to identify each specimen and what would be necessary for using climate data to understand the effects of climate variables on flowering time</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>important_specimen_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"FullSpecimenCCH2Data.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(id, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>institutionCode, specificEpithet, recordedBy, eventDate, year<span class="sc">:</span>day, </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>verbatimEventDate, county, locality, </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>decimalLatitude<span class="sc">:</span>coordinateUncertaintyInMeters)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Change "id" column from integer class to character class in CCH2 data frame</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>important_specimen_data<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">as.character</span>(important_specimen_data<span class="sc">$</span>id)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Combine Annotated and Unannotated phenology class data into one big data frame</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>ann <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"annotated_inference_counts.csv"</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>unann <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"inference_counts_RETRY.csv"</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>entire_class_dataset <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(ann, unann)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Change the name of "image" column in phenology class data frame to "id" to align with CCH2 data frame</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>entire_class_dataset <span class="ot">&lt;-</span> entire_class_dataset <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">id =</span> image)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Images that were larger than Roboflow's maximum upload size of 20MB were resized via code and given the prefix "SML_" in the filename to discern the edited image. However, this prefix appeared in the id column of the phenology class data and needed to be removed in order to combine the ohenology class and CCH2 data frames</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>entire_class_dataset<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">str_replace</span>(entire_class_dataset<span class="sc">$</span>id, <span class="st">"^SML_"</span>, <span class="st">""</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove any observation (e.g. duplicates) that is in phenology class, but not CCH2 data</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>rm <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(entire_class_dataset<span class="sc">$</span>id, important_specimen_data<span class="sc">$</span>id)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>entire_class_dataset <span class="ot">&lt;-</span> entire_class_dataset <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>entire_class_dataset<span class="sc">$</span>id </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>                                                        <span class="sc">%in%</span> rm)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co">#Merge the CCH2 data frame and the full phenology class data frame into one large data frame, matching based on the id column with a precautionary full join</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>totalinfo <span class="ot">&lt;-</span> <span class="fu">full_join</span>(entire_class_dataset, important_specimen_data, <span class="at">by =</span> <span class="st">"id"</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co">#Export the full combined data frame into a CSV for further uses</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(totalinfo, <span class="st">"completed_specimen_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>At a later time, it was discovered that, when running the code for the model on specimens, there was one previously hand-annotated specimen that was given counts of 0 bud clusters, 0 flowers, and 0 fruits. After hand checking this image, it was clear that all three reproductive structures could be found on the specimen. The original hand-annotation counts from Roboflow were assigned to the specimen using the following code:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in full complete data CSV</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>fulldata<span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"completed_specimen_data.csv"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Fix the specimen that was falsely determined to have no assigned reproductive structure counts by individually assigning the accurate counts from the original annotations done by hand in Roboflow</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>fulldata <span class="ot">&lt;-</span> fulldata <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mutate</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">Bud.Cluster =</span> <span class="fu">if_else</span>(id <span class="sc">==</span> <span class="dv">1368028</span>, <span class="dv">3</span>, Bud.Cluster),</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">Flower =</span> <span class="fu">if_else</span>(id <span class="sc">==</span> <span class="dv">1368028</span>, <span class="dv">2</span>, Flower),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">Fruit =</span> <span class="fu">if_else</span>(id <span class="sc">==</span> <span class="dv">1368028</span>, <span class="dv">2</span>, Fruit))</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#Export this adjusted change back into the CSV</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(fulldata, <span class="st">"completed_specimen_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="extracting-climate-data" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="extracting-climate-data"><span class="header-section-number">1.9</span> Extracting Climate Data</h2>
+<p><strong>Add in text here about how climate NA was Chosen and how we sourced data, lots of credit to Bontrager, etc.</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#EVENTUAL BONTRAGER + Additional to us code here... unless we somehow link the entire other markdown into here if that's a thing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="trial-plots" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="trial-plots"><span class="header-section-number">1.10</span> Trial Plots:</h2>
-<p>Instructions for additional phenology plots:<br>
-1) First R chunk: Filter to only include specimens in flower, then create a histogram by month. SO the final plot should show the number of specimend collected in flower for a given month.</p>
+</section>
+<section id="trial-plots" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Trial Plots</h1>
+<p>SEE BELOW NOTE UNDER ALL CHUNKS OF CODE: Instructions for additional phenology plots:<br>
+Write the code for eahc plot in it’s own chunk, and make sure the plots show up in the rendered html. (try both plots in same chunk vs separate chunks, and see which output html style you like better!)<br>
+</p>
+<p>I THINK I DID THIS BELOW:<br>
+1) First R chunk: Filter to only include specimens in flower, then create a histogram by month. SO the final plot should show the number of specimens collected in flower for a given month.</p>
 <p>2) Second R chunk: Do the same for Fruit</p>
-<p><img src="images/clipboard-2428802079.png" class="img-fluid"></p>
-<p><img src="images/clipboard-3749884537.png" class="img-fluid"></p>
-<p><img src="images/clipboard-1602755941.png" class="img-fluid"></p>
-</section>
-<section id="quarto" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1.11</span> Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-</section>
-<section id="running-code" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="running-code"><span class="header-section-number">1.12</span> Running Code</h2>
+<p><strong>Basic Frequency Plots:</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Bud Clusters</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fulldata<span class="sc">$</span>Bud.Cluster, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"darkorchid3"</span>, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>, <span class="at">main =</span> <span class="st">"Bud Cluster Frequency in California Raphanus </span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">     Herbarium Specimens"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>, <span class="at">xlab =</span> <span class="st">"# of Bud Clusters"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="RaphanusPhenology_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Flowers</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fulldata<span class="sc">$</span>Flower, <span class="at">breaks =</span> <span class="dv">40</span>, <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"firebrick3"</span>, </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>, <span class="at">main =</span> <span class="st">"Flower Frequency in California Raphanus </span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="st">     Herbarium Specimens"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>, <span class="at">xlab =</span> <span class="st">"# of Flowers"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="RaphanusPhenology_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fruits</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fulldata<span class="sc">$</span>Fruit, <span class="at">breaks =</span> <span class="dv">25</span>, <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"seagreen1"</span>, </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"black"</span>, <span class="at">main =</span> <span class="st">"Fruit Frequency in California Raphanus </span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">     Herbarium Specimens"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>, <span class="at">xlab =</span> <span class="st">"# of Fruits"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="RaphanusPhenology_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Histograms for Frequency of Structure Per Month:</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Flowering and Months</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>flowering <span class="ot">&lt;-</span> fulldata <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Flower <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(flowering<span class="sc">$</span>month, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">12</span>, <span class="dv">1</span>), <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"firebrick3"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>, <span class="at">main =</span> <span class="st">"Frequency of Specimens Collected While Flowering</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="st">     for Each Month"</span>, <span class="at">xlab =</span> <span class="st">"Month"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="RaphanusPhenology_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fruits and Months</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fruiting <span class="ot">&lt;-</span> fulldata <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Fruit <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fruiting<span class="sc">$</span>month, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">12</span>, <span class="dv">1</span>), <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"seagreen1"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"black"</span>, <span class="at">main =</span> <span class="st">"Frequency of Specimens Collected While Fruiting</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="st">     for Each Month"</span>, <span class="at">xlab =</span> <span class="st">"Month"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="RaphanusPhenology_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>NOTE FOR JULIA: I was having trouble rendering, it’s giving me an error message in Background Jobs</p>
+<section id="running-code" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="running-code"><span class="header-section-number">2.1</span> Running Code</h2>
 <p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
@@ -834,99 +997,213 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "RaphanusPhenology"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Natalie Veech"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-overflow: wrap</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="an">theme:</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">  light: yeti</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">  dark: superhero</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">  chunk_output_type: console</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># Methods</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. \~70 (get exact number?!?!?!?) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment(more specificity here?) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**<span class="sc">\*</span>.)</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Specimen Exclusions</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>Many of the exclusions applied to the data were guided by the exclusion criteria described in the methods of Love and Mazer (2021). 1 specimen was excluded due to the blurriness of the image. 12 images were excluded for having a poor date range recorded for the time of collection. A date range was considered unusable if it spanned more than a month due to the frequently changing nature of *Raphanus* reproductive stages. Any specimens that were collected off of islands (e.g. Channel Islands) were excluded due to the unique climatic setting and lack of gene flow. 45 island specimens were removed from the data set based on this criterion. 2 specimens were deemed unfit for imaging, defined here as specimens that had an envelope containing plant matter on the specimen sheet, but no actual sample that could provide counts of reproductive structures. 71 specimens were excluded for having unreliable location data that was either difficult to assign coordinates to (see Assigning GPS Coordinates and Uncertainty) or too broad to draw accurate and precise climate data from. 5 specimens were excluded for having no listed collection date. 21 specimens were excluded on the basis of having poor metadata, lacking several pieces of information that are necessary understanding the spatial, temporal, and climatic context of the specimen. Lastly, 246 specimens were removed for possessing a spatiotemporal duplicate in the remaining data set, removing any repetition for a more cohesive data set.</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assigning GPS Coordinates and Uncertainty</span></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>Any specimens without previously entered GPS coordinates were assigned GPS coordinates by hand. The locality data provided was used to narrow down a precise geographic position in Google Maps, occasionally with the assistance of ChatGPT or local records and articles to provide historical context. The coordinates were then taken from Google Maps and entered into a program that allows for visualizing uncertainty radii around a specified point. The uncertainty radius was hand-picked and cautiously selected to encompass the extent to which the locality description would logically still apply, similar to the approach described in the Georeferencing methodology in Bontrager et. al 2025. The coordinate system was for all hand-determined GPS coordinates was marked as World Geodetic System 1984 (WGS84), as used by both Google Maps and the map radius software (calcmaps.com).</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>WGS 84 was selected as the coordinate system to standardize all samples against due to its prevalence in location data following its introduction in 1987. Based on information gathered from NOAA, the one to two meter difference between coordinates in NAD83 and WGS84, the two coordinate systems are considered equal for the purposes of the Raphanus data. However, the differences between NAD27 and WGS84 are often greater, so any NAD27 points were converted to WGS84. The calculations were primarily conducted en masse by ChatGPT while spot checking using the calculator provided by the West Virginia Department of Environmental Protection. The variance between coordinates in NAD27 and WGS84 was on the scale of 10^-3^ or 10^-4^, correlating to a 10-100m discrepancy between the points.</span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>Specimens with coordinates that were listed as NAD27 in the CCH2 data were converted to CCH2. There were two subsequent pathways for specimens with coordinates that were listed as "preprocessed" or "unknown", or were otherwise unlisted. For specimens collected prior to 1987, NAD27 was broadly assumed to be the coordinate system. For specimens collected after WGS84, it was assumed that any modern GPS devices, computers, or phones operate in WGS84. Due to the uncertainty associated with these assumptions, all original coordinate and geodetic datum data was saved separately.</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>An additional protocol was developed for examining and assigning missing uncertainty radii entries in the CCH2 data, all of which included coordinates that served as the starting judgement point. Based on the Love and Mazer (2021) protocol, 4000 meters was deemed the ceiling cutoff for assigning uncertainty radii at this stage. For specimens that had narrowly defined, "good" locality data, the specificity of location and inclusion of coordinates generated the assumption that the uncertainty was greater than 4000 meters and the specimen's uncertainty was labeled as 3999. If a specimen was determined to have broad, "bad" location data, the specimen label was then read to determine the origin of the coordinates. If the coordinates were present on the original label, it was assumed that the coordinates are accurate and that the location data was poorly recorded, earning the specimen an uncertainty radius assignment of 3999. However, if there were no coordinates present on the label, it was assumed that they were added at a later time based on the poor location and it cannot be safely assumed that the uncertainty radius is less than 4000 meters; these specimens were then assigned an uncertainty radius of 4001. The binomial nature of this distribution can eventually be reanalyzed and assigned a more specific uncertainty value depending on the nature of the climate data that is used.</span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>By using the 111.1 kilometer \~ 1 degree conversion, it was decided that any specimen with an original latitudinal or longitudinal coordinate that was rounded to the nearest 0.1 degree (\~11 km) should be reexamined to determine whether the coordinates or uncertainty radii could be adjusted to more precisely fall on either side of the previously set 4000 meter uncertainty radius cutoff. Specimens with location descriptions that were determined to be broader in extent than 4000 meters, were assigned an uncertainty radius of 4001 if their previously listed uncertainty radius was not already greater than 4000. Specimens with location data that was deemed more specific than 4000 meters (e.g. parks, specific intersections, street addresses) then received adjusted, more precise coordinates in WGS84 and were reassigned a fitting uncertainty radius using the map radius software found at calcmaps.com.</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Choosing the Right Machine Learning Program</span></span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>Many previously published scientific papers have also utilized images from various herbaria or citizen science platforms such as iNaturalist to study phenological trends. These papers were examined to get a sense of the software options available to annotate images, build models, and subsequently train machine learning programs to apply the model to a larger data set. There were many possible paths that varied in coding language, accessibility, complexity, and suitability for the needs of the project. Eventually, Roboflow was selected as the most practical choice for conducting the study, as the software provides the ease of completing annotation and training models in the same location. Additionally, Roboflow provides model evaluations with specific feedback such asprecision and recall metrics as well as confusion matrices to easily visualize errors in the model and coding prompts to deploy the model to other sets of images.</span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Selecting Specimens for Model Training</span></span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>It was initially decided that 100 specimens, slight greater than ten percent of the full data set, would be selected to be annotated and used to train the phenology models. The first consideration made was to include at least one specimen from each of the 31 herbaria that are represented by the complete specimen data set. Afterwards, specimens were added in to be relatively proportional to the distribution of the data set. When continuing to add in specimens after initial herbarium representation was accounted for, three factors received the majority of focus: time of collection, reproductive stage, and complexity of specimens. The time of collection was critical to creating a diverse, representative training set. While most specimens are collected during the spring and summer months, when flowering and fruiting is widespread, specimens collected during both the very beginning and the later months of the calendar year were fairly represent. Additionally, a majority of specimens possess both flowering and fruiting structures, so training set selection was carefully done to also include specimens that had not yet begun to fruit or that only had fruit left. Lastly, due to the many different conditional circumstances that can occur in herbarium specimens, such as image quality, age, human error, etc., both complex, overlapping specimens and well-defined clear cut specimens were selected for annotation to prepare the model for any unusual specimen appearances.</span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Annotating Herbarium Specimens</span></span>
-<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## Training Model Versions</span></span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Deploying Model from Roboflow</span></span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Converting Model Data into a Usable Format</span></span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extracting Climate Data</span></span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Trial Plots:</span></span>
-<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>Instructions for additional phenology plots: \</span>
-<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>1) First R chunk: Filter to only include specimens in flower, then create a histogram by month. SO the final plot should show the number of specimend collected in flower for a given month.</span>
-<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>2<span class="sc">\)</span> Second R chunk: Do the same for Fruit</span>
-<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/clipboard-2428802079.png)</span></span>
-<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/clipboard-3749884537.png)</span></span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/clipboard-1602755941.png)</span></span>
-<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto</span></span>
-<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
-<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Running Code</span></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
-<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>You can add options to executable code like this</span>
-<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">2</span></span>
-<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span>
+<div class="sourceCode" id="cb16" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "RaphanusPhenology"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Natalie Veech"</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-overflow: wrap</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="an">theme:</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">  light: yeti</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">  dark: superhero</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co">  chunk_output_type: console</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># Methods</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. \~70 (**get exact number?!?!?!?**) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment (**more specificity here?**) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**<span class="sc">\*</span>.)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Specimen Exclusions</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>Many of the exclusions applied to the data were guided by the exclusion criteria described in the methods of Love and Mazer (2021). 1 specimen was excluded due to the blurriness of the image. 12 images were excluded for having a poor date range recorded for the time of collection. A date range was considered unusable if it spanned more than a month due to the frequently changing nature of *Raphanus* reproductive stages. Any specimens that were collected off of islands (e.g. Channel Islands) were excluded due to the unique climatic setting and lack of gene flow. 45 island specimens were removed from the data set based on this criterion. 2 specimens were deemed unfit for imaging, defined here as specimens that had an envelope containing plant matter on the specimen sheet, but no actual sample that could provide counts of reproductive structures. 71 specimens were excluded for having unreliable location data that was either difficult to assign coordinates to (see Assigning GPS Coordinates and Uncertainty) or too broad to draw accurate and precise climate data from. 5 specimens were excluded for having no listed collection date. 21 specimens were excluded on the basis of having poor metadata, lacking several pieces of information that are necessary understanding the spatial, temporal, and climatic context of the specimen. Lastly, 246 specimens were removed for possessing a spatiotemporal duplicate in the remaining data set, removing any repetition for a more cohesive data set.</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assigning GPS Coordinates and Uncertainty</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>Any specimens without previously entered GPS coordinates were assigned GPS coordinates by hand. The locality data provided was used to narrow down a precise geographic position in Google Maps, occasionally with the assistance of ChatGPT or local records and articles to provide historical context. The coordinates were then taken from Google Maps and entered into a program that allows for visualizing uncertainty radii around a specified point. The uncertainty radius was hand-picked and cautiously selected to encompass the extent to which the locality description would logically still apply, similar to the approach described in the Georeferencing methodology in Bontrager et. al 2025. The coordinate system was for all hand-determined GPS coordinates was marked as World Geodetic System 1984 (WGS84), as used by both Google Maps and the map radius software (calcmaps.com).</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>WGS 84 was selected as the coordinate system to standardize all samples against due to its prevalence in location data following its introduction in 1987. Based on information gathered from NOAA, the one to two meter difference between coordinates in NAD83 and WGS84, the two coordinate systems are considered equal for the purposes of the Raphanus data. However, the differences between NAD27 and WGS84 are often greater, so any NAD27 points were converted to WGS84. The calculations were primarily conducted en masse by ChatGPT while spot checking using the calculator provided by the West Virginia Department of Environmental Protection. The variance between coordinates in NAD27 and WGS84 was on the scale of 10^-3^ or 10^-4^, correlating to a 10-100m discrepancy between the points.</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>Specimens with coordinates that were listed as NAD27 in the CCH2 data were converted to CCH2. There were two subsequent pathways for specimens with coordinates that were listed as "preprocessed" or "unknown", or were otherwise unlisted. For specimens collected prior to 1987, NAD27 was broadly assumed to be the coordinate system. For specimens collected after WGS84, it was assumed that any modern GPS devices, computers, or phones operate in WGS84. Due to the uncertainty associated with these assumptions, all original coordinate and geodetic datum data was saved separately.</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>An additional protocol was developed for examining and assigning missing uncertainty radii entries in the CCH2 data, all of which included coordinates that served as the starting judgement point. Based on the Love and Mazer (2021) protocol, 4000 meters was deemed the ceiling cutoff for assigning uncertainty radii at this stage. For specimens that had narrowly defined, "good" locality data, the specificity of location and inclusion of coordinates generated the assumption that the uncertainty was greater than 4000 meters and the specimen's uncertainty was labeled as 3999. If a specimen was determined to have broad, "bad" location data, the specimen label was then read to determine the origin of the coordinates. If the coordinates were present on the original label, it was assumed that the coordinates are accurate and that the location data was poorly recorded, earning the specimen an uncertainty radius assignment of 3999. However, if there were no coordinates present on the label, it was assumed that they were added at a later time based on the poor location and it cannot be safely assumed that the uncertainty radius is less than 4000 meters; these specimens were then assigned an uncertainty radius of 4001. The binomial nature of this distribution can eventually be reanalyzed and assigned a more specific uncertainty value depending on the nature of the climate data that is used.</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>By using the 111.1 kilometer \~ 1 degree conversion, it was decided that any specimen with an original latitudinal or longitudinal coordinate that was rounded to the nearest 0.1 degree (\~11 km) should be reexamined to determine whether the coordinates or uncertainty radii could be adjusted to more precisely fall on either side of the previously set 4000 meter uncertainty radius cutoff. Specimens with location descriptions that were determined to be broader in extent than 4000 meters, were assigned an uncertainty radius of 4001 if their previously listed uncertainty radius was not already greater than 4000. Specimens with location data that was deemed more specific than 4000 meters (e.g. parks, specific intersections, street addresses) then received adjusted, more precise coordinates in WGS84 and were reassigned a fitting uncertainty radius using the map radius software found at calcmaps.com.</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Choosing the Right Machine Learning Program</span></span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>Many previously published scientific papers have also utilized images from various herbaria or citizen science platforms such as iNaturalist to study phenological trends. These papers were examined to get a sense of the software options available to annotate images, build models, and subsequently train machine learning programs to apply the model to a larger data set. There were many possible paths that varied in coding language, accessibility, complexity, and suitability for the needs of the project. Eventually, Roboflow was selected as the most practical choice for conducting the study, as the software provides the ease of completing annotation and training models in the same location. Additionally, Roboflow provides model evaluations with specific feedback such asprecision and recall metrics as well as confusion matrices to easily visualize errors in the model and coding prompts to deploy the model to other sets of images.</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Selecting Specimens for Model Training</span></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>It was initially decided that 100 specimens, slight greater than ten percent of the full data set, would be selected to be annotated and used to train the phenology models. The first consideration made was to include at least one specimen from each of the 31 herbaria that are represented by the complete specimen data set. Afterwards, specimens were added in to be relatively proportional to the distribution of the data set. When continuing to add in specimens after initial herbarium representation was accounted for, three factors received the majority of focus: time of collection, reproductive stage, and complexity of specimens. The time of collection was critical to creating a diverse, representative training set. While most specimens are collected during the spring and summer months, when flowering and fruiting is widespread, specimens collected during both the very beginning and the later months of the calendar year were fairly represent. Additionally, a majority of specimens possess both flowering and fruiting structures, so training set selection was carefully done to also include specimens that had not yet begun to fruit or that only had fruit left. Lastly, due to the many different conditional circumstances that can occur in herbarium specimens, such as image quality, age, human error, etc., both complex, overlapping specimens and well-defined clear cut specimens were selected for annotation to prepare the model for any unusual specimen appearances.</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Annotating Herbarium Specimens</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>**Insert text here about the procedures for annotating specimens and the subsequent additions of specimens to the training set**</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{bash}</span></span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="co">#Insert Julia's code for resizing images, I think it was in bash?</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Training Model Versions</span></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>**Insert text here about how we picked different models to train, how each version did, the 70-20-10 distribution, model metrics and evaluations, etc.**</span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Deploying Model from Roboflow</span></span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>**Insert Julia's codes to get the JSONS and get JSONS to data frame**</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a><span class="in">```{bash}</span></span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a><span class="co">#eventual code here</span></span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Converting Model Data into a Usable Format</span></span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>The following code was created to achieve two purposes. The first was to combine the JSON information on phenology (reproductive structure counts) after running both the original 155 annotated specimen images and the remaining 782 unannotated specimen images through the Roboflow model. The second was to combine all then phenology data with a subset of the data provided by CCH2. Intermediate steps were incorporated as needed to ensure compatibility when merging data frames.</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a><span class="co">#Load tidyverse package into R from Library</span></span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a><span class="co">#Simplify CCH2 data down to the columns of interest</span></span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns of interest were determined based on what would be necessary to identify each specimen and what would be necessary for using climate data to understand the effects of climate variables on flowering time</span></span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>important_specimen_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"FullSpecimenCCH2Data.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(id, </span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a>institutionCode, specificEpithet, recordedBy, eventDate, year<span class="sc">:</span>day, </span>
+<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>verbatimEventDate, county, locality, </span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a>decimalLatitude<span class="sc">:</span>coordinateUncertaintyInMeters)</span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a><span class="co">#Change "id" column from integer class to character class in CCH2 data frame</span></span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>important_specimen_data<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">as.character</span>(important_specimen_data<span class="sc">$</span>id)</span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a><span class="co">#Combine Annotated and Unannotated phenology class data into one big data frame</span></span>
+<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a>ann <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"annotated_inference_counts.csv"</span>)</span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a>unann <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"inference_counts_RETRY.csv"</span>)</span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a>entire_class_dataset <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(ann, unann)</span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a><span class="co">#Change the name of "image" column in phenology class data frame to "id" to align with CCH2 data frame</span></span>
+<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a>entire_class_dataset <span class="ot">&lt;-</span> entire_class_dataset <span class="sc">%&gt;%</span> <span class="fu">rename</span>(<span class="at">id =</span> image)</span>
+<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a><span class="co">#Images that were larger than Roboflow's maximum upload size of 20MB were resized via code and given the prefix "SML_" in the filename to discern the edited image. However, this prefix appeared in the id column of the phenology class data and needed to be removed in order to combine the ohenology class and CCH2 data frames</span></span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a>entire_class_dataset<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">str_replace</span>(entire_class_dataset<span class="sc">$</span>id, <span class="st">"^SML_"</span>, <span class="st">""</span>)</span>
+<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-108"><a href="#cb16-108" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove any observation (e.g. duplicates) that is in phenology class, but not CCH2 data</span></span>
+<span id="cb16-109"><a href="#cb16-109" aria-hidden="true" tabindex="-1"></a>rm <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(entire_class_dataset<span class="sc">$</span>id, important_specimen_data<span class="sc">$</span>id)</span>
+<span id="cb16-110"><a href="#cb16-110" aria-hidden="true" tabindex="-1"></a>entire_class_dataset <span class="ot">&lt;-</span> entire_class_dataset <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>entire_class_dataset<span class="sc">$</span>id </span>
+<span id="cb16-111"><a href="#cb16-111" aria-hidden="true" tabindex="-1"></a>                                                        <span class="sc">%in%</span> rm)</span>
+<span id="cb16-112"><a href="#cb16-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-113"><a href="#cb16-113" aria-hidden="true" tabindex="-1"></a><span class="co">#Merge the CCH2 data frame and the full phenology class data frame into one large data frame, matching based on the id column with a precautionary full join</span></span>
+<span id="cb16-114"><a href="#cb16-114" aria-hidden="true" tabindex="-1"></a>totalinfo <span class="ot">&lt;-</span> <span class="fu">full_join</span>(entire_class_dataset, important_specimen_data, <span class="at">by =</span> <span class="st">"id"</span>)</span>
+<span id="cb16-115"><a href="#cb16-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-116"><a href="#cb16-116" aria-hidden="true" tabindex="-1"></a><span class="co">#Export the full combined data frame into a CSV for further uses</span></span>
+<span id="cb16-117"><a href="#cb16-117" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(totalinfo, <span class="st">"completed_specimen_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-118"><a href="#cb16-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-119"><a href="#cb16-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-120"><a href="#cb16-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-121"><a href="#cb16-121" aria-hidden="true" tabindex="-1"></a>At a later time, it was discovered that, when running the code for the model on specimens, there was one previously hand-annotated specimen that was given counts of 0 bud clusters, 0 flowers, and 0 fruits. After hand checking this image, it was clear that all three reproductive structures could be found on the specimen. The original hand-annotation counts from Roboflow were assigned to the specimen using the following code:</span>
+<span id="cb16-122"><a href="#cb16-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-125"><a href="#cb16-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-126"><a href="#cb16-126" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in full complete data CSV</span></span>
+<span id="cb16-127"><a href="#cb16-127" aria-hidden="true" tabindex="-1"></a>fulldata<span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"completed_specimen_data.csv"</span>)</span>
+<span id="cb16-128"><a href="#cb16-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-129"><a href="#cb16-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-130"><a href="#cb16-130" aria-hidden="true" tabindex="-1"></a><span class="co">#Fix the specimen that was falsely determined to have no assigned reproductive structure counts by individually assigning the accurate counts from the original annotations done by hand in Roboflow</span></span>
+<span id="cb16-131"><a href="#cb16-131" aria-hidden="true" tabindex="-1"></a>fulldata <span class="ot">&lt;-</span> fulldata <span class="sc">%&gt;%</span></span>
+<span id="cb16-132"><a href="#cb16-132" aria-hidden="true" tabindex="-1"></a>     <span class="fu">mutate</span>(</span>
+<span id="cb16-133"><a href="#cb16-133" aria-hidden="true" tabindex="-1"></a>           <span class="at">Bud.Cluster =</span> <span class="fu">if_else</span>(id <span class="sc">==</span> <span class="dv">1368028</span>, <span class="dv">3</span>, Bud.Cluster),</span>
+<span id="cb16-134"><a href="#cb16-134" aria-hidden="true" tabindex="-1"></a>        <span class="at">Flower =</span> <span class="fu">if_else</span>(id <span class="sc">==</span> <span class="dv">1368028</span>, <span class="dv">2</span>, Flower),</span>
+<span id="cb16-135"><a href="#cb16-135" aria-hidden="true" tabindex="-1"></a>         <span class="at">Fruit =</span> <span class="fu">if_else</span>(id <span class="sc">==</span> <span class="dv">1368028</span>, <span class="dv">2</span>, Fruit))</span>
+<span id="cb16-136"><a href="#cb16-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-137"><a href="#cb16-137" aria-hidden="true" tabindex="-1"></a><span class="co">#Export this adjusted change back into the CSV</span></span>
+<span id="cb16-138"><a href="#cb16-138" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(fulldata, <span class="st">"completed_specimen_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-139"><a href="#cb16-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-140"><a href="#cb16-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extracting Climate Data</span></span>
+<span id="cb16-142"><a href="#cb16-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a>**Add in text here about how climate NA was Chosen and how we sourced data, lots of credit to Bontrager, etc.**</span>
+<span id="cb16-144"><a href="#cb16-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-147"><a href="#cb16-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a><span class="co">#EVENTUAL BONTRAGER + Additional to us code here... unless we somehow link the entire other markdown into here if that's a thing</span></span>
+<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a><span class="fu"># Trial Plots</span></span>
+<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a>SEE BELOW NOTE UNDER ALL CHUNKS OF CODE: Instructions for additional phenology plots:\</span>
+<span id="cb16-154"><a href="#cb16-154" aria-hidden="true" tabindex="-1"></a>Write the code for eahc plot in it's own chunk, and make sure the plots show up in the rendered html. (try both plots in same chunk vs separate chunks, and see which output html style you like better!)\</span>
+<span id="cb16-155"><a href="#cb16-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-156"><a href="#cb16-156" aria-hidden="true" tabindex="-1"></a>I THINK I DID THIS BELOW:\</span>
+<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a>1) First R chunk: Filter to only include specimens in flower, then create a histogram by month. SO the final plot should show the number of specimens collected in flower for a given month.</span>
+<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a>2<span class="sc">\)</span> Second R chunk: Do the same for Fruit</span>
+<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-161"><a href="#cb16-161" aria-hidden="true" tabindex="-1"></a>**Basic Frequency Plots:**</span>
+<span id="cb16-162"><a href="#cb16-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a><span class="co">#Bud Clusters</span></span>
+<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fulldata<span class="sc">$</span>Bud.Cluster, <span class="at">breaks =</span> <span class="dv">10</span>, <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"darkorchid3"</span>, </span>
+<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>, <span class="at">main =</span> <span class="st">"Bud Cluster Frequency in California Raphanus </span></span>
+<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a><span class="st">     Herbarium Specimens"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>, <span class="at">xlab =</span> <span class="st">"# of Bud Clusters"</span>)</span>
+<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-174"><a href="#cb16-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-175"><a href="#cb16-175" aria-hidden="true" tabindex="-1"></a><span class="co">#Flowers</span></span>
+<span id="cb16-176"><a href="#cb16-176" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fulldata<span class="sc">$</span>Flower, <span class="at">breaks =</span> <span class="dv">40</span>, <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"firebrick3"</span>, </span>
+<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>, <span class="at">main =</span> <span class="st">"Flower Frequency in California Raphanus </span></span>
+<span id="cb16-178"><a href="#cb16-178" aria-hidden="true" tabindex="-1"></a><span class="st">     Herbarium Specimens"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>, <span class="at">xlab =</span> <span class="st">"# of Flowers"</span>)</span>
+<span id="cb16-179"><a href="#cb16-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-180"><a href="#cb16-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-183"><a href="#cb16-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-184"><a href="#cb16-184" aria-hidden="true" tabindex="-1"></a><span class="co">#Fruits</span></span>
+<span id="cb16-185"><a href="#cb16-185" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fulldata<span class="sc">$</span>Fruit, <span class="at">breaks =</span> <span class="dv">25</span>, <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"seagreen1"</span>, </span>
+<span id="cb16-186"><a href="#cb16-186" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"black"</span>, <span class="at">main =</span> <span class="st">"Fruit Frequency in California Raphanus </span></span>
+<span id="cb16-187"><a href="#cb16-187" aria-hidden="true" tabindex="-1"></a><span class="st">     Herbarium Specimens"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>, <span class="at">xlab =</span> <span class="st">"# of Fruits"</span>)</span>
+<span id="cb16-188"><a href="#cb16-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-189"><a href="#cb16-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-190"><a href="#cb16-190" aria-hidden="true" tabindex="-1"></a>**Histograms for Frequency of Structure Per Month:**</span>
+<span id="cb16-191"><a href="#cb16-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-194"><a href="#cb16-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-195"><a href="#cb16-195" aria-hidden="true" tabindex="-1"></a><span class="co">#Flowering and Months</span></span>
+<span id="cb16-196"><a href="#cb16-196" aria-hidden="true" tabindex="-1"></a>flowering <span class="ot">&lt;-</span> fulldata <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Flower <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(flowering<span class="sc">$</span>month, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">12</span>, <span class="dv">1</span>), <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"firebrick3"</span>,</span>
+<span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>, <span class="at">main =</span> <span class="st">"Frequency of Specimens Collected While Flowering</span></span>
+<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a><span class="st">     for Each Month"</span>, <span class="at">xlab =</span> <span class="st">"Month"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span>
+<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-204"><a href="#cb16-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-205"><a href="#cb16-205" aria-hidden="true" tabindex="-1"></a><span class="co">#Fruits and Months</span></span>
+<span id="cb16-206"><a href="#cb16-206" aria-hidden="true" tabindex="-1"></a>fruiting <span class="ot">&lt;-</span> fulldata <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Fruit <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb16-207"><a href="#cb16-207" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(fruiting<span class="sc">$</span>month, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">12</span>, <span class="dv">1</span>), <span class="at">freq =</span> <span class="cn">TRUE</span>, <span class="at">col =</span> <span class="st">"seagreen1"</span>,</span>
+<span id="cb16-208"><a href="#cb16-208" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"black"</span>, <span class="at">main =</span> <span class="st">"Frequency of Specimens Collected While Fruiting</span></span>
+<span id="cb16-209"><a href="#cb16-209" aria-hidden="true" tabindex="-1"></a><span class="st">     for Each Month"</span>, <span class="at">xlab =</span> <span class="st">"Month"</span>, <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span>
+<span id="cb16-210"><a href="#cb16-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-211"><a href="#cb16-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-212"><a href="#cb16-212" aria-hidden="true" tabindex="-1"></a>NOTE FOR JULIA: I was having trouble rendering, it's giving me an error message in Background Jobs</span>
+<span id="cb16-213"><a href="#cb16-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-214"><a href="#cb16-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## Running Code</span></span>
+<span id="cb16-215"><a href="#cb16-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-216"><a href="#cb16-216" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
+<span id="cb16-217"><a href="#cb16-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-220"><a href="#cb16-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-221"><a href="#cb16-221" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a>You can add options to executable code like this</span>
+<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-228"><a href="#cb16-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-229"><a href="#cb16-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb16-230"><a href="#cb16-230" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb16-231"><a href="#cb16-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-232"><a href="#cb16-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-233"><a href="#cb16-233" aria-hidden="true" tabindex="-1"></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

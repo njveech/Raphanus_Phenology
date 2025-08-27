@@ -187,7 +187,10 @@ hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
      for Each Month", xlab = "Month", ylab = "Frequency")
 ```
 
-NOTE FOR JULIA: I was having trouble rendering, it's giving me an error message in Background Jobs
+NOTE FOR JULIA: I was having trouble rendering, it's giving me an error message in Background Jobs\
+NOTE FOR NATALIE: Hmmmm... Renders fine for me (and looks good!). In general, please paste your errors when you want help solving so I can see if I can decipher them :) \
+
+NEXT FOR NATALIE: I have now pushed the new climate data with all the variables, and
 
 ## Running Code
 

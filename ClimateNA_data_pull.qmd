@@ -23,10 +23,6 @@ First, set working directory and load packages.
 
 ```{r}
 #| include: false
-
-# set working directory
-setwd("/Users/juliaharencar/Documents/Github/Raphanus_climateNA")
-
 # load packages
 library(tidyverse)
 library(cowplot) # for plot aesthetics
@@ -38,10 +34,11 @@ library(magrittr)
 Then, we load the specimen data and make a new csv with coordinates and IDs in the format required by ClimateNA.
 
 ```{r}
-#| echo: false
+#| eval: false
+#| include: false
 
 # load the data
-specimens <- read.csv(" ", header = T)
+specimens <- read.csv("FullSpecimenCCH2Data.csv", header = T)
 
 # make specific dataframe for pulling data from climateNA
 # ClimateNA requires an input csv containing the columns ID1, ID2, lat, long, and (optionally) el.
@@ -73,14 +70,11 @@ To get the data, I select "Historical time series" in the dropdown menu under "m
 
 Note, growing degree days marked as days \> 5°C: DD5_01 – DD5_12     January - December degree-days above 5°C
 
-```{r}
-# Import climate data
-tmp <- read.csv("raw_outputs/Raph_locs_1901-2024MP.csv")
-```
-
 ### Reformat ClimateNA data
 
-NOTE - need to redo with full climate variables once climate subsetting is figured out.
+NOTE - eval is false here because generating the all_data df takes a long time (like, minutes), so we will only run when we need to modify the saved output climateNA_full_data_tall.csv. 
+
+TASK FOR NATALIE: In the chunk below, it now reads in the new, full climate dataset. there are additional variables from before and from what is named in the second 'line' (the "rearrange columns" line). Read in the new dataset to generate all_data. Then, use colnames() to get a list of the varibles. Determine ehat each acronym stands for (hopefully you can find them on the page linked above), and add to the last line of the code that reads in and reformats the data to rename them to more intuitive things (or at least get rid of the weird tailing "_"). Then re-run the whole chunk to generate the new climateNA_full_data_tall.csv. Open that in excel to check and make sure it looks good!
 
 ```{r}
 #| label: reformat data
@@ -91,7 +85,7 @@ NOTE - need to redo with full climate variables once climate subsetting is figur
 
 # Data is formatted with one row per site/year, one column per variable/month
 
-all_data <- read_csv("raw_outputs/Raph_locs_1901-2024MP.csv") %>%
+all_data <- read_csv("Raph_locs_1901-2024Mfull.csv") %>%
   select(-id2,-Elevation) %>%
   # Make data tall (one row per variable/site/month/year)
   gather(variable, value, -Year, -id1, -Latitude, -Longitude) %>%
@@ -107,7 +101,7 @@ all_data <- read_csv("raw_outputs/Raph_locs_1901-2024MP.csv") %>%
   # Drop unnecessary columns
   select(-month_pad) %>%
   # Rename to standard variable names
-  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax)
+  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax, )
 
 # Rearrange columns
 all_data %<>%
@@ -115,7 +109,7 @@ all_data %<>%
   select(id, clim_year, clim_month, clim_date, everything())
 
 # Now save this data
-write.csv(all_data, "climateNA_partial_data_tall.csv", row.names = FALSE)
+write.csv(all_data, "climateNA_full_data_tall.csv", row.names = FALSE)
 
 ```
 
