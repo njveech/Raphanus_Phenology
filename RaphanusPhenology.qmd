@@ -78,7 +78,7 @@ library(tidyverse)
 
 #Simplify CCH2 data down to the columns of interest
 #Columns of interest were determined based on what would be necessary to identify each specimen and what would be necessary for using climate data to understand the effects of climate variables on flowering time
-important_specimen_data <- read.csv("FullSpecimenCCH2Data.csv") %>% select(id, 
+important_specimen_data <- read.csv("Input_Files/FullSpecimenCCH2Data.csv") %>% select(id, 
 institutionCode, specificEpithet, recordedBy, eventDate, year:day, 
 verbatimEventDate, county, locality, 
 decimalLatitude:coordinateUncertaintyInMeters)
@@ -87,8 +87,8 @@ decimalLatitude:coordinateUncertaintyInMeters)
 important_specimen_data$id <- as.character(important_specimen_data$id)
 
 #Combine Annotated and Unannotated phenology class data into one big data frame
-ann <- read.csv("annotated_inference_counts.csv")
-unann <- read.csv("inference_counts_RETRY.csv")
+ann <- read.csv("Input_Files/annotated_inference_counts.csv")
+unann <- read.csv("Input_Files/inference_counts_RETRY.csv")
 entire_class_dataset <- bind_rows(ann, unann)
 
 #Change the name of "image" column in phenology class data frame to "id" to align with CCH2 data frame
@@ -106,16 +106,16 @@ entire_class_dataset <- entire_class_dataset %>% filter(!entire_class_dataset$id
 totalinfo <- full_join(entire_class_dataset, important_specimen_data, by = "id")
 
 #Export the full combined data frame into a CSV for further uses
-write.csv(totalinfo, "completed_specimen_data.csv", row.names = FALSE)
+write.csv(totalinfo, "Output_Files/completed_specimen_data.csv", row.names = FALSE)
 
 ```
 
 At a later time, it was discovered that, when running the code for the model on specimens, there was one previously hand-annotated specimen that was given counts of 0 bud clusters, 0 flowers, and 0 fruits. After hand checking this image, it was clear that all three reproductive structures could be found on the specimen. The original hand-annotation counts from Roboflow were assigned to the specimen using the following code:
 
 ```{r}
+#| eval: false
 #Read in full complete data CSV
-fulldata<- read.csv("completed_specimen_data.csv")
-
+fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
 
 #Fix the specimen that was falsely determined to have no assigned reproductive structure counts by individually assigning the accurate counts from the original annotations done by hand in Roboflow
 fulldata <- fulldata %>%
@@ -125,7 +125,7 @@ fulldata <- fulldata %>%
          Fruit = if_else(id == 1368028, 2, Fruit))
 
 #Export this adjusted change back into the CSV
-write.csv(fulldata, "completed_specimen_data.csv", row.names = FALSE)
+write.csv(fulldata, "Output_Files/completed_specimen_data.csv", row.names = FALSE)
 ```
 
 ## Extracting Climate Data
@@ -149,6 +149,9 @@ I THINK I DID THIS BELOW:\
 **Basic Frequency Plots:**
 
 ```{r}
+#Read in full complete data CSV
+fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
+
 #Bud Clusters
 hist(fulldata$Bud.Cluster, breaks = 10, freq = TRUE, col = "darkorchid3", 
      border = "white", main = "Bud Cluster Frequency in California Raphanus 
@@ -196,22 +199,3 @@ hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
 ```
 
 A similar trend follows when looking at the graphs of fruit-month frequency and flower-month frequency with most specimens that were fruiting being collected in the spring, specifically April. Based on this observation, I first and foremost think it is important to go back and make a histogram of just when each specimen was collected within the year specifically, although based on the similarity of the two specified histograms, I can't imagine this would change much. On that note, I'd also like to make a histogram showing when specimens were collected across our entire range, since I actually couldn't necessarily narrow down off the cuff which decade had the most specimens collected. I'm not sure what sorts of questions would be more beneficially asked by fruits since much of the literature is on flowering time. Perhaps comparisons could be made for specimens collected within a year to see if there is a noticeable time difference between collection of early few flower specimens and late fruit specimens, but there is lots of subjectivity there due to the specimen just being a snapshot of any given population and possibilities for not enough data to pull this off. I'm also intrigued as to why for both flowers and fruits, there is a slight peak in October, but I don't know that there are enough specimens to parse that out.
-
-\
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
