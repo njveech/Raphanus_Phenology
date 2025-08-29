@@ -72,9 +72,46 @@ Note, growing degree days marked as days \> 5°C: DD5_01 – DD5_12     Janu
 
 ### Reformat ClimateNA data
 
-NOTE - eval is false here because generating the all_data df takes a long time (like, minutes), so we will only run when we need to modify the saved output climateNA_full_data_tall.csv. 
+NOTE - eval is false here because generating the all_data df takes a long time (like, minutes), so we will only run when we need to modify the saved output climateNA_full_data_tall.csv.
 
-TASK FOR NATALIE: In the chunk below, it now reads in the new, full climate dataset. there are additional variables from before and from what is named in the second 'line' (the "rearrange columns" line). Read in the new dataset to generate all_data. Then, use colnames() to get a list of the varibles. Determine ehat each acronym stands for (hopefully you can find them on the page linked above), and add to the last line of the code that reads in and reformats the data to rename them to more intuitive things (or at least get rid of the weird tailing "_"). Then re-run the whole chunk to generate the new climateNA_full_data_tall.csv. Open that in excel to check and make sure it looks good!
+TASK FOR NATALIE: In the chunk below, it now reads in the new, full climate data set. there are additional variables from before and from what is named in the second 'line' (the "rearrange columns" line). Read in the new dataset to generate all_data. Then, use colnames() to get a list of the variables. Determine what each acronym stands for (hopefully you can find them on the page linked above), and add to the last line of the code that reads in and reformat the data to rename them to more intuitive things (or at least get rid of the weird tailing "\_"). Then re-run the whole chunk to generate the new climateNA_full_data_tall.csv. Open that in excel to check and make sure it looks good!
+
+NATALIE'S WORK TODAY (8/27): I think I created the correct new CSV, but I'd love for you take a look at the values to see if they look okay/if they make sense. In particular the "DD" (degree-days) columns concern me since I can't understand how the number could be \>31 for any given month. I also attempted the code below to create a little table as a quick guide to the different climate variables. I tried to render to see if my table worked, but it bounced back with this error message even after I restarted R:
+
+```         
+==> quarto preview ClimateNA_data_pull.qmd --to html --no-watch-inputs --no-browse
+
+
+
+processing file: ClimateNA_data_pull.qmd
+  |..................                                  |  35% [unnamed-chunk-3]running: bash  -c '# open ClimateNA gui on my mac
+  # arch -x86_64 wine Z:\\Users\\juliaharencar\\Documents\\Software\\ClimateNA_v760\\ClimateNA_v7.60.exe'
+  |........................                            |  47% [unnamed-chunk-4]
+
+Error in `contrib.url()`:
+! trying to use CRAN without setting a mirror
+Backtrace:
+    ▆
+ 1. └─utils::install.packages("knitr")
+ 2.   └─utils::contrib.url(repos, "source")
+
+Quitting from ClimateNA_data_pull.qmd:99-106 [unnamed-chunk-4]
+                                                                                                            
+Execution halted
+```
+
+**Climate Variable Key:**
+
+```{r}
+#Create a Table from a CSV to serve as a Key to Climate variables
+
+install.packages("knitr")
+library(knitr)
+legend <- read.csv("Climate_variable_Legend.csv")
+kable(legend, format = "markdown")
+```
+
+**Code for reformatting Climate Data for our needs:**
 
 ```{r}
 #| label: reformat data
@@ -101,7 +138,7 @@ all_data <- read_csv("Raph_locs_1901-2024Mfull.csv") %>%
   # Drop unnecessary columns
   select(-month_pad) %>%
   # Rename to standard variable names
-  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax, )
+  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax, CMD_mm = CMD, CMI_mm = CMI, chillDD = DD_0_, heatDD = DD_18_, coolDD = DD18_, growDD= DD5_, FFD = NFFD)
 
 # Rearrange columns
 all_data %<>%

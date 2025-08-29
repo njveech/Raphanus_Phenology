@@ -31,17 +31,21 @@ hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
 
 #Read in Complete Data CSV
 fulldata<- read.csv("completed_specimen_data.csv")
-
-
 #Code to fix specimen with no reprod structure counts manually:
 fulldata <- fulldata %>%
      mutate(
            Bud.Cluster = if_else(id == 1368028, 3, Bud.Cluster),
         Flower = if_else(id == 1368028, 2, Flower),
          Fruit = if_else(id == 1368028, 2, Fruit))
-
 #Export this adjusted change back into CSV
 write.csv(fulldata, "completed_specimen_data.csv", row.names = FALSE)
+
+#attempt to display CSV as nice table
+install.packages("knitr")
+library(knitr)
+legend <- read.csv("Climate_variable_Legend.csv")
+kable(legend, format = "markdown")
+
 
 #Code to explicitly store PAT for Github
 #install.packages("gitcreds")

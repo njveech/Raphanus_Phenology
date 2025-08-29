@@ -155,6 +155,8 @@ hist(fulldata$Bud.Cluster, breaks = 10, freq = TRUE, col = "darkorchid3",
      Herbarium Specimens", ylab = "Frequency", xlab = "# of Bud Clusters")
 ```
 
+The majority of specimens had just one bud cluster, with a steep drop off between one and two bud clusters. While this is likely both a flaw in our model and just the inherently difficult-to-discern nature of bud clusters, other analyses could be attempted on bud cluster counts. In particular, we could ask for a representation of how far along specimens are in flowering by comparing a ratio of bud clusters to fruits for each specimen. This could assist in creating some sort of graph where we are able to see the proportion of flowers that were opened to the overall count of flowers, both opened and potential to have opened in the future. I could also benefit to doing additional research on bud cluster phenology to see what other questions could be asked, but this feels like a less reliable data point for the sake of our project.
+
 ```{r}
 #Flowers
 hist(fulldata$Flower, breaks = 40, freq = TRUE, col = "firebrick3", 
@@ -162,12 +164,16 @@ hist(fulldata$Flower, breaks = 40, freq = TRUE, col = "firebrick3",
      Herbarium Specimens", ylab = "Frequency", xlab = "# of Flowers")
 ```
 
+There is a right skewed distribution for the flower frequency curve, with most observations falling between 0-10 flowers. I would like to find a way to use this data to further study latitudinal and longitudinal differences in flower count, as it is a factor that seems to have a significant effect on flowering times (Ridley & Ellstrand 2009), due to how much California's climate differs on both the E-W and N-S axis. Perhaps we could divide up latitudes into chunks and average over an area and/or use a continuous spectrum to see at what latitudes and what longitudes flower count peaks. (Not sure of the logistics of this). Additionally, fruiting to flowering frequency ratios could be interesting as well, and I'm still intrigued as to what analyses we might be able to do and what conclusions we could draw if we create a phenology scoring formula.
+
 ```{r}
 #Fruits
 hist(fulldata$Fruit, breaks = 25, freq = TRUE, col = "seagreen1", 
      border = "black", main = "Fruit Frequency in California Raphanus 
      Herbarium Specimens", ylab = "Frequency", xlab = "# of Fruits")
 ```
+
+Similar to flowers, the distirbution curve for fruits is white skewing, with over 25% of the observations having between 0-5 fruits. I would like to repeat the above description of location based frequency analyses for fruits to see if there is a correlation of location frequency between fruits and flowers. Additionally, as mentioned earlier, fruiting to flowering frequency ratios could be interesting as well, and I'm still intrigued as to what analyses we might be able to do and what conclusions we could draw if we create a phenology scoring formula.
 
 **Histograms for Frequency of Structure Per Month:**
 
@@ -179,6 +185,8 @@ hist(flowering$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
      for Each Month", xlab = "Month", ylab = "Frequency")
 ```
 
+By looking at this graph, we can tell that the majority of specimens that were flowering were collected in the Spring months between March and May. Over 250 flowering specimens were collected in April alone. When reading through the scientific articles, I was intrigued by the Ridley and Ellstrand 2009 papers, where they had 2 study sites for both southern inland and northern coastal specimens to be grown and studied. One specimen site was inland and southern, at UCR, and the other was coastal and northern, at Point Reyes. The authors mentioned that at the Point Reyes site, radishes tend to behave as a summer annual, flowering near the end of summer, while at the UCR site the Radish behave like winter annuals and flower in early spring. I think it could be interesting to expand on this histogram and incorporate location data to try and further understand this aforementioned trend and see if there is proof of this idea in the herbarium specimens.
+
 ```{r}
 #Fruits and Months
 fruiting <- fulldata %>% filter(Fruit > 0)
@@ -187,10 +195,9 @@ hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
      for Each Month", xlab = "Month", ylab = "Frequency")
 ```
 
-NOTE FOR JULIA: I was having trouble rendering, it's giving me an error message in Background Jobs\
-NOTE FOR NATALIE: Hmmmm... Renders fine for me (and looks good!). In general, please paste your errors when you want help solving so I can see if I can decipher them :) \
+A similar trend follows when looking at the graphs of fruit-month frequency and flower-month frequency with most specimens that were fruiting being collected in the spring, specifically April. Based on this observation, I first and foremost think it is important to go back and make a histogram of just when each specimen was collected within the year specifically, although based on the similarity of the two specified histograms, I can't imagine this would change much. On that note, I'd also like to make a histogram showing when specimens were collected across our entire range, since I actually couldn't necessarily narrow down off the cuff which decade had the most specimens collected. I'm not sure what sorts of questions would be more beneficially asked by fruits since much of the literature is on flowering time. Perhaps comparisons could be made for specimens collected within a year to see if there is a noticeable time difference between collection of early few flower specimens and late fruit specimens, but there is lots of subjectivity there due to the specimen just being a snapshot of any given population and possibilities for not enough data to pull this off. I'm also intrigued as to why for both flowers and fruits, there is a slight peak in October, but I don't know that there are enough specimens to parse that out.
 
-NEXT FOR NATALIE: I have now pushed the new climate data with all the variables, and
+\
 
 ## Running Code
 

@@ -1,0 +1,16 @@
+﻿Variable,Description,Units
+CMD_mm,Hargreaves Climatic Moisture Deficit,mm
+CMI_mm,Hogg's Climate Moisture Index,mm
+chillDD,chilling degree-days; degree-days < 0°C,days
+heatDD,heating degree-days; degree-days < 18°C,days
+coolDD,cooling degree-days; degree-days > 18°C,days
+growDD,growing degree-days; degree-days >5°C,days
+Eref,Hargreaves Reference Evaporation,mm
+FFD,Number of Frost-Free Days,days
+PAS,Precipitation as Snow (previous August- present July),mm
+ppt_mm,Precipitation,mm
+RH,Mean Average Relative Humidity,%
+srad,Solar Radiation,MJ m‐2 d‐1
+tave,Mean Temperature,°C
+tmax,Mean Maximum Temperature,°C
+tmin,Mean Minimum Temperature,°C
