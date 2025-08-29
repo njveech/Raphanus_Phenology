@@ -34,11 +34,12 @@ library(magrittr)
 Then, we load the specimen data and make a new csv with coordinates and IDs in the format required by ClimateNA.
 
 ```{r}
+#| label: climate input data
 #| eval: false
 #| include: false
 
 # load the data
-specimens <- read.csv("FullSpecimenCCH2Data.csv", header = T)
+specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
 
 # make specific dataframe for pulling data from climateNA
 # ClimateNA requires an input csv containing the columns ID1, ID2, lat, long, and (optionally) el.
@@ -48,7 +49,7 @@ specimens <- read.csv("FullSpecimenCCH2Data.csv", header = T)
 locs <- specimens %>% 
   mutate(id2 = NA,
          elev = NA) %>% # add a blank ID2 col
-  select(id1 = id, id2, lat = decimalLatitude, long = decimalLongitude, elev)
+  dplyr::select(id1 = id, id2, lat = decimalLatitude, long = decimalLongitude, elev)
 
 head(locs) # peak at the new df to check; looks good!
 
@@ -78,36 +79,14 @@ TASK FOR NATALIE: In the chunk below, it now reads in the new, full climate data
 
 NATALIE'S WORK TODAY (8/27): I think I created the correct new CSV, but I'd love for you take a look at the values to see if they look okay/if they make sense. In particular the "DD" (degree-days) columns concern me since I can't understand how the number could be \>31 for any given month. I also attempted the code below to create a little table as a quick guide to the different climate variables. I tried to render to see if my table worked, but it bounced back with this error message even after I restarted R:
 
-```         
-==> quarto preview ClimateNA_data_pull.qmd --to html --no-watch-inputs --no-browse
-
-
-
-processing file: ClimateNA_data_pull.qmd
-  |..................                                  |  35% [unnamed-chunk-3]running: bash  -c '# open ClimateNA gui on my mac
-  # arch -x86_64 wine Z:\\Users\\juliaharencar\\Documents\\Software\\ClimateNA_v760\\ClimateNA_v7.60.exe'
-  |........................                            |  47% [unnamed-chunk-4]
-
-Error in `contrib.url()`:
-! trying to use CRAN without setting a mirror
-Backtrace:
-    ▆
- 1. └─utils::install.packages("knitr")
- 2.   └─utils::contrib.url(repos, "source")
-
-Quitting from ClimateNA_data_pull.qmd:99-106 [unnamed-chunk-4]
-                                                                                                            
-Execution halted
-```
-
 **Climate Variable Key:**
 
 ```{r}
+#| label: climate variable key
 #Create a Table from a CSV to serve as a Key to Climate variables
-
-install.packages("knitr")
+#install.packages("knitr")
 library(knitr)
-legend <- read.csv("Climate_variable_Legend.csv")
+legend <- read.csv("Figures/Climate_variable_Legend.csv")
 kable(legend, format = "markdown")
 ```
 
@@ -122,8 +101,8 @@ kable(legend, format = "markdown")
 
 # Data is formatted with one row per site/year, one column per variable/month
 
-all_data <- read_csv("Raph_locs_1901-2024Mfull.csv") %>%
-  select(-id2,-Elevation) %>%
+all_data <- read_csv("Input_Files/Raph_locs_1901-2024Mfull.csv") %>%
+  dplyr::select(-id2,-Elevation) %>%
   # Make data tall (one row per variable/site/month/year)
   gather(variable, value, -Year, -id1, -Latitude, -Longitude) %>%
   # Split month from variable name
@@ -142,19 +121,24 @@ all_data <- read_csv("Raph_locs_1901-2024Mfull.csv") %>%
 
 # Rearrange columns
 all_data %<>%
-  select(-latitude,-longitude) %>%
-  select(id, clim_year, clim_month, clim_date, everything())
+  dplyr::select(-latitude,-longitude) %>%
+  dplyr::select(id, clim_year, clim_month, clim_date, everything())
 
 # Now save this data
-write.csv(all_data, "climateNA_full_data_tall.csv", row.names = FALSE)
+write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FALSE)
 
 ```
 
 ### Lived climate calculation
 
 ```{r}
+#| label: subsetting climate data
+
+# load the data
+specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
+
 # subset to keep just the columns we need (for now, including more than maybe necessary)
-specimens <- specimens %>% select(id, institutionCode, specificEpithet, year, month, day, county, locality, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters)
+specimens <- specimens %>% dplyr::select(id, institutionCode, specificEpithet, year, month, day, county, locality, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters)
 
 ## WORK FOR NATALIE:
 # Determine the first month in each year that had greater than 25mm of precip
