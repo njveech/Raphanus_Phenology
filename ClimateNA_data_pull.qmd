@@ -129,28 +129,557 @@ write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FAL
 
 ```
 
-### Lived climate calculation
+### Subset climate data
 
 ```{r}
 #| label: subsetting climate data
 
 # load the data
 specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
+clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
+  
+# subset to keep just the columns we need 
+specimens <- specimens %>% dplyr::select(id, year, month, day)
 
-# subset to keep just the columns we need (for now, including more than maybe necessary)
-specimens <- specimens %>% dplyr::select(id, institutionCode, specificEpithet, year, month, day, county, locality, decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters)
+# First, we are just going to use the year-to-date for each specimen as the time period for which we evaluate climate data. This means we want the full year of data starting with the day and month of collection, but in the previous year, and ending with the date of collection. 
 
-## WORK FOR NATALIE:
-# Determine the first month in each year that had greater than 25mm of precip
-# below is example code from Bontrager et al. Modify the code for our data. 
+# The climate data is currently in what is called "long" or "tall" format, meaning that there are multiple rows per indiviudal ID, in this case each of which contain climate data for a given month. 
+# If you look at head(clim), you can see there is a clim_year, clim_month, and clim_date column. clim_date is just the year and month together (e.g. year 2024 and month 12 has a clim_date of 202412).
+
+# First, we need to calculate the date range. We will only include the month of collection in the year of collection if it was collected after the first week, so on the 8th or later. If it was collected before the 8th (1-7th), we do NOT include that month for the year of collection, and instead include it from the previous year.
+# Step 1: Identify the start and end month for the "climate year" for each specimen with the specimen df. You will need mutate() from dplyr to make a new column with the start month and another column with the end month. These new columns should be in the clim_date format with year and month together (e.g. 202412 for December 2024).
+# Step 1a: Identify the end month (this will then define the start month as 11 mo before). To do this, we will need to use an if-else statement within the dplyr code, and I think specifically within the call to mutate(). You want the code new end_mo column you create to contain the month of collection if the day of collection column has a value >7. Otherwise (aka "else"), you want the new end_mo column to be assigned the month previous to collection (so, the value in "month" minus 1). 
+
+# Step 1b: Identify the start month; this will simply be the end month minus one.
+
+# Step 1c: Now you should have two new columns in the specimens df, one each for start and end month. But, they do not yet have year associated. Next you need to append (add to the string) the year to the month, specifically before the month, to match the clim_date format. This will be the year of collection for the end month, and the year of collection minus one for the start month. I don't know a function to do this off the top of my head (maybe paste0()?), but chat will probably be able to tell you. 
+
+# Step 2: Next we need to use the newly calculated start and end to subset the climate data. First, join the specimens and clim dataframes like you did with the phenology and specimen data frames, keeping in mind you only really need to join the new columns you made (start and end month) to the climate data frame. (I think you will want left or right join making sure you keep all of the clim data frame; you won't need specimen data for anything we don't have climate data for). This should fill in the same value for the many rows pertaining to each individual in the start_mo and end_mo columns.
+
+# Step 3: Use dplyr's filter() function to only keep rows where the clim_date is greater than your start_mo, or less than your end_mo. 
+
+# Step 4: Convert the long/tall format climate data to wide format where you only have 1 row per individual. You can do this with pivot_wider() from tidyr. You will end up with 12 columns of data for each climate variable, so it will be a VERY wide dataframe, but that will make it possible to calculate things like total or average precip. 
+
+# Step 5: Now, save this subsetted climate data joined with the specimen IDs so it can be combined with the phenology data! 
+write.csv(all_data, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
 
 
-# First we need to calculate a consistent number representing collection date. For now, we will do it as the Bontrager paper did and use Sept 01 as the start of the day count, then the date of collection as the last date. 
+## CHALLENGING code work for Natalie if you feel ambitious:
+# Determine the first month in each year/location that had greater than 25mm of precip:
+# First, try breaking this task out into the smallest possible steps you would need to take in code, and just write them in plain english. For example, the first step might be to make a string from the precip values for each month in the year preceeding collection (already subset for that year above). Then you would look up code to identify the first position in the string where the value is greater than 25, then link that back to what month the string position is connected to. 
 
 
 ```
 
+### Examine climate correlations
+
+```{r}
+#| label: climate correlations
+
+
+```
+
+
 ## Extra code
+
+Code from bontrager that includes calculation of a Collection Day of Year (number of days since Sept. 1):
+```{r}
+#| label: bontrager DOWY code
+#| eval: false
+#| include: false
+
+# First we need to calculate a consistent number representing collection date. For now, we will do it as the Bontrager paper did and use Sept 01 as the start of the day count, then the date of collection as the last date. Bontrager code to adapt for our data is below. We will obviously want to remove the stuff about species, use our data, and make sure our colnames match or change the code to match.
+
+specimens_compiled = read_csv("rainfall-fitness/data/compiled_specimen_data.csv") %>% 
+  mutate(species = str_c(genus, "_", species)) %>% 
+  filter(!(species %in% c("s_barbatus", "s_cordatus", "s_morrisonii", "s_tortuosus"))) %>% 
+  rename(collection_year = year, collection_day = day, collection_month = month) %>% 
+  # mutate(collection_day_assumed = if_else(is.na(collection_day), 15, collection_day)) %>% 
+  mutate(collection_date = make_date(year = collection_year, day = collection_day, month = collection_month)) %>% 
+  mutate(sept_1_date = make_date(year = collection_year-1, month = 9, day = 1),
+         collection_DOWY = as.numeric(collection_date - sept_1_date))
+```
+
+Code from bontrager for phenology analyses and figures (Bontrager et al 2025)
+```{r}
+#| label: bontrager phenology code
+#| eval: false
+#| include: false
+# PHENOLOGY ----
+# Q1B) Which components of climate influenced specimen phenology? ----------------
+
+## Model 1: temperature and precipitation on pheno ----
+
+mod_list1_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+  
+  species_choose = species_list[i]
+  
+  print(i)
+  print(species_choose) 
+  
+  dat_slim = dat1 %>% 
+    filter(species == species_choose) %>% 
+    mutate(re_group = as.integer(as.factor(group)))
+  
+  priors <- c(prior(normal(0, 1), class = b))
+  # Use default student t prior on intercept
+  
+  mod = brm(weighted_fruits|trials(total_repro) ~ 
+              collection_DOWY_scaled + 
+              tave_rain_avg_scaled + 
+              log_ppt_mm_rain_avg_scaled + 
+              (1|re_group), 
+            family = binomial(),
+            prior = priors,
+            cores = 2,
+            iter = 4000,
+            init = 0,
+            data = dat_slim,
+            refresh = 0,
+            file = glue("rainfall-fitness/model_fits/pheno_model1_{species_choose}.rds"))
+  
+  print(summary(mod))
+  
+  mod_list1_p[[i]] = mod
+  
+}
+
+names(mod_list1_p) = species_list
+
+### Make table of parameters and rhats ----
+
+m1_all_p = map_df(mod_list1_p, summarise_draws, .id="species", ~quantile(.x, probs = c(0.025, 0.975)), mean, median, sd, rhat, ess_bulk, ess_tail) %>% 
+  left_join(species_names) %>% 
+  rename(lower = `2.5%`, upper = `97.5%`) 
+
+# Check Rhats for convergence 
+# sum should be 0
+sum(m1_all_p$rhat >= 1.01)
+# All converge with 4000 iterations
+
+# Make a slimmed down table for point-range plots
+
+param_list_m1_p = m1_all_p %>% 
+  dplyr::select(-species_nice, -species_phy) %>%
+  filter(variable %in% c( "b_tave_rain_avg_scaled", "b_log_ppt_mm_rain_avg_scaled", "b_collection_DOWY_scaled")) %>% 
+  mutate(variable_nice = fct_recode(variable,
+                                    "Average temperature\n(first rainy month until species'\naverage collection month)" =
+                                      "b_tave_rain_avg_scaled",
+                                    "Total precipitation\n(first rainy month until species'\naverage collection month)" =
+                                      "b_log_ppt_mm_rain_avg_scaled",
+                                    "Collection DOWY" = "b_collection_DOWY_scaled"),
+         sig = if_else((upper > 0 & lower > 0), "sig_pos",
+                       if_else((upper <0 & lower < 0), "sig_neg", "ns"))) %>%
+  mutate(response = "pheno", model = "model1", model_eq = "weighted_fruits|trials(total_repro) ~ collection_DOWY_scaled + tave_rain_avg_scaled + log_ppt_mm_rain_avg_scaled + (1|re_group)")
+
+
+## Model 2: CWD ----
+
+mod_list2_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+  
+  species_choose = species_list[i]
+  
+  print(i)
+  print(species_choose) 
+  
+  dat_slim = dat1 %>% 
+    filter(species == species_choose) %>% 
+    mutate(re_group = as.integer(as.factor(group)))
+  
+  priors <- c(prior(normal(0, 1), class = b))
+  # Use default student t prior on intercept
+  
+  mod = brm(weighted_fruits|trials(total_repro) ~ 
+              collection_DOWY_scaled + 
+              cwd_rain_avg_scaled + 
+              (1|re_group), 
+            family = binomial(),
+            prior = priors,
+            cores = 2,
+            iter = 4000,
+            init = 0,
+            data = dat_slim,
+            refresh = 0,
+            file = glue("rainfall-fitness/model_fits/pheno_model2_{species_choose}.rds"))
+  
+  print(summary(mod))
+  
+  mod_list2_p[[i]] = mod
+  
+}
+
+names(mod_list2_p) = species_list
+
+
+### Make table of parameters and rhats ----
+
+m2_all_p = map_df(mod_list2_p, summarise_draws, .id="species", ~quantile(.x, probs = c(0.025, 0.975)), mean, median, sd, rhat, ess_bulk, ess_tail) %>% 
+  left_join(species_names) %>% 
+  rename(lower = `2.5%`, upper = `97.5%`)
+
+# Check Rhats for convergence 
+# sums should all be 0
+sum(m2_all_p$rhat >= 1.01)
+# all good but anceps ess are low
+
+param_list_m2_p = m2_all_p %>% 
+  dplyr::select(-species_nice, -species_phy) %>%
+  filter(variable %in% c("b_cwd_rain_avg_scaled", "b_collection_DOWY_scaled")) %>% 
+  mutate(variable_nice = fct_recode(variable,
+                                    "Total climatic water deficit\n(first rainy month until species'\naverage collection month)" = "b_cwd_rain_avg_scaled",
+                                    "Collection DOWY" = "b_collection_DOWY_scaled"),
+         sig = if_else((upper > 0 & lower > 0), "sig_pos",
+                       if_else((upper <0 & lower < 0), "sig_neg", "ns"))) %>%
+  mutate(response = "pheno", model = "model2", model_eq = "weighted_fruits|trials(total_repro) ~ collection_DOWY_scaled + cwd_rain_avg_scaled + (1|re_group)")
+
+
+# Figure 1: pheno vs. climate multipanel ----
+
+
+plot_list1p_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+  
+  species_choose = species_list[i]
+  
+  dat_slim = dat1 %>%
+    filter(species == species_choose) %>%
+    mutate(re_group = as.integer(as.factor(group)))
+  
+  plot_list1p_p[[i]] = mod_list1_p[[i]] %>%
+    ggemmeans(., terms = c("log_ppt_mm_rain_avg_scaled [all]")) %>%
+    # ggemmeans(., terms = c("log_ppt_mm_rain_avg_scaled [all]"), bias_correction = TRUE) %>% 
+    as_tibble() %>%
+    mutate(species = species_choose)
+  
+}
+
+pheno_ppt_panel_plot = plot_list1p_p %>%
+  bind_rows() %>%
+  mutate(ppt_mm_rain_avg = exp(x * sd(dat1$log_ppt_mm_rain_avg) + mean(dat1$log_ppt_mm_rain_avg))) %>%
+  mutate(variable = "b_log_ppt_mm_rain_avg_scaled") %>%
+  left_join(., param_list_m1_p) %>% # add on significance to color lines
+  left_join(., species_names) %>%
+  ggplot() +
+  geom_point(data = dat1, aes(x = ppt_mm_rain_avg, y = pheno_stage), alpha = 0.2) +
+  geom_line(aes(x = ppt_mm_rain_avg, y = predicted, color = sig)) +
+  geom_ribbon(aes(x = ppt_mm_rain_avg, ymin = conf.low, ymax = conf.high, fill = sig), alpha = 0.6) +
+  labs(y = "Phenological stage") +
+  scale_x_log10(name = "Precipitation (mm), log scale") +
+  guides(color = "none", fill = "none")+
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_fill_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  facet_wrap(. ~ species_nice, nrow = 3, scales = "free_y") +
+  theme_cowplot() +
+  theme(axis.title.x = element_text(hjust = 0.5), strip.text = element_text(face = "italic"), axis.text.x = element_text(angle = -90, hjust = 0, vjust = 0.5)); pheno_ppt_panel_plot
+
+
+ests1_p = ggplot(data = filter(param_list_m1_p, variable != "b_collection_DOWY_scaled")) +
+  geom_point(aes(x = mean, y = species_phy_ordered, color = sig), size = 1) +
+  geom_errorbarh(aes(xmin = lower, xmax = upper, y = species_phy_ordered, color = sig), height = 0, size = 0.7) +
+  facet_grid(.~ variable_nice) +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  guides(color = "none") +
+  labs(y = "Species", x = "Estimated effect on\nphenology") +
+  theme(axis.text.y = element_text(face = "italic", hjust = 0.5), axis.title.y = element_blank()); ests1_p
+
+ests2_p = ggplot(data = filter(param_list_m2_p, variable != "b_collection_DOWY_scaled")) +
+  geom_point(aes(x = mean, y = species_phy_ordered, color = sig), size = 1) +
+  geom_errorbarh(aes(xmin = lower, xmax = upper, y = species_phy_ordered, color = sig), height = 0, size = 0.7) +
+  facet_grid(.~ variable_nice) +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  guides(color = "none") +
+  labs(y = "Species", x = "Estimated effect on\nphenology") +
+  theme(axis.text.y = element_blank(), axis.title.y = element_blank()); ests2_p
+
+p_centered = plot_grid(NULL, p, NULL, rel_heights = c(0.1, 1, 0.1), ncol = 1)
+
+p_all_p = plot_grid(p_centered, ests1_p, NULL, ests2_p, rel_widths = c(0.3, 1, 0.05, 0.38), rel_heights = c(0.8, 1, 1), nrow = 1,
+                    labels = c("", "b.", "c."), label_x = c(0, 0.25, 0)); p_all_p
+
+plot_grid(pheno_ppt_panel_plot, p_all_p, rel_heights = c(0.8, 1, 1), nrow = 2,
+          labels = c("a.", "", ""), label_x = c(0, 0.25, 0))
+
+ggsave("rainfall-fitness/figs/Fig1_pheno_mod1_multipanel.pdf", height = 10, width = 9)
+ggsave("rainfall-fitness/figs/Fig1_pheno_mod1_multipanel.png", height = 10, width = 9)
+
+
+
+# Figure S8: temp and cwd on pheno panel plot ----
+
+plot_list1t_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+  
+  species_choose = species_list[i]
+  
+  dat_slim = dat1 %>%
+    filter(species == species_choose) %>%
+    mutate(re_group = as.integer(as.factor(group)))
+  
+  plot_list1t_p[[i]] = mod_list1_p[[i]] %>%
+    ggemmeans(., terms = c("tave_rain_avg_scaled [all]")) %>%
+    # ggemmeans(., terms = c("tave_rain_avg_scaled [all]", bias_correction = TRUE)) %>% 
+    as_tibble() %>%
+    mutate(species = species_choose)
+  
+}
+
+pheno_temp_panel_plot = plot_list1t_p %>%
+  bind_rows() %>%
+  mutate(tave_rain_avg = x * sd(dat1$tave_rain_avg) + mean(dat1$tave_rain_avg)) %>%
+  mutate(variable = "b_tave_rain_avg_scaled") %>%
+  left_join(., param_list_m1_p) %>% # add on significance to color lines
+  left_join(., species_names) %>%
+  ggplot() +
+  geom_point(data = dat1, aes(x = tave_rain_avg, y = pheno_stage), alpha = 0.2) +
+  # geom_smooth(data = dat1, aes(x = tave_rain_avg, y = total_repro), method = "lm", alpha = 0.2) +
+  geom_line(aes(x = tave_rain_avg, y = predicted, color = sig), size = 1) +
+  geom_ribbon(aes(x = tave_rain_avg, ymin = conf.low, ymax = conf.high, fill = sig), alpha = 0.6) +
+  guides(color = "none", fill = "none")+
+  labs(y = "Phenological stage", x = "Average temperature (C)") +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_fill_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  facet_wrap(. ~ species_nice, nrow = 3, scales = "free_y") +
+  theme_cowplot() +
+  theme(axis.title.x = element_text(hjust = 0.5), strip.text = element_text(face = "italic"), axis.text.x = element_text(hjust = 0, vjust = 0.5)); pheno_temp_panel_plot
+
+
+plot_list2_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+
+  species_choose = species_list[i]
+
+  dat_slim = dat1 %>%
+    filter(species == species_choose) %>%
+    mutate(re_group = as.integer(as.factor(group)))
+
+  plot_list2_p[[i]] = mod_list2_p[[i]] %>%
+    ggemmeans(., terms = c("cwd_rain_avg_scaled [all]")) %>% 
+    # ggemmeans(., terms = c("cwd_rain_avg_scaled [all]"), bias_correction = TRUE) %>% 
+    as_tibble() %>%
+    mutate(species = species_choose)
+
+}
+
+pheno_cwd_panel_plot = plot_list2_p %>%
+  bind_rows() %>%
+  mutate(cwd_rain_avg = x * sd(dat1$cwd_rain_avg) + mean(dat1$cwd_rain_avg)) %>%
+  mutate(variable = "b_cwd_rain_avg_scaled") %>%
+  filter(cwd_rain_avg > 0) %>%
+  left_join(., param_list_m2_p) %>% # add on significance to color lines
+  left_join(., species_names) %>%
+  ggplot() +
+  geom_point(data = dat1, aes(x = cwd_rain_avg, y = pheno_stage), alpha = 0.2) +
+  geom_line(aes(x = cwd_rain_avg, y = predicted, color = sig)) +
+  geom_ribbon(aes(x = cwd_rain_avg, ymin = conf.low, ymax = conf.high, fill = sig), alpha = 0.6) +
+  labs(y = "Phenological stage", color = "Species", fill = "Species") +
+  scale_x_continuous(name = "Climatic water deficit") +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_fill_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  guides(color = "none", fill = "none")+
+  facet_wrap(. ~ species_nice, nrow = 3, scales = "free_y") +
+  theme_cowplot() +
+  theme(axis.title.x = element_text(hjust = 0.5), strip.text = element_text(face = "italic"), axis.text.x = element_text( hjust = 0, vjust = 0.5)); pheno_cwd_panel_plot
+
+
+plot_grid(pheno_temp_panel_plot, pheno_cwd_panel_plot, rel_heights = c(1,1), nrow = 2,
+          labels = c("a.", "b."))
+
+ggsave("rainfall-fitness/figs/FigS8_pheno_mod12_cwd_temp_panel.pdf", height = 10, width = 9)
+ggsave("rainfall-fitness/figs/FigS8_pheno_mod12_cwd_temp_panel.png", height = 10, width = 9)
+
+
+
+# Q2B) Does later onset of seasonal rainfall, predicted to become more frequent under climate change, change phenology? ----
+
+## Model 3: rainfall timing with recent dataset ----
+
+mod_list3_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+  
+  species_choose = species_list[i]
+  
+  print(i)
+  print(species_choose) 
+  
+  dat_slim = dat3 %>% 
+    filter(species == species_choose) %>% 
+    mutate(re_group = as.integer(as.factor(group)))
+  
+  priors <- c(prior(normal(0, 1), class = b))
+  # Use default student t prior on intercept
+  
+  
+  mod = brm(weighted_fruits|trials(total_repro) ~ 
+              collection_DOWY_scaled + 
+              tave_rain_avg_scaled + 
+              log_ppt_mm_rain_avg_scaled + 
+              first_rain_DOWY_scaled + 
+              (1|re_group),
+            family = binomial(),
+            prior = priors,
+            cores = 2,
+            iter = 4000,
+            init = 0,
+            data = dat_slim,
+            refresh = 0,
+            file = glue("rainfall-fitness/model_fits/pheno_model3_{species_choose}.rds"))
+  
+  print(summary(mod))
+  
+  mod_list3_p[[i]] = mod
+  
+}
+
+names(mod_list3_p) = species_list
+
+
+### Make table of parameters and rhats ----
+
+m3_all_p = map_df(mod_list3_p, summarise_draws, .id="species", ~quantile(.x, probs = c(0.025, 0.975)), mean, median, sd, rhat, ess_bulk, ess_tail) %>% 
+  left_join(species_names) %>% 
+  rename(lower = `2.5%`, upper = `97.5%`)
+
+# Check Rhats for convergence 
+# sums should all be 0
+sum(m3_all_p$rhat >= 1.01)
+
+param_list_m3_p = m3_all_p %>% 
+  dplyr::select(-species_nice, -species_phy) %>%
+  filter(variable %in% c("b_collection_DOWY_scaled", "b_first_rain_DOWY_scaled", "b_tave_rain_avg_scaled", "b_log_ppt_mm_rain_avg_scaled")) %>% 
+  mutate(variable_nice = fct_recode(variable,
+                                    "First rain event DOWY" = "b_first_rain_DOWY_scaled",
+                                    "Average temperature\n(first rainy month until species'\naverage collection month)" = "b_tave_rain_avg_scaled",
+                                    "Total precipitation\n(first rainy month until species'\naverage collection month)" = "b_log_ppt_mm_rain_avg_scaled",
+                                    "Collection DOWY" = "b_collection_DOWY_scaled"),
+         sig = if_else((upper > 0 & lower > 0), "sig_pos",
+                       if_else((upper <0 & lower < 0), "sig_neg", "ns"))) %>%
+  mutate(response = "pheno", model = "model3", model_eq = "weighted_fruits|trials(total_repro) ~ collection_DOWY_scaled + tave_rain_avg_scaled + log_ppt_mm_rain_avg_scaled + first_rain_DOWY_scaled + (1|re_group)")
+
+
+# Figure S9: point ranges model 3 on pheno ----
+
+ests3_p = ggplot(data = param_list_m3_p) +
+  geom_point(aes(x = mean, y = species_phy_ordered, color = sig), size = 1) +
+  geom_errorbarh(aes(xmin = lower, xmax = upper, y = species_phy_ordered, color = sig), height = 0, size = 0.7) +
+  facet_grid(.~ variable_nice) +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  # scale_x_continuous(limits = c(-0.85, 0.85)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  guides(color = "none") +
+  labs(y = "Species", x = "Estimated effect on\nphenology") +
+  theme(axis.text.y = element_text(face = "italic", hjust = 0.5), axis.title.y = element_blank()); ests3_p
+
+ggsave("rainfall-fitness/figs/FigS9_pheno_mod3_estimates.pdf", height = 6, width = 9)
+ggsave("rainfall-fitness/figs/FigS9_pheno_mod3_estimates.png", height = 6, width = 9)
+
+
+# Figure 2: first rain vs. pheno ----
+
+
+plot_list3_p = vector(mode = "list", length = length(species_list))
+
+for (i in 1:length(species_list)) {
+  
+  species_choose = species_list[i]
+  
+  dat_slim = dat3 %>%
+    filter(species == species_choose) %>%
+    mutate(re_group = as.integer(as.factor(group)))
+  
+  plot_list3_p[[i]] = mod_list3_p[[i]] %>%
+    ggemmeans(., terms = c("first_rain_DOWY_scaled [all]")) %>% 
+    # ggemmeans(., terms = c("first_rain_DOWY_scaled [all]"), bias_correction = TRUE) %>% 
+    as_tibble() %>%
+    mutate(species = species_choose)
+  
+}
+
+pheno_germ_panel_plot = plot_list3_p %>%
+  bind_rows() %>%
+  mutate(first_rain_DOWY = x * sd(dat3$first_rain_DOWY) + mean(dat3$first_rain_DOWY)) %>%
+  mutate(variable = "b_first_rain_DOWY_scaled") %>%
+  left_join(., species_names) %>%
+  left_join(., param_list_m3_p) %>% # add on significance to color lines
+  ggplot() +
+  geom_point(data = dat3, aes(x = first_rain_DOWY, y = pheno_stage), alpha = 0.2) +
+  geom_line(aes(x = first_rain_DOWY, y = predicted, color = sig)) +
+  geom_ribbon(aes(x = first_rain_DOWY, ymin = conf.low, ymax = conf.high, fill = sig), alpha = 0.6) +
+  labs(y = "Phenological stage") +
+  scale_x_continuous(name = "Timing of first rain event", breaks = c(0, 31, 62, 92, 123, 154, 182), labels = c("Sep 1", "Oct 1", "Nov 1", "Dec 1", "Jan 1", "Feb 1", "Mar 1")) +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_fill_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  guides(color = "none", fill = "none")+
+  facet_wrap(. ~ species_nice, nrow = 3, scales = "free_y") +
+  theme_cowplot() +
+  theme(axis.title.x = element_text(hjust = 0.5), strip.text = element_text(face = "italic"), axis.text.x = element_text( hjust = 0, vjust = 0.5, angle = 90)); pheno_germ_panel_plot
+
+# sept 30 = 30
+# oct 31 = 61
+# nov 30  = 91
+# dec 31 = 122 
+# jan 31 = 153
+# feb 28 = 181
+# march 31 = 212
+# april 30 = 242
+# may 31 = 273
+# june 30 = 303
+# July 31 = 334
+# aug 31 = 365
+# sept 30 = 395
+# oct 31 = 426
+
+ests3b_p = ggplot(data = filter(param_list_m3_p, variable == "b_first_rain_DOWY_scaled")) +
+  geom_point(aes(x = mean, y = species_phy_ordered, color = sig), size = 1) +
+  geom_errorbarh(aes(xmin = lower, xmax = upper, y = species_phy_ordered, color = sig), height = 0, size = 0.7) +
+  facet_grid(.~ variable_nice) +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  # scale_x_continuous(limits = c(-0.85, 0.85)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  guides(color = "none") +
+  labs(y = "Species", x = "Estimated effect on\nphenology") +
+  theme(axis.text.y = element_text(face = "italic", hjust = 0.5), axis.title.y = element_blank()); ests3b_p
+
+p_centered = plot_grid(NULL, p, NULL, rel_heights = c(0.05, 1, 0.1), ncol = 1)
+
+p1_p = plot_grid(p_centered, ests3b_p, rel_widths = c(0.3, 1), rel_heights = c(0.8, 1), nrow = 1, labels = c("", "a."), label_x = c(0, 0.25)); p1_p
+
+pheno_germ_panel_plot_tall = plot_list3_p %>%
+  bind_rows() %>%
+  mutate(first_rain_DOWY = x * sd(dat3$first_rain_DOWY) + mean(dat3$first_rain_DOWY)) %>%
+  mutate(variable = "b_first_rain_DOWY_scaled") %>%
+  left_join(., species_names) %>%
+  left_join(., param_list_m3_p) %>% # add on significance to color lines
+  ggplot() +
+  geom_point(data = dat3, aes(x = first_rain_DOWY, y = pheno_stage), alpha = 0.2) +
+  geom_line(aes(x = first_rain_DOWY, y = predicted, color = sig)) +
+  geom_ribbon(aes(x = first_rain_DOWY, ymin = conf.low, ymax = conf.high, fill = sig), alpha = 0.6) +
+  labs(y = "Phenological stage") +
+  scale_x_continuous(name = "Timing of first rain event", breaks = c(0, 31, 62, 92, 123, 154, 182), labels = c("Sep 1", "Oct 1", "Nov 1", "Dec 1", "Jan 1", "Feb 1", "Mar 1")) +
+  scale_color_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  scale_fill_manual(values = c("grey60", "tomato", "dodgerblue")) +
+  guides(color = "none", fill = "none")+
+  facet_wrap(. ~ species_nice, nrow = 5, scales = "free_y") +
+  theme_cowplot() +
+  theme(axis.title.x = element_text(hjust = 0.5), strip.text = element_text(face = "italic"), axis.text.x = element_text( hjust = 0, vjust = 0.5, angle = 90)); pheno_germ_panel_plot_tall
+
+p2_p = plot_grid(p1_p, pheno_germ_panel_plot_tall, rel_widths = c(0.8, 1), rel_heights = c(0.8, 1), nrow = 1, labels = c("", "b.")); p2_p
+
+ggsave("rainfall-fitness/figs/Fig2_pheno_mod3_estimates_multipanel.pdf", height = 6, width = 12)
+ggsave("rainfall-fitness/figs/Fig2_pheno_mod3_estimates_multipanel.png", height = 6, width = 12)
+```
+
 
 Code for pulling climateNA data with R - untested, but might work now by using the correctly formatted input file.
 
