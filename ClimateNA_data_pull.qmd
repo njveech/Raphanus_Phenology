@@ -163,11 +163,10 @@ specimens <- specimens %>% dplyr::select(id, year, month, day)
 # Step 5: Now, save this subsetted climate data joined with the specimen IDs so it can be combined with the phenology data! 
 write.csv(all_data, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
 
-
-## CHALLENGING code work for Natalie if you feel ambitious:
-# Determine the first month in each year/location that had greater than 25mm of precip:
-# First, try breaking this task out into the smallest possible steps you would need to take in code, and just write them in plain english. For example, the first step might be to make a string from the precip values for each month in the year preceeding collection (already subset for that year above). Then you would look up code to identify the first position in the string where the value is greater than 25, then link that back to what month the string position is connected to. 
-
+## Next step code work for Natalie if you feel ambitious:
+# use pairs.panels() from the psych package to make a correlation plot for all the climate variables. This will show us if, for example, temperature and growing degree days are correlated (they should be!). this will be important information for later analyses
+# modify the code from above to make a 9 month climate window (should be fairly straightforward).
+# modify the code from above to make a 5 year climate window (harder).
 
 ```
 
