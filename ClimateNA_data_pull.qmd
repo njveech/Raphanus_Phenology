@@ -179,10 +179,10 @@ write.csv(all_data, "Output_Files/climateNA_subset_data_tall.csv", row.names = F
 
 ```
 
-
 ## Extra code
 
 Code from bontrager that includes calculation of a Collection Day of Year (number of days since Sept. 1):
+
 ```{r}
 #| label: bontrager DOWY code
 #| eval: false
@@ -201,6 +201,7 @@ specimens_compiled = read_csv("rainfall-fitness/data/compiled_specimen_data.csv"
 ```
 
 Code from bontrager for phenology analyses and figures (Bontrager et al 2025)
+
 ```{r}
 #| label: bontrager phenology code
 #| eval: false
@@ -679,7 +680,6 @@ p2_p = plot_grid(p1_p, pheno_germ_panel_plot_tall, rel_widths = c(0.8, 1), rel_h
 ggsave("rainfall-fitness/figs/Fig2_pheno_mod3_estimates_multipanel.pdf", height = 6, width = 12)
 ggsave("rainfall-fitness/figs/Fig2_pheno_mod3_estimates_multipanel.png", height = 6, width = 12)
 ```
-
 
 Code for pulling climateNA data with R - untested, but might work now by using the correctly formatted input file.
 
