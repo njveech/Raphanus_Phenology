@@ -134,6 +134,9 @@ write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FAL
 ```{r}
 #| label: subsetting climate data
 
+# Natalie Note: Out of curiosity, would we rather load in the completed specimen data csv instead of CCH2 data since the completed specimen data csv is the one with all the phenology data too so that gets included in final product?
+
+
 # load the data
 specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
 clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
@@ -141,24 +144,70 @@ clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
 # subset to keep just the columns we need 
 specimens <- specimens %>% dplyr::select(id, year, month, day)
 
+#Natalie Note: I'm pretty sure I don't need to assign everything back to specimens df as I go (as you'll see below), but it makes me nervous since I don't feel 100% confident in how piping it with %>% works within this big coding chunk in the markdown, etc. I'd appreciate some help and clarity in refining this.
+
 # First, we are just going to use the year-to-date for each specimen as the time period for which we evaluate climate data. This means we want the full year of data starting with the day and month of collection, but in the previous year, and ending with the date of collection. 
 
 # The climate data is currently in what is called "long" or "tall" format, meaning that there are multiple rows per indiviudal ID, in this case each of which contain climate data for a given month. 
 # If you look at head(clim), you can see there is a clim_year, clim_month, and clim_date column. clim_date is just the year and month together (e.g. year 2024 and month 12 has a clim_date of 202412).
 
 # First, we need to calculate the date range. We will only include the month of collection in the year of collection if it was collected after the first week, so on the 8th or later. If it was collected before the 8th (1-7th), we do NOT include that month for the year of collection, and instead include it from the previous year.
+
 # Step 1: Identify the start and end month for the "climate year" for each specimen with the specimen df. You will need mutate() from dplyr to make a new column with the start month and another column with the end month. These new columns should be in the clim_date format with year and month together (e.g. 202412 for December 2024).
+
 # Step 1a: Identify the end month (this will then define the start month as 11 mo before). To do this, we will need to use an if-else statement within the dplyr code, and I think specifically within the call to mutate(). You want the code new end_mo column you create to contain the month of collection if the day of collection column has a value >7. Otherwise (aka "else"), you want the new end_mo column to be assigned the month previous to collection (so, the value in "month" minus 1). 
+
+#Natalie Note: I had some internet help, but think this works and addresses anything in january that would loop back around to be December
+
+
+specimens <- specimens %>% mutate(
+  end_mo = if_else(day > 7, month, 
+if_else(month == 1, 12, month - 1))
+                        )
+
 
 # Step 1b: Identify the start month; this will simply be the end month minus one.
 
+#Natalie Note: I might be confused, but are we not doing the full 12 months? If we collected a specimen on March 17, 1949, then the end month would be March of 1949 (194903). However, for the start month don't we want March of 1948 (194803), instead of February of 1948, which is what we'd get once we'll add years in and whatnot. I wrote the code based on how you described step 1b but let me know if my confusion makes sense or please do help me fill in what I'm not understanding! I think my code here is saying make a new column called start_mo. If end month is NOT Janaury, then start month should be the previous month before. but if the end month IS January, the start month should be December or 12 (month before). I just don't quite understand/something isn't aligning in my thought process as to why start month is the month (and year) before end month since we just want the 12 month cycle.
+
+specimens <- specimens %>% mutate(start_mo = if_else(end_mo != 1, end_mo - 1, 12))
+
 # Step 1c: Now you should have two new columns in the specimens df, one each for start and end month. But, they do not yet have year associated. Next you need to append (add to the string) the year to the month, specifically before the month, to match the clim_date format. This will be the year of collection for the end month, and the year of collection minus one for the start month. I don't know a function to do this off the top of my head (maybe paste0()?), but chat will probably be able to tell you. 
+
+#For End Date:
+
+
+specimens <- specimens %>% mutate(end_date = paste0(year, str_pad(end_mo, 2, pad = "0")), end_mo = as.integer(end_mo))
+
+
+
+#For Start Date:
+
+specimens <- specimens %>% mutate(start_date = paste0(year -1, str_pad(start_mo, 2, pad = "0")), start_mo = as.integer(start_mo))
 
 # Step 2: Next we need to use the newly calculated start and end to subset the climate data. First, join the specimens and clim dataframes like you did with the phenology and specimen data frames, keeping in mind you only really need to join the new columns you made (start and end month) to the climate data frame. (I think you will want left or right join making sure you keep all of the clim data frame; you won't need specimen data for anything we don't have climate data for). This should fill in the same value for the many rows pertaining to each individual in the start_mo and end_mo columns.
 
+#Natalie Notes: Will I need to rename columns to join? I also anticipate this step being difficult for me/a place for lots of errors to occur so I'd appreciate feedback here as well especially. I think left join works here in that no specimens will be kept that we don't have climate data for and we'll still be keeping all the many observations for each specimen in clim df until we specify them down in step 3. I'm struggling to visualize what this will look like when it combines though, and if this was not supposed to be combined by the "id" column, i'm not sure how to do it so we pair BOTH the start and end dates with the clim_dates column and don't lose all the in betweens in that year range as well. 
+
+big_comb <- left_join(clim, specimens, by = "id")
+
 # Step 3: Use dplyr's filter() function to only keep rows where the clim_date is greater than your start_mo, or less than your end_mo. 
 
+##Do we have repeating columns at this point? Since month(specimens) and clim_month(clim) are the same.... I'm confused on how everything will combine but I'm so lost and uncomfortable in all the coding I've written that I don't want to run the code because I'm not confident that I can interpret what goes wrong.
+
+filter_comb <- big_comb %>% filter(big_comb$clim_date, clim_date >= start_mo, clim_date <= end_mo)
+
 # Step 4: Convert the long/tall format climate data to wide format where you only have 1 row per individual. You can do this with pivot_wider() from tidyr. You will end up with 12 columns of data for each climate variable, so it will be a VERY wide dataframe, but that will make it possible to calculate things like total or average precip. 
+
+#Natalie Notes: This is so confusing to me. I'm not sure how much specification R will need to do this type of thing and I need more guidance on how to approach this. I've just left my best guess. I'm not sure how to prevent it from widening EVERY variable and not just the climate variables. Super duper lost at this point. I have a bunch of red "x" in my coding line so clearly I'm doing something wrong.
+
+
+all_data <- filter_comb %>%
+  mutate(month = str_pad(month, 2, pad = "0")) %>%
+  pivot_wider(
+  id_cols = c(id, year, month, day, end_mo, start_mo, start_date, end_date, clim_date, clim_month, clim_year
+  names_from = c(variable, month )
+values_from = value)
 
 # Step 5: Now, save this subsetted climate data joined with the specimen IDs so it can be combined with the phenology data! 
 write.csv(all_data, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
