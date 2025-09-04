@@ -158,56 +158,98 @@ specimens <- specimens %>% dplyr::select(id, year, month, day)
 # Step 1a: Identify the end month (this will then define the start month as 11 mo before). To do this, we will need to use an if-else statement within the dplyr code, and I think specifically within the call to mutate(). You want the code new end_mo column you create to contain the month of collection if the day of collection column has a value >7. Otherwise (aka "else"), you want the new end_mo column to be assigned the month previous to collection (so, the value in "month" minus 1). 
 
 #Natalie Note: I had some internet help, but think this works and addresses anything in january that would loop back around to be December
-
+ 
+# Julia response: You NAILED IT! You did a great job dealing with the January December weirdness I didn't even think about! 
 
 specimens <- specimens %>% mutate(
   end_mo = if_else(day > 7, month, 
 if_else(month == 1, 12, month - 1))
                         )
 
-
 # Step 1b: Identify the start month; this will simply be the end month minus one.
 
 #Natalie Note: I might be confused, but are we not doing the full 12 months? If we collected a specimen on March 17, 1949, then the end month would be March of 1949 (194903). However, for the start month don't we want March of 1948 (194803), instead of February of 1948, which is what we'd get once we'll add years in and whatnot. I wrote the code based on how you described step 1b but let me know if my confusion makes sense or please do help me fill in what I'm not understanding! I think my code here is saying make a new column called start_mo. If end month is NOT Janaury, then start month should be the previous month before. but if the end month IS January, the start month should be December or 12 (month before). I just don't quite understand/something isn't aligning in my thought process as to why start month is the month (and year) before end month since we just want the 12 month cycle.
+
+# Julia response: I totally understand your confusion, and we may switch to do it how you are saying in the future, but I believe how this will work in the later steps of actually pulling climate data will be to pull data for all rows that match or are between the start and end. If we did the 12 mo cycle with say march and march of 2 different years, we would end up with 13 months of data. 
+# BUT! You ARE right that it would work to do it how you suggest! We would just have to code Step 3 differently so as to not include the start month (so just a less than rather than less than or equal to.)
 
 specimens <- specimens %>% mutate(start_mo = if_else(end_mo != 1, end_mo - 1, 12))
 
 # Step 1c: Now you should have two new columns in the specimens df, one each for start and end month. But, they do not yet have year associated. Next you need to append (add to the string) the year to the month, specifically before the month, to match the clim_date format. This will be the year of collection for the end month, and the year of collection minus one for the start month. I don't know a function to do this off the top of my head (maybe paste0()?), but chat will probably be able to tell you. 
 
 #For End Date:
-
-
 specimens <- specimens %>% mutate(end_date = paste0(year, str_pad(end_mo, 2, pad = "0")), end_mo = as.integer(end_mo))
 
 
 
 #For Start Date:
-
 specimens <- specimens %>% mutate(start_date = paste0(year -1, str_pad(start_mo, 2, pad = "0")), start_mo = as.integer(start_mo))
 
 # Step 2: Next we need to use the newly calculated start and end to subset the climate data. First, join the specimens and clim dataframes like you did with the phenology and specimen data frames, keeping in mind you only really need to join the new columns you made (start and end month) to the climate data frame. (I think you will want left or right join making sure you keep all of the clim data frame; you won't need specimen data for anything we don't have climate data for). This should fill in the same value for the many rows pertaining to each individual in the start_mo and end_mo columns.
 
 #Natalie Notes: Will I need to rename columns to join? I also anticipate this step being difficult for me/a place for lots of errors to occur so I'd appreciate feedback here as well especially. I think left join works here in that no specimens will be kept that we don't have climate data for and we'll still be keeping all the many observations for each specimen in clim df until we specify them down in step 3. I'm struggling to visualize what this will look like when it combines though, and if this was not supposed to be combined by the "id" column, i'm not sure how to do it so we pair BOTH the start and end dates with the clim_dates column and don't lose all the in betweens in that year range as well. 
 
+# Julia response: Again, you nailed it despite your doubts! It may seem weird, but we basically want to turn the start and end-mo columns intor ridiculously redundant columns so we can use them in the following step to specify which rows to keep based on a value present in each row. We can chat through all of this tomorrow on zoom if I am still not making sense!
+  
 big_comb <- left_join(clim, specimens, by = "id")
 
 # Step 3: Use dplyr's filter() function to only keep rows where the clim_date is greater than your start_mo, or less than your end_mo. 
 
 ##Do we have repeating columns at this point? Since month(specimens) and clim_month(clim) are the same.... I'm confused on how everything will combine but I'm so lost and uncomfortable in all the coding I've written that I don't want to run the code because I'm not confident that I can interpret what goes wrong.
 
-filter_comb <- big_comb %>% filter(big_comb$clim_date, clim_date >= start_mo, clim_date <= end_mo)
+# Julia response: I am sensing a theme here haha. You have again done this almost perfectly. The only thing throwing an error is that you specified the column ("big_comb$clim_date") when you didn't need to. by using %>%, you are automatically "piping" in the big_combo dataframe, then you are specifying to filter based on the big_comb column. I left your original code so you can see how I fixed it.
+#The other thing you didn't get a chance to see and think about is that you made new columns I didn't anticipate (end_date and start_date) which actually match the format of clim_date, so after fixing the syntax error, the filtering was removing everything, because it was referencing the end_mo, and of course this removes everything if we can only include things where clim_date is LESS thena end_mo - end mo is a very small number (12 or less), while clim_date is a big "number" because it starts with the year and has 8 decimal places. We want to compare clim_date to start_ and end_date!
+# More generally, If you are worried about a step going wrong, save it to a new name (as you already have in all these steps!), then you can check it while not modifying the original dataframe. It makes it easy to ensure things are happening as you intend. Here, We have exactly what we want: 
+
+# first attempt code:
+#filter_comb <- big_comb %>% filter(big_comb$clim_date, clim_date >= start_mo, clim_date <= end_mo)
+
+# fixed code:
+filter_comb <- big_comb %>% filter(clim_date >= start_date, clim_date <= end_date)
 
 # Step 4: Convert the long/tall format climate data to wide format where you only have 1 row per individual. You can do this with pivot_wider() from tidyr. You will end up with 12 columns of data for each climate variable, so it will be a VERY wide dataframe, but that will make it possible to calculate things like total or average precip. 
 
 #Natalie Notes: This is so confusing to me. I'm not sure how much specification R will need to do this type of thing and I need more guidance on how to approach this. I've just left my best guess. I'm not sure how to prevent it from widening EVERY variable and not just the climate variables. Super duper lost at this point. I have a bunch of red "x" in my coding line so clearly I'm doing something wrong.
 
+# Julia response: You were very close! The x's were coming from missing a `),` at the end of your id_cols string assignment, which starts with `c(`. You were also missing a ',' after the parentheses assiging values to "names_from"
+# quick note about notation (LOL), when I am using `` above to denote specific characters in the code. 
+# otherwise, you actually can just drop a lot of the things you are trying to specify 
+
+# first attempt code:
+# all_data <- filter_comb %>%
+#   mutate(month = str_pad(month, 2, pad = "0")) %>%
+#   pivot_wider(
+#   id_cols = c(id, year, month, day, end_mo, start_mo, start_date, end_date, clim_date, clim_month, clim_year
+#   names_from = c(variable, month )
+# values_from = value)
+
+# fixed code:
+
+# first, let's make this simpler by first paring down the filter_comb dataframe to columns we actually need:
+
+filter_comb <- filter_comb %>% 
+  select(-clim_year, -end_mo, -start_mo)
+
+# Then we can pivot wider, letting the function's default settings do most of the work (REMIND ME to talk to you about default settings and how they work!). The challenging thin I forgot about here is the weird mental warp necessary to understand what belongs in names_from and values_from. Look at the solution below as will as the dataframe it creates and think about it, then we can discuss. This confused the crap out of me for a while! Also, quick note that I used colnames() to get the list of variables to include in values_from. By copying I make sure I don't introduce a typo!
 
 all_data <- filter_comb %>%
-  mutate(month = str_pad(month, 2, pad = "0")) %>%
-  pivot_wider(
-  id_cols = c(id, year, month, day, end_mo, start_mo, start_date, end_date, clim_date, clim_month, clim_year
-  names_from = c(variable, month )
-values_from = value)
+  pivot_wider(names_from = c(clim_date),
+values_from = c("CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD", 
+"growDD", "Eref", "FFD", "PAS", "ppt_mm", "RH", "srad", "tave", "tmax", "tmin"))
+
+# I realize now another reason this was confusing - because each specimen has a different time period, but we are naming columns with specific months AND years for each variable, we have a ton of missing data (eg if the specimen is from 1904, we are missing and don't need data for 2024, but we will still have a bunch of columns for 2024).
+
+# There is probably a more elegant way to do this, and we can put all the code together at the end to see, but for now we will add an additional step to create simplified climate variable columns that are the same for each specimen. I am not sure the "best" way to do this, but the way that makes the most sense to me at first thought is to keep the specification of month, but drop year, knowing that the year will be based on the collection year. 
+
+all_data_simple <- all_data %>% 
+  
+# STOPPED WORKING at 6:30 co time (started ~4:15, but at lieast ~30 min break for travel)
+# started SGS work ~ 1pm, stopped probably ~2??) 
+
+
+
+# ASSIGNMENT: Once we discuss how default settings work, you will go into the documentation for pivot_wider and write out the full code for the commmand below to practice/bring home the concept:
+
 
 # Step 5: Now, save this subsetted climate data joined with the specimen IDs so it can be combined with the phenology data! 
 write.csv(all_data, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
