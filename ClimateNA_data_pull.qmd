@@ -120,6 +120,34 @@ all_data %<>%
   dplyr::select(-latitude,-longitude) %>%
   dplyr::select(id, clim_year, clim_month, clim_date, everything())
 
+# adding in data that was originally missing due to bad gps coordinate format 
+missing_data <- read_csv("Input_Files/missing_redo_1901-2024M.csv") %>%
+  dplyr::select(-id2,-Elevation) %>%
+  # Make data tall (one row per variable/site/month/year)
+  gather(variable, value, -Year, -id1, -Latitude, -Longitude) %>%
+  # Split month from variable name
+  separate(variable, -2, into = c("variable", "month"), convert = TRUE) %>%
+  # Spread again so that there is one row per site/year/month, one column per variable type
+  spread(variable, value) %>%
+  # Make a climate date column
+  mutate(Year = as.numeric(Year),
+         month = as.numeric(month),
+         month_pad = str_pad(month, 2, pad = "0"),
+         clim_date = as.numeric(paste0(Year, month_pad))) %>%
+  # Drop unnecessary columns
+  select(-month_pad) %>%
+  # Rename to standard variable names
+  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax, CMD_mm = CMD, CMI_mm = CMI, chillDD = DD_0_, heatDD = DD_18_, coolDD = DD18_, growDD= DD5_, FFD = NFFD)
+
+# Rearrange columns
+missing_data %<>%
+  dplyr::select(-latitude,-longitude) %>%
+  dplyr::select(id, clim_year, clim_month, clim_date, everything())
+
+# Add missing data back into main df
+all_data <- all_data %>% 
+  rows_update(missing_data, by = c("id", "clim_date"))
+
 # Now save this data
 write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FALSE)
 
