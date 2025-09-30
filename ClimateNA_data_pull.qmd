@@ -153,10 +153,12 @@ write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FAL
 
 ```
 
-### Subset climate data
+## Subset Climate Data
+
+### 1 Year Timeframe
 
 ```{r}
-#| label: subsetting climate data
+#| label: subsetting 1 year climate data
 
 # load the data
 clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
@@ -169,11 +171,10 @@ specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
 specimens <- specimens %>% dplyr::select(id, year, month, day)
 
 
-#We are just going to use the year-to-date for each specimen as the time period for which we evaluate climate data. This means we want the full year (12 months) of data starting with the day and month of collection, but in the previous year, and ending with the date of collection. 
+#WUsing the full year (12 months) of data starting with the day and month of collection, but in the previous year, and ending with the date of collection. 
 
 # METHODS: First, we need to calculate the date range. We will only include the month of collection in the year of collection if it was collected after the first week, so on the 8th or later. If it was collected before the 8th (1-7th), we do NOT include that month for the year of collection, and instead begin from the full month completed prior to the specimen's collection Additionally, if a specimen did not have a specific date of collection listed (n = 17), whcih displays as day=0 in the data frame, we do not feel confident in assuming that we should use said listed month as the end date, so the specimen will be treated the same as a specimen collected on the 1st-7th of the month. 
 
-#--------------------------------------------------------------------------------------
 
 # Step 1: Identify the start and end month for the "climate year" for each specimen within the specimen df.These new columns should be in the clim_date format with year and month together (e.g. 202412 for December 2024).
 
@@ -224,113 +225,110 @@ wide_final_clim_subset <- filter_comb %>% pivot_wider(
 
 # Step 5: Write out the combined project csv... not going to write until I hopefully figure out the weird missing data
 
-#write.csv(wide_final_clim_subset, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
+write.csv(wide_final_clim_subset, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
+
+```
+
+### 9-Month Timeframe
+
+```{r}
+#| label: subsetting 9 month climate data
+
+# load the data
+clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
+specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
+
+#Note: Will eventually need to combine back in at least phenology scoring data(maybe not coords, etc from CCH2). This could likely best be done using the full entire class dataset from earlier code that is within Raphanus Phenology markdown
 
 
+#subset to keep just the columns we need 
+specimens <- specimens %>% dplyr::select(id, year, month, day)
 
-#--------------------------------------------------------------------------------------
-# ASSIGNMENT: Now we have the code working (YAY!), but are missing some data and need to determine why. get a list of ids for which the climate data values are -9999. ONce you have the list of ids, go look at their location data (lat and long) in FullSpecimenCCH2Data.csv and see if there is any reason you might thing they would not work for pulling climate data.
+library(dplyr)
+library(zoo)
+specimens <- specimens %>%
+  mutate(
+    # Construct a "yearmon" object from year+month
+    ym = as.yearmon(paste(year, month), "%Y %m"),
+    # If day <= 7, subtract one month, else keep the same
+    end_ym = if_else(day > 7, ym, ym - 1/12),
+    # Convert back to Date (first day of month)
+    end_mo = as.Date(end_ym)
+  )
+```
 
+### 5-Year Timeframe
+
+```{r}
+#| label: subsetting 5 year climate data
+
+# load the data
+clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
+specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
+
+#Note: Will eventually need to combine back in at least phenology scoring data(maybe not coords, etc from CCH2). This could likely best be done using the full entire class dataset from earlier code that is within Raphanus Phenology markdown
+
+#subset to keep just the columns we need 
+specimens <- specimens %>% dplyr::select(id, year, month, day)
+
+#Change clim_date column from integer to date
+
+library(dplyr)
+library(zoo)
+specimens <- specimens %>%
+  mutate(
+    # Construct a "yearmon" object from year+month
+    ym = as.yearmon(paste(year, month), "%Y %m"),
+    # If day <= 7, subtract one month, else keep the same
+    end_ym = if_else(day > 7, ym, ym - 1/12),
+    # Convert back to Date (first day of month)
+    end_mo = as.Date(end_ym)
+  )
+```
+
+## Examine Climate Correlations
+
+```{r}
+#| label: climate correlations
+# use pairs.panels() from the psych package to make a correlation plot for all the climate variables. This will show us if, for example, temperature and growing degree days are correlated (they should be!). this will be important information for later analyses
+
+```
+
+## Extra Code
+
+#### Code used to resolve the issue with Missing Climate Variables
+
+```{r}
+#| label: Missing Climate Data Fix
+#| eval: false
+#| include: false
+
+#The specimens that did not receive proper climate data downloads were listed as "-9999" for each climate variable. 
+
+#Filter the list of specimens to only include the ones without proper climate data downloads using Climatic Moisture Deficit (January) as a filter, and create a list of those specimens
 check_up <- wide_final_clim_subset %>% filter(CMD_mm_1 < 0) 
 check_up <- as.list(check_up$id)
 
+#Filter the CCH2 data frame (specimens) to only get the latitude and longitude for the messed up specimen IDs
 bad_clim <- specimens %>% filter( id %in% check_up) %>% select(id, decimalLatitude, decimalLongitude)
 
-#Fixing the Issue: some longitudes not integers:
 
-# Fix weird dash characters
+
+#There are different dahses/hyphen characters present in longitude values that interfered with the ability to pull climate data from ClimateNA .
+
+#Convert unusable dash characters to correct negative sign for longitude values
 bad_clim$decimalLongitude <- gsub("−", "-", bad_clim$decimalLongitude)
 bad_clim$decimalLongitude <- gsub("–", "-", bad_clim$decimalLongitude)
 
 # Convert to numeric
 bad_clim$decimalLongitude <- as.numeric(bad_clim$decimalLongitude)
 
+#Write a CSV so the proper climate data can be downloaded
 #write.csv(bad_clim, "Redo_Climate_Specimens.csv", row.names = FALSE)
 
-
-#Now, I will need to find a way to replace this part of bad_clim (the longitudes) into the bigger clim data frame and also reexport this correction back into the csv. I'm not sure if I can reselect and refilter in bad clim so that the changes I made are kept but I have the full dataset. 
-
-
-#-------------------------------------------------------------------------------------
-# ASSIGNMENT: Try putting the line of code all in one line and piping: Successful!
-
-# clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
-# 
-# specimens_trial <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T) %>%
-#   dplyr::select(id, year, month, day) %>% 
-#   mutate(end_mo = if_else(day > 7, month, if_else(month == 1, 12, month - 1))) %>%
-#   mutate(start_mo = if_else(end_mo != 12, end_mo + 1, 1)) %>%
-#   mutate(end_date = if_else(end_mo == 12 & month == 1, paste0(year-1, str_pad(end_mo, 2, pad = "0")), paste0(year, str_pad(end_mo, 2, pad = "0"))), end_mo = as.integer(end_mo)) %>%
-#   mutate(start_date = if_else(month == 12 & end_mo == 12, paste0(year, str_pad(start_mo, 2, pad = "0")), paste0(year -1, str_pad(start_mo, 2, pad = "0"))), start_mo = as.integer(start_mo)) %>%
-#   left_join(x = clim, y = ., by = "id") %>%
-#   filter(clim_date >= start_date, clim_date <= end_date) %>% 
-#   select(-clim_year, -clim_date, -end_mo, -start_mo) %>%
-#   pivot_wider(
-#     names_from = clim_month,
-#     values_from = c("CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD", 
-# "growDD", "Eref", "FFD", "PAS", "ppt_mm", "RH", "srad", "tave", "tmax", "tmin")
-#   )
-  
- 
- #Chat's version of the cleaned up code. Will not run for now because sprintf not in a package I have:
-  
-  
-  #clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = TRUE)
-
-#specimens_trial <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = TRUE) %>%
-  # dplyr::select(id, year, month, day) %>%
-  # mutate(
-  #   end_mo = if_else(day > 7, month, if_else(month == 1, 12L, month - 1L)),
-  #   start_mo = if_else(end_mo != 12L, end_mo + 1L, 1L),
-  # 
-  #   end_date = if_else(
-  #     end_mo == 12 & month == 1,
-  #     sprintf("%04d%02d", year - 1, end_mo),
-  #     sprintf("%04d%02d", year, end_mo)
-  #   ),
-  # 
-  #   start_date = if_else(
-  #     month == 12 & end_mo == 12,
-  #     sprintf("%04d%02d", year, start_mo),
-  #     sprintf("%04d%02d", year - 1, start_mo)
-  #   )
-  # ) %>%
-  # left_join(clim, by = "id") %>%
-  # filter(clim_date >= start_date, clim_date <= end_date) %>%
-  # select(-clim_year, -clim_date, -end_mo, -start_mo) %>%
-  # pivot_wider(
-  #   names_from = clim_month,
-  #   values_from = c(
-  #     "CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD",
-  #     "growDD", "Eref", "FFD", "PAS", "ppt_mm", 
-  #     "RH", "srad", "tave", "tmax", "tmin"
-  #   )
-  # )
-  
-#--------------------------------------------------------------------------------------
-# ASSIGNMENT: Once we discuss how default settings work, you will go into the documentation for pivot_wider and write out the full code for the commmand below to practice/bring home the concept: 
-
-#pivot_wider(filter_comb, id_cols = c("id", "year", "month", "day", "end_date", "start_date"), id_expand = FALSE, names_from = clim_month, names_prefix = "", names_sep = "_", names_glue = NULL, names_sort = FALSE, names_vary = "fastest", names_expand = FALSE, names_repair = "check_unique", values_from = c("CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD", "growDD", "Eref", "FFD", "PAS", "ppt_mm", "RH", "srad", "tave", "tmax", "tmin"), values_fill = NULL, values_fn =  NULL, unused_fn = NULL)
-
-#--------------------------------------------------------------------------------------
-## Next step code work for Natalie if you feel ambitious:
-# use pairs.panels() from the psych package to make a correlation plot for all the climate variables. This will show us if, for example, temperature and growing degree days are correlated (they should be!). this will be important information for later analyses
-# modify the code from above to make a 9 month climate window (should be fairly straightforward).
-# modify the code from above to make a 5 year climate window (harder).
-
 ```
 
-### Examine climate correlations
-
-```{r}
-#| label: climate correlations
-
-
-```
-
-## Extra code
-
-Code from bontrager that includes calculation of a Collection Day of Year (number of days since Sept. 1):
+#### Code from Bontrager that includes calculation of a Collection Day of Year (number of days since Sept. 1):
 
 ```{r}
 #| label: bontrager DOWY code
@@ -349,7 +347,7 @@ specimens_compiled = read_csv("rainfall-fitness/data/compiled_specimen_data.csv"
          collection_DOWY = as.numeric(collection_date - sept_1_date))
 ```
 
-Code from bontrager for phenology analyses and figures (Bontrager et al 2025)
+#### Code from bontrager for phenology analyses and figures (Bontrager et al 2025)
 
 ```{r}
 #| label: bontrager phenology code
@@ -830,7 +828,7 @@ ggsave("rainfall-fitness/figs/Fig2_pheno_mod3_estimates_multipanel.pdf", height 
 ggsave("rainfall-fitness/figs/Fig2_pheno_mod3_estimates_multipanel.png", height = 6, width = 12)
 ```
 
-Code for pulling climateNA data with R - untested, but might work now by using the correctly formatted input file.
+#### Code for pulling climateNA data with R - untested, but might work now by using the correctly formatted input file.
 
 ```{r}
 # setwd("/Users/juliaharencar/Documents/Software/ClimateNA_v760 "); # set the ClimateNA root directory as the working directory 
