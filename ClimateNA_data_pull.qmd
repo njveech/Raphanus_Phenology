@@ -27,6 +27,13 @@ First, set working directory and load packages.
 library(tidyverse)
 library(cowplot) # for plot aesthetics
 library(magrittr)
+library(ggplot2)
+theme_set(theme_bw())
+library(ggmap)
+library(htmlwidgets)
+library(leaflet)
+library(leaflet.extras)
+library(RColorBrewer)
 ```
 
 ### Generate ClimateNA input file
@@ -228,6 +235,536 @@ wide_final_clim_subset <- filter_comb %>% pivot_wider(
 write.csv(wide_final_clim_subset, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
 
 ```
+
+#### Join and clean data
+```{r}
+#| label: join and clean
+
+# read in the data
+oneyr_clim <- read.csv("Output_Files/climateNA_subset_data_tall.csv")
+fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
+
+# clean the county names in the phenology data
+fulldata$county <- gsub("\\s*[Cc]ounty\\s*$", "", fulldata$county) # remove "county"
+fulldata$county <- trimws(fulldata$county) # trim whitespace
+
+# combine with phenology data
+phen_1yr <- fulldata %>% 
+  select(id, institutionCode, specificEpithet, year, month, day, county, decimalLatitude, decimalLongitude, Bud.Cluster, Flower, Fruit) %>% # select only necessary cols
+  full_join(oneyr_clim) # join with climate data
+```
+
+#### PCA of climate
+```{r}
+
+# change -9999 to NA
+phen_1yr[phen_1yr == -9999] <- NA
+
+# calculate some reasonable per year/individual values from the monthly data (NATALIE - please look up what yearly variables are available through climateNA and write out how we would calculate each with our data - assuming it is a variable I didn't calculate below)
+
+clim_1yr <- phen_1yr %>%
+  mutate(
+    # Summations
+    sum_heatDD = rowSums(across(starts_with("heatDD_")), na.rm = TRUE),
+    sum_coolDD = rowSums(across(starts_with("coolDD_")), na.rm = TRUE),
+    sum_chillDD = rowSums(across(starts_with("chillDD_")), na.rm = TRUE),
+    sum_growDD = rowSums(across(starts_with("growDD_")), na.rm = TRUE),
+    sum_FFD    = rowSums(across(starts_with("FFD_")), na.rm = TRUE), # frost-free days
+    sum_PAS    = rowSums(across(starts_with("PAS_")), na.rm = TRUE), # snow
+    sum_ppt_mm = rowSums(across(starts_with("ppt_mm_")), na.rm = TRUE), 
+
+    # Averages
+    ave_CMD = rowMeans(across(starts_with("CMD_")), na.rm = TRUE), # clim moisture def
+    ave_CMI = rowMeans(across(starts_with("CMI_")), na.rm = TRUE), # clim moisture index
+    ave_Eref = rowMeans(across(starts_with("Eref_")), na.rm = TRUE), # evaporation
+    ave_RH   = rowMeans(across(starts_with("RH_")), na.rm = TRUE), # relative humidity
+    ave_srad = rowMeans(across(starts_with("srad_")), na.rm = TRUE), # solar rad
+    ave_tave = rowMeans(across(starts_with("tave_")), na.rm = TRUE),
+
+    # Hot/cold extremes (row-wise)
+    max_tmax = do.call(pmax, c(across(starts_with("tmax_")), na.rm = TRUE)),
+    min_tmin = do.call(pmin, c(across(starts_with("tmin_")), na.rm = TRUE))
+  )
+
+# id individuals with missing climate data (NATALIE: figure out why these are missing data - was it missing from the original climate data file, or did we lose it along the way?)
+# rows missing data:
+# bad_rows <- which(!complete.cases(clim_1yr) | rowSums(!is.finite(as.matrix(clim_1yr))) > 0) # 21 indivs without climate data
+# remove bad rows
+clim_1yr_clean <- clim_1yr[complete.cases(clim_1yr), ]
+
+# subset for jsut climate data to run prcomp
+clim_only_1yr_clean <- clim_1yr_clean %>% 
+  select(sum_heatDD, sum_coolDD, sum_growDD, sum_FFD, sum_PAS, sum_ppt_mm, ave_CMD, ave_CMI, sum_chillDD, ave_Eref, ave_RH, ave_srad, ave_tave, max_tmax, min_tmin)
+
+# calculate principal components
+clim_pca <- prcomp(clim_only_1yr_clean, center = TRUE, scale = TRUE)
+
+# display principal components
+clim_pca$rotation
+
+# Basic biplot
+biplot(clim_pca, scale = 0)
+
+# Extract scores and loadings
+pca_scores <- as.data.frame(clim_pca$x)
+loadings <- as.data.frame(clim_pca$rotation)
+
+# Scale arrows for plotting
+arrow_scale <- 11  # adjust to make arrows visible
+library(scales)
+library(cowplot)
+library(maps)
+ggplot(pca_scores, aes(x = PC1, y = PC2)) +
+  geom_point(alpha = 0.7) +
+  geom_segment(data = loadings,
+               aes(x = 0, y = 0, xend = PC1 * arrow_scale, yend = PC2 * arrow_scale),
+               arrow = arrow(length = unit(0.5, "cm")),
+               color = "#E38471", size = 0.7) +
+  geom_text(data = loadings,
+            aes(x = PC1 * arrow_scale * 1.1, y = PC2 * arrow_scale * 1.1, label = rownames(loadings)),
+            color = "#E38471", size = 3) +
+  theme_minimal() +
+  labs(x = "PC1 (45.3%)", y = "PC2 (22.0%)",
+       title = "1yr climate PCA Biplot") +
+  coord_equal()
+
+# add back location and other info
+phen_w_clim_pca_scores <- bind_cols(clim_1yr_clean, pca_scores)
+
+pca_scores_forbiplot <- phen_w_clim_pca_scores %>%
+  mutate(
+    geo_color = rgb(
+      rescale(decimalLongitude, to = c(0, 1)),        # red channel
+      rescale(decimalLatitude,  to = c(0, 1)),        # green channel
+      rescale(1 - abs(decimalLatitude - mean(decimalLatitude)) / max(decimalLatitude), to = c(0, 1)),  # blue channel
+      alpha = 0.8
+    )
+  )
+
+# Biplot with geographic coloring
+# 1️⃣ Make the main PCA biplot
+p_biplot <- ggplot(pca_scores_forbiplot, aes(x = PC1, y = PC2)) +
+  geom_point(aes(color = geo_color), alpha = 0.8, size = 2) +
+  geom_segment(data = loadings,
+               aes(x = 0, y = 0,
+                   xend = PC1 * arrow_scale,
+                   yend = PC2 * arrow_scale),
+               arrow = arrow(length = unit(0.5, "cm")),
+               color = "black", size = 0.7) +
+  geom_text(data = loadings,
+            aes(x = PC1 * arrow_scale * 1.1,
+                y = PC2 * arrow_scale * 1.1,
+                label = rownames(loadings)),
+            color = "black", size = 3) +
+  theme_minimal() +
+  labs(
+    x = "PC1 (45.3%)",
+    y = "PC2 (22.0%)",
+    title = "1yr Climate PCA Biplot"
+  ) +
+  coord_equal() +
+  theme(legend.position = "none")
+
+# 2️⃣ Make a simple California outline map
+california_map <- map_data("state") %>%
+  dplyr::filter(region == "california")
+
+p_map <- ggplot() +
+  geom_polygon(data = california_map, aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "gray50", linewidth = 0.3) +
+  geom_point(data = pca_scores_forbiplot,
+             aes(x = decimalLongitude, y = decimalLatitude, color = geo_color),
+             size = 1.6, alpha = 0.9) +
+  coord_fixed(1.3, xlim = c(-125, -113), ylim = c(32, 43)) +
+  theme_void() +
+  theme(legend.position = "none")
+
+# 3️⃣ Combine the two plots with the map inset
+final_plot <- ggdraw() +
+  draw_plot(p_biplot) +
+  draw_plot(p_map, x = 0.01, y = 0.04, width = 0.6, height = 0.6) # adjust position/size
+
+final_plot
+
+
+### bilot of only flowering individuals colored by month
+
+# Create reversed color palette
+spectral_colors <- rev(brewer.pal(11, "Spectral")) # reversed palette (11 colors)
+# Interpolate to 12 colors for all months
+spectral_colors_12 <- colorRampPalette(spectral_colors)(12)
+
+arrow_scale <- 18  # adjust to make arrows visible
+# Plot
+mo_biplot <- ggplot(pca_scores_forbiplot %>% filter(Flower != 0),
+       aes(x = PC1, y = PC2)) +
+  geom_point(aes(color = factor(month, levels = 1:12)), alpha = 0.8, size = 2) +
+  geom_segment(data = loadings,
+               aes(x = 0, y = 0,
+                   xend = PC1 * arrow_scale,
+                   yend = PC2 * arrow_scale),
+               arrow = arrow(length = unit(0.5, "cm")),
+               color = "black", size = 0.7) +
+  geom_text(data = loadings,
+            aes(x = PC1 * arrow_scale * 1.1,
+                y = PC2 * arrow_scale * 1.1,
+                label = rownames(loadings)),
+            color = "black", size = 3) +
+  scale_color_manual(values = spectral_colors_12,
+                     labels = month.abb) +
+  theme_minimal() +
+  labs(
+    x = "PC1 (45.3%)",
+    y = "PC2 (22.0%)",
+    title = "1yr Climate PCA Biplot\ncolor by month",
+    color = "Month"
+  ) +
+  coord_equal() +
+  theme(legend.position = "right")
+
+# Calculate the variance explained by each principal component
+per_variance_explained <- (clim_pca$sdev^2 / sum(clim_pca$sdev^2))*100
+# Create a data frame for the variance explained
+variance_df <- data.frame(
+  PC = paste0("PC", 1:length(per_variance_explained)),
+  Variance_Explained = per_variance_explained,
+  Cumulative_Variance = cumsum(per_variance_explained)
+)
+variance_df #PC3 = 13.33% variance
+
+# look at PC1 vals to see if any bimodality
+library(ggplot2)
+ggplot(pca_scores, aes(x = PC1)) +
+  geom_histogram(bins = 100, fill = "skyblue", color = "white") +
+  scale_x_continuous(breaks = pretty(pca_scores$PC1, n = 15)) +
+  theme_minimal() +
+  labs(title = "PC1 Distribution", x = "PC1 Score", y = "Count")
+
+# make simpler df to work with
+phen_sub <- phen_w_clim_pca_scores %>% 
+  select(id,institutionCode,specificEpithet,year,month,day,county,decimalLatitude,decimalLongitude,Bud.Cluster,Flower,Fruit,PC1,PC2,PC3)
+
+# Make PCA - colored by county for now
+ggplot(phen_sub, aes(x=PC1, y=PC2, colour = county)) +
+  geom_point() +
+  labs(title = "Initial PCA", x = "PC1 (45.3%)", y = "PC2 (22.0%)")
+
+
+# PICKUP could save this but looks like we should add more variables similar to what I had before? or draw diagonal ovals to group? TRY same PCA but colored by month collected:
+# PICKUP add biplot back in!
+
+ggplot(phen_sub, aes(x = PC1, y = PC2, colour = month)) +
+  geom_point(size = 3, alpha = 0.8) +
+  scale_colour_gradientn(
+    colours = c(
+      "#313695",  # deep blue (winter)
+      "#4575b4",  # blue (late winter)
+      "#74add1",  # blue-green (early spring)
+      "#abd9e9",  # greenish-blue (mid-spring)
+      "#fdae61",  # orange (summer)
+      "#f46d43",  # red-orange (late summer)
+      "#d73027",  # red (fall)
+      "#a50026",  # dark red (late fall)
+      "#313695"   # loop back to deep blue
+    ),
+    limits = c(1, 12),
+    breaks = 1:12,
+    labels = month.abb
+  ) +
+  labs(
+    title = "Seasonal Color Scale",
+    x = "PC1 (45.3%)", 
+    y = "PC2 (22.0%)",
+    colour = "Month"
+  ) +
+  theme_minimal()
+# seems like no really clear pattern... not a lot of hope to see the diff life cycles...
+# maybe low vals of PC1 and high of PC1 show less flowering in Summer...? 
+# From the biplot, I think that would be the more mild, more growing DD, but also less rain and hotter?? Maybe need to remove mountain individuals or whatever that tail to the bottom right is to get better PC axes for analysis
+
+# split by -4 anyway and plot flowering histogram:
+# Split data and filter for Flower != 0
+phen_sub_filtered <- phen_sub %>%
+  filter(Flower != 0) %>%                  # keep only non-zero Flower
+  mutate(nor_coast_group = if_else(PC1 > 5 & PC2 > -2.5,
+                         "Nor coast (PC1 > 5 & PC2 > -2.5)",
+                         "Not nor coast"))  # create group
+
+# THIS DOESN"T work... not sure how to divide so I separate out the 2 distributions... or if I can. 
+
+# Histogram of month faceted by PC1 group
+ggplot(phen_sub_filtered, aes(x = month)) +   # change x = month if preferred
+  geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
+  facet_wrap(~ nor_coast_group) +
+  labs(title = "Distribution of Flowering Dates by nor coast or not",
+       x = "Day of Year",
+       y = "Count") +
+  theme_minimal()
+
+# Look at distributions by county
+# Filter for flowering specimens and create PC1 group
+library(dplyr)
+library(ggplot2)
+
+# Filter for flowering specimens and only counties with ≥20 individuals
+phen_sub_filtered <- phen_sub %>%
+  filter(Flower != 0) %>%          # keep only flowering specimens
+  add_count(county) %>%            # count individuals per county
+  filter(n >= 20) %>%              # keep only counties with 20 or more
+  select(-n)                        # remove helper column
+
+# Plot: histogram per county
+ggplot(phen_sub_filtered, aes(x = month)) +
+  geom_histogram(binwidth = 1, fill = "pink", color = "black", boundary = 0) +
+  facet_wrap(~ county, scales = "free_y") +
+  scale_x_continuous(breaks = 1:12, labels = 1:12, limits = c(1, 12)) +
+  labs(title = "Flowering Specimen Frequency by County",
+       x = "Month",
+       y = "Count") +
+  theme_minimal() +
+  theme(strip.text = element_text(size = 10))
+```
+
+#### Interactive plot color by PC1 from above to understand climate distribution
+
+```{r}
+# plot interactive map w points colored by collection month
+      
+specimen_map_leaflet <- leaflet(phen_sub) %>%
+  addTiles() %>%  # Add OpenStreetMap tiles
+  addCircleMarkers(
+    lat = ~decimalLatitude, 
+    lng = ~decimalLongitude, 
+    radius = 4,  # Size of the markers
+    fillColor = ~colorNumeric("Spectral", phen_sub$month)(month),
+    color = "black",           # thin black border
+    weight = 1,              # border thickness
+    stroke = TRUE,             # show border
+    fillOpacity = 1,
+    popup = ~paste(
+      "Scientific Name:", specificEpithet, "<br>",
+      "Year:", year, "<br>",
+      "Herbarium:", institutionCode
+    ),
+    label = ~paste(specificEpithet, institutionCode, id)
+  ) %>%
+  setView(lng = -119.4179, lat = 36.7783, zoom = 6) %>%
+  addLegend(
+    position = "bottomright",
+    pal = colorNumeric("Spectral", phen_sub$month),
+    values = ~month,
+    title = "Month",
+    opacity = 1
+  )
+
+saveWidget(specimen_map_leaflet, "maps/interactive_CA_specimen_by_month_all_Cal_phenology.html")
+
+# Display the interactive plot
+#interactive_plot2
+
+# color by PC1
+# make a custom palette
+custom_palette <- colorRampPalette(rev(c(
+  "#542788",  # purple
+  "#053061",  # deep navy blue
+  "#2166AC",  # strong blue
+  "#4393C3",  # medium-light blue
+  "#92C5DE",  # pale blue
+  "#D9C48F",  # darker gray/yellow midpoint
+  "#F4A582",  # light salmon
+  "#D6604D",  # orange-red
+  "#B2182B",  # deep red
+  "#67000D"   # near-black red
+)))
+pal <- colorNumeric(palette = custom_palette(100), domain = phen_sub$PC1)
+
+# Spectral is good but the yellow in the middle is hard to see
+
+#PICKUP - finish picking pallette and fix color legend; 2 extreme PC1 vals driving things, maybe make red extreme black or red black too!
+  
+# build the map colored by PC1
+specimen_map_leaflet <- leaflet(phen_sub) %>%
+specimen_map_leaflet <- leaflet(phen_sub) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lat = ~decimalLatitude, 
+    lng = ~decimalLongitude, 
+    radius = 4,  # Size of the markers
+    fillColor = ~pal(PC1),    # fill uses the palette
+    color = "black",           # thin black border
+    weight = 0.5,              # border thickness
+    stroke = TRUE,             # show border
+    fillOpacity = 1,
+    popup = ~paste(
+      "Scientific Name:", specificEpithet, "<br>",
+      "Year:", year, "<br>",
+      "Herbarium:", institutionCode
+    ),
+    label = ~paste(specificEpithet, institutionCode, id)
+  ) %>%
+  setView(lng = -119.4179, lat = 36.7783, zoom = 6) %>%
+  addLegend(
+    position = "bottomright",
+    pal = pal,
+    values = ~PC1,
+    title = "PC1",
+    opacity = 1
+  )
+
+saveWidget(specimen_map_leaflet, "maps/interactive_CA_specimen_by_PC1_all_Cal_phenology.html")
+
+
+# color by PC2 (22% var)
+custom_palette <- colorRampPalette(brewer.pal(11, "Spectral"))
+pal <- colorNumeric(palette = custom_palette(100), domain = phen_sub$PC2)
+
+specimen_map_leaflet <- leaflet(phen_sub) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lat = ~decimalLatitude, 
+    lng = ~decimalLongitude, 
+    radius = 4,
+    fillColor = ~pal(PC2),   # fill uses Spectral palette
+    color = "black",         # thin black border
+    weight = 0.5,            # border thickness
+    stroke = TRUE,           # show border
+    fillOpacity = 1,
+    popup = ~paste(
+      "Scientific Name:", specificEpithet, "<br>",
+      "Year:", year, "<br>",
+      "Herbarium:", institutionCode
+    ),
+    label = ~paste(specificEpithet, institutionCode, id)
+  ) %>%
+  setView(lng = -119.4179, lat = 36.7783, zoom = 6) %>%
+  addLegend(
+    position = "bottomright",
+    pal = pal,
+    values = ~PC2,
+    title = "PC2",
+    opacity = 1
+  )
+
+saveWidget(specimen_map_leaflet, "maps/interactive_CA_specimen_by_PC2_all_Cal_phenology.html")
+
+# color by PC2
+custom_palette <- colorRampPalette(brewer.pal(11, "Spectral"))
+pal <- colorNumeric(palette = custom_palette(100), domain = phen_sub$PC2)
+
+specimen_map_leaflet <- leaflet(phen_sub) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lat = ~decimalLatitude, 
+    lng = ~decimalLongitude, 
+    radius = 4,
+    fillColor = ~pal(PC2),   # fill uses Spectral palette
+    color = "black",         # thin black border
+    weight = 0.5,            # border thickness
+    stroke = TRUE,           # show border
+    fillOpacity = 1,
+    popup = ~paste(
+      "Scientific Name:", specificEpithet, "<br>",
+      "Year:", year, "<br>",
+      "Herbarium:", institutionCode
+    ),
+    label = ~paste(specificEpithet, institutionCode, id)
+  ) %>%
+  setView(lng = -119.4179, lat = 36.7783, zoom = 6) %>%
+  addLegend(
+    position = "bottomright",
+    pal = pal,
+    values = ~PC2,
+    title = "PC2",
+    opacity = 1
+  )
+
+saveWidget(specimen_map_leaflet, "maps/interactive_CA_specimen_by_PC2_all_Cal_phenology.html")
+
+# investigate collection locations of flowering specimens collected in Sept-December (maybe through January would be wise..?) 
+
+```
+#### divide data plot phenology
+```{r}
+# Start with all data divided into pre 1950 and post 2000
+# remove Sierran individuals (PC2 < -6)
+phen_sub_no_sierra <- phen_sub %>% filter(PC2>-6)
+
+# quick check how many specimens per year
+hist(phen_sub_no_sierra$year, breaks=50)
+# bulk of specimens actually between 1950 and 2000...
+
+# divided data into groups by year
+phen_sub_2_yr_groups <- phen_sub %>%
+  filter(Flower != 0) %>%  # keep only non-zero Flower
+  mutate(year_group = case_when(
+    year <= 1950 ~ "Year ≤ 1950",
+    year >= 2000 ~ "Year ≥ 2000",
+    TRUE ~ NA_character_
+  )) %>%
+  filter(!is.na(year_group))  # keep only the two groups of interest
+
+# Histogram of flowering month, faceted by year group
+ggplot(phen_sub_2_yr_groups, aes(x = month)) +
+  geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
+  facet_wrap(~ year_group) +
+  labs(
+    title = "Distribution of Flowering Dates: ≤1950 vs ≥2000",
+    x = "Month",
+    y = "Count"
+  ) +
+  theme_minimal()
+
+# look at intervening years too:
+phen_sub_3_yr_groups <- phen_sub %>%
+  filter(Flower != 0) %>%  # keep only non-zero Flower
+  mutate(year_group = case_when(
+    year <= 1950 ~ "Year ≤ 1950",
+    year > 1950 & year < 2000 ~ "1950–2000",
+    year >= 2000 ~ "Year ≥ 2000",
+    TRUE ~ NA_character_
+  )) %>%
+  filter(!is.na(year_group)) %>%
+  mutate(
+    year_group = factor(
+      year_group,
+      levels = c("Year ≤ 1950", "1950–2000", "Year ≥ 2000")
+    )
+  )
+
+# Histogram of flowering month, faceted by year group
+ggplot(phen_sub_3_yr_groups, aes(x = month, fill = specificEpithet)) +
+  geom_histogram(
+    binwidth = 1,
+    color = "black",
+    position = "dodge"  # side-by-side bars for species
+  ) +
+  scale_x_continuous(
+    breaks = 1:12,
+    labels = 1:12,
+    expand = c(0, 0.5)  # prevents cutting off month 12
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, max(table(phen_sub_filtered$month)), by = 5)
+  ) +
+  facet_wrap(~ year_group) +
+  labs(
+    title = "Distribution of Flowering Dates by Time Period and Species",
+    x = "Month",
+    y = "Count",
+    fill = "Species"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 10),
+    axis.title = element_text(size = 12),
+    strip.text = element_text(size = 12),
+    legend.position = "top")
+
+# color by species
+
+
+```
+
 
 ### 9-Month Timeframe
 
