@@ -237,6 +237,7 @@ write.csv(wide_final_clim_subset, "Output_Files/climateNA_subset_data_tall.csv",
 ```
 
 #### Join and clean data
+
 ```{r}
 #| label: join and clean
 
@@ -255,6 +256,7 @@ phen_1yr <- fulldata %>%
 ```
 
 #### PCA of climate
+
 ```{r}
 
 # change -9999 to NA
@@ -683,7 +685,9 @@ saveWidget(specimen_map_leaflet, "maps/interactive_CA_specimen_by_PC2_all_Cal_ph
 # investigate collection locations of flowering specimens collected in Sept-December (maybe through January would be wise..?) 
 
 ```
+
 #### divide data plot phenology
+
 ```{r}
 # Start with all data divided into pre 1950 and post 2000
 # remove Sierran individuals (PC2 < -6)
@@ -764,7 +768,6 @@ ggplot(phen_sub_3_yr_groups, aes(x = month, fill = specificEpithet)) +
 
 
 ```
-
 
 ### 9-Month Timeframe
 

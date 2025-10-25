@@ -146,7 +146,10 @@ write.csv(fulldata, "Output_Files/completed_specimen_data.csv", row.names = FALS
 
 ```{r}
 #Read in full complete data CSV
-fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
+fulldata<- read.csv("Output_Files/completed_specimen_data.csv") %>% mutate(monthname = month.abb[as.numeric(month)])
+
+
+
 
 #Bud Clusters
 hist(fulldata$Bud.Cluster, breaks = 10, freq = TRUE, col = "darkorchid3", 
@@ -190,6 +193,10 @@ flowering <- fulldata %>% filter(Flower > 0)
 hist(flowering$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
      border = "white", main = "Frequency of Specimens Collected While Flowering
      for Each Month", xlab = "Month", ylab = "Frequency")
+
+#Diff attempt
+
+ggplot(flowering, aes(x = month)) + geom_histogram(binwidth = 1, fill = "firebrick3", color = "black") + scale_x_continuous(breaks = 1:12, labels = month.abb) + labs(x = "Month", y = "Frequency", title = "Frequency of Flowering Specimens Collected in each Month ") + theme(panel.grid.minor.x = element_blank())
 ```
 
 By looking at this graph, we can tell that the majority of specimens that were flowering were collected in the Spring months between March and May. Over 250 flowering specimens were collected in April alone. When reading through the scientific articles, I was intrigued by the Ridley and Ellstrand 2009 papers, where they had 2 study sites for both southern inland and northern coastal specimens to be grown and studied. One specimen site was inland and southern, at UCR, and the other was coastal and northern, at Point Reyes. The authors mentioned that at the Point Reyes site, radishes tend to behave as a summer annual, flowering near the end of summer, while at the UCR site the Radish behave like winter annuals and flower in early spring. I think it could be interesting to expand on this histogram and incorporate location data to try and further understand this aforementioned trend and see if there is proof of this idea in the herbarium specimens.
@@ -203,3 +210,27 @@ hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
 ```
 
 A similar trend follows when looking at the graphs of fruit-month frequency and flower-month frequency with most specimens that were fruiting being collected in the spring, specifically April. Based on this observation, I first and foremost think it is important to go back and make a histogram of just when each specimen was collected within the year specifically, although based on the similarity of the two specified histograms, I can't imagine this would change much. On that note, I'd also like to make a histogram showing when specimens were collected across our entire range, since I actually couldn't necessarily narrow down off the cuff which decade had the most specimens collected. I'm not sure what sorts of questions would be more beneficially asked by fruits since much of the literature is on flowering time. Perhaps comparisons could be made for specimens collected within a year to see if there is a noticeable time difference between collection of early few flower specimens and late fruit specimens, but there is lots of subjectivity there due to the specimen just being a snapshot of any given population and possibilities for not enough data to pull this off. I'm also intrigued as to why for both flowers and fruits, there is a slight peak in October, but I don't know that there are enough specimens to parse that out.
+
+**Pre-1950/Post-2000 Graphs:**
+
+```{r}
+
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+
+old <- fulldata %>% filter(year < 1950) %>% filter(Flower > 0)
+
+hist(old$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
+     border = "white", main = "Frequency of Specimens Collected While Flowering
+    pre-1950", xlab = "Month", ylab = "Frequency")
+
+
+recent <- fulldata %>% filter(year > 2000) %>% filter(Flower > 0) 
+
+hist(recent$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
+     border = "white", main = "Frequency of Specimens Collected While Flowering
+   post-2000", xlab = "Month", ylab = "Frequency")
+
+
+```
