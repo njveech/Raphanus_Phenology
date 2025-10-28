@@ -249,7 +249,7 @@ fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
 fulldata$county <- gsub("\\s*[Cc]ounty\\s*$", "", fulldata$county) # remove "county"
 fulldata$county <- trimws(fulldata$county) # trim whitespace
 
-# combine with phenology data
+# combine with climate data
 phen_1yr <- fulldata %>% 
   select(id, institutionCode, specificEpithet, year, month, day, county, decimalLatitude, decimalLongitude, Bud.Cluster, Flower, Fruit) %>% # select only necessary cols
   full_join(oneyr_clim) # join with climate data
@@ -692,6 +692,12 @@ saveWidget(specimen_map_leaflet, "maps/interactive_CA_specimen_by_PC2_all_Cal_ph
 # Start with all data divided into pre 1950 and post 2000
 # remove Sierran individuals (PC2 < -6)
 phen_sub_no_sierra <- phen_sub %>% filter(PC2>-6)
+
+# ID just sierran samples
+sierra_ids <- phen_sub %>% filter(PC2 < -6) %>% pull(id)
+
+# save as a vector for use elsewhere
+cat("sierra_ids <- c(", paste(shQuote(sierra_ids, type = "cmd"), collapse = ", "), ")\n")
 
 # quick check how many specimens per year
 hist(phen_sub_no_sierra$year, breaks=50)

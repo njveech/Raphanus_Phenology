@@ -118,18 +118,18 @@ At a later time, it was discovered that, when running the code for the model on 
 
 ```{r}
 #| eval: false
-#Read in full complete data CSV
-fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
-
-#Fix the specimen that was falsely determined to have no assigned reproductive structure counts by individually assigning the accurate counts from the original annotations done by hand in Roboflow
-fulldata <- fulldata %>%
-     mutate(
-           Bud.Cluster = if_else(id == 1368028, 3, Bud.Cluster),
-        Flower = if_else(id == 1368028, 2, Flower),
-         Fruit = if_else(id == 1368028, 2, Fruit))
-
-#Export this adjusted change back into the CSV
-write.csv(fulldata, "Output_Files/completed_specimen_data.csv", row.names = FALSE)
+# #Read in full complete data CSV
+# fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
+# 
+# #Fix the specimen that was falsely determined to have no assigned reproductive structure counts by individually assigning the accurate counts from the original annotations done by hand in Roboflow
+# fulldata <- fulldata %>%
+#      mutate(
+#            Bud.Cluster = if_else(id == 1368028, 3, Bud.Cluster),
+#         Flower = if_else(id == 1368028, 2, Flower),
+#          Fruit = if_else(id == 1368028, 2, Fruit))
+# 
+# #Export this adjusted change back into the CSV
+# write.csv(fulldata, "Output_Files/completed_specimen_data.csv", row.names = FALSE)
 ```
 
 ## Extracting Climate Data
@@ -145,9 +145,8 @@ write.csv(fulldata, "Output_Files/completed_specimen_data.csv", row.names = FALS
 **Basic Frequency Plots:**
 
 ```{r}
-#Read in full complete data CSV
+#Read in full complete data CSV, and add col with month abbreviations in text
 fulldata<- read.csv("Output_Files/completed_specimen_data.csv") %>% mutate(monthname = month.abb[as.numeric(month)])
-
 
 
 
@@ -219,14 +218,31 @@ library(dplyr)
 library(ggplot2)
 library(patchwork)
 
-old <- fulldata %>% filter(year < 1950) %>% filter(Flower > 0)
+# quick check how many specimens per year
+hist(fulldata$year, breaks=60)
+
+# make vector with ids of sierran samples
+sierra_ids <- c("1311269", "1312145", "1777873", "3737681", "2289763", "2342720", "2345323", "2358602", "2359565", "2370292", "2433969", "2442814", "4488222")
+
+# filter out all sierrans
+fulldata_no.sierra <- fulldata %>% filter(!id %in% sierra_ids)
+
+# clean up county names
+fulldata$county <- gsub("\\s*[Cc]ounty\\s*$", "", fulldata$county) # remove "county"
+fulldata$county <- trimws(fulldata$county) # trim whitespace
+
+# filter for only so cal counties: filter to only include 
+fulldata_so_cal <- fulldata %>% filter(county %in% c("Santa Barbara", "San Diego",)
+
+
+old <- fulldata_so_cal %>% filter(year < 1950 ) %>% filter(Flower > 0)
 
 hist(old$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
      border = "white", main = "Frequency of Specimens Collected While Flowering
     pre-1950", xlab = "Month", ylab = "Frequency")
 
 
-recent <- fulldata %>% filter(year > 2000) %>% filter(Flower > 0) 
+recent <- fulldata_so_cal %>% filter(year > 2000) %>% filter(Flower > 0) 
 
 hist(recent$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
      border = "white", main = "Frequency of Specimens Collected While Flowering
@@ -234,3 +250,5 @@ hist(recent$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
 
 
 ```
+
+\
