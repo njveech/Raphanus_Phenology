@@ -18,15 +18,21 @@ editor: visual
 
 # Methods
 
-All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. \~70 (**get exact number?!?!?!?**) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment (**more specificity here?**) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
+All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
 
 ```{r}
 library(tidyverse)
 ```
 
+## Scanning Images in UCD Herbarium
+
+I do not have notes for this :( -insert later
+
+\~70 (**get exact number?!?!?!?**) specimens held in possession by the San Diego Natural History Museum were unimaged, but included in the full data set. These specimens were imaged using equipment (**more specificity here?**) from the University of California, Davis Center for Plant Diversity (Herbarium) and edited in Adobe Lightroom.
+
 ## Specimen Exclusions
 
-Many of the exclusions applied to the data were guided by the exclusion criteria described in the methods of Love and Mazer (2021). 1 specimen was excluded due to the blurriness of the image. 12 images were excluded for having a poor date range recorded for the time of collection. A date range was considered unusable if it spanned more than a month due to the frequently changing nature of *Raphanus* reproductive stages. Any specimens that were collected off of islands (e.g. Channel Islands) were excluded due to the unique climatic setting and lack of gene flow. 45 island specimens were removed from the data set based on this criterion. 2 specimens were deemed unfit for imaging, defined here as specimens that had an envelope containing plant matter on the specimen sheet, but no actual sample that could provide counts of reproductive structures. 71 specimens were excluded for having unreliable location data that was either difficult to assign coordinates to (see Assigning GPS Coordinates and Uncertainty) or too broad to draw accurate and precise climate data from. 5 specimens were excluded for having no listed collection date. 21 specimens were excluded on the basis of having poor metadata, lacking several pieces of information that are necessary to understand the spatial, temporal, and climatic context of the specimen. Lastly, 246 specimens were removed for possessing a spatiotemporal duplicate in the remaining data set, removing any repetition for a more cohesive data set.
+Many of the exclusions applied to the data were guided by the exclusion criteria described in the methods of Love and Mazer (2021). 1 specimen was excluded due to the blurriness of the image. 12 images were excluded for having a poor date range recorded for the time of collection. A date range was considered unusable if it spanned more than a month due to the consistently changing *Raphanus* reproductive stages. Any specimens that were collected off of islands (e.g. Channel Islands) were excluded due to the unique climatic setting and lack of gene flow. 45 island specimens were removed from the data set based on this criterion. 2 specimens were deemed unfit for imaging, as the specimens had an envelope containing plant tissue on the specimen sheet, but no actual sample that could provide counts of reproductive structures. 71 specimens were excluded for having unreliable location data that was either difficult to assign coordinates to (see Assigning GPS Coordinates and Uncertainty) or too broad to draw accurate and precise climate data from. 5 specimens were excluded for having no listed collection date. 21 specimens were excluded on the basis of having poor metadata, lacking several pieces of information that are necessary to understand the spatial, temporal, and climatic context of the specimen. Lastly, 246 specimens were removed for possessing a spatiotemporal duplicate in the remaining data set, removing any repetition for a more cohesive data set.
 
 ## Assigning GPS Coordinates and Uncertainty
 
@@ -50,13 +56,21 @@ It was initially decided that 100 specimens, slight greater than ten percent of 
 
 ## Annotating Herbarium Specimens
 
-An initial 100 specimens were uploaded into Roboflow to be annotated. The Roboflow software has a file size limit of 20 MB, any specimen images that exceeded that size were shrunk using code written in terminal:
+An initial 100 specimens were uploaded into Roboflow to be annotated. The Roboflow software has a file size limit of 20 MB; any specimen images that exceeded that size were shrunk using code written in terminal:
 
 ```{bash}
 #Insert Julia's code for resizing images, I think it was in bash?
 ```
 
-Specific procedures and approaches were developed after discussing the logistics and potential inconsistencies that could occur when training a Machine Learning model to recognize the three different reproductive classes: bud clusters, flowers, and fruit. Bud clusters fall along a spectrum of appearances. Some bud
+Specific procedures and approaches were developed after discussing the logistics and potential inconsistencies that could occur when training a Machine Learning model to recognize the three different reproductive classes: bud clusters, flowers, and fruit. Bud clusters fall along a spectrum of appearances. Bud clusters were annotated by outlining groups of, or individual buds, that were clearly young and appeared green and fuzzy or were slightly older and had a darker brown, woody looking appearance. By this guideline, it was acceptable to annotate just a portion of the bud cluster that met the brown, woody appearance that could be learned by the model, thereby representing the entire cluster as a whole.
+
+To prevent model confusion between bud clusters and flowers, any buds where petals had begun to emerge and both bud cluster tissue and flower tissue were visible were excluded. Flowers were annotated individually as best as possible, even if clustered together or pressed to the sheet in a visually confusing manner. Flowers were annotated without the pedicel. Any flowers that had broken off but were still glued onto the specimen sheet were included. Flowers that seemed to have undergone senescence (shriveled, darker and drier in appearance) were excluded, as they were not contributing to the model's reproductive output at the time of collection.
+
+Fruits were annotated with the pedicel to provide consistency to the model in identifying the structure. Immature and mature fruits vary drastically in length, width, and curvature, so providing the pedicel was intended to help the model identify fruits. Like flowers, fruits that were partially or completely broken off but included on the specimen sheet were included in annotations.
+
+Empty pedicels were not included in annotations (somewhat due to time constraints). Pedicels could be identified as corresponding to either flowers or fruits depending on their location on the plant and proximity to developed and fruits. However, for our model annotations, empty pedicels were omitted.
+
+Leaves were not annotated for our model (again time constraints in place), though there would be some benefits to doing so. Although leaves are not a reproductive structure, including them in annotations could potentially help the model differentiate between leaves and fruits. By teaching the model what fruits and leaves are separately, it could have more success in differentiating the two when run.
 
 ## Training Model Versions
 
@@ -140,115 +154,247 @@ At a later time, it was discovered that, when running the code for the model on 
 #EVENTUAL BONTRAGER + Additional to us code here... unless we somehow link the entire other markdown into here if that's a thing
 ```
 
-# Trial Plots
+## Plotting and Figure Creation
 
-**Basic Frequency Plots:**
+#### Frequency of Occurrence for all Reproductive Structures
 
 ```{r}
-#Read in full complete data CSV, and add col with month abbreviations in text
+#| eval: false
+
+#Load in Dplyr and GGplot2
+library(dplyr)
+library(ggplot2)
+
+#Read in full complete data CSV, and add column with month abbreviations in text
 fulldata<- read.csv("Output_Files/completed_specimen_data.csv") %>% mutate(monthname = month.abb[as.numeric(month)])
 
 
-
-#Bud Clusters
+#Create frequency histogram for Bud Clusters
 hist(fulldata$Bud.Cluster, breaks = 10, freq = TRUE, col = "darkorchid3", 
      border = "white", main = "Bud Cluster Frequency in California Raphanus 
      Herbarium Specimens", ylab = "Frequency", xlab = "# of Bud Clusters")
 ```
 
-The majority of specimens had just one bud cluster, with a steep drop off between one and two bud clusters. While this is likely both a flaw in our model and just the inherently difficult-to-discern nature of bud clusters, other analyses could be attempted on bud cluster counts. In particular, we could ask for a representation of how far along specimens are in flowering by comparing a ratio of bud clusters to fruits for each specimen. This could assist in creating some sort of graph where we are able to see the proportion of flowers that were opened to the overall count of flowers, both opened and potential to have opened in the future. I could also benefit to doing additional research on bud cluster phenology to see what other questions could be asked, but this feels like a less reliable data point for the sake of our project.
-
-Notes: Main takeaway: it seems odd that there would only be 1 bud cluster. This is not reliable.
+The majority of specimens had just one bud cluster, with a steep drop off between one and two bud clusters. This is likely caused by both model inaccuracies and the viusally ambiguous appearance of bud clusters. In all, the current model cannot reliably produce individual counts for bud clusters on *Raphanus* specimens.
 
 ```{r}
-#Flowers
+#| eval: false
+
+#Create frequency histogram for Flowers
 hist(fulldata$Flower, breaks = 40, freq = TRUE, col = "firebrick3", 
      border = "white", main = "Flower Frequency in California Raphanus 
      Herbarium Specimens", ylab = "Frequency", xlab = "# of Flowers")
 ```
 
-There is a right skewed distribution for the flower frequency curve, with most observations falling between 0-10 flowers. I would like to find a way to use this data to further study latitudinal and longitudinal differences in flower count, as it is a factor that seems to have a significant effect on flowering times (Ridley & Ellstrand 2009), due to how much California's climate differs on both the E-W and N-S axis. Perhaps we could divide up latitudes into chunks and average over an area and/or use a continuous spectrum to see at what latitudes and what longitudes flower count peaks. (Not sure of the logistics of this). Additionally, fruiting to flowering frequency ratios could be interesting as well, and I'm still intrigued as to what analyses we might be able to do and what conclusions we could draw if we create a phenology scoring formula.
-
-Notes:
-
--Write out logistics to make them simpler if breaking apart thinking into very specific steps in plain English.
+There is a right skewed distribution for the flower frequency curve, with most observations falling between 0-10 flowers. This data could further to be studied how flower number and flowering time varies across latitudes in California, as different latitudes experience vastly different climates. The presence or absence of flowers is a much more reliable metric that can be gauged from the model. While the individual counts for flowers are less accurate, specimens can answer the binomial question: "Does the specimen have flowers," providing insight into broader phenological stage.
 
 ```{r}
-#Fruits
+#| eval: false
+
+#Create frequency histogram for Fruits
 hist(fulldata$Fruit, breaks = 25, freq = TRUE, col = "seagreen1", 
      border = "black", main = "Fruit Frequency in California Raphanus 
      Herbarium Specimens", ylab = "Frequency", xlab = "# of Fruits")
 ```
 
-Similar to flowers, the distirbution curve for fruits is white skewing, with over 25% of the observations having between 0-5 fruits. I would like to repeat the above description of location based frequency analyses for fruits to see if there is a correlation of location frequency between fruits and flowers. Additionally, as mentioned earlier, fruiting to flowering frequency ratios could be interesting as well, and I'm still intrigued as to what analyses we might be able to do and what conclusions we could draw if we create a phenology scoring formula.
+Similar to flowers, the distribution curve for fruits is skewed right, with over 25% of the observations having between 0-5 fruits. Similar analyses can be conducted for fruits based on what is done with flowers to get a sense of broader phenological stage and variances in latitude, but this is not necessary.
 
-Notes: don't really need to do this for fruits if do for flowers
-
-**Histograms for Frequency of Structure Per Month:**
+#### Frequency of Flowering Specimens in Each Month
 
 ```{r}
-#Flowering and Months
+#| label: Creating Histogram of Flowering Specimens per month
+
+
+#Subset full data set to only include flowering specimens
 flowering <- fulldata %>% filter(Flower > 0)
-hist(flowering$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
-     border = "white", main = "Frequency of Specimens Collected While Flowering
-     for Each Month", xlab = "Month", ylab = "Frequency")
 
-#Diff attempt
 
-ggplot(flowering, aes(x = month)) + geom_histogram(binwidth = 1, fill = "firebrick3", color = "black") + scale_x_continuous(breaks = 1:12, labels = month.abb) + labs(x = "Month", y = "Frequency", title = "Frequency of Flowering Specimens Collected in each Month ") + theme(panel.grid.minor.x = element_blank())
+#Create a Histogram for flowering specimens with month on the X-Axis and Frequency(# of specimens) on the Y-axis
+
+full_histo <- ggplot(flowering, aes(x = month)) + 
+  #Set bin width and change the color of the histogram
+  geom_histogram(binwidth = 1, fill = "lightsteelblue2", color = "black") + 
+  #Label X-axis with month abbreviations
+  scale_x_continuous(breaks = 1:12, labels = month.abb) + 
+  #Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in each month ") + 
+  #Make the background blank with no grid lines and center the grpah title
+  theme(plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add a visible X-Axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75)
+
+#Save the Figure as a PDF
+#ggsave("Figures/Full_Histo_2.pdf", device = pdf, plot = full_histo, height = 4, width = 5, units = "in", dpi = 400)
 ```
 
 By looking at this graph, we can tell that the majority of specimens that were flowering were collected in the Spring months between March and May. Over 250 flowering specimens were collected in April alone. When reading through the scientific articles, I was intrigued by the Ridley and Ellstrand 2009 papers, where they had 2 study sites for both southern inland and northern coastal specimens to be grown and studied. One specimen site was inland and southern, at UCR, and the other was coastal and northern, at Point Reyes. The authors mentioned that at the Point Reyes site, radishes tend to behave as a summer annual, flowering near the end of summer, while at the UCR site the Radish behave like winter annuals and flower in early spring. I think it could be interesting to expand on this histogram and incorporate location data to try and further understand this aforementioned trend and see if there is proof of this idea in the herbarium specimens.
 
 ```{r}
-#Fruits and Months
+#| eval: false
+
+
+#Filter for specimens that are fruiting
 fruiting <- fulldata %>% filter(Fruit > 0)
-hist(fruiting$month, breaks = seq(0, 12, 1), freq = TRUE, col = "seagreen1",
-     border = "black", main = "Frequency of Specimens Collected While Fruiting
-     for Each Month", xlab = "Month", ylab = "Frequency")
+
+#Create a Histogram for fruiting specimens with month on the X-Axis and Frequency(# of specimens) on the Y-axis
+
+full_histo_fruit <- ggplot(fruiting, aes(x = month)) + 
+  #Set bin width and change the color of the histogram
+  geom_histogram(binwidth = 1, fill = "lightsteelblue2", color = "black") + 
+  #Label X-axis with month abbreviations
+  scale_x_continuous(breaks = 1:12, labels = month.abb) + 
+  #Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of fruiting specimens \ncollected in each month ") + 
+  #Make the background blank with no grid lines and center the grpah title
+  theme(plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add a visible X-Axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75)
+
+#Save the Figure as a PDF
+#ggsave("Figures/Full_Histo_Fruit.pdf", device = pdf, plot = full_histo_fruit, height = 4, width = 5, units = "in", dpi = 400)
+
+
+
 ```
 
-A similar trend follows when looking at the graphs of fruit-month frequency and flower-month frequency with most specimens that were fruiting being collected in the spring, specifically April. Based on this observation, I first and foremost think it is important to go back and make a histogram of just when each specimen was collected within the year specifically, although based on the similarity of the two specified histograms, I can't imagine this would change much. On that note, I'd also like to make a histogram showing when specimens were collected across our entire range, since I actually couldn't necessarily narrow down off the cuff which decade had the most specimens collected. I'm not sure what sorts of questions would be more beneficially asked by fruits since much of the literature is on flowering time. Perhaps comparisons could be made for specimens collected within a year to see if there is a noticeable time difference between collection of early few flower specimens and late fruit specimens, but there is lots of subjectivity there due to the specimen just being a snapshot of any given population and possibilities for not enough data to pull this off. I'm also intrigued as to why for both flowers and fruits, there is a slight peak in October, but I don't know that there are enough specimens to parse that out.
+A similar trend follows when looking at the graphs of fruit-month frequency and flower-month frequency with most specimens that were fruiting being collected in the spring, specifically April. Fruiting time is not as prevalent in literature as flowering time.
 
-**Pre-1950/Post-2000 Graphs:**
+#### Temporal Extremity Flowering Plots:
 
 ```{r}
+#| label: Creating Histogram of Flowering Specimens per month pre-1950 and post-2000
 
+
+#Load in relevent packages
 library(dplyr)
 library(ggplot2)
 library(patchwork)
-
-# quick check how many specimens per year
-hist(fulldata$year, breaks=60)
-
-# make vector with ids of sierran samples
-sierra_ids <- c("1311269", "1312145", "1777873", "3737681", "2289763", "2342720", "2345323", "2358602", "2359565", "2370292", "2433969", "2442814", "4488222")
-
-# filter out all sierrans
-fulldata_no.sierra <- fulldata %>% filter(!id %in% sierra_ids)
-
-# clean up county names
-fulldata$county <- gsub("\\s*[Cc]ounty\\s*$", "", fulldata$county) # remove "county"
-fulldata$county <- trimws(fulldata$county) # trim whitespace
-
-# filter for only so cal counties: filter to only include 
-fulldata_so_cal <- fulldata %>% filter(county %in% c("Santa Barbara", "San Diego",)
+library(lubridate)
+library(colorblindcheck)
 
 
-old <- fulldata_so_cal %>% filter(year < 1950 ) %>% filter(Flower > 0)
+# Subset the full dataset to be just flowering specimens, add month abbreviation column
+fulldata.flw <- read.csv("Output_Files/completed_specimen_data.csv") %>% mutate(monthname = month.abb[as.numeric(month)]) %>% filter(Flower > 0)
 
-hist(old$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
-     border = "white", main = "Frequency of Specimens Collected While Flowering
-    pre-1950", xlab = "Month", ylab = "Frequency")
+#Check to see approximate number of specimens per year via Histogram
+#hist(fulldata.flw$year, breaks=60)
+
+# Clean Up County Names for Uniformity
+ fulldata.flw$county <- gsub("\\s*[Cc]ounty\\s*$", "", fulldata.flw$county) 
+# remove the phrase "county"
+fulldata.flw$county <- trimws(fulldata.flw$county) # trim whitespace
+
+#Filter for the selected Southern California Counties
+so_cal <- c("Santa Barbara", "San Luis Obispo", "San Diego", "Los Angeles", "Orange", "Riverside", "San Bernardino", "Ventura")
+
+fulldata.flw_so_cal <- fulldata.flw %>% filter(county %in% so_cal)
 
 
-recent <- fulldata_so_cal %>% filter(year > 2000) %>% filter(Flower > 0) 
+#Separate the data into two separate time periods (pre-1950 ="old" and post-2000 = "recent")
 
-hist(recent$month, breaks = seq(0, 12, 1), freq = TRUE, col = "firebrick3",
-     border = "white", main = "Frequency of Specimens Collected While Flowering
-   post-2000", xlab = "Month", ylab = "Frequency")
+old_so_cal <- fulldata.flw_so_cal %>% filter(year < 1950 ) %>% mutate(day = replace(day, day == 0, 1))
+old_so_cal$date <- make_date(old_so_cal$year, old_so_cal$month, old_so_cal$day)
+old_so_cal$DOY <- yday(old_so_cal$date)
 
+#mean(old_so_cal$DOY)
+#tmp_o <- old_so_cal %>% filter(DOY < 213)
+#mean(tmp_o$DOY)
+#hist(old_so_cal$DOY, breaks =40)
+#abline(v=mean(old_so_cal$DOY), col='red')
+
+recent_so_cal <- fulldata.flw_so_cal %>% filter(year > 2000) %>% mutate(day = replace(day, day == 0, 1))
+recent_so_cal$date <- make_date(recent_so_cal$year,recent_so_cal$month, recent_so_cal$day)
+recent_so_cal$DOY <- yday(recent_so_cal$date)
+
+#mean(recent_so_cal$DOY)
+#tmp <- recent_so_cal %>% filter(DOY < 213)
+#mean(tmp$DOY)
+#hist(recent_so_cal$DOY, breaks =40)
+#abline(v=mean(recent_so_cal$DOY), col='red')
+
+
+#Colorblind Check for Histogram Colors
+#colorblindcheck::palette_plot(c("black", "#825E89", "lightsteelblue2"))
+
+
+#Create a Histogram where X-Axis is month and Y-axis is frequency/number of specimens pre-1950
+pre_histo <- ggplot(data = old_so_cal, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variables and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in southern California pre-1950") + # Center the title in the middle, make background blank wihtout grid lines
+  theme( plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75) #+
+  
+  #Add mean bar for day of year collected
+  #geom_vline(xintercept = )
+
+#Save the Histogram as a pdf
+#ggsave("Figures/Pre-1950-Histo.pdf", device = pdf, plot = pre_histo, height = 4, width = 5, units = "in")
+
+#Create a Histogram where X-Axis is month and Y-axis is frequency/number of specimens post-2000
+post_histo <- ggplot(data = recent_so_cal, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variable and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in southern California post-2000") + 
+  #Center the title in the middle, make background blank without gridlines
+  theme(plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75)
+
+#Save the histogram as a PDF
+#ggsave("Figures/Post-2000-Histo.pdf", device = pdf, plot = post_histo, height = 4, width = 5, units = "in")
 
 ```
 
-\
+#### Temporal Extremity Specimen Maps
+
+```{r}
+#| label: Creating Maps of Flowering Specimens pre-1950 and post-2000
+
+
+#Load the maps package
+library(maps)
+
+# Get a California Map
+state <- map_data("state")
+california <- subset(state, region == "california")
+
+
+#Subset the data for only the Southern California counties selected and further subset into pre-1950 and post-2000 collected specimens
+
+old <- fulldata.flw %>% filter(year < 1950 ) %>% filter(Flower > 0) %>% mutate( highlight = ifelse(county %in% so_cal, "Southern California", "Not Included")) 
+
+recent <- fulldata.flw %>% filter(year > 2000) %>% filter(Flower > 0) %>% mutate( highlight = ifelse(county %in% so_cal, "Southern California", "Not Included"))
+
+#Create a map showing specimens collected in So Cal pre-1950
+
+pre2 <- ggplot() + 
+  #Create California Outline
+  geom_polygon(data = california, aes(x = long, y = lat, group = group), fill = "lightsteelblue2", color = "white") + 
+  #Add in Old Specimen Data and color based on highlight column
+  geom_point(data = old, aes(x = decimalLongitude, y = decimalLatitude, color = highlight)) + 
+  #Label the Axes
+  labs( x = "", y = "") + theme(axis.ticks = element_blank(), axis.text = element_blank()) + scale_color_manual(values = c("Southern California" = "#825E89", "Not Included" = "black"), name = "Specimens")
+
+#Save the Map as a pdf
+#ggsave("Figures/pre_1950_map_2.pdf", device = "pdf" , plot = pre2, height = 2, width = 4, units = "in")
+
+#Create a map showing specimens collected in So Cal post-2000
+
+post2 <- ggplot() + 
+  #Create California Outline
+  geom_polygon(data = california, aes(x = long, y = lat, group = group), fill = "lightsteelblue2", color = "white") + 
+  #Add in Recent Specimen Data and color based on highlight column
+  geom_point(data = recent, aes(x = decimalLongitude, y = decimalLatitude, color = highlight)) + 
+  #Label the Axes
+  labs( x = "", y = "")  + theme(axis.ticks = element_blank(), axis.text = element_blank()) + scale_color_manual(values = c("Southern California" = "#825E89", "Not Included" = "black"), name = "Specimens")
+
+
+#Save the map as a pdf
+#ggsave("Figures/post_2000_map_2.pdf", device = "pdf" , plot = post2, height = 2, width = 4, units = "in")
+```
