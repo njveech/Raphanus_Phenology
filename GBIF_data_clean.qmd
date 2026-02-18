@@ -1,0 +1,26 @@
+---
+title: "GBIF_data_clean"
+author: "Julia Harencar"
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    toc: true
+    number-sections: true
+theme:
+  light: minty
+  dark: superhero
+editor_options: 
+  chunk_output_type: console
+---
+
+## GBIF data cleaning
+
+### Consolidate CA
+
+First, we correspond the IDs for California samples from the sheet with coordinates previously determined by Natalie.
+
+```{r}
+
+```
