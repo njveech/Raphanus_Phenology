@@ -1,4 +1,81 @@
-.Rproj.user
+iLast login: Thu Mar  5 12:42:40 on ttys032
+cd %                                                                                                                    ➜  Raphanus_Phenology git:(main) ✗ cd ..
+➜  Github ls -haltr
+total 104
+drwxr-xr-x   16 juliaharencar  staff   512B Jan 22  2024 vill_drought_adaptation
+drwxr-xr-x@ 151 juliaharencar  staff   4.7K Feb 15  2024 Chloroplast_analysis
+drwxr-xr-x   19 juliaharencar  staff   608B Jul  1  2024 temp
+drwxr-xr-x@  14 juliaharencar  staff   448B Sep 25  2024 GDTO_article_analyses
+drwxr-xr-x@  12 juliaharencar  staff   384B Jun 25  2025 Postdoc_timelines
+drwxr-xr-x@  55 juliaharencar  staff   1.7K Jul 16  2025 Raphanus_color_chem_GWAS
+drwxr-xr-x@  16 juliaharencar  staff   512B Aug 15  2025 Senescence
+drwxr-xr-x@  10 juliaharencar  staff   320B Aug 25  2025 Raphanus_climateNA
+drwxr-xr-x@ 207 juliaharencar  staff   6.5K Dec  3 08:36 alle_vill_QTL
+drwxr-xr-x@  44 juliaharencar  staff   1.4K Jan 30 15:55 cati_soil_popgen
+drwxr-xr-x@  22 juliaharencar  staff   704B Feb  5 16:01 seq_analysis
+drwx------+  20 juliaharencar  staff   640B Feb 18 21:25 ..
+drwxr-xr-x@  92 juliaharencar  staff   2.9K Feb 24 10:18 Raphanus_specimen_map
+drwxr-xr-x@  45 juliaharencar  staff   1.4K Feb 27 13:24 Population_genetics_vill_alle
+drwxr-xr-x@  15 juliaharencar  staff   480B Mar  3 12:00 Costus_sample_map
+drwxr-xr-x@  40 juliaharencar  staff   1.3K Mar  5 17:14 SGS_figure
+drwxr-xr-x@  21 juliaharencar  staff   672B Mar  5 20:10 .
+drwxr-xr-x@  18 juliaharencar  staff   576B Mar  6 14:44 Costus_popgen_clean
+drwxr-xr-x   14 juliaharencar  staff   448B Mar  9 10:15 SGS_kinship
+-rw-r--r--@   1 juliaharencar  staff    48K Mar  9 20:44 .DS_Store
+drwxr-xr-x@  30 juliaharencar  staff   960B Mar  9 20:46 Raphanus_Phenology
+➜  Github cd SGS_
+cd: no such file or directory: SGS_
+➜  Github cd SGS_kinship 
+➜  SGS_kinship git:(main) ✗ vim .gitignore 
+
+
+
+
+
+
+
+
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+.rds
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+".gitignore" 53L, 708B
+
 climateNA_full_data_tall.csv
 *pdf
 *html
