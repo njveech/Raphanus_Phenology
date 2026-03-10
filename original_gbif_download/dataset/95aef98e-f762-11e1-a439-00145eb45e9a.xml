@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="95aef98e-f762-11e1-a439-00145eb45e9a"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/zciacm</alternateIdentifier>
+        <alternateIdentifier>https://soroherbaria.org/portal/collections/misc/collprofiles.php?collid=30</alternateIdentifier>
+        <alternateIdentifier>https://www.soroherbaria.org/portal/collections/misc/collprofiles.php?collid=30</alternateIdentifier>
+        <alternateIdentifier>7892</alternateIdentifier>
+        <title>Colorado State University, Charles Maurer Herbarium</title>
+        <creator>
+            <organizationName>Southern Rocky Mountain Herbaria</organizationName>
+            <electronicMailAddress>james.r.allen@colorado.edu</electronicMailAddress>
+            <onlineUrl>https://soroherbaria.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>Southern Rocky Mountain Herbaria</organizationName>
+            <electronicMailAddress>james.r.allen@colorado.edu</electronicMailAddress>
+            <onlineUrl>https://soroherbaria.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Jennifer</givenName>
+                <surName>Ackerfield</surName>
+            </individualName>
+            <positionName>Curator</positionName>
+            <electronicMailAddress>jennifer.ackerfield@colostate.edu</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0001-6797-1088</userId>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The Charles Maurer Herbarium Collection is the third largest collection of vascular plants (&amp;gt; 104,000 specimens) and is the oldest herbarium (began in 1883) in the southern Rocky Mountain region. Important collections include those by J. Ackerfield, J. Cassidy, J. H. Cowen, C.S. Crandall, and H.D. Harrington. The herbarium has an excellent representation of the Colorado flora as well as the flora of the southern Rocky Mountain region.&amp;nbsp;The Charles Maurer Herbarium contains several important collections, including the specimen backbones of three major floras for Colorado. First, the herbarium houses approximately 4,500 historical collections made by its first curators in the late 1890&amp;rsquo;s, Charles Spencer Crandall and Jacob Hover Cowen. These collections formed the foundation for Flora of Colorado (Rydberg, 1906), the first comprehensive flora of the state. Second, the herbarium also houses approximately 10,000 collections from curator Harold D. Harrington, which formed the basis for his comprehensive Manual of the Plants of Colorado (1954). Lastly, collections of curator Jennifer Ackerfield are housed in the herbarium. Together, these collections formed the foundation for the most current Flora of Colorado (Ackerfield, 2021).&amp;nbsp; &amp;nbsp;</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://soroherbaria.org/portal/content/dwca/CS_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>Colorado State University, Charles Maurer Herbarium</organizationName>
+            <phone>(970) 491-0496</phone>
+            <electronicMailAddress>jennifer.ackerfield@colostate.edu</electronicMailAddress>
+            <onlineUrl>https://herbarium.colostate.edu/</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0001-6797-1088</userId>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:42Z</dateStamp>
+                <citation>Colorado State University Herbarium (CSU) (2026). Colorado State University, Charles Maurer Herbarium. Occurrence dataset https://doi.org/10.15468/zciacm accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

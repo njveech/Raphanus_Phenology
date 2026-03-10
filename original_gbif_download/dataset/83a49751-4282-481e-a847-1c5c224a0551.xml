@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="83a49751-4282-481e-a847-1c5c224a0551"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/nmny7h</alternateIdentifier>
+        <alternateIdentifier>83a49751-4282-481e-a847-1c5c224a0551</alternateIdentifier>
+        <alternateIdentifier>https://bnhmipt.berkeley.edu/resource?r=ucjeps_vascular</alternateIdentifier>
+        <title>The University and Jepson Herbaria -- Vascular Plants</title>
+        <creator>
+            <individualName>
+                <givenName>Jason</givenName>
+                <surName>Alexander</surName>
+            </individualName>
+            <organizationName>UC/JEPS</organizationName>
+            <positionName>Bioinformatics Manager</positionName>
+            <electronicMailAddress>jason_alexander@berkeley.edu</electronicMailAddress>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Joyce</givenName>
+                <surName>Gross</surName>
+            </individualName>
+            <electronicMailAddress>joyceg@berkeley.edu</electronicMailAddress>
+        </metadataProvider>
+        <metadataProvider>
+            <individualName>
+                <givenName>Jason</givenName>
+                <surName>Alexander</surName>
+            </individualName>
+            <organizationName>UC/JEPS</organizationName>
+            <positionName>Bioinformatics Manager</positionName>
+            <electronicMailAddress>jason_alexander@berkeley.edu</electronicMailAddress>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Joyce</givenName>
+                <surName>Gross</surName>
+            </individualName>
+            <electronicMailAddress>joyceg@berkeley.edu</electronicMailAddress>
+            <role>USER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Staci</givenName>
+                <surName>Markos</surName>
+            </individualName>
+            <organizationName>UC/JEPS</organizationName>
+            <positionName>Associate Director</positionName>
+            <electronicMailAddress>smarkos@berkeley.edu</electronicMailAddress>
+            <role>POINT_OF_CONTACT</role>
+        </associatedParty>
+        <pubDate>
+                2025-09-15
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>Established in 1895 around a core of preserved plant specimens that were collected by William Brewer on the California Geological Survey of 1860 to 1864, the University Herbarium (UC) includes over 278,000 vascular plant specimens from California (100% databased and 30% imaged).  Of the nearly 1.7 million vascular plant specimens from outside California, 270,000 have been imaged.  Databasing these imaged specimens is an ongoing project.
+
+Established in 1950 by a bequest from Willis Linn Jepson, the Jepson Herbarium (JEPS) includes over 125,000 vascular plant specimens from California (100% databased and 36% imaged).</para>
+        </abstract>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Specimen</keyword>
+            <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="information">https://webapps.cspace.berkeley.edu/ucjeps/publicsearch/publicsearch/</url>
+            </online>
+        </distribution>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://bnhmipt.berkeley.edu/archive.do?r=ucjeps_vascular</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>Global, with an emphasis on northeast Pacific and Baja California</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-180</westBoundingCoordinate>
+                    <eastBoundingCoordinate>180</eastBoundingCoordinate>
+                    <northBoundingCoordinate>90</northBoundingCoordinate>
+                    <southBoundingCoordinate>-90</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+        </coverage>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Jason</givenName>
+                <surName>Alexander</surName>
+            </individualName>
+            <organizationName>UC/JEPS</organizationName>
+            <positionName>Bioinformatics Manager</positionName>
+            <electronicMailAddress>jason_alexander@berkeley.edu</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:48Z</dateStamp>
+                <citation>Alexander J, Gross J (2025). The University and Jepson Herbaria -- Vascular Plants. Version 1.10. Berkeley Natural History Museums. Occurrence dataset https://doi.org/10.15468/nmny7h accessed via GBIF.org on 2026-01-16.</citation>
+                <physical>
+                    <objectName>UC collection at Consortium of California Herbaria</objectName>
+                    <characterEncoding>utf8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>data portal</formatName>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=46</url>
+                        </online>
+                    </distribution>
+                </physical>
+                <resourceLogoUrl>https://ucjeps.berkeley.edu/common/images/uclogo_250.png</resourceLogoUrl>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

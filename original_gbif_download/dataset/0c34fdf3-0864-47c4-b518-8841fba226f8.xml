@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="0c34fdf3-0864-47c4-b518-8841fba226f8"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/6v5ww4</alternateIdentifier>
+        <alternateIdentifier>https://sernecportal.org/portal/collections/misc/collprofiles.php?collid=403</alternateIdentifier>
+        <title>Weymouth Woods Sandhills Nature Preserve Herbarium</title>
+        <creator>
+            <organizationName>SERNEC Portal</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>SERNEC Portal</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Zachary</givenName>
+                <surName>Lunn</surName>
+            </individualName>
+            <positionName>Correspondent, WEWO; Natural Resources Ranger</positionName>
+            <electronicMailAddress>zachary.lunn@ncparks.gov</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>Weymouth Woods Sandhills Nature Preserve is a unique window onto the longleaf pine forests that once covered millions of acres in the southeastern U.S. The towering pines &amp;ndash; some of them hundreds of years old &amp;ndash; tower over expanses of wiregrass and rare and intriguing species, including the red-cockaded woodpecker, pine barrens tree frog, bog spicebush, fox squirrel and myriad wildflowers. A network of short, easy trails provides an outdoor classroom for ranger-led hikes that teach about this ecology or for quiet contemplation. With limited understory, the forest is a natural theater for birding and viewing wildlife. The visitor center&amp;rsquo;s museum-quality exhibits explore the longleaf forest, its flora and fauna and its unique history.</para>
+        </abstract>
+        <intellectualRights>
+            <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Zero v1.0 Universal</licenseName>
+            <url>https://spdx.org/licenses/CC0-1.0.html</url>
+            <identifier>CC0-1.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://sernecportal.org/portal/content/dwca/WEWO_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>Weymouth Woods Sandhills Nature Preserve Herbarium</organizationName>
+            <electronicMailAddress>zachary.lunn@ncparks.gov</electronicMailAddress>
+            <onlineUrl>https://www.ncparks.gov/weymouth-woods-sandhills-nature-preserve</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:40Z</dateStamp>
+                <citation>Weymouth Woods Sandhills Nature Preserve (2026). Weymouth Woods Sandhills Nature Preserve Herbarium. Occurrence dataset https://doi.org/10.15468/6v5ww4 accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

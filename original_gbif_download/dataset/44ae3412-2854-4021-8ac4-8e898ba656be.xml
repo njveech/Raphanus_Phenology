@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="44ae3412-2854-4021-8ac4-8e898ba656be"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/puyrj8</alternateIdentifier>
+        <alternateIdentifier>https://cch2.org/portal/collections/misc/collprofiles.php?collid=38</alternateIdentifier>
+        <alternateIdentifier>http://cch2.org/portal/collections/misc/collprofiles.php?collid=38</alternateIdentifier>
+        <alternateIdentifier>http://www.portal.capturingcaliforniasflowers.org/portal/collections/misc/collprofiles.php?collid=38</alternateIdentifier>
+        <title>FSC - Fresno State Herbarium</title>
+        <creator>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <surName>Dr. Katherine Waselkov</surName>
+            </individualName>
+            <electronicMailAddress>kwaselkov@csufresno.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The geographical specialty of the FSC is Fresno County and parts of surrounding Inyo, Kern, Madera, Mono, and Tulare Counties: including the Sierra Nevada mountains, the San Joaquin Valley, and the Mojave Desert. About nine-tenths of the accessioned collection, or 31,500 specimens, is from California, with the remaining tenth from other states and countries. We estimate that half of the California collections are from high Sierra Nevada ecosystems (above 7000 feet), as this was Quibell&amp;rsquo;s focal collecting area. The other half of the collection represents the San Joaquin Valley itself, including riverine ecosystems, vernal pools, and agricultural ecosystems; the western Diablo Range region between Panoche and Coalinga; and the eastern slope of the Sierra Nevada, including the northern extent of the Mojave Desert. There is no particular taxonomic speciality among vascular plants, and only about ~100 of the specimens are federally or state listed as rare, threatened, or endangered (representing 29 taxa). Collectors who frequently contributed to the FSC collection: Charles H. Quibell (founder of the herbarium in 1925 and Fresno State biology professor); John &amp;#34;Jack&amp;#34; Springer, a USFS employee whose private herbarium of 1930s California grass collections was donated to FSC; Rimo C. Bacigalupi, first curator of the Jepson Herbarium, with collections from the 1950s and 1960s; Philip A. Munz from Rancho Santa Ana Botanic Garden and Pomona College, who collected in the 1920s-1950s and provided many of the FSC specimen determinations for specimens collected by Charles H. Quibell; John &amp;ldquo;Jack&amp;rdquo; Rockwell, who collected in the Fresno area in the mid-20th century and whose specimens are almost entirely confined to FSC; and John H. Weiler, FSC Herbarium curator and Scrophulariaceae specialist.</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://cch2.org/portal/content/dwca/FSC_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>FSC - Fresno State Herbarium</organizationName>
+            <phone>(559) 278-2559</phone>
+            <electronicMailAddress>kwaselkov@csufresno.edu</electronicMailAddress>
+            <onlineUrl>https://waselkovlab.com/herbarium/</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:51Z</dateStamp>
+                <citation>California State University, Fresno Herbarium (2026). FSC - Fresno State Herbarium. Occurrence dataset https://doi.org/10.15468/puyrj8 accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

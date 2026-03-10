@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="ffe1030d-42d1-4bb5-8400-1123cc859a5a"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/e9zucc</alternateIdentifier>
+        <alternateIdentifier>ffe1030d-42d1-4bb5-8400-1123cc859a5a</alternateIdentifier>
+        <alternateIdentifier>https://bison.usgs.gov/ipt/resource?r=mohonk-preserve-dsrc-herbarium</alternateIdentifier>
+        <title>Mohonk Preserve Herbarium</title>
+        <creator>
+            <individualName>
+                <givenName>Alexis</givenName>
+                <surName>Garretson</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Research Associate</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>alexis.garretson@tufts.edu</electronicMailAddress>
+            <onlineUrl>http://www.alexisgarretson.com</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-7260-0131</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Jordan</givenName>
+                <surName>Williams</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Digitization Technician</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-8480-2478</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Penelope</givenName>
+                <surName>Adler-Colvin</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Community Science Coordinator</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0001-7508-0410</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Megan</givenName>
+                <surName>Napoli</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Research Ecologist</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>mnapoli@mohonkpreserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0003-2390-6545</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Natalie</givenName>
+                <surName>Feldsine</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Research Collection and Citizen Science Coordinator</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0003-4331-3042</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Elizabeth</givenName>
+                <surName>Long</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Former Director of Conservation Science</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-7410-5548</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Julia</givenName>
+                <surName>Solomon</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Director of Conservation Programs</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>jsolomon@mohonkpreserve.org</electronicMailAddress>
+        </creator>
+        <creator>
+            <individualName>
+                <surName>Mohonk Preserve</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Organization</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <onlineUrl>https://www.mohonkpreserve.org/</onlineUrl>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Daniel</givenName>
+                <surName>Smiley</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Ecosystem Ecologist, Posthumous Attribution</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <country>UNITED_STATES</country>
+            </address>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Paul</givenName>
+                <surName>Huth</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Director of Research Emeritus</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <country>UNITED_STATES</country>
+            </address>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Alexis</givenName>
+                <surName>Garretson</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Research Associate</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>alexis.garretson@tufts.edu</electronicMailAddress>
+            <onlineUrl>https://alexis-catherine.github.io/</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-7260-0131</userId>
+        </metadataProvider>
+        <metadataProvider>
+            <individualName>
+                <givenName>Jordan</givenName>
+                <surName>Williams</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Digitization Technician</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-8480-2478</userId>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Alexis</givenName>
+                <surName>Garretson</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Research Associate</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>alexis.garretson@tufts.edu</electronicMailAddress>
+            <onlineUrl>http://www.alexisgarretson.com</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-7260-0131</userId>
+            <role>USER</role>
+        </associatedParty>
+        <pubDate>
+                2023-01-03
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            Mohonk Preserve Herbarium housed at Mohonk Preserve is comprised of more than 3,000 specimens collected from the Northeastern United States, primarily on Mohonk Preserve land.  The data and natural history collections support the Preserve’s land management and stewardship activities and our educational programming. The collections are also frequently used in research on climate change, biodiversity, bird migration, and human impact on the environment. Conservation Science staff and volunteers are working to digitize the collections by producing high-resolution images of the specimens, transcribing label and card data, and uploading the information to online, open-access data repositories. Digitizing the collections and making them available via multiple online portals helps us to support new research on a variety of scientific topics, including phenology and species responses to climate change.
+        </abstract>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Zero v1.0 Universal</licenseName>
+            <url>https://spdx.org/licenses/CC0-1.0.html</url>
+            <identifier>CC0-1.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="information">https://neherbaria.org/portal/collections/misc/collprofiles.php?collid=63</url>
+            </online>
+        </distribution>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://ipt.gbif.us/archive.do?r=mohonk-preserve-dsrc-herbarium</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>Specimens were collected in the Northeastern United States, primarily in the vicinity of Mohonk Preserve</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-77.187</westBoundingCoordinate>
+                    <eastBoundingCoordinate>-69.529</eastBoundingCoordinate>
+                    <northBoundingCoordinate>44.452</northBoundingCoordinate>
+                    <southBoundingCoordinate>40.008</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>                1924-06-01
+</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>                2022-10-18
+</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+        </coverage>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Alexis</givenName>
+                <surName>Garretson</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Research Associate</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>8452550919</phone>
+            <electronicMailAddress>alexis.garretson@tufts.edu</electronicMailAddress>
+            <onlineUrl>http://www.alexisgarretson.com</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-7260-0131</userId>
+        </contact>
+        <contact>
+            <individualName>
+                <surName>Mohonk Preserve</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Staff</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <electronicMailAddress>research@mohonkpreserve.org</electronicMailAddress>
+            <onlineUrl>https://www.mohonkpreserve.org/</onlineUrl>
+        </contact>
+        <contact>
+            <individualName>
+                <givenName>Julia</givenName>
+                <surName>Solomon</surName>
+            </individualName>
+            <organizationName>Mohonk Preserve</organizationName>
+            <positionName>Director of Conservation Programs</positionName>
+            <address>
+                <deliveryPoint>PO Box 715</deliveryPoint>
+                <city>New Paltz</city>
+                <administrativeArea>New York</administrativeArea>
+                <postalCode>12561</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <electronicMailAddress>jsolomon@mohonkpreserve.org</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:41Z</dateStamp>
+                <citation>Garretson A, Williams J, Adler-Colvin P, Napoli M, Feldsine N, Long E, Solomon J, Mohonk Preserve, Smiley D, Huth P (2023). Mohonk Preserve Herbarium. Mohonk Preserve. Occurrence dataset https://doi.org/10.15468/e9zucc accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

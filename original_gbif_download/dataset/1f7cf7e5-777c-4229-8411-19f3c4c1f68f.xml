@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="1f7cf7e5-777c-4229-8411-19f3c4c1f68f"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/5dr8pp</alternateIdentifier>
+        <alternateIdentifier>1f7cf7e5-777c-4229-8411-19f3c4c1f68f</alternateIdentifier>
+        <alternateIdentifier>https://ipt.pnwherbaria.org/resource?r=cocc</alternateIdentifier>
+        <title>Central Oregon Community College</title>
+        <creator>
+            <individualName>
+                <givenName>Cindy</givenName>
+                <surName>Roche</surName>
+            </individualName>
+            <organizationName>Central Oregon Community College</organizationName>
+            <positionName>Curator</positionName>
+            <address>
+                <city>Bend</city>
+                <administrativeArea>Oregon</administrativeArea>
+                <country>UNITED_STATES</country>
+            </address>
+            <electronicMailAddress>cindy.talbot.roche@gmail.com</electronicMailAddress>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>David</givenName>
+                <surName>Giblin</surName>
+            </individualName>
+            <organizationName>University of Washington</organizationName>
+            <positionName>Collections Manager</positionName>
+            <address>
+                <deliveryPoint>Box 355325</deliveryPoint>
+                <city>Seattle</city>
+                <administrativeArea>Washington</administrativeArea>
+                <postalCode>98195-5325</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>206-543-1682</phone>
+            <electronicMailAddress>dgiblin@uw.edu</electronicMailAddress>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>David</givenName>
+                <surName>Giblin</surName>
+            </individualName>
+            <electronicMailAddress>dgiblin@uw.edu</electronicMailAddress>
+            <role>USER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-01
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>Vascular plants of Central Oregon Community College.</para>
+        </abstract>
+        <keywordSet>
+            <keyword>Occurrence</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Specimen</keyword>
+            <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://ipt.pnwherbaria.org/archive.do?r=cocc</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>N/A</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-180</westBoundingCoordinate>
+                    <eastBoundingCoordinate>180</eastBoundingCoordinate>
+                    <northBoundingCoordinate>90</northBoundingCoordinate>
+                    <southBoundingCoordinate>-90</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <taxonomicCoverage>
+                <generalTaxonomicCoverage>Vascular plants of the Central Oregon Community College.</generalTaxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankName>Kingdom</taxonRankName>
+                    <taxonRankValue>Plantae</taxonRankValue>
+                </taxonomicClassification>
+            </taxonomicCoverage>
+        </coverage>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>monthly</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>David</givenName>
+                <surName>Giblin</surName>
+            </individualName>
+            <organizationName>University of Washington</organizationName>
+            <positionName>Collections Manager</positionName>
+            <address>
+                <deliveryPoint>Box 355325</deliveryPoint>
+                <city>Seattle</city>
+                <administrativeArea>Washington</administrativeArea>
+                <postalCode>98195-5325</postalCode>
+                <country>UNITED_STATES</country>
+            </address>
+            <phone>206-543-1682</phone>
+            <electronicMailAddress>dgiblin@uw.edu</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:40Z</dateStamp>
+                <citation>Roche C, Giblin D (2026). Central Oregon Community College. Version 1.35. Consortium of Pacific Northwest Herbaria. Occurrence dataset https://doi.org/10.15468/5dr8pp accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

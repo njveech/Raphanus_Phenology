@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="537ff82a-c75f-4d73-af52-9e6c93857850"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/nscqkd</alternateIdentifier>
+        <alternateIdentifier>https://sernecportal.org/portal/collections/misc/collprofiles.php?collid=294</alternateIdentifier>
+        <title>West Virginia Wesleyan College, George B. Rossbach Herbarium</title>
+        <creator>
+            <organizationName>SERNEC Portal</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>SERNEC Portal</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <surName>Dr. Katharine B. Gregg</surName>
+            </individualName>
+            <electronicMailAddress>gregg@wvwc.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The George B. Rossbach Herbarium, established ca. 1950, is housed in the Department of Biology, Christopher Hall of Science of West Virginia Wesleyan College. The physical collection consists of over 25,000 specimens, the lifework of Dr. George Bowyer Rossbach (1910-2002). Dr. Rossbach collected primarily from West Virginia and Maine but also from elsewhere in the northeastern and southeastern United States, the western United States, Canada, Mexico, Costa Rica, and the Galapagos Islands and, as a teenager, in Massachusetts and Maine. Also present are orchid vouchers, some specimens from the central north coast of Jamaica, and other collections by Dr. Katharine B. Gregg, along with various student collections, primarily from West Virginia. In addition, there are numerous specimens from elsewhere in United States obtained through trading with other US herbaria and as gifts from Southern Appalachian Botanical Club. Dr. George B. Rossbach taught biology at West Virginia Wesleyan College from 1949-1976. From 1960 through his retirement in 1976, Dr. Rossbach was the Curator of the Herbarium. After his death, the herbarium was named the George B. Rossbach Herbarium in his honor. It is listed in Index Herbariorum (code WVW) and in the BioDiversity Collections Index. Dr. Katharine Gregg, the current curator, is now digitizing, imaging, and sharing this collection through a grant from the West Virginia Higher Education Policy Commission Division of Science and Research. As the specimens are databased and imaged they are bing made available through &amp;ldquo;Pages in Time&amp;rdquo; from the Annie Merner Pfeiffer Library, SERNEC, andiDigBio. Databasing uses software shared by the herbarium staff of Eastern Kentucky University. The virtual herbarium uses CONTENTdm, a digital content management software system, supported by OCLC (the Online Computer Library Center), Dublin, OH.</para>
+        </abstract>
+        <intellectualRights>
+            <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Zero v1.0 Universal</licenseName>
+            <url>https://spdx.org/licenses/CC0-1.0.html</url>
+            <identifier>CC0-1.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://sernecportal.org/portal/content/dwca/WVW_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>West Virginia Wesleyan College, George B. Rossbach Herbarium</organizationName>
+            <electronicMailAddress>gregg@wvwc.edu</electronicMailAddress>
+            <onlineUrl>http://cdm16111.contentdm.oclc.org/cdm/landingpage/collection/p15135coll5</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:51Z</dateStamp>
+                <citation>West Virginia Wesleyan College (2026). West Virginia Wesleyan College, George B. Rossbach Herbarium. Occurrence dataset https://doi.org/10.15468/nscqkd accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

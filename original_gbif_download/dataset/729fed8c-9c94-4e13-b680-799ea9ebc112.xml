@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="729fed8c-9c94-4e13-b680-799ea9ebc112"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/h434q4</alternateIdentifier>
+        <alternateIdentifier>https://biodiverse-nb.ca/portal/collections/misc/collprofiles.php?collid=13</alternateIdentifier>
+        <title>New Brunswick Museum - Vascular Plants</title>
+        <creator>
+            <organizationName>New Brunswick Museum Collections</organizationName>
+            <electronicMailAddress>gregor.jongsma@gmail.com</electronicMailAddress>
+            <onlineUrl>https://biodiverse-nb.ca/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>New Brunswick Museum Collections</organizationName>
+            <electronicMailAddress>gregor.jongsma@gmail.com</electronicMailAddress>
+            <onlineUrl>https://biodiverse-nb.ca/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Alfredo</givenName>
+                <surName>Justo</surName>
+            </individualName>
+            <positionName>Curator</positionName>
+            <electronicMailAddress>Alfredo.Justo@nbm-mnb.ca</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Amanda</givenName>
+                <surName>Bremner</surName>
+            </individualName>
+            <positionName>Coordinator and Research Technician</positionName>
+            <electronicMailAddress>Amanda.Bremner@nbm-mnb.ca</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2024-01-30
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            The herbarium of the New Brunswick Museum (NBM) is a systematic collection of specimens documenting the diversity, distribution, historical occurrence, and habitats of the plants and fungi of New Brunswick and northeastern North America. It is an invaluable resource for scientific research, reference, and education. The nucleus of the herbarium is a collection of several thousand specimens assembled by members of the Natural History Society of New Brunswick, beginning in the early 1860s. Especially noteworthy among this material are collections made by James Fowler (1829-1923), author of the first catalogue of the provincial flora, and by George Upham Hay (1843-1913), a versatile early contributor to knowledge of New Brunswick’s vascular plants, marine algae, and fungi.  In recent years, the geographic and taxonomic scope of the collections has expanded considerably. This growth has stemmed in part from fieldwork by New Brunswick Museum staff and associates, and in part from donations, exchanges, and purchases. The vascular plant collection remains one of the main sources of documentation for the vascular flora of New Brunswick.
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://biodiverse-nb.ca/portal/content/dwca/NBM-VP_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>New Brunswick Museum - Vascular Plants</organizationName>
+            <electronicMailAddress>Alfredo.Justo@nbm-mnb.ca</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:41Z</dateStamp>
+                <citation>New Brunswick Museum (2024). New Brunswick Museum - Vascular Plants. Occurrence dataset https://doi.org/10.15468/h434q4 accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

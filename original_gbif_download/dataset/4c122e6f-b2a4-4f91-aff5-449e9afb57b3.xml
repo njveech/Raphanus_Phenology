@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="4c122e6f-b2a4-4f91-aff5-449e9afb57b3"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/33k42a</alternateIdentifier>
+        <alternateIdentifier>https://cch2.org/portal/collections/misc/collprofiles.php?collid=34</alternateIdentifier>
+        <alternateIdentifier>https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=34</alternateIdentifier>
+        <title>LA - University of California, Los Angeles Herbarium</title>
+        <creator>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Anthony</givenName>
+                <surName>Baniaga</surName>
+            </individualName>
+            <positionName>Curator</positionName>
+            <electronicMailAddress>abaniaga@ucla.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The UCLA Herbarium (LA) was founded in ca. 1930, and contains approximately 150,000 specimens, almost entirely dried vascular plants. The herbarium contains collections of notable UCLA biologists such as A. M. Johnson, Carl C. Epling, Margaret and Harlan Lewis, Peter H. Raven, Martin L. Cody, Henry J. Thompson, Jonathan Sauer, Joseph Andorfer Ewan, Elizabeth McClintock, Mildred E. Mathias, Lawrence L. Kiefer, Barbara Joe Hoshizaki and Barry A. Prigge. The core of the collection contains specimens collected between 1920-1970 from North America (75%), South America (13%), Asia &amp;amp; the Pacific (10%), Europe (1%), and Africa (1%). The UCLA Herbarium also maintains a Santa Monica Mountains Collection and Los Angeles Basin (ca. 12,000 specimens), a Baja California Collection (ca. 4,000 specimens), a Type Collection (500 specimens), and a collection of cultivated plants from 1900-1960 West Los Angeles (ca. 8,000 specimens). Additional collection strengths include the Crassulaceae, Lamiaceae, Loasaceae, and Onagraceae clades.</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://cch2.org/portal/content/dwca/LA_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>LA - University of California, Los Angeles Herbarium</organizationName>
+            <electronicMailAddress>abaniaga@ucla.edu</electronicMailAddress>
+            <onlineUrl>https://sites.lifesci.ucla.edu/eeb-herbarium</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:49Z</dateStamp>
+                <citation>UCLA Herbarium (2026). LA - University of California, Los Angeles Herbarium. Occurrence dataset https://doi.org/10.15468/33k42a accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

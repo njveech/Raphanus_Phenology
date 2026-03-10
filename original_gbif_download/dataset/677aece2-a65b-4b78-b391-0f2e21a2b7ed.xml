@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="677aece2-a65b-4b78-b391-0f2e21a2b7ed"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/24chj5</alternateIdentifier>
+        <alternateIdentifier>https://cch2.org/portal/collections/misc/collprofiles.php?collid=4</alternateIdentifier>
+        <title>PUA - Pacific Union College Herbarium</title>
+        <creator>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Aimee</givenName>
+                <surName>Wyrick</surName>
+            </individualName>
+            <positionName>Director and Curator</positionName>
+            <electronicMailAddress>awyrick@puc.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>Specialty: Vascular plants of coastal regions from San Francisco Bay to southern Oregon; Napa County, California; Klamath Mountains; Arizona; Nevada. Date Founded: 1967</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://cch2.org/portal/content/dwca/PUA_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>PUA - Pacific Union College Herbarium</organizationName>
+            <electronicMailAddress>awyrick@puc.edu</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:39Z</dateStamp>
+                <citation>Pacific Union College (2026). PUA - Pacific Union College Herbarium. Occurrence dataset https://doi.org/10.15468/24chj5 accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

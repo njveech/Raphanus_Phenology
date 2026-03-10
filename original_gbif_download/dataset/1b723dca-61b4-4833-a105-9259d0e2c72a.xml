@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="1b723dca-61b4-4833-a105-9259d0e2c72a"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/6qssph</alternateIdentifier>
+        <alternateIdentifier>https://sernecportal.org/portal/collections/misc/collprofiles.php?collid=148</alternateIdentifier>
+        <title>Arkansas Tech University Herbarium</title>
+        <creator>
+            <organizationName>SERNEC Portal</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>SERNEC Portal</organizationName>
+            <electronicMailAddress>hbrown@mailbox.sc.edu</electronicMailAddress>
+            <onlineUrl>https://sernecportal.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Diana</givenName>
+                <surName>Soteropoulos</surName>
+            </individualName>
+            <positionName>Arkansas Herbarium Digitization Coordinator</positionName>
+            <electronicMailAddress>diana_soteropoulos@natureserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-4247-1375</userId>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>APCR comprises approx. 22000 specimens, concentrating on the flora of Arkansas, especially the Interior Highlands. Important collectors whose material is housed in the collection include Maxine Clark, Richard Davis, Delzie Demaree, Dwight M. Moore, E.J. Palmer, and Gary Tucker. The emphasis of our work is the Vascular Flora of Arkansas Project.</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://sernecportal.org/portal/content/dwca/APCR_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>Arkansas Tech University Herbarium</organizationName>
+            <electronicMailAddress>diana_soteropoulos@natureserve.org</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0002-4247-1375</userId>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:52Z</dateStamp>
+                <citation>Arkansas Tech University Herbarium (2026). Arkansas Tech University Herbarium. Occurrence dataset https://doi.org/10.15468/6qssph accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

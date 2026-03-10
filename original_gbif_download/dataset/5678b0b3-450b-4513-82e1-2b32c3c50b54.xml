@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="5678b0b3-450b-4513-82e1-2b32c3c50b54"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.5886/wrt547hq</alternateIdentifier>
+        <alternateIdentifier>https://data.canadensys.net/ipt/resource?r=lea-specimens</alternateIdentifier>
+        <alternateIdentifier>http://data.canadensys.net/ipt/resource?r=lea-specimens</alternateIdentifier>
+        <alternateIdentifier>http://data.canadensys.net/ipt-2.3.2/resource?r=lea-specimens</alternateIdentifier>
+        <alternateIdentifier>10.15468/c3ta4n</alternateIdentifier>
+        <alternateIdentifier>http://data.canadensys.net/ipt/resource.do?r=lea-specimens</alternateIdentifier>
+        <alternateIdentifier>5678b0b3-450b-4513-82e1-2b32c3c50b54</alternateIdentifier>
+        <title>University of Lethbridge Herbarium (LEA)</title>
+        <creator>
+            <individualName>
+                <givenName>John</givenName>
+                <surName>Bain</surName>
+            </individualName>
+            <organizationName>University of Lethbridge</organizationName>
+            <positionName>Director</positionName>
+            <address>
+                <deliveryPoint>4401 University Drive</deliveryPoint>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-380-1827</phone>
+            <electronicMailAddress>bain@uleth.ca</electronicMailAddress>
+            <onlineUrl>http://scholar.ulethbridge.ca/bain/pages/home</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>John</givenName>
+                <surName>Bain</surName>
+            </individualName>
+            <organizationName>University of Lethbridge</organizationName>
+            <positionName>Director</positionName>
+            <address>
+                <deliveryPoint>4401 University Drive</deliveryPoint>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-380-1827</phone>
+            <electronicMailAddress>bain@uleth.ca</electronicMailAddress>
+            <onlineUrl>http://scholar.ulethbridge.ca/bain/pages/home</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>John</givenName>
+                <surName>Bain</surName>
+            </individualName>
+            <organizationName>University of Lethbridge</organizationName>
+            <positionName>Director</positionName>
+            <address>
+                <deliveryPoint>4401 University Drive</deliveryPoint>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-380-1827</phone>
+            <electronicMailAddress>bain@uleth.ca</electronicMailAddress>
+            <onlineUrl>http://scholar.ulethbridge.ca/bain/pages/home</onlineUrl>
+            <role>PRINCIPAL_INVESTIGATOR</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Jacob</givenName>
+                <surName>Cameron</surName>
+            </individualName>
+            <organizationName>University of Lethbridge Library</organizationName>
+            <positionName>Information systems - Technical Specialist</positionName>
+            <address>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-329-2756</phone>
+            <electronicMailAddress>jacob.cameron@uleth.ca</electronicMailAddress>
+            <role>CUSTODIAN_STEWARD</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Joanne</givenName>
+                <surName>Golden</surName>
+            </individualName>
+            <organizationName>University of Lethbridge</organizationName>
+            <positionName>Curator</positionName>
+            <address>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-317-5035</phone>
+            <electronicMailAddress>joanne.golden@uleth.ca</electronicMailAddress>
+            <role>CURATOR</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Jacob</givenName>
+                <surName>Cameron</surName>
+            </individualName>
+            <organizationName>University of Lethbridge Library</organizationName>
+            <positionName>Information systems - Technical Specialist</positionName>
+            <address>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-329-2756</phone>
+            <electronicMailAddress>jacob.cameron@uleth.ca</electronicMailAddress>
+            <role>PROGRAMMER</role>
+        </associatedParty>
+        <associatedParty>
+            <organizationName>University of Lethbridge</organizationName>
+            <address>
+                <deliveryPoint>4401 University Drive</deliveryPoint>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <role>PUBLISHER</role>
+        </associatedParty>
+        <pubDate>
+                2023-04-18
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            The University of Lethbridge Herbarium was founded shortly after 1968 by Job Kuijt, primarily as a teaching collection representative of the local flora. The herbarium houses the reference collection that forms the foundation for Kuijt&amp;#39;s 1982 book A Flora of Waterton Lakes National Park and also numerous Packera collections by J.F. Bain.  The collection currently includes over 20,000 specimens of vascular plants and remains an important research tool for botanists, students and the general public.
+        </abstract>
+        <keywordSet>
+            <keyword>Canada</keyword>
+            <keyword>herbarium</keyword>
+            <keyword>Alberta</keyword>
+            <keyword>Packera</keyword>
+            <keyword>Waterton Lakes National Park</keyword>
+            <keyword>LEA</keyword>
+            <keyword>specimens</keyword>
+            <keyword>collection</keyword>
+            <keyword>Canadensys</keyword>
+            <keyword>University of Lethbridge herbarium</keyword>
+            <keyword>Consortium of Pacific Northwest Herbaria</keyword>
+            <keyword>University of Lethbridge</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+        </keywordSet>
+        <keywordSet>
+            <keyword>Specimen</keyword>
+            <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Zero v1.0 Universal</licenseName>
+            <url>https://spdx.org/licenses/CC0-1.0.html</url>
+            <identifier>CC0-1.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="information">http://digitallibrary.uleth.ca/cdm/landingpage/collection/herbarium</url>
+            </online>
+        </distribution>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://data.canadensys.net/ipt/archive.do?r=lea-specimens</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>most specimens are part of the local southern Alberta flora, especially the flora of Waterton Lakes National Park.  Limited coverage of western North America</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>-136.56</westBoundingCoordinate>
+                    <eastBoundingCoordinate>-104.26</eastBoundingCoordinate>
+                    <northBoundingCoordinate>62.85</northBoundingCoordinate>
+                    <southBoundingCoordinate>33.26</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <taxonomicCoverage>
+                <generalTaxonomicCoverage>vascular plants</generalTaxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankValue>Tracheophyta</taxonRankValue>
+                    <commonName>Tracheophytes</commonName>
+                </taxonomicClassification>
+            </taxonomicCoverage>
+        </coverage>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>John</givenName>
+                <surName>Bain</surName>
+            </individualName>
+            <organizationName>University of Lethbridge</organizationName>
+            <positionName>Director</positionName>
+            <address>
+                <deliveryPoint>4401 University Drive</deliveryPoint>
+                <city>Lethbridge</city>
+                <administrativeArea>Alberta</administrativeArea>
+                <postalCode>T1K 3M4</postalCode>
+                <country>CANADA</country>
+            </address>
+            <phone>403-380-1827</phone>
+            <electronicMailAddress>bain@uleth.ca</electronicMailAddress>
+            <onlineUrl>http://scholar.ulethbridge.ca/bain/pages/home</onlineUrl>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <para>not applicable</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>digitization of all specimens from the University of Lethbridge herbarium (LEA).</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>All sheets were photographed and label data manually digitized from sheet photos.</para>
+                </samplingDescription>
+            </sampling>
+        </methods>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:50Z</dateStamp>
+                <citation identifier="doi:10.5886/wrt547hq">Bain J (2023). University of Lethbridge Herbarium (LEA). Version 7.0. University of Lethbridge. Occurrence dataset https://doi.org/10.5886/wrt547hq accessed via GBIF.org on 2026-01-16.</citation>
+                <physical>
+                    <objectName>U. of L. Herbarium and Plant Resources</objectName>
+                    <characterEncoding>UTF-8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>HTML</formatName>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">http://scholar.ulethbridge.ca/bain/pages/home</url>
+                        </online>
+                    </distribution>
+                </physical>
+                <physical>
+                    <objectName>Canadensys Explorer</objectName>
+                    <characterEncoding>UTF-8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>HTML</formatName>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">https://data.canadensys.net/explorer/occurrences/search?q=data_resource_uid%3Adr54#tab_mapView</url>
+                        </online>
+                    </distribution>
+                </physical>
+                <physical>
+                    <objectName>GBIF data portal</objectName>
+                    <characterEncoding>UTF-8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>HTML</formatName>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">http://www.gbif.org/dataset/5678b0b3-450b-4513-82e1-2b32c3c50b54</url>
+                        </online>
+                    </distribution>
+                </physical>
+                <collection>
+                    <parentCollectionIdentifier>not applicable</parentCollectionIdentifier>
+                    <collectionIdentifier>LEA</collectionIdentifier>
+                    <collectionName>University of Lethbridge herbarium</collectionName>
+                </collection>
+                <formationPeriod>1968-current</formationPeriod>
+                <specimenPreservationMethod>DRIED_AND_PRESSED</specimenPreservationMethod>
+                <jgtiCuratorialUnit>
+                    <jgtiUnitType>sheets</jgtiUnitType>
+                    <jgtiUnitRange>
+                        <beginRange>20,000</beginRange>
+                        <endRange>25,000</endRange>
+                    </jgtiUnitRange>
+                </jgtiCuratorialUnit>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="9261ca90-4b88-491d-bcc8-db3470441689"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/fl8uov</alternateIdentifier>
+        <alternateIdentifier>https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=7</alternateIdentifier>
+        <alternateIdentifier>https://cch2.org/portal/collections/misc/collprofiles.php?collid=7</alternateIdentifier>
+        <alternateIdentifier>http://cch2.org/portal/collections/misc/collprofiles.php?collid=7</alternateIdentifier>
+        <title>SCFS - Sagehen Herbarium</title>
+        <creator>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>CCH2 Portal</organizationName>
+            <electronicMailAddress>jyost@calpoly.edu</electronicMailAddress>
+            <onlineUrl>https://cch2.org/portal/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <surName>Faerthen Felix</surName>
+            </individualName>
+            <electronicMailAddress>faerthen@gmail.com</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-01-06
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The Sagehen Herbarium is comprised of two related collections: Flora of the Sagehen Basin (approx. 1600 specimens) and Flora of the North Fork of the American River Headwaters&amp;nbsp;(approx. 200 specimens).&amp;nbsp;Both are designed to be synoptic teaching collections for their respective regions. Sagehen Basin is approximately 9000-acres, encompassing a diverse cross section of the Sierra Nevada from the alpine zone near the Pacific Crest (el. 8500 ft) to the eastern slope approaching the Great Basin (el. 6000 ft). Sagehen&amp;#39;s collection began in 1963. Important collectors and determiners include B. Trowbridge, G. H. True, Jr., W. Savage, E. Krimmel and F. Felix.&amp;nbsp; The 20,000-acre North Fork American River headwaters on the west slope of the Sierra Nevada is comprised of Chickering American River Reserve, North Fork Association Lands, Onion Creek Experimental Forest, other US Forest Service land, and a few other small private in-holdings. It includes habitats such as black oak woodlands, montane and subalpine coniferous forests, aspen groves, willow thickets, mixed riparian woodland, wet and dry subalpine meadows, montane chaparral, alpine lake margins, and fell fields. Major collectors are R. Palmer, B. Corbin, S. Chickering, E. Krimmel, and F. Felix. Flora of the North Fork American River collection began in Summer 2013, with the goal of establishing voucher specimens to document this reserve&amp;#39;s plant list. Both the Sagehen Creek and North Fork American River collections are actively being added to at a rate of 50-300 per field season, including mounting and accessioning of old specimens from 1963-1981. E. Krimmel updated the collection taxonomy in May, 2011. With the release of TJM2, A. Gallandt (2018) and F. Felix (2020) updated the collection again. Collection imaged by E. Krimmel and F. Felix at Cal Poly&amp;#39;s Hoover Herbarium (2019-2021). Georeferenced by F. Felix (2016, 2020). Info: https://bit.ly/2ULvfTs</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://cch2.org/portal/content/dwca/SCFS_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>SCFS - Sagehen Herbarium</organizationName>
+            <electronicMailAddress>faerthen@gmail.com</electronicMailAddress>
+            <onlineUrl>http://sagehen.ucnrs.org</onlineUrl>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:48Z</dateStamp>
+                <citation>Sagehen Creek Field Station (2026). SCFS - Sagehen Herbarium. Occurrence dataset https://doi.org/10.15468/fl8uov accessed via GBIF.org on 2026-01-16.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

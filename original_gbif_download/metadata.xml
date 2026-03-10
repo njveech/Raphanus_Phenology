@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="82cd02dd-22b5-4e59-b3b9-eded2fde28ce"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <title>GBIF Occurrence Download 0015578-260108223611665</title>
+        <creator>
+            <individualName>
+                <surName>GBIF Download Service</surName>
+            </individualName>
+            <electronicMailAddress>support@gbif.org</electronicMailAddress>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <surName>GBIF Download Service</surName>
+            </individualName>
+            <electronicMailAddress>support@gbif.org</electronicMailAddress>
+        </metadataProvider>
+        <pubDate>
+                2026-01-16
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            A dataset containing all occurrences available in GBIF matching the query:
+{
+  "and" : [
+    "BasisOfRecord is Specimen",
+    "Country is United States of America",
+    "OccurrenceStatus is Present",
+    "TaxonKey is Raphanus"
+  ]
+}
+The dataset includes records from the following constituent datasets. The full metadata for each constituent is also included in this archive:
+6 records from College of Idaho Herbarium
+7 records from University of British Columbia Herbarium (UBC) - Vascular Plant Collection
+14 records from World Plant Specimen from the Herbaria in China
+6 records from Plant Resources Center
+52 records from University of Vermont, Pringle Herbarium
+92 records from University of Louisiana at Monroe Herbarium, R. Dale Thomas Collection
+6 records from Linfield College Herbarium Vascular Plants
+62 records from Albion R. Hodgdon Herbarium, University of New Hampshire
+4 records from Western Carolina University Herbarium
+1 records from Silver Bluff Audubon Center Herbarium
+6 records from Putnam Museum and Science Center
+3 records from Berea College, Ralph L. Thompson Herbarium
+9 records from Michigan State University
+54 records from CHSC - Ahart Herbarium, CSU Chico - Vascular Plants
+3 records from Montana State University Herbarium
+5 records from North Cascades National Park (USA) Herbarium Vascular Plants
+28 records from MACF - MacFadden Herbarium, California State University Fullerton
+61 records from IRVC - University of California, Irvine Herbarium
+11 records from Southern Oregon University Herbarium
+5 records from Tall Timbers Research Station and Land Conservancy
+1 records from MBM - Herbário do Museu Botânico Municipal
+5 records from Longwood University, Harvill-Stevens Herbarium
+74 records from UCSC Herbarium - Kenneth S. Norris Center for Natural History, University of California Santa Cruz
+2 records from Auckland Museum Botany Collection
+3 records from Hope College
+97 records from SBBG - Clifton Smith Herbarium, Santa Barbara Botanic Garden
+3 records from Angelo State University Herbarium
+6 records from Lynchburg College, Ramsey-Freer Herbarium
+6 records from Western Illinois University, ​R. M. Myers Herbarium
+2 records from University of Cincinnati, Margaret H. Fulford Herbarium - Vascular Plants
+14 records from University of Mississippi, Thomas M. Pullen Herbarium
+10 records from Indiana University Herbarium, Deam Herbarium
+3 records from SP - Herbário do Estado "Maria Eneyda P. Kaufmann Fidalgo" - Coleção de Fanerógamas
+4 records from Pacific Northwest Herbarium (Western Washington University, Washington, USA)
+95 records from UCSB - University of California Santa Barbara Herbarium
+2 records from Lord Fairfax Community College Herbarium
+17 records from PUA - Pacific Union College Herbarium
+6 records from Intermountain Herbarium (Vasc. &amp; Algae)
+22 records from Brigham Young University, S. L. Welsh Herbarium
+69 records from University of South Carolina, A. C. Moore Herbarium Vascular Plant Collection
+18 records from Deaver Herbarium (Northern Arizona University)
+1 records from NCSM Herbarium Collection
+2 records from University of Wisconsin - Eau Claire Herbarium
+10 records from Idaho State University, Ray J. Davis Herbarium Vascular Plants
+1 records from Tasmanian Herbarium (HO) AVH data
+348 records from Harvard University Herbaria: All Records
+1 records from Central Oregon Community College
+5 records from UAM Herbarium (ALA), Vascular Plant Collection (Arctos)
+2 records from Weymouth Woods Sandhills Nature Preserve Herbarium
+8 records from University of Arkansas Herbarium
+1 records from IPA - Herbário - IPA Dárdano de Andrade Lima
+62 records from CDA - California Department of Food and Agriculture
+1 records from SANT Herbarium vascular plants collection
+32 records from Botany Division, Yale Peabody Museum
+27 records from Delaware State University, Claude E. Phillips Herbarium
+14 records from Appalachian State University, I. W. Carpenter, Jr. Herbarium
+1 records from New Brunswick Museum - Vascular Plants
+1 records from Mohonk Preserve Herbarium
+57 records from Oregon State University Vascular Plant Collection
+4 records from Desert Botanical Garden Herbarium
+4 records from Black Hills State University Herbarium
+90 records from Botanical Research Institute of Texas, Philecology Herbarium
+2 records from Marshall University
+7 records from South Dakota State University, C. A. Taylor Herbarium
+10 records from University of Rhode Island Herbarium
+10 records from Bell Museum plants
+1 records from Actualización de las bases de datos de colecciones, especies en peligro de extinción, colecta y propagación de germoplasma
+7 records from Colorado State University, Charles Maurer Herbarium
+14 records from Tennessee Technological University, Hollister Herbarium
+66 records from Wisconsin State Herbarium, Vascular Plants
+6 records from Keene State College Herbarium
+8 records from College of Southern Nevada; Wesley E. Niles Herbarium
+80 records from Louisiana State University, Shirley C. Tucker Herbarium - Vascular Plants
+2 records from East Tennessee State University, John C. Warden Herbarium
+10 records from Staten Island Museum
+2 records from CHAS Botany Collection (Arctos)
+17 records from SFV - California State University, Northridge
+1 records from Natural History Museum (London) Collection Specimens
+89 records from G. S. Torrey Herbarium at the University of Connecticut (CONN)
+2 records from BRI AVH Data and Images
+6 records from Eastern Kentucky University, Ronald L. Jones Herbarium
+8 records from Eastern Illinois University, Stover-Ebinger Herbarium
+90 records from DAV - University of California, Davis Center for Plant Diversity - Vascular Plants
+1 records from Royal BC Museum - Herbarium (V)
+4 records from Erskine College Herbarium
+5 records from CSIC-Real Jardín Botánico-Colección de Plantas Vasculares (MA)
+163 records from University of North Carolina at Chapel Hill Herbarium: Vascular Plants
+3 records from Edinburgh (E) Herbarium Specimens
+3 records from Arkansas Natural Heritage Commission Herbarium
+2 records from University of North Carolina, Asheville
+30 records from University of Washington Herbarium - Vascular Plant Collection
+35 records from Washington State University Marion Ownbey Herbarium
+10 records from Coastal Carolina University Herbarium
+115 records from UCR - University of California, Riverside Herbarium - Vascular Plants
+43 records from Tropicos Specimens Non-MO
+2 records from Morris Arboretum of University of Pennsylvania
+21 records from LOB - California State University, Long Beach Herbarium
+80 records from University of South Florida Herbarium (USF)
+34 records from Bernice P. Bishop Museum
+22 records from SFSU - Vascular Plants of the Harry D. Thiers Herbarium at San Francisco State University
+67 records from The New York Botanical Garden Herbarium (NY)
+17 records from Arizona State University Vascular Plant Herbarium
+18 records from EURISCO, The European Genetic Resources Search Catalogue
+23 records from Old Dominion University Herbarium
+6 records from Chadron State College, High Plains Herbarium
+1 records from UPCB herbarium - Universidade Federal de Paraná - Herbário Virtual REFLORA
+14 records from University of North Carolina at Pembroke Herbarium
+11 records from University of Maryland, Norton-Brown Herbarium
+43 records from Vanderbilt University Herbarium
+3 records from Natural History Museum, Vienna - Herbarium W
+7 records from Mississippi State University
+45 records from William &amp; Mary Herbarium
+1 records from UPCB - Herbário do Departamento de Botânica
+13 records from Digitalización y Sistematización de las Colecciones Biológicas Nacionales del Instituto de Biología, UNAM (Plantas vasculares)
+16 records from Morton Arboretum - Vascular Plants
+68 records from Rutgers University, Chrysler Herbarium
+2 records from University of Wisconsin - Green Bay
+10 records from University of Southern Mississippi Herbarium
+6 records from Pittsburg State University, Theodore M. Sperry Herbarium
+4 records from University of Wisconsin - Whitewater Herbarium
+38 records from Tropicos MO Specimen Data
+2 records from RB - Coleção do Herbário do Jardim Botânico do Rio de Janeiro
+18 records from Naturalis Biodiversity Center (NL) - Botany
+25 records from Mecklenburg County Park and Recreation Herbarium
+27 records from HSC - Humboldt State University Vascular Plant Herbarium
+62 records from Duke University Vascular Plant Collection
+284 records from CAS Botany (BOT)
+2 records from Royal Botanic Gardens, Kew - Herbarium Specimens
+27 records from Robert K. Godfrey Herbarium  at Florida State University
+2 records from University of New Mexico Herbarium
+1 records from SCFS - Sagehen Herbarium
+23 records from University of Nevada, Reno (UNR) Herbarium
+84 records from NMNH Extant Specimen Records (USNM, US)
+1 records from University of Central Arkansas Herbarium
+2 records from University of Puget Sound, Slater Museum Herbarium Vascular Plants
+88 records from Carnegie Museum of Natural History Herbarium
+15 records from University of Idaho, Stillinger Herbarium Vascular Plants
+90 records from The University and Jepson Herbaria -- Vascular Plants
+5 records from Reed College Vascular Plant Herbarium
+76 records from OBI - Robert F. Hoover Herbarium, Cal Poly State University
+20 records from LA - University of California, Los Angeles Herbarium
+268 records from RSA - California Botanic Garden Herbarium
+53 records from Clemson University Herbarium
+2 records from E. C. Smith Herbarium (ACAD)
+2 records from STNF - Shasta-Trinity National Forest Herbarium
+16 records from CSLA - Cal State LA Herbarium
+18 records from Mississippi Museum of Natural Science Herbarium
+55 records from Auburn University, John D. Freeman Herbarium
+18 records from University of Alabama Herbarium
+41 records from Herbarium Pacificum (Bishop Museum)
+33 records from George Mason University, Ted R. Bradley Herbarium
+9 records from Herbarium SUNY Oswego
+18 records from H.A. Stephens Herbarium
+17 records from University of Nebraska State Museum, C.E. Bessey Herbarium
+20 records from UTEP Plants (Arctos)
+37 records from SDSU - Vascular Plants of the San Diego State University Herbarium
+1 records from IAN herbarium - Embrapa Amazônia Oriental - Herbário Virtual REFLORA
+3 records from University of Lethbridge Herbarium (LEA)
+244 records from Academy of Natural Sciences of Drexel University
+4 records from West Virginia Wesleyan College, George B. Rossbach Herbarium
+32 records from University of Michigan Herbarium
+45 records from SHTC - CSU Stanislaus Herbarium
+9 records from Baylor University Herbarium
+16 records from Texas A&amp;M University, S.M. Tracy Herbarium
+6 records from MPM Milwaukee Public Museum Herbarium
+45 records from FSC - Fresno State Herbarium
+1 records from University of Graz, Institute of Plant Sciences - Herbarium GZU
+1 records from George R. Cooley Herbarium
+5 records from Olga Lakela Herbarium, University of Minnesota Duluth
+2 records from Arkansas Tech University Herbarium
+10 records from University of Tennessee, Chattanooga Herbarium
+27 records from North Carolina State University Vascular Plant Herbarium
+1 records from MBM herbarium - Museu Botânico Municipal - Herbário Virtual REFLORA
+1 records from KRA Vascular Plant Collection
+4 records from Kathryn Kalmbach Herbarium
+1 records from Butler University Friesner Herbarium (BUT)
+23 records from Portland State Universtiy Herbarium Vascular Plants
+31 records from University of Colorado Museum of Natural History Herbarium Vascular Plant Collection
+32 records from Washington State University Herbarium
+19 records from Snake River Plain Herbarium (Boise State University, Idaho, USA)
+77 records from University of Georgia Herbarium
+59 records from Muhlenberg College
+7 records from Whitman College Herbarium Vascular Plants
+9 records from MVSC; The James C. Parks Herbarium at Millersville University
+9 records from University of Arkansas at Monticello
+23 records from University of South Carolina Upstate Herbarium
+15 records from Buffalo Society of Natural Sciences Clinton Herbarium
+20 records from West Virginia University Herbarium
+2 records from University of North Texas, Benjamin B. Harris Herbarium
+2 records from Saint Ambrose University Herbarium
+7 records from CSUSB - California State University San Bernardino
+4 records from Indiana University of Pennsylvania, A.G. Shields Herbarium
+11 records from Northern Illinois University Herbarium
+1 records from Campbell University Herbarium
+33 records from R. L. McGregor Herbarium Vascular Plants Collection
+11 records from Fairchild Tropical Botanic Garden (FTG)
+6 records from Meise Botanic Garden Herbarium (BR)
+1 records from Canadian Museum of Nature Herbarium
+61 records from University of Florida Herbarium (FLAS)
+5 records from CATA - Catalina Island Conservancy Herbarium Vascular Plants
+5 records from MCCC - Mendocino College Coast Center Herbarium
+248 records from SD - SD Herbarium, San Diego Natural History Museum
+2 records from University of Northern Colorado Herbarium
+1 records from Marie-Victorin Herbarium (MT) - Plantes vasculaires
+36 records from University of Tennessee Vascular Herbarium
+24 records from Towson University
+3 records from Weber State University Herbarium
+
+        </abstract>
+        <contact>
+            <individualName>
+                <surName>GBIF Download Service</surName>
+            </individualName>
+            <electronicMailAddress>support@gbif.org</electronicMailAddress>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-01-16T22:32:55Z</dateStamp>
+                <citation identifier="0015578-260108223611665">GBIF Occurrence Download 0015578-260108223611665</citation>
+                <physical>
+                    <objectName>Darwin Core Archive</objectName>
+                    <characterEncoding>UTF-8</characterEncoding>
+                    <dataFormat>
+                        <externallyDefinedFormat>
+                            <formatName>Darwin Core Archive</formatName>
+                        </externallyDefinedFormat>
+                    </dataFormat>
+                    <distribution>
+                        <online>
+                            <url function="download">https://api.gbif.org/v1/occurrence/download/request/0015578-260108223611665.zip</url>
+                        </online>
+                    </distribution>
+                </physical>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>
