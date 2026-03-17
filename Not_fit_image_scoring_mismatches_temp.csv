@@ -1,0 +1,182 @@
+gbifID,mismatch_type,removal_locality,removal_verbatimLocality,removal_mediaType,occurrence_locality,occurrence_verbatimLocality,occurrence_mediaType,occurrence_stateProvince,occurrence_county
+4404981149,locality_only,,"Sonoma Valley, along CA Hwy 121, 0.4 mile E of its junction with CA Hwy 116 at Big Bend.",,"Sonoma Valley, along CA Hwy 121, 0.4 mile E of its junction with CA Hwy 116 at Big Bend.",,,California,Sonoma
+4404981144,locality_only,,"Hwy 40 [now I-80 xcorridor], 7 miles N of Vallejo.",,"Hwy 40 [now I-80 xcorridor], 7 miles N of Vallejo.",,,California,Solano
+4404981145,locality_only,,"Los Angeles City, Glenwood Place, South Gate.",,"Los Angeles City, Glenwood Place, South Gate.",,,California,Los Angeles
+4404923182,locality_only,,3 miles E of Oakdale.,,3 miles E of Oakdale.,,,California,Stanislaus
+4404923176,locality_only,,Between Placerville and Plymouth.,,Between Placerville and Plymouth.,,,California,Amador
+4404923171,locality_only,,"[Sierra Nevada,] on Hwy 49, 2 miles W of Nevada City.",,"[Sierra Nevada,] on Hwy 49, 2 miles W of Nevada City.",,,California,Nevada
+4404923173,locality_only,,Chico.,,Chico.,,,California,Butte
+4404923243,locality_only,,10 miles E of Ione.,,10 miles E of Ione.,,,California,Amador
+4404923225,locality_only,,Redding.,,Redding.,,,California,Shasta
+4404923101,locality_only,,Uvas Meadows Road.,,Uvas Meadows Road.,,,California,Santa Clara
+4404922762,locality_only,,"At the end of Mars Lane, just S of Bandon.",,"At the end of Mars Lane, just S of Bandon.",,,Oregon,Coos
+4404922748,locality_only,,"Hammond, Columbia River at the boat basin.",,"Hammond, Columbia River at the boat basin.",,,Oregon,Clatsop
+4404922610,locality_only,,"Along the Willamette River behind the O.S.U. Salmon Disease Lab, 34347 NE Electric Rd, just E of Corvallis.",,"Along the Willamette River behind the O.S.U. Salmon Disease Lab, 34347 NE Electric Rd, just E of Corvallis.",,,Oregon,Linn
+4404922660,locality_only,,"Along Mars Lane by its intersection with Rohrer Road, just S of Bandon.",,"Along Mars Lane by its intersection with Rohrer Road, just S of Bandon.",,,Oregon,Coos
+4404922656,locality_only,,0.5 mile W of Loomis.,,0.5 mile W of Loomis.,,,California,Placer
+4404922641,locality_only,,"Along road, 1 mile W of Fiddletown.",,"Along road, 1 mile W of Fiddletown.",,,California,Amador
+4929790611,locality_only,,"Tualitin River, in an open field, near 150th Street & Beef Bend Rd",,"Tualitin River, in an open field, near 150th Street & Beef Bend Rd",,,Oregon,Washington
+4929777591,locality_only,,"along OR Hwy 126, 4.8 mi E of jct with US Hwy 101 in Florence",,"along OR Hwy 126, 4.8 mi E of jct with US Hwy 101 in Florence",,,Oregon,Lane
+4929777589,locality_only,,"Corvallis, Jackson-Frazier Wetland, at end of Lancaster Street; in weedy upland area",,"Corvallis, Jackson-Frazier Wetland, at end of Lancaster Street; in weedy upland area",,,Oregon,Benton
+1986960313,locality_only,,Williams; by the junction of 5th Street and B Street.,,Williams; by the junction of 5th Street and B Street.,,,California,Colusa
+4404975416,locality_only,,"Along Old River Rod, 1 mile E of its junction with OR Hwy 99W, N of Monroe.",,"Along Old River Rod, 1 mile E of its junction with OR Hwy 99W, N of Monroe.",,,Oregon,Benton
+4851179485,locality_only,,McNary US Wildlife Refuge 1/4 mile NW of headquarters.,,McNary US Wildlife Refuge 1/4 mile NW of headquarters.,,,Washington,Walla Walla
+4851271231,locality_only,,Seattle.,,Seattle.,,,Washington,King
+4851282591,locality_only,,8 mi. S.E. Milton-Freewater.,,8 mi. S.E. Milton-Freewater.,,,Oregon,Umatilla
+4851271232,locality_only,,1/10 Mi. E. of S.E. Williams rd. on Powell Valley Rd.,,1/10 Mi. E. of S.E. Williams rd. on Powell Valley Rd.,,,Oregon,Multnomah
+4851165091,locality_only,,"Along the Willamette River behind the O.S.U. Salmon Disease Lab, 34347 N.E. Electric Road, just E of Corvallis. T11S R5W S36.",,"Along the Willamette River behind the O.S.U. Salmon Disease Lab, 34347 N.E. Electric Road, just E of Corvallis. T11S R5W S36.",,,Oregon,Linn
+4851282592,locality_only,,McMinnville.,,McMinnville.,,,Oregon,
+4851179486,locality_only,,Gravel bed east of Cottate Grove.,,Gravel bed east of Cottate Grove.,,,Oregon,Lane
+4851271233,locality_only,,Oak Harbor Quad 7.5 Min Topeg USGS.,,Oak Harbor Quad 7.5 Min Topeg USGS.,,,Washington,Island
+4851165092,locality_only,,Bingen.,,Bingen.,,,Washington,Klickitat
+4851282593,locality_only,,Roseburg Quadrangle.,,Roseburg Quadrangle.,,,Oregon,Douglas
+4851179487,locality_only,,"Bottomlands, Bingen.",,"Bottomlands, Bingen.",,,Washington,Klickitat
+4851271234,locality_only,,Bingen (from the bottomlands).,,Bingen (from the bottomlands).,,,Washington,Klickitat
+4851165093,locality_only,,Bingen (from the bottomlands).,,Bingen (from the bottomlands).,,,Washington,Klickitat
+4851179488,locality_only,,Pullman.,,Pullman.,,,Washington,Whitman
+4851165094,locality_only,,Shaw Mill Rd. 1 mile sw of Dewey Corner.,,Shaw Mill Rd. 1 mile sw of Dewey Corner.,,,Oregon,Yamhill
+4851282594,locality_only,,"West of Philomath, along Waldport road.",,"West of Philomath, along Waldport road.",,,Oregon,Benton
+4851179489,locality_only,,Linnton near Portland.,,Linnton near Portland.,,,Oregon,Multnomah
+4851271236,locality_only,,Whidbey Island.,,Whidbey Island.,,,Washington,Island
+4851165095,locality_only,,Brightwood.,,Brightwood.,,,Oregon,Clackamas
+4851282595,locality_only,,"Hoodview S.D.A. school property, Boring.",,"Hoodview S.D.A. school property, Boring.",,,Oregon,Clackamas
+4851282596,locality_only,,Mt. Hood area.,,Mt. Hood area.,,,Oregon,Clackamas
+4851165096,locality_only,,"Mt. Top Rd. 2 miles W. of 219 hwy., Chehelam Mt.",,"Mt. Top Rd. 2 miles W. of 219 hwy., Chehelam Mt.",,,Oregon,Washington
+4851282597,locality_only,,Shaw Mill Road 1 mile SW Dewey Corner.,,Shaw Mill Road 1 mile SW Dewey Corner.,,,Oregon,Yamhill
+4851179492,locality_only,,"Miller Sands Island, 6 mi. east of Tongue Pt. Astoria, Columbia River.",,"Miller Sands Island, 6 mi. east of Tongue Pt. Astoria, Columbia River.",,,Oregon,Clatsop
+5208874362,locality_only,,"East end of Port Angeles, along Deer Park Loop, just west of Deer Park Cinema and Hwy 101. T30N R5W S8 NW4 SE4",,"East end of Port Angeles, along Deer Park Loop, just west of Deer Park Cinema and Hwy 101. T30N R5W S8 NW4 SE4",,,Washington,Clallam
+2859084607,locality_only,,Providence,,Providence,,,Rhode Island,Providence
+2859348932,locality_only,,New Haven,,New Haven,,,Connecticut,New Haven
+2859383969,locality_only,,Prouts Neck,,Prouts Neck,,,Maine,Cumberland
+2859103029,locality_only,,Ventura,,Ventura,,,California,Ventura
+2859090093,locality_only,,"Daymon Road near railroad, Northampton",,"Daymon Road near railroad, Northampton",,,Massachusetts,Hampshire
+2859384258,locality_only,,2 mi SE of Conway on US 701,,2 mi SE of Conway on US 701,,,South Carolina,Horry
+2859096364,locality_only,,I-220 at Airline Drive (Bossier 3105) N of Bossier City,,I-220 at Airline Drive (Bossier 3105) N of Bossier City,,,Louisiana,Bossier
+2859354611,locality_only,,East Providence,,East Providence,,,Rhode Island,Providence
+2859098971,locality_only,,Jamaica,,Jamaica,,,Vermont,Windham
+2859391086,locality_only,,Pasadena,,Pasadena,,,California,Los Angeles
+2859394091,locality_only,,no further locality,,no further locality,,,Connecticut,
+2859110108,locality_only,,"Pineland Plantation, near Newton",,"Pineland Plantation, near Newton",,,Georgia,Baker
+2859097103,locality_only,,Cambridge,,Cambridge,,,Massachusetts,Middlesex
+2859112099,locality_only,,Hampton Beach,,Hampton Beach,,,New Hampshire,Rockingham
+2859356089,locality_only,,1 mi NE of Broadway,,1 mi NE of Broadway,,,North Carolina,Lee
+2859358089,locality_only,,Pittsfield,,Pittsfield,,,Vermont,Rutland
+2859359074,locality_only,,Pacific Beach,,Pacific Beach,,,Washington,Grays Harbor
+2859357086,locality_only,,Oakland,,Oakland,,,California,
+2859390069,locality_only,,Pasadena,,Pasadena,,,California,Los Angeles
+2859110109,locality_only,,"Camp Northrop, Mount Washington",,"Camp Northrop, Mount Washington",,,Massachusetts,Berkshire
+2859111121,locality_only,,South Kingston,,South Kingston,,,Rhode Island,Washington
+3460916305,locality_only,,"Thornton Creek, Seattle",,"Thornton Creek, Seattle",,,Washington,King
+4067739491,locality_only,,Belwood Gardens,,Belwood Gardens,,,,
+5931826208,locality_only,,"N of Elgin, Titus Bog tract",,"N of Elgin, Titus Bog tract",,,Pennsylvania,Erie
+4095946655,locality_only,,"Demmler Gardens, just E of 435 Jefferson St.",,"Demmler Gardens, just E of 435 Jefferson St.",,,Wisconsin,Eau Claire
+4095946649,locality_only,,"Demmler Gardens, just E of 435 Jefferson St.",,"Demmler Gardens, just E of 435 Jefferson St.",,,Wisconsin,Eau Claire
+4092624211,locality_only,Town of Suamico,Barkhausen,,Barkhausen,,,Wisconsin,Brown
+4092624210,locality_only,Town of Niagara,,,,,,Wisconsin,Marinette
+4095606782,locality_only,Darien,"Hasz Farm, 3 miles S of Darien on US Hwy 14, W side of the road.",,"Hasz Farm, 3 miles S of Darien on US Hwy 14, W side of the road.",,,Wisconsin,Walworth
+4095606773,locality_only,,Appx. 200 m W of CTH O on Kettle Moraine Drive,,Appx. 200 m W of CTH O on Kettle Moraine Drive,,,Wisconsin,Walworth
+4095606766,locality_only,Whitewater,"Hwy 12, Whitewater.",,"Hwy 12, Whitewater.",,,Wisconsin,Walworth
+4105808755,locality_only,,"Fort Canby State Park; In riprap at a large boat launch area on the Columbia River at sea level, across a bay from the Cape Disappointment Coast Guard Station",,"Fort Canby State Park; In riprap at a large boat launch area on the Columbia River at sea level, across a bay from the Cape Disappointment Coast Guard Station",,,Washington,Pacific
+5070481623,locality_only,,"Fiddler's Green, northwest, oat field.",,"Fiddler's Green, northwest, oat field.",,,New York,Madison
+3454989720,locality_only,,"T 11N, R 4W, Sec. 3; N of La. 156 at the E edge of the town of Calvin",,"T 11N, R 4W, Sec. 3; N of La. 156 at the E edge of the town of Calvin",,,Louisiana,Winn
+3454989732,locality_only,,"T 16N, R 5E, Sec. 11; Richland Plantation beside La. 15 at Moore Road NW of Rhymes",,"T 16N, R 5E, Sec. 11; Richland Plantation beside La. 15 at Moore Road NW of Rhymes",,,Louisiana,Richland
+3454989763,locality_only,,"T 18N, R 3E, Sec. 33; weed in medan of I-20 just W of Thomas Road Exit in West Monroe",,"T 18N, R 3E, Sec. 33; weed in medan of I-20 just W of Thomas Road Exit in West Monroe",,,Louisiana,Ouachita
+3454989787,locality_only,,Martha's Vineyard,,Martha's Vineyard,,,Massachusetts,Dukes
+5895776885,locality_only,,"Williamsburg County: Bright yellow corolla; erect herb. Growing sporadically in damp soil in a fire line cut along back roads along Santee River four miles southeast of Greeleyville; 33.3021 degrees N, -79.5842 degrees W, 29' elev.",,"Williamsburg County: Bright yellow corolla; erect herb. Growing sporadically in damp soil in a fire line cut along back roads along Santee River four miles southeast of Greeleyville; 33.3021 degrees N, -79.5842 degrees W, 29' elev.",,,South Carolina,Williamsburg
+3454987848,locality_only,,Just S of Bandon at the end of Mars Lane; edge of coastal dunes,,Just S of Bandon at the end of Mars Lane; edge of coastal dunes,,,Oregon,Coos
+2890664982,locality_only,,Ab. loco,,Ab. loco,,,Florida,Leon
+4507453475,locality_only,,Brooklyn,,Brooklyn,,,New York,Kings
+4507453481,locality_only,,Chester,,Chester,,,Pennsylvania,Delaware
+4507453463,locality_only,,Perkiomen,,Perkiomen,,,Pennsylvania,Montgomery
+4507453467,locality_only,,Buffalo,,Buffalo,,,New York,Erie
+3820684072,locality_only,,Julia Butler Hansen Refuge for Columbian White-tailed Deer; Steamboat Slough; bank of Columbia River just off road.,,Julia Butler Hansen Refuge for Columbian White-tailed Deer; Steamboat Slough; bank of Columbia River just off road.,,,Washington,Wahkiakum
+3820601729,locality_only,,Butler Wetland.,,Butler Wetland.,,,Oregon,Washington
+3820629448,locality_only,,Harbor.,,Harbor.,,,Oregon,Curry
+3820524602,locality_only,,mouth of Salmon R.,,mouth of Salmon R.,,,Oregon,Tillamook
+3820629773,locality_only,,Grants Pass.,,Grants Pass.,,,Oregon,Josephine
+3820523784,locality_only,,Ashland.,,Ashland.,,,Oregon,Jackson
+3820523935,locality_only,,Garibaldi.,,Garibaldi.,,,Oregon,Tillamook
+3820630969,locality_only,,bar along Willamette R. West Salem.,,bar along Willamette R. West Salem.,,,Oregon,Polk
+3820632262,locality_only,,Garibaldi.,,Garibaldi.,,,Oregon,Tillamook
+3820527615,locality_only,,Grants Pass.,,Grants Pass.,,,Oregon,Josephine
+5956578887,locality_only,,"Sand Island, sector 70, garden at residence",,"Sand Island, sector 70, garden at residence",,,,
+3987727613,locality_only,,1.5 miles W of Rhymes Plantation,,1.5 miles W of Rhymes Plantation,,,Louisiana,Richland
+3987614665,locality_only,,Olmito,,Olmito,,,Texas,Cameron
+3987641907,locality_only,,College Station,,College Station,,,Texas,Brazos
+2234307170,locality_only,,"Flora of Alabama, U.S.A. Jefferson County: Habitat: disturbed ground. Locality: off Nancy Ann Bend Rd adjacent to Shoal Creek Mine west of village of Rock Creek. Physiography: Cumberland Plateau section of the Appalachian Plateaus province; Warrior Basin district; [Pottsville Formation]",,"Flora of Alabama, U.S.A. Jefferson County: Habitat: disturbed ground. Locality: off Nancy Ann Bend Rd adjacent to Shoal Creek Mine west of village of Rock Creek. Physiography: Cumberland Plateau section of the Appalachian Plateaus province; Warrior Basin district; [Pottsville Formation]",,,Alabama,Jefferson
+3707746238,locality_only,,Small stream along Old Hwy 45 to Clarkco State Park entrance,,Small stream along Old Hwy 45 to Clarkco State Park entrance,,,Mississippi,Clarke
+3707751201,locality_only,,Tributary of Wolf Creek on CR. west of Blackland,,Tributary of Wolf Creek on CR. west of Blackland,,,Mississippi,Prentiss
+5068478061,locality_only,,Road to South River.,,Road to South River.,,,North Carolina,Carteret
+5103839298,locality_only,,Free School Road near Warner Hall Bed and Breakfast,,Free School Road near Warner Hall Bed and Breakfast,,,Virginia,Gloucester
+2245575132,locality_only,,Lacey,,Lacey,,,Washington,Thurston County
+3925810620,locality_only,,Geneva Co.: 7.5 miles W of Geneva.,,Geneva Co.: 7.5 miles W of Geneva.,,,Alabama,Geneva
+3707753422,locality_only,,"Clanton, off SR-145 at junction of 2nd Street. North",,"Clanton, off SR-145 at junction of 2nd Street. North",,,Alabama,Chilton
+3766309268,locality_only,,WHATLEY'S FARM; 7 1/4 MILES EAST OF AUBURN OFF OLD COLUMBUS HWY.,,WHATLEY'S FARM; 7 1/4 MILES EAST OF AUBURN OFF OLD COLUMBUS HWY.,,,Alabama,Lee
+3766309267,locality_only,,NEAR PEPPERELL,,NEAR PEPPERELL,,,Alabama,Lee
+3766309263,locality_only,,IN UPLAND FOOD PLOT IN FRONT FIELD ON CAMPHOUSE RD. NEAR CAMPHOUSE; WATERSHED OF TOMBIGBEE RIVER IN JAMES RIVER CORP. NA,,IN UPLAND FOOD PLOT IN FRONT FIELD ON CAMPHOUSE RD. NEAR CAMPHOUSE; WATERSHED OF TOMBIGBEE RIVER IN JAMES RIVER CORP. NA,,,Alabama,Choctaw
+3766309270,locality_only,,"SILVER BLUFF AUDUBON CENTER AND SANCTUARY, KATHWOODLAKES/ OFF BERM ROAD.",,"SILVER BLUFF AUDUBON CENTER AND SANCTUARY, KATHWOODLAKES/ OFF BERM ROAD.",,,South Carolina,Aiken
+3766309269,locality_only,,PRICE ROAD AT THE GENEVA COUNTY LINE.,,PRICE ROAD AT THE GENEVA COUNTY LINE.,,,Alabama,Houston
+3766309275,locality_only,,SWEET WILLIAN LANE SOUTHWEST OF ALABAMA HWY. 143.,,SWEET WILLIAN LANE SOUTHWEST OF ALABAMA HWY. 143.,,,Alabama,Elmore
+3766309273,locality_only,,"OZARK. ALABAMA HWY. 27, CA. 0.8 MILE NORTH OF U.S. HWY. 231.",,"OZARK. ALABAMA HWY. 27, CA. 0.8 MILE NORTH OF U.S. HWY. 231.",,,Alabama,Dale
+3766309289,locality_only,,"CONECUH COUNTY HWY. 29, 6 MILES SOUTH OF EVERGREEN.",,"CONECUH COUNTY HWY. 29, 6 MILES SOUTH OF EVERGREEN.",,,Alabama,Conecuh
+3766309286,locality_only,,"ALABAMA HWY. 106, .6 MILE EAST OF THE BUTLER COUNTY LINE.",,"ALABAMA HWY. 106, .6 MILE EAST OF THE BUTLER COUNTY LINE.",,,Alabama,Crenshaw
+3766309290,locality_only,,"COFFEE COUNTY HWY. 21, .4 MILE SOUTH OF THE PIKE COUNTY LINE.",,"COFFEE COUNTY HWY. 21, .4 MILE SOUTH OF THE PIKE COUNTY LINE.",,,Alabama,Coffee
+3766309285,locality_only,,"CRENSHAW COUNTY HWY. 57, 2.4 MILES N OF CRENSHAW COUNTY HWY. 6 AT A SMALL CREEK.",,"CRENSHAW COUNTY HWY. 57, 2.4 MILES N OF CRENSHAW COUNTY HWY. 6 AT A SMALL CREEK.",,,Alabama,Crenshaw
+3766309284,locality_only,,"ALABAMA HWY. 59, .7 MILE SOUTH OF LOXLEY.",,"ALABAMA HWY. 59, .7 MILE SOUTH OF LOXLEY.",,,Alabama,Baldwin
+3766309203,locality_only,,U.S. HWY. 84 AT LIGHTWOOD KNOT CREEK ON THE EAST SIDE OF BABBIE.,,U.S. HWY. 84 AT LIGHTWOOD KNOT CREEK ON THE EAST SIDE OF BABBIE.,,,Alabama,Covington
+3766309202,locality_only,,INTERSECTION OF ALABAMA HWY. 27 AND UN-NUMBERED DIRT ROAD SOUTH. FORT RUCKER.,,INTERSECTION OF ALABAMA HWY. 27 AND UN-NUMBERED DIRT ROAD SOUTH. FORT RUCKER.,,,Alabama,Coffee
+3766309199,locality_only,,UNNUMBERED COUNTY ROAD OFF OF PIKE CO. HWY. 5 JUST EAST OF PATSALIGA CREEK AND THE CRENSHAW COUNTY LINE.,,UNNUMBERED COUNTY ROAD OFF OF PIKE CO. HWY. 5 JUST EAST OF PATSALIGA CREEK AND THE CRENSHAW COUNTY LINE.,,,Alabama,Pike
+3766309198,locality_only,,"CRENSHAW COUNTY HWY. 57, .1 MILE SOUTH OF CRENSHAW COUNTY HWY. 6.",,"CRENSHAW COUNTY HWY. 57, .1 MILE SOUTH OF CRENSHAW COUNTY HWY. 6.",,,Alabama,Crenshaw
+3766309200,locality_only,,BUTLER COUNTY HWY. 8 JUST EAST OF PERSIMMON CREEK.,,BUTLER COUNTY HWY. 8 JUST EAST OF PERSIMMON CREEK.,,,Alabama,Butler
+3766309221,locality_only,,HONEYSUCKLE ROAD AT HONEYSUCKLE MIDDLE SCHOOL DOTHAN.,,HONEYSUCKLE ROAD AT HONEYSUCKLE MIDDLE SCHOOL DOTHAN.,,,Alabama,Houston
+3766309225,locality_only,,DALE COUNTY HWY. 66 AT COFFEE COUNTY HWY. 66/ COUNTY LINE.,,DALE COUNTY HWY. 66 AT COFFEE COUNTY HWY. 66/ COUNTY LINE.,,,Alabama,Dale
+3766309233,locality_only,,5.03 AIR MI. SE OF MYRTLEWOOD. ALONG E SIDE OF CO. RD. 75 APPROX. 2.37 NE OF JCT. WITH CO RD. 17.,,5.03 AIR MI. SE OF MYRTLEWOOD. ALONG E SIDE OF CO. RD. 75 APPROX. 2.37 NE OF JCT. WITH CO RD. 17.,,,Alabama,Marengo
+3766309237,locality_only,,ALONG ALABAMA RIVER. AT END OF PAVED PORTION OF COUNTY ROAD 29.,,ALONG ALABAMA RIVER. AT END OF PAVED PORTION OF COUNTY ROAD 29.,,,Alabama,Autauga
+3766309234,locality_only,,"EUFAULA NATIONAL WILDLIFE REFUGE, 1.9MI SE OF INTERSTATE HWY 165, AND 0.4MI NE OF U.S. HWY 431.",,"EUFAULA NATIONAL WILDLIFE REFUGE, 1.9MI SE OF INTERSTATE HWY 165, AND 0.4MI NE OF U.S. HWY 431.",,,Alabama,Barbour
+3766309227,locality_only,,"EUFAULA NATIONAL WILDLIFE REFUGE, 1.9 MI SE OF STATE HWY. 165, AND 0.4 NE OF U.S. HWY 431.",,"EUFAULA NATIONAL WILDLIFE REFUGE, 1.9 MI SE OF STATE HWY. 165, AND 0.4 NE OF U.S. HWY 431.",,,Alabama,Barbour
+3766309231,locality_only,,4.0 MI. NORTH OF DOTHAN ON ROAD TO MIDLAND CITY (VICINITY OF NAPIER FIELD).,,4.0 MI. NORTH OF DOTHAN ON ROAD TO MIDLAND CITY (VICINITY OF NAPIER FIELD).,,,Alabama,Dale
+3766309232,locality_only,,"SOLON DIXON FORESTRY EDUCATION CENTER, AT INTERSECTION OF US HWY 29 AND ROME RD, ON SW CORNER NEAR HUNTING LODGE. CA 1.6 MI E OF MAIN ENTRANCE ROAD TO THE SDFEC ON US HWY 29 (ROME ROAD 3).",,"SOLON DIXON FORESTRY EDUCATION CENTER, AT INTERSECTION OF US HWY 29 AND ROME RD, ON SW CORNER NEAR HUNTING LODGE. CA 1.6 MI E OF MAIN ENTRANCE ROAD TO THE SDFEC ON US HWY 29 (ROME ROAD 3).",,,Alabama,Covington
+3766309245,locality_only,,"SOLON DIXON FORESTRY EDUCATION CENTER, AT FOOD PLOT ON THE WAY TO BOG AREA SOUTH OF US 29.",,"SOLON DIXON FORESTRY EDUCATION CENTER, AT FOOD PLOT ON THE WAY TO BOG AREA SOUTH OF US 29.",,,Alabama,Covington
+3766309241,locality_only,,"SOLON DIXON FORESTRY EDUCATION CENTER, AT FOOD PLOT ON THE WAY TO BOG AREA SOUTH OF US 29.",,"SOLON DIXON FORESTRY EDUCATION CENTER, AT FOOD PLOT ON THE WAY TO BOG AREA SOUTH OF US 29.",,,Alabama,Covington
+3766309247,locality_only,,EUFAULA WILDLIFE REFUGE OFF U.S. HIGHWAY 431. EUFAULA.,,EUFAULA WILDLIFE REFUGE OFF U.S. HIGHWAY 431. EUFAULA.,,,Alabama,Barbour
+3766309133,locality_only,,NEAR HEADLAND,,NEAR HEADLAND,,,Alabama,Henry
+3766309129,locality_only,,SMALL GRAINS,,SMALL GRAINS,,,Alabama,Baldwin
+3766309130,locality_only,,FIELD AT THE INTERSECTION OF ALA. HWY. 267 AND WIRE ROAD.,,FIELD AT THE INTERSECTION OF ALA. HWY. 267 AND WIRE ROAD.,,,Alabama,Lee
+3766309136,locality_only,,"AL 123, CA 8 MI NE OF GENEVA.",,"AL 123, CA 8 MI NE OF GENEVA.",,,Alabama,Geneva
+3766309125,locality_only,,HARPERSVILLE.,,HARPERSVILLE.,,,Alabama,Shelby
+3766309123,locality_only,,BELLE MINA,,BELLE MINA,,,Alabama,Limestone
+3766309128,locality_only,,AUBURN,,AUBURN,,,Alabama,Lee
+3766309124,locality_only,,2 MILES NORTH OF FRANKLIN - TUSKEGEE EXIT ON I-85.,,2 MILES NORTH OF FRANKLIN - TUSKEGEE EXIT ON I-85.,,,Alabama,Macon
+3766309154,locality_only,,AUBURN UNIVERSITY.,,AUBURN UNIVERSITY.,,,Alabama,Lee
+3766309151,locality_only,,ALONG RAILROAD TRACKS. APPROX. 5 MILES NW OF LINEVILLE.,,ALONG RAILROAD TRACKS. APPROX. 5 MILES NW OF LINEVILLE.,,,Alabama,Clay
+3766309173,locality_only,,"WEED IN COTTON FIELD OFF CR-71 NEAR PLANO, WEST OF CENTRE.",,"WEED IN COTTON FIELD OFF CR-71 NEAR PLANO, WEST OF CENTRE.",,,Alabama,Cherokee
+3766309167,locality_only,,REELTOWN CITY LIMITS ON ALA. 49.,,REELTOWN CITY LIMITS ON ALA. 49.,,,Alabama,Tallapoosa
+3766309163,locality_only,,ROADSIDE; 2 MILE WEST OF LOWNDESBORO ON US 80.,,ROADSIDE; 2 MILE WEST OF LOWNDESBORO ON US 80.,,,Alabama,Lowndes
+3766309161,locality_only,,"EUFAULA NATIONAL WILDLIFE REFUGE, CA. 2 MILES FROM REFUGE HEADQUARTERS ON AUTO TRAIL.",,"EUFAULA NATIONAL WILDLIFE REFUGE, CA. 2 MILES FROM REFUGE HEADQUARTERS ON AUTO TRAIL.",,,Alabama,Barbour
+3766309164,locality_only,,0.5MI SW OF INTERSECTION OF HWY 65 AND STANFORD RANCH RD.,,0.5MI SW OF INTERSECTION OF HWY 65 AND STANFORD RANCH RD.,,,California,Placer
+3766309160,locality_only,,"2811 FREDRECK ROAD, OPELIKA",,"2811 FREDRECK ROAD, OPELIKA",,,Alabama,Lee
+3899130571,locality_only,,Rockhill Road W of jct. with Osborne Road. NE of Starkville,,Rockhill Road W of jct. with Osborne Road. NE of Starkville,,,Mississippi,Oktibbeha
+5081502113,locality_only,,Buxton Woods. Near dumpster,,Buxton Woods. Near dumpster,,,North Carolina,Dare
+5166188303,locality_only,,"on N side of Morrow Mill Rd (SR 1958) , W of Orange Chapel Clover Garden Rd (SR 1956) , E of Millikan Rd (SR 1959)",,"on N side of Morrow Mill Rd (SR 1958) , W of Orange Chapel Clover Garden Rd (SR 1956) , E of Millikan Rd (SR 1959)",,,North Carolina,Orange
+5068495463,locality_only,,Clifford Mountain in western Polk Co.,,Clifford Mountain in western Polk Co.,,,North Carolina,Polk
+3707759383,locality_only,,"roadside of US Hwy. 45 at 1.5 mi N of Lowndes Co. line, area of hwy. construction",,"roadside of US Hwy. 45 at 1.5 mi N of Lowndes Co. line, area of hwy. construction",,,Mississippi,Monroe
+3707739816,locality_only,,"Mathiston, US Hwy. 82 on new section opened for 4-lane, plants scattered along whole section from just E of junction of Hwy. 82 with Hwy. 15 and all the way W to the junction of Hwy. 82 with the Natchez Trace Parkway",,"Mathiston, US Hwy. 82 on new section opened for 4-lane, plants scattered along whole section from just E of junction of Hwy. 82 with Hwy. 15 and all the way W to the junction of Hwy. 82 with the Natchez Trace Parkway",,,Mississippi,Webster
+3707739538,locality_only,,"Mathiston, US Hwy. 82 on new section opened for 4-lane, plants scattered along whole section opened from just E of junction of Hwy. 82 with Hwy. 15 and all the way W to the junction of Hwy. 82 with the Natchez Trace Parkway",,"Mathiston, US Hwy. 82 on new section opened for 4-lane, plants scattered along whole section opened from just E of junction of Hwy. 82 with Hwy. 15 and all the way W to the junction of Hwy. 82 with the Natchez Trace Parkway",,,Mississippi,Webster
+3707751327,locality_only,,"Hwy 84 E of Brookhaven, about 9 miles E of the jct of Hwy 84 and Hwy 51.",,"Hwy 84 E of Brookhaven, about 9 miles E of the jct of Hwy 84 and Hwy 51.",,,Mississippi,Lincoln
+3707732307,locality_only,,"Chunky River, large sandbar/island in middle of river",,"Chunky River, large sandbar/island in middle of river",,,Mississippi,Lauderdale
+3707726997,locality_only,,Ca 1 mi SE of Decatur along Chapel Hill Rd.;,,Ca 1 mi SE of Decatur along Chapel Hill Rd.;,,,Mississippi,Newton
+3707761799,locality_only,,"North of Columbus-Purvis Rd, near Marion Co WMA.",,"North of Columbus-Purvis Rd, near Marion Co WMA.",,,Mississippi,Marion
+3707720312,locality_only,,"SE of Poplarville; 4.3 mi SE of jct of Hwys I-59 and MS 53; N of Hwy MS 53, TSA research area.",,"SE of Poplarville; 4.3 mi SE of jct of Hwys I-59 and MS 53; N of Hwy MS 53, TSA research area.",,,Mississippi,Pearl River
+3707721049,locality_only,,"San Diego, S of San Diego River, between Fashion Valley Rd and I-163, behind Town and Country Resort and Convention Center at 500 Hotel Circle North.",,"San Diego, S of San Diego River, between Fashion Valley Rd and I-163, behind Town and Country Resort and Convention Center at 500 Hotel Circle North.",,,California,San Diego
+3707721439,locality_only,,"SE of Poplarville; 4.3 mi SE jct of Hwys I-59 and MS 53; N of Hwy MS 53, TSA Research area, pasture and wooded areas around pastures, sandy to silty loam soil",,"SE of Poplarville; 4.3 mi SE jct of Hwys I-59 and MS 53; N of Hwy MS 53, TSA Research area, pasture and wooded areas around pastures, sandy to silty loam soil",,,Mississippi,Pearl River
+3707721776,locality_only,,"SE of Poplarville; 4.3 mi SE jct of Hwys I-59 and MS 53; N of Hwy MS 53, TSA research area, pastures and wooded area around pastures, sandy to silty loam soil",,"SE of Poplarville; 4.3 mi SE jct of Hwys I-59 and MS 53; N of Hwy MS 53, TSA research area, pastures and wooded area around pastures, sandy to silty loam soil",,,Mississippi,Pearl River
+1849136174,locality_only,,Locality Not Recorded,,Locality Not Recorded,,,Oregon,Benton County
+1849139344,locality_only,Southold,Plum Island,,Plum Island,,,New York,Suffolk County
+1095591506,locality_only,U.S.A.,California.,,California.,,,,
+2270684444,locality_only,,Walker Ranch Historic Landmark Park,,Walker Ranch Historic Landmark Park,,,Texas,Bexar
+4856921832,locality_only,,San Clemente Island. Eroded gully jut N. of Building 60081 at E. end of Seals Camp at Northwest Harbor.,,San Clemente Island. Eroded gully jut N. of Building 60081 at E. end of Seals Camp at Northwest Harbor.,,,California,Los Angeles
+1258626304,both,,"City of San Gabriel. Hawaii Supermarket: 120 East Valley Boulevard: San Gabriel, CA: 91776: (626) 307-0062 - phone.",,"City of San Gabriel. Hawaii Supermarket: 120 East Valley Boulevard: San Gabriel, CA: 91776: (626) 307-0062 - phone.",,StillImage,California,Los Angeles
+1258123476,locality_only,,"Waccasassa Bay State Preserve; T 15S R 15E S1 & S11; Fiber Factory Road (dirt road, 4 km are state-owned), north of Cow Creek; forested and grazed roadsides, often wet.",,"Waccasassa Bay State Preserve; T 15S R 15E S1 & S11; Fiber Factory Road (dirt road, 4 km are state-owned), north of Cow Creek; forested and grazed roadsides, often wet.",,,Florida,Levy
+1258123445,locality_only,,"Gainesville: University of Florida campus, along edge of agricultural field southeast of junction of Museum Road and Center Drive.",,"Gainesville: University of Florida campus, along edge of agricultural field southeast of junction of Museum Road and Center Drive.",,,Florida,Alachua
+1258625022,locality_only,,"Winter Park. Farmers' Market, off New York Ave. between New England Ave. and Lyman Ave. Open Saturday mornings.",,"Winter Park. Farmers' Market, off New York Ave. between New England Ave. and Lyman Ave. Open Saturday mornings.",,,Florida,Orange
+1258599260,locality_only,,"Miami. Norman Brothers Produce, 7621 SW 87th Ave.",,"Miami. Norman Brothers Produce, 7621 SW 87th Ave.",,,Florida,Dade

@@ -1,0 +1,1217 @@
+gbifID,locality,verbatimLocality,mismatch_type,decimalLatitude_txt,decimalLongitude_txt,coordinateUncertaintyInMeters_txt,decimalLatitude_csv,decimalLongitude_csv,coordinateUncertaintyInMeters_csv
+3820632262,Garibaldi.,,txt_has_coords_csv_no_coords,45.56,-123.9097,402.0,,,
+3820523935,Garibaldi.,,txt_has_coords_csv_no_coords,45.56,-123.9097,402.0,,,
+4857279242,Berkeley,,txt_has_coords_csv_no_coords,37.87167,-122.27167,,,,
+4857174955,Berkeley,,txt_has_coords_csv_no_coords,37.87167,-122.27167,,,,
+3454989787,Martha's Vineyard,,txt_has_coords_csv_no_coords,41.38124,-70.650471,5421.0,,,
+4010710685,"Northampton, Daymon Road near railroad.",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,70
+1851677291,"University of Florida,, Gainesville","USA | Florida | Alachua | University of Florida,, Gainesville",txt_no_coords_csv_has_coords,,,,29.64024,-82.35391,1800
+3406827741,Pomona.,,txt_has_coords_csv_no_coords,34.05547,-117.74912,3218.0,,,
+2270210090,Lompoc,,txt_no_coords_csv_has_coords,,,,34.6392,-120.4569,3000
+4955504342,Cumberland,Cumberland,txt_has_coords_csv_no_coords,41.96666,-71.43277,20000.0,,,
+4507453481,Chester,,txt_has_coords_csv_no_coords,39.849557,-75.355746,1500.0,,,
+5198194850,Just south of Bandon along Mars Lane by its intersection with Rohrer Road.,,txt_no_coords_csv_has_coords,,,,43.087215,-124.432799,805
+3766309223,WEED IN PECAN ORCHARD WSW OF VALDOSTA.,,txt_no_coords_csv_has_coords,,,,30.78845,-83.35866,4000
+3125049356,Palos Verdes,,txt_has_coords_csv_no_coords,33.75995,-118.36373,6500.0,,,
+3710063875,"Lee County, AL",,txt_no_coords_csv_has_coords,,,,30.25525,-88.11949,30000
+3709852018,"Lee County, AL",,txt_no_coords_csv_has_coords,,,,30.25525,-88.11949,30000
+5103889408,"U.F. camps, Gainesville, beside Hull Rd. 2 mi east of 34th street.",,txt_no_coords_csv_has_coords,,,,29.63975,-82.34903,2200
+1503312320,US 41 near its intersection with FL 54.,US 41 near its intersection with FL 54.,txt_no_coords_csv_has_coords,,,,28.19175,-82.46579,150
+1503312295,US 41 near its intersection with FL 54.,US 41 near its intersection with FL 54.,txt_no_coords_csv_has_coords,,,,28.19175,-82.46579,150
+4069742238,"Shaw Mill Rd., 1 mi. SW of Dewey Corner.",,txt_has_coords_csv_no_coords,44.87306,-122.87083,,,,
+5070543295,"MD-3, 0.5 mi. N of Benfield Blvd",,txt_no_coords_csv_has_coords,,,,39.10225,-76.62701,450
+5070543287,"Trimble Road, 0.5 mi. E of Magnolia Rd, 20 ft. from road",,txt_no_coords_csv_has_coords,,,,39.41584,-76.3169,80
+1998412950,"[Narvaez] St., 2 blocks N. of Bienville Blvd.","[Narvaez] St., 2 blocks N. of Bienville Blvd.",txt_no_coords_csv_has_coords,,,,30.25525,-88.11949,120
+1503232675,W side GA 67; margin of Black Creek; 1.5 mi. NW of C-317; SE of Statesboro; 5.8 mi. SE of Lotts Creek crossing.,W side GA 67; margin of Black Creek; 1.5 mi. NW of C-317; SE of Statesboro; 5.8 mi. SE of Lotts Creek crossing.,txt_no_coords_csv_has_coords,,,,32.17809,-81.46327,2800
+1998401924,South Harpswell,South Harpswell,txt_no_coords_csv_has_coords,,,,43.74164,929.98578,1000
+1849158609,Carolina Sandhills National Wildlife Refuge,,txt_no_coords_csv_has_coords,,,,34.582977,-80.234471,550
+1849120333,Carolina Sandhills National Wildlife Refuge,,txt_has_coords_csv_no_coords,34.582977,-80.234471,550.0,,,
+1978078169,Along I-20 and I-59 one mile north of Fosters Exit and just south of the Black Warrior River south of Tuscaloosa.,,txt_no_coords_csv_has_coords,,,,33.11418,-87.65281,400
+1807240548,"Hills Corner, Lincolnville",,txt_no_coords_csv_has_coords,,,,44.32218,-69.07054,2000
+1269671072,"403 Stevenson Drive, N of Monroe.",,txt_no_coords_csv_has_coords,,,,32.58401,-92.06289,50
+4075454272,"along New Spring Road, 1 mi W of Elsmere",,txt_no_coords_csv_has_coords,,,,39.73536,-75.62553,1200
+3808949312,Hayward,,txt_no_coords_csv_has_coords,,,,37.64482,-122.09382,2301
+4075454266,W of Elsmere,,txt_no_coords_csv_has_coords,,,,39.73536,-75.62553,4000
+1317467273,"Greenspring Ave. and Hillside Rd, Cornfield",,txt_no_coords_csv_has_coords,,,,39.41305,-76.68807,200
+4433286375,"Just n. of Grindel Pt., Islesboro",,txt_no_coords_csv_has_coords,,,,44.28479,-68.93697,650
+5207750301,"Corvallis; along S. 3rd St., by junction with Richland Ave., on west side of street by bus stop.",,txt_no_coords_csv_has_coords,,,,44.54222,-123.26641,
+5198185854,"Corvallis; along S. 3rd St., by junction with Richland Ave., on west side of street by bus stop.",,txt_no_coords_csv_has_coords,,,,44.54222,-123.26641,
+4912250315,"Corvallis; along S. 3rd St., by junction with Richland Ave., on west side of street by bus stop.",,txt_has_coords_csv_no_coords,44.54222,-123.26641,,,,
+2512754491,Ludoviciana. On ballast ground. Port Eads.,,txt_no_coords_csv_has_coords,,,,29.01519,-89.16681,1500
+2512865335,The Vicinity of Green's Farms.,,txt_no_coords_csv_has_coords,,,,41.12696,-73.31896,2350
+1269671063,"Along LA 16, 5.2 road miles west of Tchefuncte River. East of Holton.",,txt_no_coords_csv_has_coords,,,,30.74453,-90.34922,100
+1269671078,"Southeastern/SLU campus; Southeastern Louisiana University campus, at entrance to North Campus Recreational Complex along N Oak St., Hammond.",,txt_no_coords_csv_has_coords,,,,30.52143,-90.46952,400
+5103889465,South of La. 15 on Richland Plantation 1.5 miles west of Rhymes and L. 133.,,txt_no_coords_csv_has_coords,,,,32.37786,-91.92486,1500
+1986922321,Persimmon Tree Road; Potomac  1/2 mile southeast of Potomac Village.,,txt_no_coords_csv_has_coords,,,,39.01095,-77.20196,250
+5070543303,"Edgewood Senior High School, near railroad tracks",,txt_no_coords_csv_has_coords,,,,39.42144,-76.28485,280
+4069038162,Wilbraham; jeep road running south from junction of Monson Rd. and Ridge Rd.; south of Wigwam Hill.,,txt_no_coords_csv_has_coords,,,,42.10932,-72.41191,450
+5103891837,"403 Stevenson Drive, N. of Monroe, La.",,txt_no_coords_csv_has_coords,,,,32.58401,-92.06289,50
+4069711775,West side of Mt. Hood.,,txt_has_coords_csv_no_coords,42.11333,-120.4925,,,,
+1990244824,4 miles west of Wilson,,txt_has_coords_csv_no_coords,35.715175,-77.915595,20000.0,,,
+1990244797,4 miles west of Wilson,,txt_no_coords_csv_has_coords,,,,35.715175,-77.915595,20000
+1998806939,Truro,Truro,txt_no_coords_csv_has_coords,,,,42.2994,-71.12395,1000
+2859349265,"Buckhorn Hunting Club, near Saranac Oil & Gas Field",,txt_no_coords_csv_has_coords,,,,32.015,-91.36488,500
+2859090389,"Buckhorn Hunting Club, near Saranac Oil & Gas Field",,txt_no_coords_csv_has_coords,,,,32.015,-91.36488,500
+1929201827,"Latimer's Point, between Mystic and Stonington, on Fisher's Island Sound",,txt_no_coords_csv_has_coords,,,,41.33543,-71.95098,375
+5159149277,"South of LA 15 on Richland Plantation, 1.5 mi E of Rhymes and LA 133.",,txt_no_coords_csv_has_coords,,,,32.37786,-91.92486,1500
+1269671076,"South of LA 15 on Richland Plantation, 1.5 mi E of Rhymes and LA 133.",,txt_no_coords_csv_has_coords,,,,32.37786,-91.92486,1500
+3709855196,"Escambia County, AL",,txt_no_coords_csv_has_coords,,,,31.0451,-85.87446,48500
+3709852246,"Geneva County, AL",,txt_no_coords_csv_has_coords,,,,31.0451,-85.87446,2500
+3709848955,"Geneva County, AL",,txt_no_coords_csv_has_coords,,,,31.0451,-85.87446,2500
+1426081892,"Avalon, Santa Catalina Island.",,txt_has_coords_csv_no_coords,33.3424862,-118.328935,1000.0,,,
+1269676388,"On the BREC Bluebonnet Swamp Nature Center property, west of Bluebonnet Parkway NW of the intersection with Highland Road. Near boardwalk main entrance trail. Growin in ""meadow"" near east edge.",,txt_no_coords_csv_has_coords,,,,30.36806,-91.10708,575
+1457821324,,"Gainesville, University of Florida campus; 80 m west of the Microbiology & Cell Science bldg next to the east fence of the recreation field.",txt_no_coords_csv_has_coords,,,,29.64054,-82.36433,55
+2452243672,"The Vicinity of Green's Farms, Conn.",,txt_no_coords_csv_has_coords,,,,41.12696,-73.31896,2350
+1998834987,"The Arnold Arboretum, Conifer group [Jamaica Plain]","The Arnold Arboretum, Conifer group [Jamaica Plain]",txt_no_coords_csv_has_coords,,,,42.2994,-71.12395,1000
+1998335831,2.7 miles north of Brewton.,2.7 miles north of Brewton.,txt_no_coords_csv_has_coords,,,,31.169,-87.07625,800
+5198226845,Noank.,,txt_no_coords_csv_has_coords,,,,41.33483,-71.99865,2000
+4601577307,"Along I-20 and I-59, 1 mile N of Fosters Exit and just S of the Black Warrior River S of Tuscaloosa.",,txt_no_coords_csv_has_coords,,,,33.10706,-87.6772,500
+1426171277,Jersey Island.,,txt_no_coords_csv_has_coords,,,,38.0324496,-121.6827785,4033
+1457762699,,Cross Creek Rd. 2.5 miles East of US Route 441.,txt_no_coords_csv_has_coords,,,,29.48637,-82.16437,700
+1457779450,,Gainesville: Natural Area Teaching Lab on University of Florida campus.,txt_no_coords_csv_has_coords,,,,29.63251,-82.36849,400
+2512815201,"New- planted field, Canton Junction.",,txt_no_coords_csv_has_coords,,,,42.16217,-71.15948,1000
+1457762160,,"Waccasassa Bay State Preserve; T 15S R 15E S1 & S11; Fiber Factory Road (dirt road, 4 km are state-owned), north of Cow Creek; forested and grazed roadsides, often wet.",txt_no_coords_csv_has_coords,,,,29.20642,-82.7454,2850
+1457769526,,"Flora of O'leno State Park, Florida. Grassy area west of ranger station.",txt_no_coords_csv_has_coords,,,,29.9015,-82.57959,2700
+1998882151,Eastport,Eastport,txt_no_coords_csv_has_coords,,,,44.92126,-67.01185,3550
+3766309230,INTERSECTION OF INTERSTATE HWY. 10 AND FLORIDA HWY. 69.ON THE NORTH SIDE OF THE INTERSTATE AND ON THE EAST SIDE OF FLORI,,txt_no_coords_csv_has_coords,,,,30.65701,-85.03763,400
+1998477644,"The Arnold Arboretum, Malus group, near Peters Hill [Jamaica Plain]","The Arnold Arboretum, Malus group, near Peters Hill [Jamaica Plain]",txt_no_coords_csv_has_coords,,,,42.29615,-71.12632,350
+3709996871,"Baldwin County, AL",,txt_no_coords_csv_has_coords,,,,30.76381,-87.71111,56000
+1269678712,"I-12 E to I-55 N, right onto LA 1048 E, left onto 51 S, left onto 10 E, left onto Oilfield Rd., right onto Verberne Rd., across form Walker's mailbox.",,txt_no_coords_csv_has_coords,,,,30.83892,-90.39431,1700
+1503285031,WSW of Valdosta.,WSW of Valdosta.,txt_no_coords_csv_has_coords,,,,30.78845,-83.35866,4000
+122994729,"9034 SW 5th Street, Boca Raton","9034 SW 5th Street, Boca Raton",txt_no_coords_csv_has_coords,,,,30.65701,-85.03763,50
+3987565636,"Latimer Point, between Mystic and Stonington",,txt_no_coords_csv_has_coords,,,,41.33543,-71.95098,375
+5198174851,"Northwest side of Alice Lake, University of Florida campus, Gainesville.",,txt_no_coords_csv_has_coords,,,,29.64267,-82.36275,110
+3865363253,1.5 mi SSW of Unionville,,txt_no_coords_csv_has_coords,,,,38.79313,-76.1492,900
+2234309107,"FLORA OF LOUISIANA Parish: Ouachita Median of I-20 between Well Road Exit and Thomas Road Exit in West Monroe; Sec. 34, T18N, R3E. Showing effects of herbicide.",,txt_no_coords_csv_has_coords,,,,32.51056,-92.17443,1600
+5836321904,,"W. side of US 19, ca. 3 mi. s. of Lebanon Station. S36, T15S, R16E.",txt_no_coords_csv_has_coords,,,,29.12214,-82.63677,400
+4955501353,Deerfield,Deerfield,txt_has_coords_csv_no_coords,42.54444,-72.60555,5000.0,,,
+3053448221,Pomona,,txt_has_coords_csv_no_coords,34.05547,-117.74912,3218.0,,,
+2430260735,Pomona,,txt_no_coords_csv_has_coords,,,,34.05547,-117.74912,3218
+1998838468,Ogunquit,Ogunquit,txt_no_coords_csv_has_coords,,,,43.25084,-70.60324,4000
+4955505319,Reading,Reading,txt_has_coords_csv_no_coords,42.53333,-71.11666,5000.0,,,
+3925803525,"Daymon Rd nr RR, Northampton.",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,70
+3865380399,1 mi E of Appleton,,txt_no_coords_csv_has_coords,,,,39.69941,-75.79133,700
+2515123578,"Roadbank of I-220 at Airline Drive (Bossier 3105) north of Bossier City, Sec. 11, T18N, R13W.",,txt_no_coords_csv_has_coords,,,,32.55739,-93.70992,500
+1258875037,"Waste ground, daymon rd near railroad, northampton.",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,150
+5994419568,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5956557727,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5956408408,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5831637904,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5797631465,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272847,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272840,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272806,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272803,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272802,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272801,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272740,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272739,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272736,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272734,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272377,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106272375,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106271845,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5106271625,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5077457634,,,txt_has_coords_csv_no_coords,43.606854,-89.23684,1138.0,,,
+5077429862,,,txt_has_coords_csv_no_coords,43.869122,-90.063832,1138.0,,,
+5077311014,,,txt_has_coords_csv_no_coords,45.724205,-89.290562,1138.0,,,
+5077283904,,,txt_has_coords_csv_no_coords,43.132546,-89.251456,569.0,,,
+5077247415,,,txt_has_coords_csv_no_coords,42.921749,-89.438261,1138.0,,,
+5074461244,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5074461243,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5074461235,,,txt_has_coords_csv_no_coords,41.4467,-71.54742,11590.0,,,
+5074461230,,,txt_has_coords_csv_no_coords,41.4467,-71.54742,11590.0,,,
+5074021426,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5074020429,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072733440,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730544,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730543,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730542,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730541,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730540,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730539,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730533,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730532,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730531,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730521,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730520,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730519,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5072730518,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070880615,,,txt_has_coords_csv_no_coords,39.483666,-76.638333,,,,
+5070880499,,,txt_has_coords_csv_no_coords,40.456216,-74.443207,2022.0,,,
+5070543350,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543332,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543331,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543330,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543329,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543328,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543327,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543323,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543320,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543317,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543302,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543301,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543300,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543299,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5070543298,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068742317,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068501435,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068501431,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068501417,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068501414,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068501413,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491429,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491428,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491426,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491425,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491421,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491387,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491384,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491372,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491370,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491368,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068491366,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068489033,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068489031,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068489029,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068482938,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068482928,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068482902,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068482901,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068461197,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5068043255,,,txt_has_coords_csv_no_coords,42.94934,-72.29987,7605.0,,,
+5068043252,,,txt_has_coords_csv_no_coords,42.32664,-72.67454,7473.0,,,
+5068043248,,,txt_has_coords_csv_no_coords,42.8625,-72.29601,7787.0,,,
+5068043244,,,txt_has_coords_csv_no_coords,42.8625,-72.29601,7787.0,,,
+5068043243,,,txt_has_coords_csv_no_coords,42.36447,-72.50686,7831.0,,,
+5068043242,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5067942420,,,txt_has_coords_csv_no_coords,41.7892,-72.22873,8547.0,,,
+5067941420,,,txt_has_coords_csv_no_coords,41.30277,-72.46451,6343.0,,,
+5067927817,,,txt_has_coords_csv_no_coords,43.6954,-70.35383,6528.0,,,
+5067927816,,,txt_has_coords_csv_no_coords,42.03621,-71.1103,7320.0,,,
+5067927810,,,txt_has_coords_csv_no_coords,43.74338,-70.27825,9104.0,,,
+5067926817,,,txt_has_coords_csv_no_coords,43.29898,-70.97861,8933.0,,,
+5067926815,,,txt_has_coords_csv_no_coords,42.68476,-73.22833,8663.0,,,
+5067926814,,,txt_has_coords_csv_no_coords,42.80757,-71.29948,6656.0,,,
+5067926810,,,txt_has_coords_csv_no_coords,43.52395,-70.39051,3312.0,,,
+5067926808,,,txt_has_coords_csv_no_coords,44.88669,-68.71656,7009.0,,,
+5067925811,,,txt_has_coords_csv_no_coords,43.68047,-70.22315,11134.0,,,
+5067924818,,,txt_has_coords_csv_no_coords,42.68476,-73.22833,8663.0,,,
+5067924817,,,txt_has_coords_csv_no_coords,42.5628,-71.57175,5007.0,,,
+5067924809,,,txt_has_coords_csv_no_coords,44.83124,-68.78856,7086.0,,,
+5067923818,,,txt_has_coords_csv_no_coords,44.06701,-68.6265,8442.0,,,
+5067923817,,,txt_has_coords_csv_no_coords,42.32664,-72.67454,7473.0,,,
+5067923810,,,txt_has_coords_csv_no_coords,44.06701,-68.6265,8442.0,,,
+5052333062,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5028857010,,,txt_has_coords_csv_no_coords,32.5235,-82.9484,,,,
+5028847966,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5028847954,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5028847948,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5028847937,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5028834515,,,txt_has_coords_csv_no_coords,35.402556,-85.38675,,,,
+5028831726,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5028831722,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564472,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564471,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564470,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564469,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564468,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564467,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564466,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564409,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564408,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+5011564406,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4987955528,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4976705376,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4949044224,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4948994383,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4876061572,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4876059494,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4876053038,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4851165090,,,txt_has_coords_csv_no_coords,46.58333,-122.4,,,,
+4601577312,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4601577311,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4601577308,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4601577303,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4601577270,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691569,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691568,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691567,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691566,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691565,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691564,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691563,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691560,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691559,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691558,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691557,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691556,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691555,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691554,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691553,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536691552,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677567,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677566,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677565,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677564,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677563,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677562,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677559,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677558,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677557,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677556,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677555,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677554,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677553,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677552,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536677551,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676564,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676563,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676562,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676561,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676560,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676559,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676558,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676555,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676554,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676553,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676552,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676551,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676550,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676549,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536676548,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675578,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675577,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675576,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675575,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675574,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675573,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675572,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675569,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675568,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675567,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675566,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675565,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675564,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675563,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675562,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4536675561,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4527845145,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4527844780,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4508484407,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4508480443,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4454889316,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4436953984,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4404923242,,,txt_has_coords_csv_no_coords,38.297137,-122.285529,4000.0,,,
+4153060508,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4134270703,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4134270693,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4134270683,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4134266538,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4134266503,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4134266499,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102461053,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102461020,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102460940,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102460748,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102460589,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102460558,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102460550,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102446116,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102392750,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102392561,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102387064,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102386881,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102372567,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367555,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367471,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367470,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367469,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367468,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367467,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367466,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367465,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367464,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367463,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367462,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102367461,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102337536,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102240030,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102239959,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102239921,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102239774,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102239709,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218619,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218538,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218537,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218536,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218535,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218534,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218533,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218532,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218531,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218530,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218529,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218528,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102218527,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209479,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209478,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209477,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209476,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209475,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209474,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209473,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102209472,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102127655,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102101944,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102101866,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102101814,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102101763,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102101744,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102101534,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102090067,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089878,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089877,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089849,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089841,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089782,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089669,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089652,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102089643,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102088063,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102087955,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102087800,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102087633,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102087620,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102087601,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035620,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035539,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035538,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035537,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035536,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035535,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035534,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035533,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035532,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035531,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035530,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035529,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102035528,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4102018364,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101952374,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886608,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886533,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886532,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886531,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886530,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886529,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886528,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886527,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886526,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101886525,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885511,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885510,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885509,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885508,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885507,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885506,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885505,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885504,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101885503,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881580,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881496,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881495,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881494,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881493,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881492,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881491,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881490,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881489,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881488,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881487,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101881486,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879469,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879468,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879467,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879466,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879465,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879464,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879462,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879461,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879460,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101879459,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4101865730,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4095932316,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4092881462,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4092881458,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4092881445,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4092881438,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4092881431,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4092624210,,,txt_has_coords_csv_no_coords,45.759329,-88.03424,,,,
+4088571028,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4078027784,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4072296894,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4069762842,,,txt_has_coords_csv_no_coords,46.58333,-122.4,,,,
+4068974838,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4042798543,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4042673508,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4042671774,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4042668280,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4042592616,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4042589595,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4041223302,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4010723367,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+4010713829,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3987691570,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3987686591,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3987564966,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3987563639,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3970675662,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3970670322,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3970668672,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864035,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864034,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864033,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864032,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864031,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864030,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864029,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864028,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969864027,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969863985,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969863984,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969863983,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795116,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795115,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795114,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795113,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795112,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795111,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795110,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795109,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795071,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969795070,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781023,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781022,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781021,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781019,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781018,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781017,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781016,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969781015,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969780972,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969780971,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969780970,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778966,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778965,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778964,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778963,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778962,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778961,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778960,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778959,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778917,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969778916,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684012,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684011,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684010,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684009,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684008,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684007,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684006,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684005,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969684004,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969683961,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969683960,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595104,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595103,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595102,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595100,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595099,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595098,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595097,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595051,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969595050,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593863,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593862,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593861,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593860,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593859,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593858,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593857,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593856,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593813,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969593812,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592830,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592829,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592828,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592827,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592826,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592825,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592824,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592823,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592783,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3969592782,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3898511062,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882401,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882392,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882380,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882379,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882373,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882372,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882371,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882370,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882368,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882367,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882366,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882364,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882355,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882354,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882353,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882352,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882347,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882337,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882336,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882335,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882332,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882331,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897882330,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897881460,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897881459,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897881458,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880737,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880734,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880733,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880729,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880728,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880727,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880710,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880707,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880704,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880700,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880698,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880688,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880675,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880671,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880668,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880665,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880662,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880650,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880637,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880633,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880630,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880621,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880617,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880609,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880608,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880546,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880545,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880514,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880511,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880503,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880501,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880496,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880460,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880442,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880438,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880437,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880435,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3897880433,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886964637,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886936079,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886936071,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886936060,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886934600,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886929463,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3886929458,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3870581939,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3870581938,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3865362263,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3709905432,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3695177078,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3695177039,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3695177037,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3503181943,,,txt_has_coords_csv_no_coords,33.62841,-117.90866,16.0,,,
+3470026702,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469990117,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469988057,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469988056,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469988055,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469987228,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469987227,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469987226,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469986052,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469984096,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469983163,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469982047,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469982046,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469960736,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469957574,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469941060,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469939033,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469938021,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469938020,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469936050,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469934041,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469933058,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469933057,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469891138,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469891137,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469889147,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469889146,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469888056,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469886110,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469884064,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469883049,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469882089,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469840994,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469840039,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469839030,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469839029,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469838026,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469836018,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469835044,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469834017,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469834016,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469834015,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3469833006,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3406827743,,,txt_has_coords_csv_no_coords,34.11558,-117.88912,,,,
+3395222566,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3344481305,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3329993629,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+3307631105,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2859088851,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2859083858,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573523406,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573523062,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522950,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522928,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522772,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522647,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522519,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522511,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522440,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522291,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522266,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573522189,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573521651,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573521373,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573521327,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573521081,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573520967,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573519157,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573494904,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573493909,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573492885,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573491881,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573489909,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573488897,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573487873,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573486872,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573485884,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573131006,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573130244,,,txt_has_coords_csv_no_coords,43.0745,-72.51026,8375.0,,,
+2573128020,,,txt_has_coords_csv_no_coords,42.52202,-72.60972,7304.0,,,
+2573122212,,,txt_has_coords_csv_no_coords,42.42416,-71.10831,3947.0,,,
+2573119618,,,txt_has_coords_csv_no_coords,43.79975,-73.08017,7790.0,,,
+2573116026,,,txt_has_coords_csv_no_coords,43.42917,-72.80459,8911.0,,,
+2573115324,,,txt_has_coords_csv_no_coords,41.3683,-71.90669,8831.0,,,
+2573115035,,,txt_has_coords_csv_no_coords,41.3683,-71.90669,8831.0,,,
+2573114655,,,txt_has_coords_csv_no_coords,41.82362,-71.42199,5758.0,,,
+2573111823,,,txt_has_coords_csv_no_coords,43.7129,-73.17596,6827.0,,,
+2573103733,,,txt_has_coords_csv_no_coords,43.79975,-73.08017,7790.0,,,
+2573103437,,,txt_has_coords_csv_no_coords,43.71556,-72.19101,9733.0,,,
+2573103026,,,txt_has_coords_csv_no_coords,44.72042,-73.29939,7627.0,,,
+2573101872,,,txt_has_coords_csv_no_coords,43.48474,-73.12664,6206.0,,,
+2573097498,,,txt_has_coords_csv_no_coords,41.31079,-70.11468,16757.0,,,
+2573096133,,,txt_has_coords_csv_no_coords,44.55473,-73.21948,11376.0,,,
+2573092603,,,txt_has_coords_csv_no_coords,44.31569,-72.36097,7956.0,,,
+2573092565,,,txt_has_coords_csv_no_coords,41.31079,-70.11468,16757.0,,,
+2573090470,,,txt_has_coords_csv_no_coords,42.35564,-72.56923,8543.0,,,
+2573088856,,,txt_has_coords_csv_no_coords,44.30894,-73.23596,8247.0,,,
+2573088224,,,txt_has_coords_csv_no_coords,42.24737,-71.17653,4960.0,,,
+2573085208,,,txt_has_coords_csv_no_coords,44.09146,-70.16808,9610.0,,,
+2573085122,,,txt_has_coords_csv_no_coords,43.57413,-72.43549,9302.0,,,
+2573081214,,,txt_has_coords_csv_no_coords,41.6898,-73.20799,6031.0,,,
+2573080970,,,txt_has_coords_csv_no_coords,44.5905,-69.3428,7503.0,,,
+2573078965,,,txt_has_coords_csv_no_coords,43.25879,-73.05147,8006.0,,,
+2573076914,,,txt_has_coords_csv_no_coords,43.477,-72.42083,5878.0,,,
+2573074641,,,txt_has_coords_csv_no_coords,44.90801,-73.125,14386.0,,,
+2573072017,,,txt_has_coords_csv_no_coords,41.35984,-71.80749,8874.0,,,
+2573071186,,,txt_has_coords_csv_no_coords,42.32664,-72.67454,7473.0,,,
+2573069230,,,txt_has_coords_csv_no_coords,41.3202,-72.30472,5958.0,,,
+2573068147,,,txt_has_coords_csv_no_coords,41.31079,-70.11468,16757.0,,,
+2573064526,,,txt_has_coords_csv_no_coords,43.79975,-73.08017,7790.0,,,
+2573060735,,,txt_has_coords_csv_no_coords,44.76156,-72.68051,7127.0,,,
+2573060067,,,txt_has_coords_csv_no_coords,41.31079,-70.11468,16757.0,,,
+2573059704,,,txt_has_coords_csv_no_coords,41.3683,-71.90669,8831.0,,,
+2573012427,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573012273,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573011385,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573011203,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573011103,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573010659,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573010090,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573009443,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2573009412,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2565952867,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2564272799,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2459160591,,,txt_has_coords_csv_no_coords,36.9782,-122.05389,5.0,,,
+2452825012,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2382622392,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+231000171,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+231000170,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2273381323,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2273379286,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2273376950,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2270590361,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2270586802,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2270222521,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2265954519,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2265941363,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2265940650,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2265939251,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2242402297,,,txt_has_coords_csv_no_coords,41.645042,-87.639968,2538.0,,,
+2234335067,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234334664,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234334360,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234334336,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234334300,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234334063,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234334059,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333763,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333701,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333687,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333619,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333571,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333505,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333416,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333300,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333296,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333291,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333243,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333173,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333109,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333079,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333064,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333045,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234333034,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332991,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332919,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332830,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332785,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332688,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332681,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332639,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332601,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332584,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332578,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332539,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332516,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332494,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332449,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332444,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332438,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332425,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332392,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332366,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332354,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332333,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332332,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332264,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332245,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332239,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332193,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332156,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332105,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332088,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332087,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332064,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332062,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332050,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234332017,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331997,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331965,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331960,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331908,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331893,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331872,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331871,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331833,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331814,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331799,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331794,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331766,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331741,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331733,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331714,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331709,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331694,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331679,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331632,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331565,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331547,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331517,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331497,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331494,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331476,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331470,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331446,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331429,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331411,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331409,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331404,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331400,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331366,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331362,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331358,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331354,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331347,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331341,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331321,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331309,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331294,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331257,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331250,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331246,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331238,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331195,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331136,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331098,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331075,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331061,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331046,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331045,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331042,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234331004,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330991,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330930,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330897,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330877,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330872,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330852,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330839,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330822,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330806,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330727,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330657,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330604,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330574,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330539,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330502,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330483,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330415,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330162,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330129,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330091,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234330048,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329990,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329914,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329767,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329735,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329619,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329480,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329354,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234329345,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+2234328717,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1999429074,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1999324495,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1999245273,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1999205867,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1990244758,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1990201134,,,txt_has_coords_csv_no_coords,33.436135,-80.802913,,,,
+1990006308,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1990006252,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996195,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996188,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996179,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996176,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996174,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996153,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996152,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996143,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996142,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996140,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996130,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996129,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996128,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996127,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996120,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996114,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996113,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996110,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996108,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996107,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996106,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996104,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996103,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996096,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996095,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996088,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996082,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996078,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996074,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1989996072,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1977805897,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1977805896,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1977805495,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1949564035,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1936443642,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1931379338,,,txt_has_coords_csv_no_coords,40.725207,-73.646312,,,,
+1931366896,,,txt_has_coords_csv_no_coords,40.642048,-74.441201,,,,
+1931308177,,,txt_has_coords_csv_no_coords,40.725207,-73.646312,,,,
+1931264220,,,txt_has_coords_csv_no_coords,40.749723,-73.638882,,,,
+1931210161,,,txt_has_coords_csv_no_coords,40.725207,-73.646312,,,,
+1930847308,,,txt_has_coords_csv_no_coords,40.063681,-74.921502,,,,
+1930805110,,,txt_has_coords_csv_no_coords,41.407424,-75.664472,,,,
+1930775913,,,txt_has_coords_csv_no_coords,47.838058,-100.665419,,,,
+1930748918,,,txt_has_coords_csv_no_coords,40.663684,-73.705632,,,,
+1930403266,,,txt_has_coords_csv_no_coords,40.707107,-73.825973,,,,
+1930347833,,,txt_has_coords_csv_no_coords,40.725207,-73.646312,,,,
+1930231081,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1929767661,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1929417250,,,txt_has_coords_csv_no_coords,40.703545,-73.618912,,,,
+1929410664,,,txt_has_coords_csv_no_coords,40.673852,-75.232405,,,,
+1928973306,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1928802133,,,txt_has_coords_csv_no_coords,40.749723,-73.638882,,,,
+1928778838,,,txt_has_coords_csv_no_coords,41.147261,-72.276121,,,,
+1928695606,,,txt_has_coords_csv_no_coords,40.703545,-73.618912,,,,
+1928676734,,,txt_has_coords_csv_no_coords,41.45107,-77.231552,,,,
+1928615825,,,txt_has_coords_csv_no_coords,40.703545,-73.618912,,,,
+1928391821,,,txt_has_coords_csv_no_coords,40.663684,-73.705632,,,,
+1928366607,,,txt_has_coords_csv_no_coords,40.080281,-74.06888,,,,
+1928139385,,,txt_has_coords_csv_no_coords,38.899446,-77.0283,,,,
+1927974500,,,txt_has_coords_csv_no_coords,40.663684,-73.705632,,,,
+1927950514,,,txt_has_coords_csv_no_coords,40.725207,-73.646312,,,,
+1927803995,,,txt_has_coords_csv_no_coords,40.703545,-73.618912,,,,
+1844407152,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844407141,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844407140,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844407129,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844407119,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844407114,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844407109,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844406912,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844406906,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844406853,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844406828,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844406823,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1844406801,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1573734361,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1573734270,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1573734243,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1503219523,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136560543,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136560305,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136560279,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136560265,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136560197,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136559880,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136559718,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136559708,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+136559688,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1305294686,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1305260279,,,txt_has_coords_csv_no_coords,39.1586,-122.1473,,,,
+1305260123,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1305259567,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1305242883,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1305232066,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1260996228,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1258123467,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+122995905,,,txt_has_coords_csv_no_coords,25.609,-80.4987,72324.0,,,
+122995253,,,txt_has_coords_csv_no_coords,27.9489,-81.6977,70701.0,,,
+122995252,,,txt_has_coords_csv_no_coords,28.3067,-82.4389,54157.0,,,
+122995197,,,txt_has_coords_csv_no_coords,44.7316,-93.178,,,,
+122995160,,,txt_has_coords_csv_no_coords,30.458,-84.2779,47760.0,,,
+122995074,,,txt_has_coords_csv_no_coords,25.609,-80.4987,72324.0,,,
+122995022,,,txt_has_coords_csv_no_coords,29.2822,-82.7886,51175.0,,,
+122995012,,,txt_has_coords_csv_no_coords,30.4441,-83.4701,38366.0,,,
+122994969,,,txt_has_coords_csv_no_coords,29.2822,-82.7886,51175.0,,,
+122994964,,,txt_has_coords_csv_no_coords,28.3003,-80.7012,71077.0,,,
+1090179087,,,txt_no_coords_csv_has_coords,,,,28.3003,-80.7012,71077
+1057558556,,,txt_no_coords_csv_has_coords,,,137690.81,28.3003,-80.7012,71077
+1039021286,,,txt_has_coords_csv_no_coords,41.305111,-72.920823,6384.0,,,
+1039021048,,,txt_has_coords_csv_no_coords,41.406,-72.4831,4835.0,,,
+1039020261,,,txt_has_coords_csv_no_coords,41.1932,-73.196,6473.0,,,
+1039019594,,,txt_has_coords_csv_no_coords,41.6153,-72.1432,6011.0,,,
+1039019418,,,txt_has_coords_csv_no_coords,41.6741,-72.8571,3828.0,,,
+1039016492,,,txt_has_coords_csv_no_coords,41.305111,-72.920823,6384.0,,,
+1039013244,,,txt_has_coords_csv_no_coords,41.8786,-72.3649,7549.0,,,
+1039012435,,,txt_has_coords_csv_no_coords,41.406,-72.4831,4835.0,,,
+1038995347,,,txt_has_coords_csv_no_coords,41.6523,-73.3145,7762.0,,,
+1038986945,,,txt_has_coords_csv_no_coords,41.325,-73.3974,43847.0,,,
+1038978703,,,txt_has_coords_csv_no_coords,41.9945,-72.6788,8341.0,,,
+1038978550,,,txt_has_coords_csv_no_coords,41.305111,-72.920823,6384.0,,,
+1038977610,,,txt_has_coords_csv_no_coords,41.5162,-72.8337,5062.0,,,
+1038968555,,,txt_has_coords_csv_no_coords,41.1779,-73.2735,6752.0,,,
+1038964643,,,txt_has_coords_csv_no_coords,41.305111,-72.920823,6384.0,,,
+1038962535,,,txt_has_coords_csv_no_coords,41.3791,-72.5782,9115.0,,,
+1038958768,,,txt_has_coords_csv_no_coords,41.305111,-72.920823,6384.0,,,
+1038957958,,,txt_has_coords_csv_no_coords,41.305111,-72.920823,6384.0,,,
+1038941330,,,txt_has_coords_csv_no_coords,41.5583,-73.036,6630.0,,,
+1038937998,,,txt_has_coords_csv_no_coords,41.3965,-72.3438,8164.0,,,
+1038933423,,,txt_has_coords_csv_no_coords,41.6921,-72.5472,9532.0,,,
+1038933176,,,txt_has_coords_csv_no_coords,41.6741,-72.8571,3828.0,,,
+1038930808,,,txt_has_coords_csv_no_coords,41.4313,-73.1351,7184.0,,,
+1038929120,,,txt_has_coords_csv_no_coords,41.2994,-72.5298,5255.0,,,
+3344481299,Richland,,txt_no_coords_csv_has_coords,,,,33.9941,-80.9861,
+1849171238,Richland,,txt_no_coords_csv_has_coords,,,,33.9941,-80.9861,
+1849170215,Richland,,txt_has_coords_csv_no_coords,33.9134,-80.815,,,,
+1849159167,Richland,,txt_no_coords_csv_has_coords,,,,33.9941,-80.9861,
+1849156122,Richland,,txt_has_coords_csv_no_coords,33.9941,-80.9861,,,,
+1849129039,Richland,,txt_no_coords_csv_has_coords,,,,33.9941,-80.9861,
+1849116778,Richland,,txt_no_coords_csv_has_coords,,,,33.9941,-80.9861,
+1503221969,"Richland Plantation S of LA 15 and 2 mi. W of Rhymes; T16N, R3E, Sec. 11.","Richland Plantation S of LA 15 and 2 mi. W of Rhymes; T16N, R3E, Sec. 11.",txt_no_coords_csv_has_coords,,,,32.37786,-91.92486,1500
+1503231170,"Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.","Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.",txt_no_coords_csv_has_coords,,,,30.03917,-92.31862,200
+1503231145,"Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.","Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.",txt_no_coords_csv_has_coords,,,,30.03917,-92.31862,200
+1503231131,"Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.","Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.",txt_no_coords_csv_has_coords,,,,30.03917,-92.31862,200
+1503231126,"Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.","Along both sides of LA 13 just E of Parish Road 9-35 at Cossinade ca. 2.5 mi. N of junction LA 13 and LA 14; T11S, R1E, Sec. 36.",txt_no_coords_csv_has_coords,,,,30.03917,-92.31862,200
+2890664990,North of Franklinton.,,txt_no_coords_csv_has_coords,,,,30.86994,-90.15439,1000
+4075454236,"Silver Spring, Xaverian College grounds",,txt_no_coords_csv_has_coords,,,,39.12518,-77.02787,3000
+4955504330,Mansfield,Mansfield,txt_has_coords_csv_no_coords,41.78833,-72.22888,5000.0,,,
+4955500341,Mansfield,Mansfield,txt_has_coords_csv_no_coords,41.78833,-72.22888,5000.0,,,
+1457802973,,University of Florida Natural Teaching Area.,txt_no_coords_csv_has_coords,,,,29.63251,-82.36849,400
+5070543304,"Gunpowder Falls State Park, at Kearney Dr. on margins of Joppatowne Marina",,txt_no_coords_csv_has_coords,,,,39.40361,-76.35064,500
+5083369513,"Sears Island, NW 1/4","Sears Island, NW 1/4",txt_no_coords_csv_has_coords,,,,44.44799,-68.8813,1000
+4955501354,Block Island,Block Island,txt_has_coords_csv_no_coords,41.19166,-71.575,5000.0,,,
+4075454246,Wilmington,,txt_no_coords_csv_has_coords,,,,39.745947,-75.546589,7283
+3766309255,"DAYMON ROAD NEAR RAILROAD, NORTHAMPTON",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,70
+4070671230,"Near Marist High School, Goodpasture Island Road, Eugene.",,txt_no_coords_csv_has_coords,,,,44.0522,-123.0856,9656
+4070660651,"Near Marist High School, Goodpasture Island Road, Eugene.",,txt_no_coords_csv_has_coords,,,,44.0522,-123.0856,9656
+894984579,"Daymon Road near railroad, Northampton",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,150
+3987614664,"Daymon Road near railroad, Northampton",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,150
+2859090093,"Daymon Road near railroad, Northampton",,txt_has_coords_csv_no_coords,42.336456,-72.625001,758.0,,,
+5070543294,"Beltsville, Virginia Manor Rd, 400 m. N of high school",,txt_no_coords_csv_has_coords,,,,39.06113,-76.89183,450
+1936437065,"Massachusetts, Franklin County. Town: Deerfield. An old tobacco field bordering Sand Gully and Stillwater Bridge rd.",,txt_no_coords_csv_has_coords,,,,42.51802,-72.63718,450
+5198256841,"Just off Ga 21 exit of I-95, near Savannah.",,txt_no_coords_csv_has_coords,,,,32.19126,-81.19474,250
+4073697004,Richland Plantation south of La. 15 and two miles west of Rhymes.,,txt_no_coords_csv_has_coords,,,,32.422169,-91.9778,4597
+1503213258,"I-220 at Airline Drive (Bossier 3105) N of Bossier City; T18N, R13W, Sec. 11.","I-220 at Airline Drive (Bossier 3105) N of Bossier City; T18N, R13W, Sec. 11.",txt_no_coords_csv_has_coords,,,,32.55739,-93.70992,500
+1269671048,Profit Island.,,txt_no_coords_csv_has_coords,,,,30.585,-91.28559,2470
+4075454274,Newark,,txt_no_coords_csv_has_coords,,,,39.68192,-75.75135,2250
+4075454270,Newark,,txt_no_coords_csv_has_coords,,,,39.68192,-75.75135,2250
+4075454267,Newark,,txt_no_coords_csv_has_coords,,,,39.68192,-75.75135,2250
+4075454244,Newark,,txt_no_coords_csv_has_coords,,,,39.68192,-75.75135,2250
+4075454242,Newark,,txt_no_coords_csv_has_coords,,,,39.68192,-75.75135,2250
+4073686880,Weed in median of I-20 just west of Thomas Road Exit in West Monroe.,,txt_no_coords_csv_has_coords,,,,32.509311,-92.119301,26835
+4433286379,"Hills Corner, w. of Rt. 137 & Pitcher Pond, Lincolnville",,txt_no_coords_csv_has_coords,,,,44.32218,-69.07054,2000
+3307916928,Roadbank of I-220 at Airline Drive (Bossier 3105) north of Bossier City,,txt_no_coords_csv_has_coords,,,,32.55739,-93.70992,500
+3766309170,ON RICHLAND PLANTATION SOUTH OF LA. 15 AND TWO MILES WEST OF RHYMES.,,txt_no_coords_csv_has_coords,,,,32.37786,-91.92486,1500
+1269671071,About 1 1/4 mi E of Pine Grove.,,txt_no_coords_csv_has_coords,,,,30.70908,-90.72605,800
+3695177067,"Birmingham, E of metropolitan area. ""The Rise"" stables.",,txt_no_coords_csv_has_coords,,,,30.76381,-87.71111,6000
+2512761027,Station: Cumberland.,,txt_no_coords_csv_has_coords,,,,39.65053,-78.75794,40
+1269671061,"BREC Horse Activity Center on River Road, Baton Rouge.",,txt_no_coords_csv_has_coords,,,,30.38375,-91.21052,1300
+1269671055,"BREC Horse Activity Center on River Road, Baton Rouge.",,txt_no_coords_csv_has_coords,,,,30.38375,-91.21052,1300
+1269671098,"Collected along paved road to Hilltop Missionary Baptist Church, 0.8 mi N of LA 436; east of Pine.",,txt_no_coords_csv_has_coords,,,,30.92952,-89.91546,500
+3414482304,Fallbrook,,txt_no_coords_csv_has_coords,,,,33.37642,-117.251147,3439
+4069847376,West slope of Mt. Hood.,,txt_has_coords_csv_no_coords,45.49889,-122.76333,,,,
+1999136716,Monhegan Island,Monhegan Island,txt_no_coords_csv_has_coords,,,,43.76521,-69.31238,1300
+1998693494,Monhegan Island,Monhegan Island,txt_no_coords_csv_has_coords,,,,43.76521,-69.31238,1300
+4075454248,Milltown,,txt_no_coords_csv_has_coords,,,,39.73079,-75.66604,1000
+4075454240,Milltown,,txt_no_coords_csv_has_coords,,,,39.73079,-75.66604,1000
+3865094239,Milltown,,txt_no_coords_csv_has_coords,,,,39.73079,-75.66604,1000
+1807240943,"near North Hope Corner, Hope",,txt_no_coords_csv_has_coords,,,,44.2903,-69.1904,4000
+2859110749,in median of I-20 just W of Thomas Road Exit in West Monroe,,txt_no_coords_csv_has_coords,,,,32.50862,-92.16164,500
+1269671087,Near Innis.,,txt_no_coords_csv_has_coords,,,,30.8777,-91.68101,4000
+1999288224,Old Orchard Beach,Old Orchard Beach,txt_no_coords_csv_has_coords,,,,43.52113,-70.38483,3400
+1999262411,Old Orchard Beach,Old Orchard Beach,txt_no_coords_csv_has_coords,,,,43.52113,-70.38483,3400
+1998544299,Old Orchard Beach,Old Orchard Beach,txt_no_coords_csv_has_coords,,,,43.52113,-70.38483,3400
+1998330101,Old Orchard Beach,Old Orchard Beach,txt_no_coords_csv_has_coords,,,,43.52113,-70.38483,3400
+3341236057,Staten Island,,txt_has_coords_csv_no_coords,40.583438,-74.149588,5421.0,,,
+1988621463,Staten Island,,txt_no_coords_csv_has_coords,,,,40.583438,-74.149588,5421
+4075454279,near Berlin,,txt_no_coords_csv_has_coords,,,,38.32556,-75.21658,4000
+4955505310,Newport,Newport,txt_has_coords_csv_no_coords,41.50833,-71.31666,20000.0,,,
+3798074545,"Oak Glen Road, NE of Yucaipa, 1.5 mi from Bryant Street.",,txt_no_coords_csv_has_coords,,,,34.033625,-117.043086,9270
+3091277621,"Oak Glen Road, NE of Yucaipa, 1.5 mi from Bryant Street.",,txt_has_coords_csv_no_coords,34.033625,-117.043086,9270.0,,,
+3709849798,"Mobile County, AL",,txt_no_coords_csv_has_coords,,,,30.68894,-88.03804,15000
+3915845386,Corner of Station Rd and Utley Rd,Corner of Station Rd and Utley Rd,txt_no_coords_csv_has_coords,,,,41.35707,-72.5655,100
+1998390878,"near I-10, ca. 10 mi. e. Loxley.","near I-10, ca. 10 mi. e. Loxley.",txt_no_coords_csv_has_coords,,,,30.58453,-87.48976,1000
+1269671086,"Along both sides of LA 13 just E of Parish Rd. 9-35 at Cossinade, ca. 2.5 mi N of jct. LA 13 and LA 14.",,txt_no_coords_csv_has_coords,,,,30.03917,-92.31862,200
+4067794324,Fairless Junction,,txt_has_coords_csv_no_coords,40.179554,-74.855164,2415.0,,,
+3865379342,Fairless Junction,,txt_no_coords_csv_has_coords,,,,40.179554,-74.855164,2415
+5103525925,"ca. 5.5 miles SE of Monroe, junction of Miller Road and State Highway 15","Ca. 5.5 mi. SE Monroe, Jct of Miller Rd & STHY 15 (T17N, R4E, Sec.35)",txt_no_coords_csv_has_coords,,,,32.42326,-92.03494,25
+1503182300,1 mi. E of the junction with US 41 on the S shoulder of FL 54.,1 mi. E of the junction with US 41 on the S shoulder of FL 54.,txt_no_coords_csv_has_coords,,,,28.18575,-82.45087,100
+1269671088,"Along LA 16, 1.1 road miles east of junction of LA 16 and LA 445; east of Holton.",,txt_no_coords_csv_has_coords,,,,30.74461,-90.34527,300
+1503275825,County fairgrounds along US 231; S edge of Dothan.,County fairgrounds along US 231; S edge of Dothan.,txt_no_coords_csv_has_coords,,,,31.14289,-85.40585,500
+2575052218,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1999235118,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1999221651,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1999163225,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1999079562,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1998979386,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1998595508,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1998434351,[no additional data],[no additional data],txt_no_coords_csv_has_coords,,,,41.17915,-73.19604,4000
+1269680439,"Natchitoches vicinity, at first exit on I-40 south of this town's exit. Along shoulder of interstate highway only.",,txt_no_coords_csv_has_coords,,,,31.66521,-93.10232,420
+3307865220,Median of I-20 between Well Road Exit and Thomas Road Exit in West Monroe,,txt_no_coords_csv_has_coords,,,,32.51056,-92.17443,1600
+1457766275,,Gainesville. University of Florida Campus. Natural Area Teaching Lab.,txt_no_coords_csv_has_coords,,,,29.63251,-82.36849,400
+1269671059,In median of I-20 just West of Thomas Road exit in West Monroe.,,txt_no_coords_csv_has_coords,,,,32.50862,-92.16164,500
+2234309165,"FLORA OF LOUISIANA Parish: Richland Along south side of I-20E east of Start Exit west of Rayville; Sec. 10, T17N, R6E.",,txt_no_coords_csv_has_coords,,,,32.45733,-91.76188,300
+3766309166,ROADBANK OF I-220 AT AIRLINE DRIVE (BOSSIER 3105) NORTH OF BOSSIER CITY.,,txt_no_coords_csv_has_coords,,,,32.55739,-93.70992,500
+2234308373,"FLORA OF LOUISIANA Parish: Bossier Roadbank of I-220 at Airline Drive (Bossier 3105) north of Bossier City, Sec. 11, T18N, R13W.",,txt_no_coords_csv_has_coords,,,,32.55739,-93.70992,500
+3125116381,"Behind greenhouse, University of Florida campus, Gainesville.",,txt_no_coords_csv_has_coords,,,,29.63975,-82.34903,1000
+3865377302,Elsmere,,txt_no_coords_csv_has_coords,,,,39.73823,-75.59472,1200
+3865364298,Elsmere,,txt_no_coords_csv_has_coords,,,,39.73823,-75.59472,1200
+1998739173,Southport,Southport,txt_no_coords_csv_has_coords,,,,43.81772,-69.66584,3650
+3865378423,Beaver Valley,,txt_no_coords_csv_has_coords,,,,39.83905,-75.5596,1600
+1999128077,In old field on S. E. rim of Bryces in Tuscaloosa,In old field on S. E. rim of Bryces in Tuscaloosa,txt_no_coords_csv_has_coords,,,,30.25525,-88.11949,1500
+1503278698,On Louisiana State University Experiment Station Farm W of I-20 and US 80 interchange at Calhoun.,On Louisiana State University Experiment Station Farm W of I-20 and US 80 interchange at Calhoun.,txt_no_coords_csv_has_coords,,,,32.51441,-92.34603,1800
+3344481325,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481316,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481247,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481243,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481242,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481241,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481226,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+3344481223,Colleton,,txt_no_coords_csv_has_coords,,,,33.1427,-80.8426,
+1849155093,Colleton,,txt_has_coords_csv_no_coords,33.1427,-80.8426,,,,
+5067927811,[no precise locality],,txt_has_coords_csv_no_coords,43.71556,-72.19101,9733.0,,,
+5067927808,[no precise locality],,txt_no_coords_csv_has_coords,,,,43.71556,-72.19101,9733
+5067926811,[no precise locality],,txt_has_coords_csv_no_coords,43.61174,-71.1706,9493.0,,,
+5067925816,[no precise locality],,txt_has_coords_csv_no_coords,42.7874,-72.40055,9623.0,,,
+5067923812,[no precise locality],,txt_has_coords_csv_no_coords,43.71556,-72.19101,9733.0,,,
+5067923809,[no precise locality],,txt_has_coords_csv_no_coords,43.71556,-72.19101,9733.0,,,
+5070543297,White Marsh,,txt_no_coords_csv_has_coords,,,,39.38016,-76.4626,3400
+5070543296,White Marsh,,txt_no_coords_csv_has_coords,,,,39.38016,-76.4626,3400
+1457786443,,Live Oak: 14019 State Road 51.,txt_no_coords_csv_has_coords,,,,30.19497,-83.11509,50
+1269671041,At Jct. of Hwy 11 and IH-10,,txt_no_coords_csv_has_coords,,,,30.15105,-89.85825,400
+2859345286,"near Anthony, along W side of old hwy 301",,txt_no_coords_csv_has_coords,,,,29.28842,-82.11164,4000
+1269671074,"North of White Castle, Hwy 1.",,txt_no_coords_csv_has_coords,,,,30.1718,-91.14625,4000
+1269680118,"Farr Park and Horse Activity Center; BREC Horse Activity Center on River Road, Baton Rouge.",,txt_no_coords_csv_has_coords,,,,30.38375,-91.21052,1300
+1269680109,"Farr Park and Horse Activity Center; BREC Horse Activity Center on River Road, Baton Rouge.",,txt_no_coords_csv_has_coords,,,,30.38375,-91.21052,1300
+5103569109,"State Highway 15, 1.5 miles W of Rhymes","Sthy 15, 1.5 mi. W of Rhymes (T16N, R5E, Sec.12)",txt_no_coords_csv_has_coords,,,,32.38096,-91.92517,600
+4073852218,"S of La. 15 on Richland Plantation, 1.5 miles W of Rhymes and La. 133.",,txt_no_coords_csv_has_coords,,,,32.422169,-91.9778,4597
+4856605890,"North Gate Road on west side of Mount Diablo, hairpin turn opposite Angel Kerley trailhead.",,txt_no_coords_csv_has_coords,,,,37.88,-121.96,301
+2430117629,"North Gate Road on west side of Mount Diablo, hairpin turn opposite Angel Kerley trailhead.",,txt_no_coords_csv_has_coords,,,,37.88,-121.96,301
+3744713750,"Eufaula, Al.",,txt_no_coords_csv_has_coords,,,,31.90877,-85.15387,15900
+1503221582,SE corner of Exit 73 of I-75; 3 mi. NE of Vienna.,SE corner of Exit 73 of I-75; 3 mi. NE of Vienna.,txt_no_coords_csv_has_coords,,,,32.19186,-83.74767,200
+1930870051,"Open places, western shore of Lake Okeechobee, Fisheating Creek to Three-Mile Canal [map]",,txt_no_coords_csv_has_coords,,,,26.96938,-81.09642,2000
+5295083176,"Daymon Road near railroad, Northampton.",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,70
+5198193840,"Daymon Road near railroad, Northampton.",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,70
+1086616831,"Daymon Road near railroad, Northampton.",,txt_no_coords_csv_has_coords,,,,42.338,-72.63613,70
+5070567592,"Twin Churches Rd, near Lower New Germany Rd.",,txt_no_coords_csv_has_coords,,,,39.63625,-79.10419,500
+5070543285,"Twin Churches Rd, near Lower New Germany Rd.",,txt_no_coords_csv_has_coords,,,,39.63625,-79.10419,500
+4601577309,N of La. 156 at the E edge of the town of Calvin.,,txt_no_coords_csv_has_coords,,,,31.97048,-92.75419,800
+1849185672,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849180278,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849180104,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849180024,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849179967,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849173178,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849168894,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849164872,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849155893,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849152921,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849149301,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849147903,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849146681,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849142821,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849142705,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849136174,Locality Not Recorded,,txt_has_coords_csv_no_coords,44.46044,-123.23572,,,,
+1849135346,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849134075,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849133989,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849125163,Locality Not Recorded,,txt_has_coords_csv_no_coords,34.236944,-80.436944,,,,
+1849118603,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849116243,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849111081,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+1849109529,Locality Not Recorded,,txt_no_coords_csv_has_coords,,,,34.236944,-80.436944,
+3744690045,I-220 at Airline Drive ( Bossier 3105) north of Bossier City T18N R13W S11,,txt_no_coords_csv_has_coords,,,,32.55739,-93.70992,500

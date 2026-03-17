@@ -1,0 +1,42 @@
+Disjoint analysis (CSV vs original .txt)
+Comparing columns in .txt order; eventDate IGNORED.
+======================================================================
+
+gbifID 122994729:
+  Number of disjoint regions: 11
+  Region 1: columns [97:100] from 'decimalLatitude' through 'coordinateUncertaintyInMeters'
+  Region 2: columns [103:104] from 'verbatimSRS' through 'verbatimSRS'
+  Region 3: columns [175:176] from 'nomenclaturalCode' through 'nomenclaturalCode'
+  Region 4: columns [179:180] from 'datasetKey' through 'datasetKey'
+  Region 5: columns [181:182] from 'lastInterpreted' through 'lastInterpreted'
+  Region 6: columns [187:188] from 'issue' through 'issue'
+  Region 7: columns [190:195] from 'mediaType' through 'acceptedTaxonKey'
+  Region 8: columns [202:206] from 'speciesKey' through 'verbatimScientificName'
+  Region 9: columns [207:210] from 'protocol' through 'lastCrawled'
+  Region 10: columns [211:212] from 'repatriated' through 'repatriated'
+  Region 11: columns [214:215] from 'isSequenced' through 'isSequenced'
+  Example columns in first disjoint: decimalLatitude, ..., coordinateUncertaintyInMeters
+
+gbifID 122994964:
+  Number of disjoint regions: 4
+  Region 1: columns [99:100] from 'coordinateUncertaintyInMeters' through 'coordinateUncertaintyInMeters'
+  Region 2: columns [191:193] from 'hasCoordinate' through 'hasGeospatialIssues'
+  Region 3: columns [211:212] from 'repatriated' through 'repatriated'
+  Region 4: columns [214:215] from 'isSequenced' through 'isSequenced'
+  Example columns in first disjoint: coordinateUncertaintyInMeters, ..., coordinateUncertaintyInMeters
+
+gbifID 122994969:
+  Number of disjoint regions: 4
+  Region 1: columns [99:100] from 'coordinateUncertaintyInMeters' through 'coordinateUncertaintyInMeters'
+  Region 2: columns [191:193] from 'hasCoordinate' through 'hasGeospatialIssues'
+  Region 3: columns [211:212] from 'repatriated' through 'repatriated'
+  Region 4: columns [214:215] from 'isSequenced' through 'isSequenced'
+  Example columns in first disjoint: coordinateUncertaintyInMeters, ..., coordinateUncertaintyInMeters
+
+gbifID 122995012:
+  Number of disjoint regions: 4
+  Region 1: columns [99:100] from 'coordinateUncertaintyInMeters' through 'coordinateUncertaintyInMeters'
+  Region 2: columns [191:193] from 'hasCoordinate' through 'hasGeospatialIssues'
+  Region 3: columns [211:212] from 'repatriated' through 'repatriated'
+  Region 4: columns [214:215] from 'isSequenced' through 'isSequenced'
+  Example columns in first disjoint: coordinateUncertaintyInMeters, ..., coordinateUncertaintyInMeters

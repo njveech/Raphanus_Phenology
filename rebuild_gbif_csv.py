@@ -2,9 +2,8 @@
 """
 1) Disjoint analysis: Compare CSV vs .txt for gbifID 122994729 (and optionally others),
    ignoring eventDate. Identify contiguous column regions where values don't match (disjoints).
-2) Build new CSV: gbifIDs from original CSV (order preserved), row data from .txt for each ID,
-   then fill missing decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters from
-   original CSV by matching on (locality, verbatimLocality).
+2) Build new CSV: gbifIDs from original CSV (order preserved) plus 24 gbifIDs with media;
+   row data from occurrence.txt only. (Coordinate fixes will be added via a separate dataset later.)
 """
 
 import csv
@@ -13,8 +12,16 @@ import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ORIGINAL_TSV = os.path.join(SCRIPT_DIR, "original_gbif_download", "occurrence.txt")
-ORIGINAL_CSV = os.path.join(SCRIPT_DIR, "..", "GBIF_occurance_dataset_030926.csv")
+ORIGINAL_CSV = os.path.join(SCRIPT_DIR, "GBIF_occurance_dataset_030926.csv")
 OUTPUT_CSV = os.path.join(SCRIPT_DIR, "GBIF_occurrence_fixed.csv")
+
+# 24 gbifIDs that have non-empty mediaType in occurrence.txt (add to CSV set for fixed output)
+GBIF_IDS_WITH_MEDIA = [
+    "1424424381", "1503179582", "1988852972", "2512848219", "2514964427", "2514966053",
+    "2515352603", "4072686279", "4072686280", "4073082560", "4073173685", "4073226109",
+    "4073226121", "4880005783", "5198161855", "5198174852", "5198176853", "5198185854",
+    "5198193841", "5198194850", "5198218870", "5198256842", "5198257856", "894984655",
+]
 DISJOINT_REPORT = os.path.join(SCRIPT_DIR, "disjoint_analysis_report.txt")
 
 
@@ -131,27 +138,6 @@ def run_disjoint_analysis(txt_cols, txt_by_id, csv_rows):
     return report_text
 
 
-def build_coord_lookup(csv_rows):
-    """
-    Build (locality, verbatimLocality) -> (decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters).
-    Only include CSV rows that have at least one of lat/long non-empty.
-    """
-    lookup = {}
-    for row in csv_rows:
-        loc = norm(row.get("locality", ""))
-        vloc = norm(row.get("verbatimLocality", ""))
-        lat = norm(row.get("decimalLatitude", ""))
-        lon = norm(row.get("decimalLongitude", ""))
-        unc = norm(row.get("coordinateUncertaintyInMeters", ""))
-        if not lat and not lon:
-            continue
-        key = (loc or "", vloc or "")
-        # Prefer row that has both lat and lon
-        if key not in lookup or (lat and lon):
-            lookup[key] = (lat or "", lon or "", unc or "")
-    return lookup
-
-
 def main():
     if not os.path.isfile(ORIGINAL_TSV):
         print(f"Original TSV not found: {ORIGINAL_TSV}", file=sys.stderr)
@@ -174,50 +160,32 @@ def main():
 
     # --- 2) Build new CSV ---
     print("\n--- Building new CSV ---")
-    # gbifID order from CSV
-    gbif_ids_from_csv = []
+    # gbifID order: all from CSV, then any of the 24-with-media not already in CSV
+    csv_id_set = set()
+    gbif_id_list = []
     for row in csv_rows:
         gid = norm(row.get("gbifID"))
-        if gid:
-            gbif_ids_from_csv.append(gid)
-
-    coord_lookup = build_coord_lookup(csv_rows)
-    print(f"  Coordinate lookup: {len(coord_lookup)} (locality, verbatimLocality) pairs with coords from CSV.")
+        if gid and gid not in csv_id_set:
+            csv_id_set.add(gid)
+            gbif_id_list.append(gid)
+    for gid in GBIF_IDS_WITH_MEDIA:
+        if gid not in csv_id_set and gid in txt_by_id:
+            gbif_id_list.append(gid)
 
     # Use only columns that exist in .txt (no extra CSV columns)
     out_cols = [c for c in txt_cols if c]
     out_rows = []
-    filled_count = 0
-    for gid in gbif_ids_from_csv:
+    for gid in gbif_id_list:
         if gid not in txt_by_id:
             continue
-        row = dict(txt_by_id[gid])
-        # Fill missing coordinates from CSV lookup by locality/verbatimLocality
-        loc = norm(row.get("locality", ""))
-        vloc = norm(row.get("verbatimLocality", ""))
-        key = (loc or "", vloc or "")
-        if key in coord_lookup:
-            lat, lon, unc = coord_lookup[key]
-            need_lat = not norm(row.get("decimalLatitude")) and lat
-            need_lon = not norm(row.get("decimalLongitude")) and lon
-            need_unc = unc and not norm(row.get("coordinateUncertaintyInMeters"))
-            if need_lat or need_lon:
-                if lat:
-                    row["decimalLatitude"] = lat
-                if lon:
-                    row["decimalLongitude"] = lon
-                if need_unc and unc:
-                    row["coordinateUncertaintyInMeters"] = unc
-                filled_count += 1
-        out_rows.append(row)
+        out_rows.append(dict(txt_by_id[gid]))
 
     with open(OUTPUT_CSV, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=out_cols, extrasaction="ignore")
         w.writeheader()
         w.writerows(out_rows)
 
-    print(f"  Wrote {len(out_rows)} rows to {OUTPUT_CSV}")
-    print(f"  Filled missing coordinates for {filled_count} rows using (locality, verbatimLocality) from original CSV.")
+    print(f"  Wrote {len(out_rows)} rows to {OUTPUT_CSV} (CSV gbifIDs + 24 with media, data from occurrence.txt only).")
     return 0
 
 

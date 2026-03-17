@@ -1,0 +1,3 @@
+next, pull unreliable location info removals and check if gbifid and locality match the pairings in the original .txt - make a list of those that do not match to fix... (ie find the correct gbif ID for the locality and remove that but not the mismatched ID)
+next, next check the state removals by checking whether gbifID and state got disjointed
+add any ids we do not want to remove back to the main sheet, fill rows from the original download, then add back corrected coordinates once we are certain they match locality info.

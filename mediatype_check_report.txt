@@ -1,0 +1,32 @@
+MediaType check: No_Media_No_Reference_Remove_031126.csv vs occurrence.txt
+
+Total gbifIDs in No_Media CSV: 402
+  With non-empty mediaType in occurrence.txt: 24
+  With empty/zero mediaType in occurrence.txt: 377
+  Not found in occurrence.txt: 1
+
+gbifIDs that HAVE mediaType in occurrence.txt (discrepancies):
+  1424424381	mediaType=StillImage
+  1503179582	mediaType=StillImage
+  1988852972	mediaType=StillImage
+  2512848219	mediaType=StillImage
+  2514964427	mediaType=StillImage
+  2514966053	mediaType=StillImage
+  2515352603	mediaType=StillImage
+  4072686279	mediaType=InteractiveResource;StillImage
+  4072686280	mediaType=StillImage;InteractiveResource
+  4073082560	mediaType=InteractiveResource;StillImage
+  4073173685	mediaType=InteractiveResource;StillImage
+  4073226109	mediaType=StillImage;InteractiveResource
+  4073226121	mediaType=StillImage;InteractiveResource
+  4880005783	mediaType=StillImage
+  5198161855	mediaType=StillImage
+  5198174852	mediaType=StillImage
+  5198176853	mediaType=StillImage
+  5198185854	mediaType=StillImage
+  5198193841	mediaType=StillImage
+  5198194850	mediaType=StillImage
+  5198218870	mediaType=StillImage
+  5198256842	mediaType=StillImage
+  5198257856	mediaType=StillImage
+  894984655	mediaType=StillImage
