@@ -44,15 +44,12 @@ after_locality <- after_basis %>% filter(
 )
 n_locality <- nrow(after_basis) - nrow(after_locality)
 
-after_media <- after_locality %>% filter(mediaType == "StillImage")
+after_media <- after_locality %>% filter(grepl("StillImage", mediaType, fixed = TRUE))
 n_media <- nrow(after_locality) - nrow(after_media)
+
 # Rows actually removed at media step: NA, blank, "0", or any other non-StillImage
-mediaType_not_StillImage <- after_locality %>% filter(
-  is.na(mediaType) |
-  trimws(mediaType) == "" |
-  mediaType == "0" |
-  mediaType != "StillImage"
-)
+mediaType_not_StillImage <- after_locality %>%
+  filter(!grepl("StillImage", mediaType, fixed = TRUE))
 
 occ_filtered <- after_media
 
