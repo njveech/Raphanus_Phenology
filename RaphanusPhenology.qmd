@@ -149,8 +149,14 @@ links_subset <- links %>%
   semi_join(after_basis, by = "gbifID")
 
 # print subset for image pulling
-path_links_filtered <- "Output_Files/filtered_multimedia_260407.csv"
-write_csv(links_subset, path_links_filtered)
+path_links_filtered <- "Output_Files/filtered_multimedia_260407.txt"
+write.table(
+  links_subset,
+  file = path_links_filtered,
+  sep = "\t",
+  row.names = FALSE,
+  quote = FALSE
+)
 ```
 
 \
