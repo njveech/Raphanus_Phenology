@@ -132,10 +132,28 @@ write_csv(county_only, path_removed_county_only)
 write_csv(occ_filtered, path_filtered_out)
 
 
+# filter specimen image link document (original_gbif_download/multimedia.txt) for only specimens found in after_basis (include images for specimens without locality for now in case county is sufficient/has uniform climate)
 
+links <- read.delim(
+  "original_gbif_download/multimedia.txt",
+  header = TRUE,
+  sep = "\t",
+  quote = "\"",
+  fill = TRUE,
+  stringsAsFactors = FALSE
+)
 
+# filter
+after_basis$gbifID <- as.numeric(after_basis$gbifID)
+links_subset <- links %>%
+  semi_join(after_basis, by = "gbifID")
 
+# print subset for image pulling
+path_links_filtered <- "Output_Files/filtered_multimedia_260407.csv"
+write_csv(links_subset, path_links_filtered)
 ```
+
+\
 
 # CA Methods
 
