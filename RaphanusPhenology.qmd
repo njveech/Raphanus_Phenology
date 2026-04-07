@@ -16,7 +16,128 @@ editor_options:
 editor: visual
 ---
 
-# Methods
+# US Methods
+
+All specimens were downloaded from GBIF. After initial filtering on the GBIF website, 5,697 specimens were downloaded. The filers applied on the GBIF website included: Occurrence = Present, Basis of Record = Preserved Specimen, Scientific Name = "Raphanus \|L.", Country of Collection = U.S. Only. Specimens from all years and methods were included.
+
+## Filtering GBIF Specimens
+
+Filtering was conducted sequentially to exclude any specimens from the data set, whether it be from lack of metadata to reliably provide reproductive counts or capture climate data, or simple irrelevance to the geographic areas of interest for Raphanus.
+
+The first method of filtering was to keep all specimens from states that fall into the three geographic regions of interest, and exclude all other states for the time being. There is the potential to revisit the inclusion of specimens from states of potential interest (i.e. Midwestern States, Hawaii) in the future. The geographic regions were separated based on map guidelines of climate regions as described by the Environmental Protection Agency, and thus, specimens in certain states may be divided up based on their location within multiple climate regions that span one state. The first geographic region, the West, consists of California, Oregon, and Washington. The second geographic region, North East, contains northern Virginia, Maryland, Delaware, New Jersey, Rhode Island, New York, Connecticut, Massachusetts, Vermont, New Hampshire, and Maine. The final region is the South East, which contains southern Virginia, portions of Texas, Louisiana, Alabama, Mississippi, Florida, Georgia, South Carolina, and North Carolina. Any specimen location that fell outside of our predefined regions was excluded through code. (n_state = #)
+
+As a means to ensure the GBIF criteria were applied correctly when the download was first done, any specimens with a country code that was not used were excluded (n_country = #), and any specimens that had a Basis of Record that was not Preserved Specimen were excluded (n_basis = #).
+
+Specimens without nay locality or VerbatimLocality information were also excluded due to the lack of metadata, especially due to the inability to identify coordinates for specimens without any previously listed. This constituted \_\_ specimens. (n_locality = #). Specimens with no locality information and just a county label were specified out separately later in the code.
+
+Lastly, a filter was applied to exclude any specimens that did not have the phrase "StillImage" listed in their mediaType, as these specimens do not have any associated image on which the Machine Learning model can perform reproductive counts. (n_media = #).
+
+A table was also created to view how many specimens were removed for each reason. Separate CSV files can be viewed for all removed specimens.
+
+```{r}
+#| label: Filtering GBIF Specimens based on set removal criteria
+#| eval: false
+
+# GBIF occurrence further filtering -------------------------------
+# Set working directory to project root (Raphanus_Phenology) before sourcing.
+
+library(dplyr)
+library(readr)
+
+# Paths (relative to project root)
+path_occurrences <- "GBIF_occurrence_fixed.csv"
+path_filtered_out <- "Output_Files/GBIF_occurrence_filtered.csv"
+path_removed_county_only <- "Output_Files/GBIF_occurrence_removed_county_only.csv"
+path_removed_mediaType_not_StillImage <- "Output_Files/GBIF_occurrence_removed_mediaType_not_StillImage.csv"
+path_removed_not_preserved <- "Output_Files/GBIF_occurrence_removed_not_preserved_specimen.csv"
+path_removals_breakdown <- "Output_Files/GBIF_filter_removals_breakdown.csv"
+
+# Load occurrence data (read as character to avoid parsing issues with messy GBIF fields)
+occ <- read_csv(path_occurrences, col_types = cols(.default = col_character()), show_col_types = FALSE)
+
+# Define US states to exclude due to low specimen counts or irrelevance to geographic interests
+states_exclude <- c(
+  "Alaska (State)", "Arizona", "Arkansas", "Colorado",
+  "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
+  "Michigan", "Minnesota", "Missouri", "Montana", "Nebraska", "Nevada",
+  "New Mexico", "North Dakota", "Ohio", "Oklahoma", "South Dakota",
+  "Tennessee", "Utah", "West Virginia", "Wisconsin", "Wyoming", "0"
+)
+
+# Create output directory if needed
+dir.create("Output_Files", showWarnings = FALSE)
+
+# Apply filters sequentially to build removal breakdown
+
+#n0 is representative of total starting row count, n_state keeps track of how many were removed for state, n_country drops any records where country code for collection isn't US, n_basis is for anything with a record that's not preserved specimen, 
+n0 <- nrow(occ)
+after_state <- occ %>% filter(!stateProvince %in% states_exclude)
+n_state <- n0 - nrow(after_state)
+
+after_country <- after_state %>% filter(countryCode == "US")
+n_country <- nrow(after_state) - nrow(after_country)
+
+after_basis <- after_country %>% filter(basisOfRecord == "PRESERVED_SPECIMEN")
+n_basis <- nrow(after_country) - nrow(after_basis)
+
+after_locality <- after_basis %>% filter(
+  !( (is.na(locality) | trimws(locality) == "") &
+     (is.na(verbatimLocality) | trimws(verbatimLocality) == "") )
+)
+n_locality <- nrow(after_basis) - nrow(after_locality)
+
+after_media <- after_locality %>% filter(grepl("StillImage", mediaType, fixed = TRUE))
+n_media <- nrow(after_locality) - nrow(after_media)
+
+# Rows actually removed at media step: NA, blank, "0", or any other non-StillImage
+mediaType_not_StillImage <- after_locality %>%
+  filter(!grepl("StillImage", mediaType, fixed = TRUE))
+
+occ_filtered <- after_media
+
+# Breakdown table of removals (sequential)
+removals_breakdown <- tibble(
+  reason = c(
+    "Excluded state (stateProvince in states_exclude)",
+    "Country not US",
+    "basisOfRecord not PRESERVED_SPECIMEN",
+    "Empty locality (county-only)",
+    "mediaType not StillImage"
+  ),
+  n_removed = c(n_state, n_country, n_basis, n_locality, n_media)
+) %>%
+  mutate(
+    n_remaining_after = n0 - cumsum(n_removed),
+    .after = n_removed
+  )
+
+# Optional: print or view the table
+print(removals_breakdown)
+
+# Specimens with only county information (for potential county-level climate assignment)
+county_only <- occ %>%
+  filter(
+    (is.na(locality) | trimws(locality) == "") &
+    (is.na(verbatimLocality) | trimws(verbatimLocality) == "")
+  )
+
+# Specimens removed due to basisOfRecord not being PRESERVED_SPECIMEN
+not_preserved_specimen <- occ %>% filter(basisOfRecord != "PRESERVED_SPECIMEN")
+
+# Write breakdown table and removed specimens / filtered dataset
+write_csv(removals_breakdown, path_removals_breakdown)
+write_csv(not_preserved_specimen, path_removed_not_preserved)
+write_csv(mediaType_not_StillImage, path_removed_mediaType_not_StillImage)
+write_csv(county_only, path_removed_county_only)
+write_csv(occ_filtered, path_filtered_out)
+
+
+
+
+
+```
+
+# CA Methods
 
 All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
 
@@ -78,10 +199,54 @@ Leaves were not annotated for our model (again time constraints in place), thoug
 
 ## Deploying Model from Roboflow
 
-**Insert Julia's codes to get the JSONS and get JSONS to data frame**
-
 ```{bash}
 #eventual code here
+```
+
+```{python}
+#Code for converting model output JSON to Dataframe
+import glob
+import json
+import pandas as pd
+from collections import Counter
+
+# Desired class order
+class_order = ["Bud Cluster", "Flower", "Fruit"]
+
+rows = []
+
+# Loop through all JSON files
+for file in glob.glob("*.json"):
+    with open(file, "r") as f:
+        result = json.load(f)
+    
+    # Extract class names from predictions
+    classes = [pred["class"] for pred in result.get("predictions", [])]
+    
+    # Count how many of each class were detected
+    counts = Counter(classes)
+    
+    # Image ID without extension
+    image_id = file.replace(".json", "")
+    
+    # Build row dict with all classes in fixed order
+    row = {"image": image_id}
+    for cls in class_order:
+        row[cls] = counts.get(cls, 0)
+    
+    rows.append(row)
+
+# Build DataFrame with class order
+df = pd.DataFrame(rows, columns=["image"] + class_order)
+
+# Set image as index if desired (optional)
+# df = df.set_index("image")
+
+# Save to CSV
+df.to_csv("missing_inference_counts.csv", index=False)
+
+print("Saved dataset to missing_inference_counts.csv")
+print(df)
 ```
 
 ## Converting Model Data into a Usable Format
