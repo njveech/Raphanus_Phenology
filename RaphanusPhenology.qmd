@@ -162,7 +162,7 @@ write.table(
 )
 ```
 
-##  Pulling Images from GBIF for Model Evaluation
+## Pulling Images from GBIF for Model Evaluation
 
 ```{python}
 #| eval: false
