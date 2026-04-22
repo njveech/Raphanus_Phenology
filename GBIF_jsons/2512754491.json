@@ -1,6 +1,6 @@
 {
-    "inference_id": "1b372bb1-a6c0-46cd-8e3b-4a913f4505b3",
-    "time": 0.06306830793619156,
+    "inference_id": "a5cae859-81da-49e0-adf6-81e14bceb4a3",
+    "time": 0.07683485187590122,
     "image": {
         "width": 1519,
         "height": 1999
@@ -14,7 +14,7 @@
             "confidence": 0.8479538559913635,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "4c508d8a-a33f-40aa-b850-e98467315252",
+            "detection_id": "bed3a565-c3a5-4999-9d38-c6e0187298ab",
             "points": [
                 {
                     "x": 754.0,
@@ -362,7 +362,7 @@
             "confidence": 0.8475238680839539,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "ab38b401-1860-465b-90da-af91d01080d4",
+            "detection_id": "a74f9709-0dbd-4873-ac5d-f4f8d0257bca",
             "points": [
                 {
                     "x": 1143.0,
@@ -438,7 +438,7 @@
             "confidence": 0.8436474800109863,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "05d0878c-1477-4b08-ba75-1c9a80c9d52f",
+            "detection_id": "e2862c8c-a585-4998-91cc-9526bc15611f",
             "points": [
                 {
                     "x": 564.0,
@@ -518,7 +518,7 @@
             "confidence": 0.7635648846626282,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "e09136f3-2c61-4726-b325-7d33007d1055",
+            "detection_id": "547467a3-1ac0-487a-886c-f37aaf35e8e3",
             "points": [
                 {
                     "x": 489.0,
@@ -654,7 +654,7 @@
             "confidence": 0.674095094203949,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "890f459d-8bde-4f56-b291-59cbbe12ac3b",
+            "detection_id": "4ce869f5-3464-4413-94ad-415eb47b586e",
             "points": [
                 {
                     "x": 544.0,
@@ -750,7 +750,7 @@
             "confidence": 0.5057942867279053,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "8b766180-383f-4571-9c34-8c4090623aa3",
+            "detection_id": "4f7b8361-eb8e-45da-9c7f-6485cbfb1826",
             "points": [
                 {
                     "x": 390.0,
@@ -834,7 +834,7 @@
             "confidence": 0.47756296396255493,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "4c793fc2-f758-4b7e-9add-8115aa8426da",
+            "detection_id": "fb1ed5f9-05f9-4cf3-b029-8f61c8d5fb0f",
             "points": [
                 {
                     "x": 944.0,
@@ -938,7 +938,7 @@
             "confidence": 0.47525668144226074,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "5242d6f9-5642-400f-9bd6-ce108642fd1b",
+            "detection_id": "5738e460-5009-492f-85cf-d55517f4befb",
             "points": [
                 {
                     "x": 821.0,
@@ -1038,7 +1038,7 @@
             "confidence": 0.4745004177093506,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "b557adc4-7608-4d40-a610-b0af3066fb2c",
+            "detection_id": "fee63621-6129-4b92-9f3d-31d33ccd48d4",
             "points": [
                 {
                     "x": 713.0,
@@ -1346,7 +1346,7 @@
             "confidence": 0.46423661708831787,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "2c8145bc-62ca-42fb-8c5d-728f743c687a",
+            "detection_id": "f68556cc-2756-493d-aa99-9e28e6f870c3",
             "points": [
                 {
                     "x": 760.0,
@@ -1526,7 +1526,7 @@
             "confidence": 0.45626115798950195,
             "class": "Fruit",
             "class_id": 2,
-            "detection_id": "e5defb8f-d787-446e-8dab-acbcc6341df9",
+            "detection_id": "dc40e36a-6e8b-419d-b769-9ad006e05d39",
             "points": [
                 {
                     "x": 912.0,

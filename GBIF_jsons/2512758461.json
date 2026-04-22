@@ -1,6 +1,6 @@
 {
-    "inference_id": "27dd1632-8b80-41db-9256-45e5095f2e27",
-    "time": 0.04108511609956622,
+    "inference_id": "44a2cdca-5677-407b-ad40-83e47b279db3",
+    "time": 0.04753091000020504,
     "image": {
         "width": 1518,
         "height": 2000
@@ -14,7 +14,7 @@
             "confidence": 0.919527530670166,
             "class": "Flower",
             "class_id": 1,
-            "detection_id": "0234824c-ff42-4ee3-911e-6c6e9a50ce58",
+            "detection_id": "b4a8e200-3af0-42b1-a12d-561782ba3622",
             "points": [
                 {
                     "x": 905.0,
@@ -626,7 +626,7 @@
             "confidence": 0.8588557243347168,
             "class": "Flower",
             "class_id": 1,
-            "detection_id": "900f2bcf-34ad-46c3-9b5c-5915aa136f27",
+            "detection_id": "18cee2ea-3e95-4b35-9e24-f7cc98f82b7c",
             "points": [
                 {
                     "x": 990.0,
@@ -998,7 +998,7 @@
             "confidence": 0.5898407101631165,
             "class": "Flower",
             "class_id": 1,
-            "detection_id": "a1524476-8364-4e4d-bb23-5086c2d85a0f",
+            "detection_id": "43cd62c5-46d4-44d5-a8d3-c4f6179998c0",
             "points": [
                 {
                     "x": 1056.0,
@@ -1138,7 +1138,7 @@
             "confidence": 0.5795049667358398,
             "class": "Flower",
             "class_id": 1,
-            "detection_id": "f46a0408-7257-4698-a91d-b0b9b3ee4e51",
+            "detection_id": "137b1e3d-d372-4cb0-9784-df5dfea6d444",
             "points": [
                 {
                     "x": 971.0,
@@ -1482,7 +1482,7 @@
             "confidence": 0.44035273790359497,
             "class": "Bud Cluster",
             "class_id": 0,
-            "detection_id": "6dcba2de-c684-411e-89f3-ce941b2f329a",
+            "detection_id": "617ce50c-6393-4768-9d6d-ca19a6ab096c",
             "points": [
                 {
                     "x": 896.0,
@@ -1658,7 +1658,7 @@
             "confidence": 0.4113439917564392,
             "class": "Flower",
             "class_id": 1,
-            "detection_id": "cb6a8202-db9e-4006-b49b-56a4a2bf80bb",
+            "detection_id": "c2dd17ff-9410-44f7-ac0d-07afc5aedd8c",
             "points": [
                 {
                     "x": 1000.0,
