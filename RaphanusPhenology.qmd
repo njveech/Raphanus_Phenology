@@ -30,7 +30,7 @@ As a means to ensure the GBIF criteria were applied correctly when the download 
 
 Specimens without nay locality or VerbatimLocality information were also excluded due to the lack of metadata, especially due to the inability to identify coordinates for specimens without any previously listed. This constituted \_\_ specimens. (n_locality = #). Specimens with no locality information and just a county label were specified out separately later in the code.
 
-Lastly, a filter was applied to exclude any specimens that did not have the phrase "StillImage" listed in their mediaType, as these specimens do not have any associated image on which the Machine Learning model can perform reproductive counts. (n_media = #).
+Occurrence `mediaType` was not used as an exclusion filter; multimedia links were taken from `multimedia.txt` where available (including when `mediaType` was blank on the occurrence row).
 
 A table was also created to view how many specimens were removed for each reason. Separate CSV files can be viewed for all removed specimens.
 
@@ -50,10 +50,19 @@ path_filtered_out <- "Output_Files/GBIF_occurrence_filtered.csv"
 path_removed_county_only <- "Output_Files/GBIF_occurrence_removed_county_only.csv"
 path_removed_mediaType_not_StillImage <- "Output_Files/GBIF_occurrence_removed_mediaType_not_StillImage.csv"
 path_removed_not_preserved <- "Output_Files/GBIF_occurrence_removed_not_preserved_specimen.csv"
+path_removed_cch2_catalog <- "Output_Files/GBIF_occurrence_removed_CCH2_catalog_overlap.csv"
 path_removals_breakdown <- "Output_Files/GBIF_filter_removals_breakdown.csv"
+path_cch2_catalog_ids <- "CCH2_2025_full_ID_list.txt"
 
 # Load occurrence data (read as character to avoid parsing issues with messy GBIF fields)
 occ <- read_csv(path_occurrences, col_types = cols(.default = col_character()), show_col_types = FALSE)
+
+cch2_catalog_numbers <- read_csv(path_cch2_catalog_ids, show_col_types = FALSE) %>%
+  pull(1) %>%
+  as.character() %>%
+  trimws() %>%
+  unique()
+cch2_catalog_numbers <- cch2_catalog_numbers[nzchar(cch2_catalog_numbers)]
 
 # Define US states to exclude due to low specimen counts or irrelevance to geographic interests
 states_exclude <- c(
@@ -86,14 +95,22 @@ after_locality <- after_basis %>% filter(
 )
 n_locality <- nrow(after_basis) - nrow(after_locality)
 
-after_media <- after_locality %>% filter(grepl("StillImage", mediaType, fixed = TRUE))
-n_media <- nrow(after_locality) - nrow(after_media)
+# No mediaType / StillImage filter (specimens may still have rows in multimedia.txt)
+after_media <- after_locality
 
-# Rows actually removed at media step: NA, blank, "0", or any other non-StillImage
+# Optional export: rows where occurrence mediaType is not StillImage (diagnostic only)
 mediaType_not_StillImage <- after_locality %>%
   filter(!grepl("StillImage", mediaType, fixed = TRUE))
 
-occ_filtered <- after_media
+# Drop specimens already represented in the CCH2 California download (catalogNumber match)
+cat_trim <- function(x) ifelse(is.na(x), "", trimws(as.character(x)))
+removed_cch2_catalog <- after_media %>%
+  filter(cat_trim(catalogNumber) %in% cch2_catalog_numbers)
+after_cch2 <- after_media %>%
+  filter(!cat_trim(catalogNumber) %in% cch2_catalog_numbers)
+n_cch2 <- nrow(after_media) - nrow(after_cch2)
+
+occ_filtered <- after_cch2
 
 # Breakdown table of removals (sequential)
 removals_breakdown <- tibble(
@@ -102,9 +119,9 @@ removals_breakdown <- tibble(
     "Country not US",
     "basisOfRecord not PRESERVED_SPECIMEN",
     "Empty locality (county-only)",
-    "mediaType not StillImage"
+    "catalogNumber in CCH2_2025_full_ID_list.txt"
   ),
-  n_removed = c(n_state, n_country, n_basis, n_locality, n_media)
+  n_removed = c(n_state, n_country, n_basis, n_locality, n_cch2)
 ) %>%
   mutate(
     n_remaining_after = n0 - cumsum(n_removed),
@@ -129,6 +146,7 @@ write_csv(removals_breakdown, path_removals_breakdown)
 write_csv(not_preserved_specimen, path_removed_not_preserved)
 write_csv(mediaType_not_StillImage, path_removed_mediaType_not_StillImage)
 write_csv(county_only, path_removed_county_only)
+write_csv(removed_cch2_catalog, path_removed_cch2_catalog)
 write_csv(occ_filtered, path_filtered_out)
 
 
@@ -146,10 +164,28 @@ links <- read.delim(
   stringsAsFactors = FALSE
 )
 
+# One row per gbifID: merge duplicate multimedia rows by pasting unique non-empty
+# values per column (e.g. several image URLs in `identifier`).
+collapse_multimedia_by_gbifID <- function(df, sep = " | ") {
+  collapse_col <- function(x) {
+    x <- trimws(as.character(x))
+    x <- x[!is.na(x) & x != ""]
+    x <- unique(x)
+    if (length(x) == 0) {
+      return(NA_character_)
+    }
+    paste(x, collapse = sep)
+  }
+  df %>%
+    group_by(gbifID) %>%
+    summarise(across(everything(), collapse_col), .groups = "drop")
+}
+
 # Filter the Multimedia Links by linking the filtered full dataset to the multimedia textfile by the GBIF ID. 
 after_basis$gbifID <- as.numeric(after_basis$gbifID)
 links_subset <- links %>%
-  semi_join(after_basis, by = "gbifID")
+  semi_join(after_basis, by = "gbifID") %>%
+  collapse_multimedia_by_gbifID()
 
 # Print a subset with the filtered links into a table so that each specimen can be viewed as either a successful or unsuccessful pull of image
 path_links_filtered <- "Output_Files/filtered_multimedia_260407.txt"
@@ -160,6 +196,189 @@ write.table(
   row.names = FALSE,
   quote = FALSE
 )
+```
+
+```{r}
+#| label: Filter original GBIF occurrence.txt (same criteria as fixed CSV)
+#| eval: false
+
+# Load raw Darwin Core occurrence table from the original GBIF download and apply
+# the same sequential filters as `GBIF_occurrence_fixed.csv` (see chunk above).
+library(dplyr)
+library(readr)
+
+path_occurrences_txt <- "original_gbif_download/occurrence.txt"
+path_cch2_catalog_ids <- "CCH2_2025_full_ID_list.txt"
+path_removals_breakdown_txt <- "Output_Files/GBIF_filter_removals_breakdown_occurrence_txt.csv"
+path_links_filtered_from_occ_txt <- "Output_Files/filtered_multimedia_occurrence_txt.txt"
+path_gbif_multimedia_diff <- "Output_Files/filtered_multimedia_gbifID_differences.csv"
+
+occ_from_txt <- read_delim(
+  path_occurrences_txt,
+  delim = "\t",
+  quote = "\"",
+  col_types = cols(.default = col_character()),
+  show_col_types = FALSE
+)
+
+cch2_catalog_numbers <- read_csv(path_cch2_catalog_ids, show_col_types = FALSE) %>%
+  pull(1) %>%
+  as.character() %>%
+  trimws() %>%
+  unique()
+cch2_catalog_numbers <- cch2_catalog_numbers[nzchar(cch2_catalog_numbers)]
+
+cat_trim <- function(x) ifelse(is.na(x), "", trimws(as.character(x)))
+
+states_exclude <- c(
+  "Alaska (State)", "Arizona", "Arkansas", "Colorado",
+  "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
+  "Michigan", "Minnesota", "Missouri", "Montana", "Nebraska", "Nevada",
+  "New Mexico", "North Dakota", "Ohio", "Oklahoma", "South Dakota",
+  "Tennessee", "Utah", "West Virginia", "Wisconsin", "Wyoming", "0"
+)
+
+dir.create("Output_Files", showWarnings = FALSE)
+
+n0_txt <- nrow(occ_from_txt)
+after_state_txt <- occ_from_txt %>% filter(!stateProvince %in% states_exclude)
+n_state_txt <- n0_txt - nrow(after_state_txt)
+
+after_country_txt <- after_state_txt %>% filter(countryCode == "US")
+n_country_txt <- nrow(after_state_txt) - nrow(after_country_txt)
+
+after_basis_txt <- after_country_txt %>% filter(basisOfRecord == "PRESERVED_SPECIMEN")
+n_basis_txt <- nrow(after_country_txt) - nrow(after_basis_txt)
+
+after_locality_txt <- after_basis_txt %>% filter(
+  !( (is.na(locality) | trimws(locality) == "") &
+     (is.na(verbatimLocality) | trimws(verbatimLocality) == "") )
+)
+n_locality_txt <- nrow(after_basis_txt) - nrow(after_locality_txt)
+
+# No mediaType / StillImage filter (specimens may still have rows in multimedia.txt)
+after_media_txt <- after_locality_txt
+
+occ_filtered_from_cch2_catalog <- after_media_txt %>%
+  filter(!cat_trim(catalogNumber) %in% cch2_catalog_numbers)
+n_cch2_txt <- nrow(after_media_txt) - nrow(occ_filtered_from_cch2_catalog)
+
+removals_breakdown_txt <- tibble(
+  reason = c(
+    "Excluded state (stateProvince in states_exclude)",
+    "Country not US",
+    "basisOfRecord not PRESERVED_SPECIMEN",
+    "Empty locality (county-only)",
+    "catalogNumber in CCH2_2025_full_ID_list.txt"
+  ),
+  n_removed = c(
+    n_state_txt, n_country_txt, n_basis_txt, n_locality_txt,
+    n_cch2_txt
+  )
+) %>%
+  mutate(
+    n_remaining_after = n0_txt - cumsum(n_removed),
+    .after = n_removed
+  )
+
+print(removals_breakdown_txt)
+write_csv(removals_breakdown_txt, path_removals_breakdown_txt)
+
+# multimedia.txt: state, US, preserved, not CCH2 catalog overlap; no locality or
+# mediaType requirement (cf. main chunk joining multimedia to after_basis).
+occ_for_multimedia_from_txt <- after_basis_txt %>%
+  filter(!cat_trim(catalogNumber) %in% cch2_catalog_numbers) %>%
+  mutate(gbifID = as.numeric(gbifID))
+
+# Same locality rule as elsewhere: TRUE if locality or verbatimLocality is non-empty
+locality_flag_from_occ_txt <- occ_for_multimedia_from_txt %>%
+  mutate(
+    has_locality_occurrence_txt = !(
+      (is.na(locality) | trimws(locality) == "") &
+      (is.na(verbatimLocality) | trimws(verbatimLocality) == "")
+    )
+  ) %>%
+  select(gbifID, has_locality_occurrence_txt) %>%
+  distinct()
+
+links_from_occ_txt <- read.delim(
+  "original_gbif_download/multimedia.txt",
+  header = TRUE,
+  sep = "\t",
+  quote = "\"",
+  fill = TRUE,
+  stringsAsFactors = FALSE
+)
+
+collapse_multimedia_by_gbifID <- function(df, sep = " | ") {
+  collapse_col <- function(x) {
+    x <- trimws(as.character(x))
+    x <- x[!is.na(x) & x != ""]
+    x <- unique(x)
+    if (length(x) == 0) {
+      return(NA_character_)
+    }
+    paste(x, collapse = sep)
+  }
+  df %>%
+    group_by(gbifID) %>%
+    summarise(across(everything(), collapse_col), .groups = "drop")
+}
+
+links_subset_from_occ_txt <- links_from_occ_txt %>%
+  semi_join(occ_for_multimedia_from_txt, by = "gbifID") %>%
+  collapse_multimedia_by_gbifID() %>%
+  left_join(locality_flag_from_occ_txt, by = "gbifID")
+
+write.table(
+  links_subset_from_occ_txt,
+  file = path_links_filtered_from_occ_txt,
+  sep = "\t",
+  row.names = FALSE,
+  quote = FALSE
+)
+
+# gbifIDs in one filtered multimedia list but not the other + locality from occurrence.txt
+path_occurrences_fixed <- "GBIF_occurrence_fixed.csv"
+occ_fixed <- read_csv(path_occurrences_fixed, col_types = cols(.default = col_character()), show_col_types = FALSE)
+after_basis_fixed <- occ_fixed %>%
+  filter(!stateProvince %in% states_exclude) %>%
+  filter(countryCode == "US") %>%
+  filter(basisOfRecord == "PRESERVED_SPECIMEN") %>%
+  mutate(gbifID = as.numeric(gbifID))
+
+ids_main_multimedia <- links_from_occ_txt %>%
+  semi_join(after_basis_fixed, by = "gbifID") %>%
+  collapse_multimedia_by_gbifID() %>%
+  pull(gbifID)
+
+ids_occ_multimedia <- links_subset_from_occ_txt %>% pull(gbifID)
+
+locality_lookup_occ_txt <- occ_from_txt %>%
+  mutate(
+    gbifID = as.numeric(gbifID),
+    has_locality_occurrence_txt = !(
+      (is.na(locality) | trimws(locality) == "") &
+      (is.na(verbatimLocality) | trimws(verbatimLocality) == "")
+    )
+  ) %>%
+  group_by(gbifID) %>%
+  summarise(has_locality_occurrence_txt = any(has_locality_occurrence_txt), .groups = "drop")
+
+multimedia_gbifID_diff <- bind_rows(
+  tibble(
+    gbifID = as.numeric(setdiff(ids_main_multimedia, ids_occ_multimedia)),
+    in_set = "only_filtered_multimedia_260407_logic"
+  ),
+  tibble(
+    gbifID = as.numeric(setdiff(ids_occ_multimedia, ids_main_multimedia)),
+    in_set = "only_filtered_multimedia_occurrence_txt_logic"
+  )
+) %>%
+  left_join(locality_lookup_occ_txt, by = "gbifID") %>%
+  arrange(in_set, gbifID)
+
+write_csv(multimedia_gbifID_diff, path_gbif_multimedia_diff)
 ```
 
 ## Pulling Images from GBIF for Model Evaluation

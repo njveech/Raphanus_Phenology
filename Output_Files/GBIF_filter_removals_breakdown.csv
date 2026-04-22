@@ -3,4 +3,4 @@ Excluded state (stateProvince in states_exclude),0,2867
 Country not US,0,2867
 basisOfRecord not PRESERVED_SPECIMEN,0,2867
 Empty locality (county-only),660,2207
-mediaType not StillImage,595,1612
+catalogNumber in CCH2_2025_full_ID_list.txt,0,2207

@@ -1,0 +1,6 @@
+reason,n_removed,n_remaining_after
+Excluded state (stateProvince in states_exclude),534,5162
+Country not US,0,5162
+basisOfRecord not PRESERVED_SPECIMEN,0,5162
+Empty locality (county-only),898,4264
+catalogNumber in CCH2_2025_full_ID_list.txt,1327,2937
