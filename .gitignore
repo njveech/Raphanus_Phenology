@@ -43,6 +43,7 @@ climateNA_full_data_tall.csv
 *html
 *png
 *jpeg
+*.jpg
 
 # Bulk-downloaded specimen images (large; keep local only — do not push to GitHub)
 **/gbif_images/
