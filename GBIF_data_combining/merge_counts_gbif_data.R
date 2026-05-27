@@ -31,8 +31,17 @@ is_catalog_image <- function(x) {
   grepl("^(CDA-|YOSE)", x)
 }
 
+# Unscorable images (e.g. roots only, wrong species) — excluded from merge output
+unscorable_image_ids <- c(
+  "3865376379", "3897880503", "3865094236", "3331193610", "3331194244",
+  "2859098605", "SML_1999235118", "3865109363", "3331201163", "3969683961",
+  "2517114190", "2265941363", "1998980671", "3865374367", "3865108376",
+  "1998922892", "3865096296", "3897882331", "3331193053", "3710072566"
+)
+
 counts <- read_csv(path_counts, show_col_types = FALSE) %>%
-  mutate(image = as.character(image))
+  mutate(image = as.character(image)) %>%
+  filter(!image %in% unscorable_image_ids)
 
 occ <- read_tsv(
   path_occurrence,
@@ -65,6 +74,8 @@ catalog_to_gbif <- bind_rows(
 occ_by_gbif <- occ %>%
   distinct(gbifID, .keep_all = TRUE) %>%
   select(gbifID, all_of(occ_cols))
+
+occ_gbif_ids <- occ_by_gbif$gbifID
 
 added_coords <- added_full %>%
   distinct(gbifID, .keep_all = TRUE) %>%
@@ -100,16 +111,21 @@ merged <- counts_with_gbif %>%
       ~ coalesce_char(.x, get(paste0(cur_column(), "__added")))
     )
   ) %>%
-  select(-ends_with("__added"))
+  select(-ends_with("__added")) %>%
+  mutate(matched_occurrence = !is.na(gbifID) & gbifID %in% occ_gbif_ids)
 
-write_csv(merged, path_out)
+write_csv(merged %>% select(-matched_occurrence), path_out)
 
-n_matched_metadata <- sum(!is.na(merged$institutionCode) & merged$institutionCode != "")
+n_matched_metadata <- sum(merged$matched_occurrence)
 n_with_coords <- sum(!is.na(merged$decimalLatitude) & merged$decimalLatitude != "")
 n_catalog_resolved <- sum(
   is_catalog_image(merged$image) &
     !is.na(merged$gbifID) &
     merged$gbifID != ""
+)
+
+message(
+  "Excluded ", length(unscorable_image_ids), " unscorable image IDs from counts input."
 )
 
 message(
@@ -120,10 +136,11 @@ message(
 )
 
 unmatched_metadata <- merged %>%
-  filter(is.na(institutionCode) | institutionCode == "") %>%
+  filter(!matched_occurrence) %>%
   arrange(image) %>%
   select(image, catalogNumber, gbifID, `Bud Cluster`, Flower, Fruit)
 
+# Numeric image IDs with no row in occurrence.txt (excludes CDA/YOSE catalog gaps)
 unmatched_no_metadata <- unmatched_metadata %>%
   filter(!is_catalog_image(image))
 
