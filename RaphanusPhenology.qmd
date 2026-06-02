@@ -545,6 +545,27 @@ write.csv(totalinfo_gbif, "Output_Files/completed_gbif_specimens.csv", row.names
 
 ```
 
+## Basic Data Analysis
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+library(lubridate)
+library(colorblindcheck)
+
+gbif_full_flw<- read.csv("gbif_repro_counts_merged.csv") %>% mutate(monthname = month.abb[as.numeric(month)])%>% filter(Flower > 0)
+
+west <- c("California", "Oregon", "Washington")
+
+northeast <- c("Maryland", "Delaware", "New Jersey", "Rhode Island", "New York", "Connecticut", "Massachusetts", "Vermont", "New Hampshire", "Maine")
+
+southeast <- c("Virginia", "Texas", "Louisiana", "Alabama", "Mississippi", "Florida", "Georgia", "South Carolina", "North Carolina")
+
+fulldata.flw_W <- fulldata.flw %>% filter(county %in% so_cal)
+
+```
+
 # CA Methods
 
 All specimen images were downloaded through the Consortium of California Herbaria (cch2.org). The search was filtered to only include specimens within *R. raphanistrum* and *R. sativus* that were collected within California and had corresponding. The full specimen data set, prior to specimen exclusions, consisted of 1,251 specimens (\***this number may be wrong and not include SD**\*.)
