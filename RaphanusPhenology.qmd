@@ -548,13 +548,15 @@ write.csv(totalinfo_gbif, "Output_Files/completed_gbif_specimens.csv", row.names
 ## Basic Data Analysis
 
 ```{r}
+#| label: Beginning Data Analysis for gaps and EVE192 Deliverables
+#| eval: false
 library(dplyr)
 library(ggplot2)
 library(patchwork)
 library(lubridate)
 library(colorblindcheck)
 
-gbif_full_flw<- read.csv("gbif_repro_counts_merged.csv") %>% mutate(monthname = month.abb[as.numeric(month)])%>% filter(Flower > 0)
+gbif_full_flw<- read.csv("GBIF_data_combining/gbif_repro_counts_merged.csv") %>% mutate(monthname = month.abb[as.numeric(month)]) %>% filter(Flower > 0)
 
 west <- c("California", "Oregon", "Washington")
 
@@ -562,8 +564,148 @@ northeast <- c("Maryland", "Delaware", "New Jersey", "Rhode Island", "New York",
 
 southeast <- c("Virginia", "Texas", "Louisiana", "Alabama", "Mississippi", "Florida", "Georgia", "South Carolina", "North Carolina")
 
-fulldata.flw_W <- fulldata.flw %>% filter(county %in% so_cal)
+#WEST:
 
+ west_flw <- gbif_full_flw %>% filter( stateProvince %in% west)
+ 
+old_west <- west_flw %>% filter(year < 1950 ) %>% mutate(day = replace(day, day == 0, 1))
+old_west$date <- make_date(old_west$year, old_west$month, old_west$day)
+old_west$DOY <- yday(old_west$date)
+
+recent_west <- west_flw %>% filter(year > 2000) %>% mutate(day = replace(day, day == 0, 1))
+recent_west$date <- make_date(recent_west$year,recent_west$month, recent_west$day)
+recent_west$DOY <- yday(recent_west$date)
+
+pre_histo <- ggplot(data = old_west, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variables and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in the West Region pre-1950") + # Center the title in the middle, make background blank wihtout grid lines
+  theme( plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75) 
+
+post_histo <- ggplot(data = recent_west, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variable and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in West Region post-2000") + 
+  #Center the title in the middle, make background blank without gridlines
+  theme(plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75)
+
+print(pre_histo)
+print(post_histo)
+
+
+#NE
+NE_flw <- gbif_full_flw %>% filter( stateProvince %in% northeast)
+ 
+old_ne <- NE_flw %>% filter(year < 1950 ) %>% mutate(day = replace(day, day == 0, 1))
+old_ne$date <- make_date(old_ne$year, old_ne$month, old_ne$day)
+old_ne$DOY <- yday(old_ne$date)
+
+recent_ne <- NE_flw %>% filter(year > 2000) %>% mutate(day = replace(day, day == 0, 1))
+recent_ne$date <- make_date(recent_ne$year,recent_ne$month, recent_ne$day)
+recent_ne$DOY <- yday(recent_ne$date)
+
+pre_histo_ne <- ggplot(data = old_ne, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variables and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in the Northeast Region pre-1950") + # Center the title in the middle, make background blank wihtout grid lines
+  theme( plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75) 
+
+post_histo_ne <- ggplot(data = recent_ne, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variable and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in Northeast Region post-2000") + 
+  #Center the title in the middle, make background blank without gridlines
+  theme(plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75)
+
+print(pre_histo_ne)
+print(post_histo_ne)
+
+
+#SE
+SE_flw <- gbif_full_flw %>% filter( stateProvince %in% southeast)
+ 
+old_se <- SE_flw %>% filter(year < 1950 ) %>% mutate(day = replace(day, day == 0, 1))
+old_se$date <- make_date(old_se$year, old_se$month, old_se$day)
+old_se$DOY <- yday(old_se$date)
+
+recent_se <- SE_flw %>% filter(year > 2000) %>% mutate(day = replace(day, day == 0, 1))
+recent_se$date <- make_date(recent_se$year,recent_se$month, recent_se$day)
+recent_se$DOY <- yday(recent_se$date)
+
+pre_histo_se <- ggplot(data = old_se, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variables and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in the Southeast Region pre-1950") + # Center the title in the middle, make background blank wihtout grid lines
+  theme( plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75) 
+
+post_histo_se <- ggplot(data = recent_ne, aes(x = factor(month, levels = 1:12) )) + #Make a bar graph for discrete variable and choose graph color
+  geom_bar(color = "black", fill = "#825E89", width = 1) + 
+  #Make the X-axis labels appear as month abbreviations
+  scale_x_discrete(labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"), drop = FALSE) +
+  # Add axis and graph titles
+  labs(x = "Month", y = "Frequency", title = "Frequency of flowering specimens \ncollected in Southeast Region post-2000") + 
+  #Center the title in the middle, make background blank without gridlines
+  theme(plot.title = element_text(hjust = 0.5), panel.grid.minor = element_blank(), panel.border = element_rect(fill = "white"), panel.background = element_rect(fill = "white")) +
+  #Add visible X-axis
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.75)
+
+print(pre_histo_se)
+print(post_histo_se)
+
+
+#Histogram Via Decade
+
+gbif_full_coord<- read.csv("GBIF_data_combining/gbif_repro_counts_merged.csv") %>% mutate(monthname = month.abb[as.numeric(month)]) %>% filter(Flower > 0) %>% filter(!is.na(decimalLatitude)) %>% filter(!is.na(decimalLongitude)) %>% filter(!is.na(year))
+
+west <- c("California", "Oregon", "Washington")
+
+northeast <- c("Maryland", "Delaware", "New Jersey", "Rhode Island", "New York", "Connecticut", "Massachusetts", "Vermont", "New Hampshire", "Maine")
+
+southeast <- c("Virginia", "Texas", "Louisiana", "Alabama", "Mississippi", "Florida", "Georgia", "South Carolina", "North Carolina")
+
+decades <- seq(
+  from = floor(min(gbif_full_coord$year, na.rm = TRUE) / 10) * 10,
+  to = ceiling(max(gbif_full_coord$year, na.rm = TRUE) / 10) * 10,
+  by = 10
+)
+
+W_coord <- gbif_full_coord %>% filter( stateProvince %in% west )
+
+NE_coord <- gbif_full_coord %>% filter( stateProvince %in% northeast)
+
+SE_coord <- gbif_full_coord %>% filter( stateProvince %in% southeast)
+
+W_histo <- ggplot(W_coord, aes(x = year)) + geom_histogram(breaks = decades, fill = "#825E89", color = "white") + scale_x_continuous(breaks = decades) + labs(title = "Western Region Herbarium Specimens by Decade", x = "Year", y = "Number of Specimens") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(W_histo)
+
+NE_histo <- ggplot(NE_coord, aes(x = year)) + geom_histogram(breaks = decades, fill = "#825E89", color = "white") + scale_x_continuous(breaks = decades) + labs(title = "Northeastern Region Herbarium Specimens by Decade", x = "Year", y = "Number of Specimens") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(NE_histo)
+
+SE_histo <- ggplot(SE_coord, aes(x = year)) + geom_histogram(breaks = decades, fill = "#825E89", color = "white") + scale_x_continuous(breaks = decades) + labs(title = "Southeastern Region Herbarium Specimens by Decade", x = "Year", y = "Number of Specimens") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(SE_histo)
 ```
 
 # CA Methods
