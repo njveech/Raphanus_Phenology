@@ -24,7 +24,9 @@ This repository supports **Raphanus** (radish) **phenology** work and **code sha
 | `GBIF_jsons/` | Bulk per-record JSON from GBIF |
 | `CCH2_jsons_2025/` | Bulk per-record JSON from CCH2 |
 | `original_gbif_download/` | Original bulk GBIF download material (e.g. XML under `dataset/`, `occurrence.txt`, `multimedia.txt`) |
-| `GBIF_data_combining/` | GBIF phenology-count merge: inputs, `merge_counts_gbif_data.R`, merged outputs (see below) |
+| `GBIF_fresh_download_09.10.2026/` | Fresh GBIF Darwin Core download used by the 2026 redo |
+| `GBIF_data_combining/` | **Previous** GBIF phenology-count merge (2025 pipeline): inputs, `merge_counts_gbif_data.R`, merged outputs (see below). Do not overwrite for the 2026 redo. |
+| `GBIF_2026_update/` | **2026 redo**: unified occurrence, image ID audit, scoring-image assembly, new-model Roboflow copies, and merge (see below) |
 | `Datasheet_mis-sort_fix_files/` | Python scripts to fix, compare, and rebuild datasheet/GBIF-related CSVs (coordinate checks, removals, rebuilds, etc.) |
 | `images/` | Image assets |
 | Root CSV / XLSX / TXT | Examples: `GBIF_occurrence_fixed.csv`, `Removals_fixed_031326.csv`, `Annotated_CAS_specimen_list.xlsx`, `CCH2_2025_full_ID_list.txt`, `Redo_Climate_Specimens.csv` — plus other project spreadsheets as needed |
@@ -87,6 +89,49 @@ Requires **dplyr** and **readr**.
 - **Do not** use `institutionCode` alone to judge merge success — check `recordedBy`, `eventDate`, or `scientificName` for Naturalis-style records.
 - Coordinate backfill from `occurence_w_added_coords.csv` only applies where that file has non-empty coordinate fields for the `gbifID`.
 - To change exclusions or add inputs, edit paths and vectors at the top of `merge_counts_gbif_data.R`.
+
+## GBIF + CCH2 2026 redo (`GBIF_2026_update/`)
+
+This is the current working pipeline for a **full re-score** with a new Roboflow model and the 09.10.2026 GBIF download. Details and run order: [`GBIF_2026_update/README.md`](GBIF_2026_update/README.md). Shared paths and helpers: [`GBIF_2026_update/paths.R`](GBIF_2026_update/paths.R).
+
+**Do not edit** `RaphanusPhenology.qmd`, `GBIF_data_combining/`, or the originals in `image_handling_scripts/` for this redo. Copies of the Python helpers live in `GBIF_2026_update/` with the new model ID and scoring directory.
+
+### What changed vs the old pipeline
+
+- New model: `raphanus-specimen-phenology/phenologyscoringeve-11-yolov8x-seg-t1` (replaces `phenologyscoringeve/10`). Re-score **all** assembled images, not only new ones.
+- Occurrence source: `GBIF_fresh_download_09.10.2026/occurrence.txt` (not `GBIF_occurrence_fixed.csv`).
+- Filters match the current Quarto document **except** CCH2 catalog overlap is **kept** (the old qmd dropped rows whose `catalogNumber` was in `CCH2_2025_full_ID_list.txt`).
+- No `mediaType` / StillImage occurrence filter.
+- Unmatched CCH2 / SD / CDA / YOSE rows go to `GBIF_2026_update/unmatched_cch2_sd_for_review.csv` only; they are **not** appended to the analysis occurrence table.
+- `gbifID` can change between downloads. Coordinate overlay and image matching use `gbifID`, then `occurrenceID`, then `institutionCode` + `catalogNumber`, then locality text. Researched coords (`match?` first token `yes`) replace GBIF/GeoLocate values.
+
+### How to run (from project root)
+
+```bash
+Rscript GBIF_2026_update/build_unified_occurrence.R
+Rscript GBIF_2026_update/build_image_id_audit.R
+Rscript GBIF_2026_update/assemble_scoring_images.R
+Rscript GBIF_2026_update/download_new_gbif_images.R
+python3 GBIF_2026_update/gbif_image_pull_from_multimedia.py
+Rscript GBIF_2026_update/update_audit_from_scoring_dir.R
+# resize any scoring jpg over 20 MB: sips --resampleWidth 5000, SML_ prefix
+export ROBOFLOW_API_KEY="your_key"
+python3 GBIF_2026_update/roboflow_to_json_parellelize.py
+python3 GBIF_2026_update/json_to_df.py
+Rscript GBIF_2026_update/merge_counts_gbif_data.R
+```
+
+Scoring images (local, not in git): `/Volumes/Radishes/GBIF_2026_update_scoring_images`. Local herbarium photos: `/Volumes/Radishes/locally_imaged_herbarium_sheets/{CDA_YOSE,SD}`. Do not mix CDA/YOSE (catalog-number filenames) with SD (barcode filenames).
+
+`GBIF_fresh_download_09.10.2026/multimedia.txt` is column-shifted: the image URL is often in `references`, not `identifier`. Scripts take the first `http(s)` URL from either field.
+
+### Image ID audit (fail closed)
+
+[`GBIF_2026_update/image_id_audit.csv`](GBIF_2026_update/image_id_audit.csv) is one row per candidate image. Copies/renames to `{gbifID}.jpg` happen only when `id_check_status == ok`. Failures: `image_id_audit_needs_review.csv`. Duplicate photos of the same sheet (e.g. SD copies of CCH2 originals) keep one scoring file, preferring local CDA/YOSE, then local SD, then CCH2 original, then previous GBIF.
+
+### Status (as of 17 Sep 2026)
+
+Occurrence, ID audit, scoring-image assembly, and new-GBIF downloads are done. Unified table: **4,354** filtered rows; **1,891** ID-checked jpgs on the Radishes scoring folder (14 resized with `SML_`). Roboflow inference, `json_to_df.py`, and the 2026 merge have **not** been run yet (no JSON sidecars, no `gbif_repro_counts`). Review leftovers: `unmatched_cch2_sd_for_review.csv`, `failed_downloads.csv` (CAS 403s), `new_gbif_images_missing_url.csv` (mostly SACT), and one SD barcode/occid conflict in the audit.
 
 ## Version control and ignores
 

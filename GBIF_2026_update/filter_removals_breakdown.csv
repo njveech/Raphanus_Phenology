@@ -1,0 +1,5 @@
+reason,n_removed,n_remaining_after
+Excluded state (stateProvince in states_exclude),541,5354
+Country not US,0,5354
+basisOfRecord not PRESERVED_SPECIMEN,0,5354
+Empty locality (county-only),1000,4354
