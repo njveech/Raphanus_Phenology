@@ -744,6 +744,8 @@ Many previously published scientific papers have also utilized images from vario
 
 ## Pulling Images from CCH2 for Model Evaluation
 
+Images were pulled and downloaded into a folder from the downloaded CCH2 metadata using the image links included for each specimen. The following code was used for this process
+
 ```{python}
 
 #| eval: false
@@ -801,11 +803,19 @@ for url in urls:
 
 ## Selecting Specimens for Model Training
 
-It was initially decided that 100 specimens, slight greater than ten percent of the full data set, would be selected to be annotated and used to train the phenology models. The first consideration made was to include at least one specimen from each of the 31 herbaria that are represented by the complete specimen data set. Afterwards, specimens were added in to be relatively proportional to the distribution of the data set. When continuing to add in specimens after initial herbarium representation was accounted for, three factors received the majority of focus: time of collection, reproductive stage, and complexity of specimens. The time of collection was critical to creating a diverse, representative training set. While most specimens are collected during the spring and summer months, when flowering and fruiting is widespread, specimens collected during both the very beginning and the later months of the calendar year were fairly represented. Additionally, a majority of specimens possess both flowering and fruiting structures, so training set selection was carefully done to also include specimens that had not yet begun to fruit or that only had fruit left. Lastly, due to the many different conditional circumstances that can occur in herbarium specimens, such as image quality, age, human error, etc., both complex, overlapping specimens and well-defined clear cut specimens were selected for annotation to prepare the model for any unusual specimen appearances.
+It was initially decided that 100 specimens, slight greater than ten percent of the full data set, would be selected to be annotated and used to train the phenology models. The first consideration made was to include at least one specimen from each of the 31 herbaria that are represented by the complete specimen data set. Afterwards, specimens were added in to be relatively proportional to the distribution of the data set. When continuing to add in specimens after initial herbarium representation was accounted for, three factors received the majority of focus: time of collection, reproductive stage, and complexity of specimens. The time of collection was critical to creating a diverse, representative training set. While most specimens are collected during the spring and summer months, when flowering and fruiting is widespread, specimens collected during both the very beginning and the later months of the calendar year were fairly represented. Additionally, a majority of specimens possess both flowering and fruiting structures, so training set selection was carefully done to also include specimens that had not yet begun to fruit or that only had fruit left. Lastly, due to the many different conditional circumstances that can occur in herbarium specimens, such as image quality, age, human error, etc., both complex, blurry, overlapping specimens and well-defined clear cut specimens were selected for annotation to prepare the model for any unusual specimen appearances.
+
+#### Accuracy Checks-if needs to be
+
+In June 2026, we decided to check the model for accuracy by creating a separate folder of images from specimens that received a flowering count of 0 ( is this what we did I need to confirm). From this, we randomly selected 20 specimen images to see if the model correctly predicted presence/absence of flowers in comparison to our own human visible judgement. of these 20, 5 were inaccurately categorized, giving an accuracy of 75%. We then selected 50 additional specimens from the folder of specimens that had received "absent" flower scores to add to our training dataset and a new model version. These 50 specimens were randomly selected, but chosen for either obviously having flowers or having flowers that are harder to visually identify.
+
+#### Overall summary-if can write from point of most recent model:
+
+Model ended with 205 specimen images after multiple additions.
 
 ## Annotating Herbarium Specimens
 
-An initial 100 specimens were uploaded into Roboflow to be annotated. The Roboflow software has a file size limit of 20 MB; any specimen images that exceeded that size were shrunk using code written in terminal:
+An initial 100 specimens were uploaded into Roboflow to be annotated. By the end of the project, the final model consisted of 205 specimen images. The Roboflow software has a file size limit of 20 MB; any specimen images that exceeded that size were shrunk using code written in terminal:
 
 ```{bash}
 #| eval: false
@@ -833,9 +843,13 @@ Leaves were not annotated for our model (again time constraints in place), thoug
 
 ## Training Model Versions
 
-**Insert text here about how we picked different models to train, how each version did, the 70-20-10 distribution, model metrics and evaluations, etc.**
+11 different model versions were subsequently developed through Roboflow. The first 6 models were trained using Roboflow's free Research and Education Plan. The Core Commercial plan was purchased at this point, which allowed for expanded Model Size options. We used the custom training engine for each model. The architecture used for all models was Roboflow 3.0, which is YOLOv8-compatible. The Model Size run under the Research and Education Plan was "Fast", but under the core plan we were able to run "XL" models which offered a better combination of speed and accuracy. Most models were trained from a previous checkpoint, which we selected to be either the most accurate and precise previous model, or in the case of our final XL model, its XL predecessor. Additional parameters related to image visualization, contrast, sizing, etc. were experimented with but showed no influence on model precision and accuracy.
+
+- add in a section here about how we didn't really end up needing precision, accuracy stats since we ended up going with presence/absence over quantitative counts ?
 
 ## Deploying Model from Roboflow
+
+\*\* we used this code from roboflow in bash but platform looks different now, not sure what final version will be like, may need to adjust below code and description
 
 ```{bash}
 #Code for doing Roboflow model to JSONS 
@@ -951,9 +965,9 @@ print("Saved dataset to missing_inference_counts.csv")
 print(df)
 ```
 
-## Converting Model Data into a Usable Format
+## Converting Model Data into a Usable Format-rewrite to include gbif specific
 
-The following code was created to achieve two purposes. The first was to combine the JSON information on phenology (reproductive structure counts) after running both the original 155 annotated specimen images and the remaining 782 unannotated specimen images through the Roboflow model. The second was to combine all the phenology data with a subset of the data provided by CCH2. Intermediate steps were incorporated as needed to ensure compatibility when merging data frames.
+The following code was created to combine the metadata. The first was to combine the JSON information on phenology (reproductive structure counts) of all images. The second was to combine all the phenology data with a subset of the data provided by CCH2. Intermediate steps were incorporated as needed to ensure compatibility when merging data frames.
 
 ```{r}
 #| label: Combining CCH2 Data with Roboflow Scores
