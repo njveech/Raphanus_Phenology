@@ -42,7 +42,6 @@ for (i in seq_len(nrow(copy_log))) {
   if (file.exists(to) && normalizePath(from) == normalizePath(to, mustWork = FALSE)) {
     copy_log$copied[[i]] <- TRUE
     copy_log$copy_note[[i]] <- "already at destination"
-    copy_log$copied[[i]] <- TRUE
     next
   }
   ok <- file.copy(from, to, overwrite = TRUE)

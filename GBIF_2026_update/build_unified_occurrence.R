@@ -6,6 +6,7 @@
 
 library(dplyr)
 library(readr)
+library(readxl)
 
 source("GBIF_2026_update/paths.R")
 
@@ -31,51 +32,52 @@ after_country <- after_state %>% filter(countryCode == "US")
 n_country <- nrow(after_state) - nrow(after_country)
 after_basis <- after_country %>% filter(basisOfRecord == "PRESERVED_SPECIMEN")
 n_basis <- nrow(after_country) - nrow(after_basis)
-after_locality <- after_basis %>%
-  filter(!(is_blank(locality) & is_blank(verbatimLocality)))
-n_locality <- nrow(after_basis) - nrow(after_locality)
+# Keep county-only sheets (county present even when locality text is blank).
+after_geo <- after_basis %>%
+  filter(!(is_blank(locality) & is_blank(verbatimLocality) & is_blank(county)))
+n_geo <- nrow(after_basis) - nrow(after_geo)
 
 # Keep CCH2 catalog overlap (do not drop). No mediaType filter.
-occ_unified <- after_locality
+occ_unified <- after_geo
 
 removals_breakdown <- tibble(
   reason = c(
     "Excluded state (stateProvince in states_exclude)",
     "Country not US",
     "basisOfRecord not PRESERVED_SPECIMEN",
-    "Empty locality (county-only)"
+    "Empty locality and empty county"
   ),
-  n_removed = c(n_state, n_country, n_basis, n_locality)
+  n_removed = c(n_state, n_country, n_basis, n_geo)
 ) %>%
   mutate(n_remaining_after = n0 - cumsum(n_removed), .after = n_removed)
 
 write_csv(removals_breakdown, path_filter_breakdown)
 print(removals_breakdown)
 
-cch2_catalog <- read_csv(
-  path_cch2_catalog,
-  show_col_types = FALSE
-) %>%
-  pull(1) %>%
-  as.character() %>%
-  trimws() %>%
-  unique()
-cch2_catalog <- cch2_catalog[nzchar(cch2_catalog)]
+local_move_log <- if (file.exists(path_local_move_log)) {
+  read_csv(path_local_move_log, col_types = cols(.default = col_character()), show_col_types = FALSE)
+} else {
+  tibble(from_path = character(), to_path = character(), filename = character(), action = character())
+}
 
-sd_map <- read_tsv(
-  path_sd_map,
-  col_names = c("sd_filename", "occid_filename"),
-  col_types = cols(.default = col_character()),
-  show_col_types = FALSE
-) %>%
-  mutate(
-    sd_barcode = stem_filename(sd_filename),
-    cch2_occid = stem_filename(occid_filename)
-  )
+sd_map <- load_sd_map()
+cch2_excel <- load_cch2_excel()
 
-# Fill CCH2 occid from catalogNumber when the GBIF catalog is an occid from the CCH2 list,
-# or from the SD barcode mapping.
+# True CCH2 occid: URL occid= first, then Excel catalog/occurrenceID, then SD map.
+# Do not copy catalogNumber from CCH2_2025_full_ID_list.txt into cch2_occid.
+excel_by_cat <- cch2_excel %>%
+  filter(!is_blank(catalogNumber)) %>%
+  distinct(catalogNumber, .keep_all = TRUE) %>%
+  select(catalogNumber, occid_from_excel_cat = cch2_occid)
+excel_by_oid <- cch2_excel %>%
+  filter(!is_blank(occurrenceID)) %>%
+  add_count(occurrenceID) %>%
+  filter(n == 1) %>%
+  select(occurrenceID, occid_from_excel_oid = cch2_occid)
+
 occ_unified <- occ_unified %>%
+  left_join(excel_by_cat, by = "catalogNumber") %>%
+  left_join(excel_by_oid, by = "occurrenceID") %>%
   left_join(
     sd_map %>%
       select(sd_barcode, cch2_occid_from_sd = cch2_occid) %>%
@@ -85,11 +87,12 @@ occ_unified <- occ_unified %>%
   mutate(
     cch2_occid = coalesce(
       cch2_occid,
-      ifelse(catalogNumber %in% cch2_catalog, catalogNumber, NA_character_),
+      occid_from_excel_cat,
+      occid_from_excel_oid,
       cch2_occid_from_sd
     )
   ) %>%
-  select(-cch2_occid_from_sd)
+  select(-occid_from_excel_cat, -occid_from_excel_oid, -cch2_occid_from_sd)
 
 # --- researched GBIF coordinates (match? first token = yes) ---
 coords_raw <- read_csv(
@@ -247,42 +250,47 @@ crosswalk <- occ_unified %>%
   ) %>%
   mutate(in_unified_occurrence = TRUE)
 
-cda_yose_ids <- stem_filename(list_jpgs(dir_cda_yose_images))
+# Unmatched review: CCH2 full download + local SD/CDA/YOSE images vs the
+# unfiltered 09.10.2026 GBIF occurrence.txt (not the filtered analysis table).
+gbif_catalog <- unique(c(
+  na.omit(norm_chr(occ$catalogNumber)),
+  split_id_tokens(occ$otherCatalogNumbers)
+))
+gbif_occid <- unique(na.omit(norm_chr(occ$cch2_occid)))
+gbif_occurrence_id <- unique(na.omit(norm_chr(occ$occurrenceID)))
+gbif_id_any <- unique(c(gbif_catalog, gbif_occid, gbif_occurrence_id))
 
-cch2_from_images <- tibble(
-  source = "cch2_image_file",
-  cch2_occid = stem_filename(list_jpgs(dir_cch2_images)),
-  catalogNumber = NA_character_,
-  institutionCode = NA_character_,
+cch2_full <- cch2_excel %>%
+  mutate(source = "cch2_full_download")
+
+cda_yose_ids <- unique(c(
+  stem_filename(list_jpgs(dir_cda_yose_images)),
+  stem_filename(
+    local_move_log$filename[grepl("^(CDA-|YOSE)", ifelse(is.na(local_move_log$filename), "", local_move_log$filename))]
+  )
+))
+sd_files <- unique(c(
+  stem_filename(list_jpgs(dir_sd_images)),
+  stem_filename(
+    local_move_log$filename[grepl("^SD000", ifelse(is.na(local_move_log$filename), "", local_move_log$filename))]
+  )
+))
+sd_files <- sd_files[nzchar(sd_files) & !is.na(sd_files)]
+cda_yose_ids <- cda_yose_ids[nzchar(cda_yose_ids) & !is.na(cda_yose_ids)]
+
+sd_from_files <- tibble(
+  source = "ucd_imaged_sd",
+  catalogNumber = sd_files,
+  institutionCode = "SD",
+  occurrenceID = NA_character_,
+  otherCatalogNumbers = NA_character_,
   locality = NA_character_
 ) %>%
-  filter(!is_blank(cch2_occid)) %>%
-  distinct(cch2_occid, .keep_all = TRUE)
-
-cch2_from_list <- tibble(
-  source = "cch2_2025_full_id_list",
-  cch2_occid = cch2_catalog,
-  catalogNumber = NA_character_,
-  institutionCode = NA_character_,
-  locality = NA_character_
-)
-
-cch2_from_completed <- cch2_done %>%
-  transmute(
-    source = "completed_specimen_data",
-    cch2_occid,
-    catalogNumber = NA_character_,
-    institutionCode,
-    locality
-  )
-
-sd_from_map <- sd_map %>%
-  transmute(
-    source = "ucd_imaged_sd",
-    cch2_occid,
-    catalogNumber = sd_barcode,
-    institutionCode = "SD",
-    locality = NA_character_
+  left_join(
+    sd_map %>%
+      select(catalogNumber = sd_barcode, cch2_occid) %>%
+      distinct(catalogNumber, .keep_all = TRUE),
+    by = "catalogNumber"
   )
 
 cda_yose_from_files <- tibble(
@@ -290,31 +298,47 @@ cda_yose_from_files <- tibble(
   cch2_occid = NA_character_,
   catalogNumber = cda_yose_ids,
   institutionCode = ifelse(startsWith(cda_yose_ids, "CDA"), "CDA", "YOSE"),
+  occurrenceID = NA_character_,
+  otherCatalogNumbers = NA_character_,
   locality = NA_character_
 )
 
-candidates <- bind_rows(
-  cch2_from_images, cch2_from_list, cch2_from_completed, sd_from_map, cda_yose_from_files
-)
+candidates <- bind_rows(cch2_full, sd_from_files, cda_yose_from_files)
 
-matched_occids <- unique(na.omit(occ_unified$cch2_occid))
-matched_cats <- unique(na.omit(norm_chr(occ_unified$catalogNumber)))
+present_in_full_gbif <- function(occid, catalog, occurrence_id, other) {
+  vapply(seq_along(occid), function(i) {
+    toks <- unique(na.omit(c(
+      norm_chr(occid[[i]]),
+      norm_chr(catalog[[i]]),
+      norm_chr(occurrence_id[[i]]),
+      split_id_tokens(other[[i]])
+    )))
+    length(toks) > 0 && any(toks %in% gbif_id_any)
+  }, logical(1))
+}
 
 unmatched <- candidates %>%
   mutate(
-    matched_by_occid = !is_blank(cch2_occid) & cch2_occid %in% matched_occids,
-    matched_by_catalog = !is_blank(catalogNumber) & catalogNumber %in% matched_cats
+    matched_by_occid = !is_blank(cch2_occid) &
+      (cch2_occid %in% gbif_occid | cch2_occid %in% gbif_catalog),
+    matched_by_catalog = !is_blank(catalogNumber) & catalogNumber %in% gbif_catalog,
+    matched_by_occurrenceID = !is_blank(occurrenceID) & occurrenceID %in% gbif_occurrence_id,
+    matched_any = present_in_full_gbif(
+      cch2_occid, catalogNumber, occurrenceID, otherCatalogNumbers
+    )
   ) %>%
-  filter(!matched_by_occid & !matched_by_catalog) %>%
+  filter(!matched_any) %>%
   mutate(
     match_fail_reason = case_when(
       source == "locally_imaged_cda_yose" ~
-        "catalogNumber not found in filtered 09.10.2026 GBIF occurrence",
+        "catalogNumber not found in full 09.10.2026 GBIF occurrence.txt",
       source == "ucd_imaged_sd" ~
-        "SD barcode / mapped CCH2 occid not found in filtered 09.10.2026 GBIF occurrence",
-      TRUE ~ "CCH2 occid not found via GBIF references URL (occid=) or catalogNumber in filtered occurrence"
+        "SD barcode / mapped CCH2 occid not found in full 09.10.2026 GBIF occurrence.txt",
+      TRUE ~
+        "CCH2 occid, catalogNumber, and occurrenceID all absent from full 09.10.2026 GBIF occurrence.txt"
     )
   ) %>%
+  select(-matched_any) %>%
   distinct() %>%
   arrange(source, cch2_occid, catalogNumber)
 
@@ -337,4 +361,9 @@ message(
   "Unmatched CCH2/SD/CDA/YOSE rows for review: ", nrow(unmatched),
   " -> ", path_unmatched_review
 )
+message(
+  "CCH2 full-download rows not in full GBIF occurrence: ",
+  sum(unmatched$source == "cch2_full_download"), " of ", nrow(cch2_full), "."
+)
 print(unmatched %>% count(source), n = Inf)
+message("Next: Rscript GBIF_2026_update/build_image_id_audit.R")
