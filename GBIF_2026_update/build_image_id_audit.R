@@ -23,22 +23,14 @@ old_occ <- read_gbif_tsv(path_old_occ) %>%
     institutionCode = as.character(institutionCode)
   )
 
-sd_map <- read_tsv(
-  path_sd_map,
-  col_names = c("sd_filename", "occid_filename"),
-  col_types = cols(.default = col_character()),
-  show_col_types = FALSE
-) %>%
-  mutate(
-    sd_barcode = stem_filename(sd_filename),
-    cch2_occid = stem_filename(occid_filename)
-  )
+cch2_excel <- load_cch2_excel()
 
 media <- read_gbif_multimedia(path_fresh_media)
 
 occ_lookup_cols <- c(
   "gbifID", "catalogNumber", "institutionCode", "cch2_occid",
-  "occurrenceID", "locality", "eventDate", "scientificName", "otherCatalogNumbers"
+  "occurrenceID", "locality", "county", "eventDate", "scientificName",
+  "otherCatalogNumbers"
 )
 
 occ_small <- occ %>% select(any_of(occ_lookup_cols))
@@ -92,46 +84,57 @@ bind_hits <- function(files, source, source_dir, match_fun) {
 
 match_cch2 <- function(stem, filename) {
   hits <- occ_small %>% filter(cch2_occid == stem)
+  label <- paste0("CCH2 occid=", stem)
   if (nrow(hits) == 0) {
     hits <- occ_small %>% filter(catalogNumber == stem)
+    if (nrow(hits) > 0) {
+      label <- paste0("CCH2 filename=", stem, " as catalogNumber")
+    }
   }
-  pick_unique(hits, paste0("CCH2 occid=", stem))
+  if (nrow(hits) == 0) {
+    x <- cch2_excel %>% filter(cch2_occid == stem)
+    if (nrow(x) == 1) {
+      cat <- x$catalogNumber[[1]]
+      inst <- x$institutionCode[[1]]
+      oid <- x$occurrenceID[[1]]
+      if (!is_blank(cat)) {
+        hits <- occ_small %>% filter(catalogNumber == cat)
+        label <- paste0("CCH2 occid=", stem, " via Excel catalogNumber=", cat)
+        if (nrow(hits) > 1 && !is_blank(inst)) {
+          inst_hits <- hits %>% filter(institutionCode == inst)
+          if (nrow(inst_hits) == 1) {
+            hits <- inst_hits
+            label <- paste0(
+              "CCH2 occid=", stem, " via Excel institutionCode+", "catalogNumber=", cat
+            )
+          }
+        }
+      }
+      if (nrow(hits) == 0 && !is_blank(oid)) {
+        hits <- occ_small %>% filter(occurrenceID == oid)
+        label <- paste0("CCH2 occid=", stem, " via Excel occurrenceID")
+      }
+      if (nrow(hits) == 0) {
+        toks <- split_id_tokens(x$otherCatalogNumbers[[1]])
+        if (length(toks) > 0) {
+          hits <- occ_small %>% filter(catalogNumber %in% toks)
+          label <- paste0("CCH2 occid=", stem, " via Excel otherCatalogNumbers")
+        }
+      }
+    }
+  }
+  pick_unique(hits, label)
 }
 
 match_sd <- function(stem, filename) {
-  map_row <- sd_map %>% filter(sd_barcode == stem)
-  occid <- if (nrow(map_row) == 1) map_row$cch2_occid[[1]] else NA_character_
-  hits <- occ_small %>% filter(catalogNumber == stem)
-  if (nrow(hits) == 0 && !is.na(occid)) {
-    hits <- occ_small %>% filter(cch2_occid == occid)
+  if (!grepl("^SD000", stem)) {
+    return(list(
+      hit = occ_small[0, ],
+      status = "unmatched",
+      notes = "SD folder file is not an SD000 barcode (skip gbifID-named leftovers)"
+    ))
   }
-  if (nrow(hits) == 0 && !is.na(occid)) {
-    hits <- occ_small %>% filter(catalogNumber == occid)
-  }
-  res <- pick_unique(hits, paste0("SD barcode=", stem))
-  extra <- c()
-  if (nrow(map_row) != 1) {
-    extra <- c(extra, "SD barcode not in UCD mapping or mapping not unique")
-  }
-  if (nrow(hits) == 1 && nrow(map_row) == 1) {
-    cat_ok <- !is_blank(hits$catalogNumber) && hits$catalogNumber == stem
-    occid_ok <- !is_blank(hits$cch2_occid) && hits$cch2_occid == occid
-    if (!cat_ok && !occid_ok) {
-      extra <- c(extra, "GBIF catalogNumber/occid does not agree with SD mapping")
-      res$status <- "needs_review"
-    } else if (res$status == "ok" && !is.na(occid) && !is_blank(hits$cch2_occid) && hits$cch2_occid != occid) {
-      extra <- c(extra, paste0("mapped occid ", occid, " != GBIF occid ", hits$cch2_occid))
-      res$status <- "needs_review"
-    }
-  }
-  if (length(extra)) {
-    res$notes <- paste(c(res$notes, extra), collapse = "; ")
-  }
-  if (nrow(hits) == 1 && !is.na(occid) && is_blank(hits$cch2_occid)) {
-    hits$cch2_occid <- occid
-    res$hit <- hits
-  }
-  res
+  pick_unique(occ_small %>% filter(catalogNumber == stem), paste0("SD barcode=", stem))
 }
 
 match_cda_yose <- function(stem, filename) {
@@ -154,6 +157,18 @@ match_prev_gbif <- function(stem, filename) {
   old_hit <- old_occ %>% filter(gbifID == stem)
   if (nrow(old_hit) == 1 && !is_blank(old_hit$catalogNumber)) {
     new_hits <- occ_small %>% filter(catalogNumber == old_hit$catalogNumber)
+    if (nrow(new_hits) > 1 && !is_blank(old_hit$institutionCode)) {
+      inst_hits <- new_hits %>% filter(institutionCode == old_hit$institutionCode)
+      if (nrow(inst_hits) == 1) {
+        new_hits <- inst_hits
+        res <- pick_unique(
+          new_hits,
+          paste0("old gbifID=", stem, " via institutionCode+catalogNumber")
+        )
+        res$notes <- paste0(res$notes, "; gbifID_changed; old_gbifID=", stem)
+        return(res)
+      }
+    }
     if (nrow(new_hits) == 1) {
       res <- pick_unique(new_hits, paste0("old gbifID=", stem, " via catalogNumber"))
       res$notes <- paste0(res$notes, "; gbifID_changed")
@@ -186,10 +201,15 @@ match_raw_big <- function(stem, filename) {
   match_prev_gbif(stem, filename)
 }
 
+if (!dir.exists(dir_cch2_images)) {
+  stop("CCH2 image folder not found (is Radishes mounted?): ", dir_cch2_images)
+}
+
 cch2_files <- list_jpgs(dir_cch2_images)
 sd_files <- list_jpgs(dir_sd_images)
+sd_files <- sd_files[grepl("^SD000", basename(sd_files))]
 cda_files <- list_jpgs(dir_cda_yose_images)
-prev_files <- list_jpgs(dir_gbif_prev_images, recursive = FALSE)
+prev_files <- list_jpgs(dir_gbif_prev_images)
 too_large_files <- list_jpgs(dir_gbif_too_large)
 raw_big_files <- list_jpgs(dir_raw_big_images)
 
@@ -247,3 +267,7 @@ message("Wrote ", nrow(audit), " audit rows to ", path_audit)
 print(audit %>% count(image_source, id_check_status), n = Inf)
 message("Needs review: ", nrow(review), " -> ", path_audit_review)
 message("Selected for scoring (unique gbifID): ", sum(audit$selected_for_scoring))
+message(
+  "PAUSE here. Review ", path_audit, " (especially cch2_original / selected_for_scoring) ",
+  "and ", path_audit_review, " before assembling images."
+)
