@@ -82,7 +82,7 @@ Note, growing degree days marked as days \> 5°C: DD5_01 – DD5_12     Janu
 
 NOTE - eval is false here because generating the all_data df takes a long time (like, minutes), so we will only run when we need to modify the saved output climateNA_full_data_tall.csv.
 
-**Climate Variable Key:**
+**Climate Variable Key:**----NATALIE UPDATE LATER, IS MESSED UP
 
 ```{r}
 #| label: climate variable key
