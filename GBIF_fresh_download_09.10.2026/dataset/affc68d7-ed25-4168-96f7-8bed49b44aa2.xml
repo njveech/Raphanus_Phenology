@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="affc68d7-ed25-4168-96f7-8bed49b44aa2"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/e7fa2q</alternateIdentifier>
+        <alternateIdentifier>https://swbiodiversity.org/seinet/collections/misc/collprofiles.php?collid=22</alternateIdentifier>
+        <title>New Mexico State University Herbaria</title>
+        <creator>
+            <organizationName>SEINet - AZ/NM Node</organizationName>
+            <onlineUrl>https://swbiodiversity.org/seinet/index.php</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <organizationName>SEINet - AZ/NM Node</organizationName>
+            <onlineUrl>https://swbiodiversity.org/seinet/index.php</onlineUrl>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Zachary</givenName>
+                <surName>Rogers</surName>
+            </individualName>
+            <positionName>Curator</positionName>
+            <electronicMailAddress>zrogers@nmsu.edu</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0003-1136-0960</userId>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <associatedParty>
+            <individualName>
+                <givenName>Sara</givenName>
+                <surName>Fuentes Soriano</surName>
+            </individualName>
+            <electronicMailAddress>sfuensor@nmsu.edu</electronicMailAddress>
+            <role>CONTENT_PROVIDER</role>
+        </associatedParty>
+        <pubDate>
+                2026-09-03
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>The NMSU herbarium collection is composed of two historical herbaria, NMC, from the Biology Department, and NMCR, from the Animal &amp;amp; Range Sciences Department. The two were unified, physically and digitally, in 2022, and the combined permanent collection currently totals more than 103,000 specimens (ca. 70% NMC, 30% NMCR).
+The herbaria have been 100% databased and imaged since 2022. The collection is rich in vascular plants and bryophytes, with large holdings of Asteraceae, Brassicaceae, Fagaceae (oaks), Nyctaginaceae, Poaceae and mosses. Geographically, focus areas are New Mexico, surrounding states in the US and northern Mexico, and the Chihuahuan Desert.
+Historically, NMC-NMCR specimen vouchers were used as the primary source to create the first inventory of the plants for New Mexico (Flora of New Mexico - Wooton &amp;amp; Standley, 1915). More recently, the NMC-NMCR collection served as the basis for the updated flora series for the state (Flora Neomexicana - Allred et al., 2020-2024). The herbaria hold a large number of unique specimens duplicated nowhere else, and NMC contains the largest number of New Mexico nomenclatural plant types in the world (ca. 900, excluding paratypes). The collection also includes representation of 97% of New Mexico&amp;#39;s ca. 4,500 species of vascular and non-vascular plants.</para>
+        </abstract>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://swbiodiversity.org/seinet/content/dwca/NMC-NMCR_DwC-A.zip</url>
+            </online>
+        </distribution>
+        <contact>
+            <organizationName>New Mexico State University Herbaria</organizationName>
+            <phone>575-646-1529</phone>
+            <electronicMailAddress>zrogers@nmsu.edu</electronicMailAddress>
+            <onlineUrl>https://herbarium.nmsu.edu/index.html</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0003-1136-0960</userId>
+        </contact>
+
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-09-10T18:45:45Z</dateStamp>
+                <citation>New Mexico State University Herbaria (2026). New Mexico State University Herbaria. Occurrence dataset https://doi.org/10.15468/e7fa2q accessed via GBIF.org on 2026-09-10.</citation>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>
