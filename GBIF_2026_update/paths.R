@@ -7,7 +7,7 @@ path_fresh_occ <- "GBIF_fresh_download_09.10.2026/occurrence.txt"
 path_fresh_media <- "GBIF_fresh_download_09.10.2026/multimedia.txt"
 path_old_occ <- "original_gbif_download/occurrence.txt"
 path_old_media <- "original_gbif_download/multimedia.txt"
-path_cch2_catalog <- "CCH2_2025_full_ID_list.txt"
+path_cch2_full_occ <- "Input_Files/CCH2FullOcurrencesDownload20250707_oldcopy.xlsx"
 path_cch2_completed <- "Output_Files/completed_specimen_data.csv"
 path_researched_coords <- "Datasheet_mis-sort_fix_files/updated_csv_only_coordinates_for_adding_back.csv"
 path_old_added_coords <- "GBIF_data_combining/occurence_w_added_coords.csv"
@@ -43,6 +43,7 @@ path_failed_downloads <- file.path(this_dir, "failed_downloads.csv")
 path_counts <- file.path(this_dir, "gbif_repro_counts")
 path_merged <- file.path(this_dir, "gbif_repro_counts_merged.csv")
 path_filter_breakdown <- file.path(this_dir, "filter_removals_breakdown.csv")
+path_local_move_log <- file.path(this_dir, "local_image_move_log.csv")
 
 states_exclude <- c(
   "Alaska (State)", "Arizona", "Arkansas", "Colorado",
@@ -63,12 +64,6 @@ norm_chr <- function(x) {
 is_blank <- function(x) {
   x <- norm_chr(x)
   is.na(x)
-}
-
-extract_cch2_occid <- function(...) {
-  text <- paste(..., sep = " ")
-  m <- regmatches(text, regexpr("occid=([0-9]+)", text, perl = TRUE))
-  ifelse(length(m) == 1 && nzchar(m), sub("occid=", "", m), NA_character_)
 }
 
 extract_cch2_occid_vec <- function(x) {
@@ -117,6 +112,73 @@ list_jpgs <- function(dir, recursive = FALSE) {
     recursive = recursive
   )
   files[!startsWith(basename(files), "._")]
+}
+
+load_cch2_excel <- function() {
+  readxl::read_excel(path_cch2_full_occ, sheet = 1, col_types = "text") %>%
+    dplyr::transmute(
+      cch2_occid = as.character(id),
+      catalogNumber = as.character(catalogNumber),
+      institutionCode = as.character(institutionCode),
+      occurrenceID = as.character(occurrenceID),
+      otherCatalogNumbers = as.character(otherCatalogNumbers),
+      locality = as.character(locality)
+    )
+}
+
+load_sd_map <- function() {
+  if (file.exists(path_sd_map)) {
+    return(
+      readr::read_tsv(
+        path_sd_map,
+        col_names = c("sd_filename", "occid_filename"),
+        col_types = readr::cols(.default = readr::col_character()),
+        show_col_types = FALSE
+      ) %>%
+        dplyr::mutate(
+          sd_barcode = stem_filename(sd_filename),
+          cch2_occid = stem_filename(occid_filename)
+        ) %>%
+        # Known-bad pair: SCFS occid 3737681 is not SD00062562.
+        dplyr::filter(!(sd_barcode == "SD00062562" & cch2_occid == "3737681"))
+    )
+  }
+  if (file.exists(path_local_move_log)) {
+    message("SD mapping file not found; inferring barcodes from ", path_local_move_log)
+    log <- readr::read_csv(
+      path_local_move_log,
+      col_types = readr::cols(.default = readr::col_character()),
+      show_col_types = FALSE
+    )
+    return(
+      log %>%
+        dplyr::filter(grepl("^SD000", ifelse(is.na(filename), "", filename))) %>%
+        dplyr::transmute(
+          sd_filename = filename,
+          occid_filename = basename(from_path),
+          sd_barcode = stem_filename(filename),
+          cch2_occid = stem_filename(from_path)
+        ) %>%
+        dplyr::filter(!(sd_barcode == "SD00062562" & cch2_occid == "3737681"))
+    )
+  }
+  tibble::tibble(
+    sd_filename = character(),
+    occid_filename = character(),
+    sd_barcode = character(),
+    cch2_occid = character()
+  )
+}
+
+split_id_tokens <- function(x) {
+  x <- norm_chr(x)
+  x <- x[!is.na(x)]
+  if (length(x) == 0) {
+    return(character(0))
+  }
+  toks <- trimws(unlist(strsplit(x, "[;,|]"), use.names = FALSE))
+  toks <- norm_chr(toks)
+  unique(toks[!is.na(toks)])
 }
 
 read_gbif_tsv <- function(path) {
