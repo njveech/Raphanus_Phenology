@@ -4,10 +4,12 @@
 
 source("GBIF_2026_update/paths.R")
 
+# 20 MB cutoff. Skip files that were already resized (SML_ prefix).
 limit_bytes <- 20 * 1024 * 1024
 files <- list_jpgs(dir_scoring)
 files <- files[!startsWith(basename(files), "SML_")]
 
+# Resample each oversized jpg to 5000 px wide, write SML_{stem}.jpg, and delete the original.
 resized <- 0L
 for (path in files) {
   info <- file.info(path)

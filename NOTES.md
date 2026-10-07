@@ -100,9 +100,9 @@ This is the current working pipeline for a **full re-score** with a new Roboflow
 
 - New model: `raphanus-specimen-phenology/phenologyscoringeve-11-yolov8x-seg-t1` (replaces `phenologyscoringeve/10`). Re-score **all** assembled images, not only new ones.
 - Occurrence source: `GBIF_fresh_download_09.10.2026/occurrence.txt` (not `GBIF_occurrence_fixed.csv`).
-- Filters match the current Quarto document **except** CCH2 catalog overlap is **kept** (the old qmd dropped rows whose `catalogNumber` was in `CCH2_2025_full_ID_list.txt`).
+- Filters match the current Quarto document **except** CCH2 catalog overlap is **kept** (the old qmd dropped rows whose `catalogNumber` was in `CCH2_2025_full_ID_list.txt`), and county-only sheets are **kept** (rows are dropped only when `locality`, `verbatimLocality`, and `county` are all blank).
 - No `mediaType` / StillImage occurrence filter.
-- Unmatched CCH2 / SD / CDA / YOSE rows go to `GBIF_2026_update/unmatched_cch2_sd_for_review.csv` only; they are **not** appended to the analysis occurrence table.
+- Unmatched CCH2 / SD / CDA / YOSE rows go to `GBIF_2026_update/unmatched_cch2_sd_for_review.csv` only; they are **not** appended to the analysis occurrence table. The review sheet is built from `Input_Files/CCH2FullOcurrencesDownload20250707_oldcopy.xlsx` plus local SD / CDA / YOSE image IDs, matched against the **full** 09.10.2026 GBIF `occurrence.txt` (occid, catalogNumber, occurrenceID). CCH2 catalog numbers such as `CHSC000538` are treated as catalogs, not occids. The image ID audit uses the same Excel `id` → `catalogNumber` join. True CCH2 occid on GBIF rows comes from `occid=` URLs or that Excel join, not from stuffing catalog numbers in `CCH2_2025_full_ID_list.txt` into `cch2_occid`.
 - `gbifID` can change between downloads. Coordinate overlay and image matching use `gbifID`, then `occurrenceID`, then `institutionCode` + `catalogNumber`, then locality text. Researched coords (`match?` first token `yes`) replace GBIF/GeoLocate values.
 
 ### How to run (from project root)
@@ -110,11 +110,12 @@ This is the current working pipeline for a **full re-score** with a new Roboflow
 ```bash
 Rscript GBIF_2026_update/build_unified_occurrence.R
 Rscript GBIF_2026_update/build_image_id_audit.R
+# pause: review image_id_audit.csv (CCH2 occid photos) then continue
 Rscript GBIF_2026_update/assemble_scoring_images.R
 Rscript GBIF_2026_update/download_new_gbif_images.R
 python3 GBIF_2026_update/gbif_image_pull_from_multimedia.py
 Rscript GBIF_2026_update/update_audit_from_scoring_dir.R
-# resize any scoring jpg over 20 MB: sips --resampleWidth 5000, SML_ prefix
+Rscript GBIF_2026_update/resize_scoring_images.R
 export ROBOFLOW_API_KEY="your_key"
 python3 GBIF_2026_update/roboflow_to_json_parellelize.py
 python3 GBIF_2026_update/json_to_df.py
@@ -127,19 +128,85 @@ Scoring images (local, not in git): `/Volumes/Radishes/GBIF_2026_update_scoring_
 
 ### Image ID audit (fail closed)
 
-[`GBIF_2026_update/image_id_audit.csv`](GBIF_2026_update/image_id_audit.csv) is one row per candidate image. Copies/renames to `{gbifID}.jpg` happen only when `id_check_status == ok`. Failures: `image_id_audit_needs_review.csv`. Duplicate photos of the same sheet (e.g. SD copies of CCH2 originals) keep one scoring file, preferring local CDA/YOSE, then local SD, then CCH2 original, then previous GBIF.
+[`GBIF_2026_update/image_id_audit.csv`](GBIF_2026_update/image_id_audit.csv) is one row per candidate image. Copies/renames to `{gbifID}.jpg` happen only when `id_check_status == ok`. Failures: `image_id_audit_needs_review.csv`. Duplicate photos of the same sheet (e.g. SD copies of CCH2 originals) keep one scoring file, preferring local CDA/YOSE, then local SD, then CCH2 original, then previous GBIF. CCH2 filenames are occids; they are joined through the CCH2 Excel catalog when GBIF has no `occid=` field.
 
-### Status (as of 17 Sep 2026)
+### Status (as of 28 Sep 2026)
 
-Occurrence, ID audit, scoring-image assembly, and new-GBIF downloads are done. Unified table: **4,354** filtered rows; **1,891** ID-checked jpgs on the Radishes scoring folder (14 resized with `SML_`). Roboflow inference, `json_to_df.py`, and the 2026 merge have **not** been run yet (no JSON sidecars, no `gbif_repro_counts`). Review leftovers: `unmatched_cch2_sd_for_review.csv`, `failed_downloads.csv` (CAS 403s), `new_gbif_images_missing_url.csv` (mostly SACT), and one SD barcode/occid conflict in the audit.
+Unified occurrence: **5,128** rows (county-only sheets kept; 226 dropped for empty locality **and** empty county). Coords after overlay: **3,736**. Image ID audit rematch: **2,507** unique `gbifID`s selected for scoring (was 1,891). Review leftovers in `image_id_audit_needs_review.csv`: **162** unmatched files (157 previous-GBIF images with no locality and no county, 4 YOSE catalogs absent from GBIF, 1 CCH2 occid `5840581` / catalog `87142` absent from GBIF). `unmatched_cch2_sd_for_review.csv` is still 7 rows vs the **full** GBIF dump (3 CCH2 Excel + 4 YOSE). New-to-this-pull downloads pending: 32 URLs in `new_gbif_images_to_download.csv`; 110 unified IDs have no multimedia URL (`new_gbif_images_missing_url.csv`). Copying newly selected jpgs onto Radishes and Roboflow for those extra files still need the drive mounted. `json_to_df.py` / `gbif_repro_counts_merged.csv` have not been rebuilt for this rematch.
 
 ## Version control and ignores
 
-`.gitignore` excludes typical R/RStudio noise (e.g. `.Rhistory`, `.Rproj.user/`) and **many rendered or binary artifacts**: patterns such as `*html`, `*pdf`, `*png`, `*jpeg`, plus `climateNA_full_data_tall.csv`. It also ignores **`**/gbif_images/`** so bulk-downloaded specimen images stay local and out of GitHub.
+`.gitignore` excludes typical R/RStudio noise (e.g. `.Rhistory`, `.Rproj.user/`) and **many rendered or binary artifacts**: `*html`, `*pdf`, `*jpeg`, `*.jpg`, plus `climateNA_full_data_tall.csv`. It also ignores **`**/gbif_images/`** so bulk-downloaded specimen images stay local and out of GitHub. PNG is **not** ignored (so small figure/data PNGs can be shared).
 
 If something expected is missing from the repo clone, check whether it is generated, ignored, or stored only locally.
 
-### Git notes (bulk images, housekeeping, collaborators)
+### Git: sharing work (main, branches, pull/push)
+
+Remote: `origin` = `https://github.com/njveech/Raphanus_Phenology.git`.  
+Shared line of work: **`main`**. Personal branches on GitHub: **`julia`** and **`natalie`** (all lowercase; Git is case-sensitive).
+
+**What is happening**
+
+- **Commit** = snapshot of staged files on *your* computer.
+- **Push** = send your commits to GitHub.
+- **Fetch** = download GitHub’s commits, but do not change your files yet.
+- **Pull** = fetch + combine GitHub into your current branch.
+- **Merge** = keep both histories and add a join commit. Use this on shared branches.
+- **Rebase** = replay your commits on top of the other branch (rewrites hashes). Do not rebase `main` that others already pulled.
+
+If two people commit on `main` without pulling first, histories **diverge**. Git then asks merge vs rebase. Choose **merge**.
+
+**One-time on each laptop** (so you do not need `--no-rebase` every pull):
+
+```bash
+git config pull.rebase false
+```
+
+**Daily: share on `main`**
+
+```bash
+git checkout main
+git pull origin main
+# edit files
+git add path/to/file-or-folder    # not a blind git add . (images are ignored)
+git status
+git commit -m "Short why, not what"
+git push origin main
+```
+
+Pull **before** you commit if anyone else may have pushed. Stay on `main` unless you intend to use a personal branch.
+
+**Personal branch → `main`**
+
+```bash
+git checkout natalie          # or julia; must match GitHub’s spelling
+git pull origin natalie
+git pull origin main          # merge latest main into your branch
+# …work, commit, then:
+git push origin natalie
+```
+
+On `main`:
+
+```bash
+git checkout main
+git pull origin main
+git merge natalie             # or julia
+git push origin main
+```
+
+**Do not**
+
+- `git push --force` (or `--force-with-lease`) to `main`.
+- `git pull origin main` while you are on `Natalie` / `julia` unless you mean to merge `main` *into that branch*.
+- Create `Natalie` if GitHub has `natalie` (different names).
+- Commit herbarium jpgs or `**/gbif_images/` (gitignored on purpose).
+
+**If pull says “divergent branches”:** `git pull origin main --no-rebase` (or set `pull.rebase false` as above).  
+**If push says “non-fast-forward”:** pull (merge) first, then push.  
+**If `git add` skips a folder:** `git check-ignore -v path/to/file` — often `*.jpg` / `*jpeg`. Add by path, or add a non-image file inside the folder.
+
+### Git notes (bulk images, housekeeping)
 
 - **Do not commit `**/gbif_images/`** — Those folders can be gigabytes and will make `git push` hang or fail. They are gitignored; keep downloads local only.
 - **`git gc --prune=now`** — Rebuilds and compresses objects under `.git` and drops unreachable history. It does **not** delete normal files in your working tree (including pictures on disk).

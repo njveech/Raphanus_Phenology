@@ -30,6 +30,7 @@ SCORING_DIR = Path(
 )
 MODEL_ID = "raphanus-specimen-phenology/phenologyscoringeve-11-yolov8x-seg-t1"
 
+# Serverless Roboflow client for the 2026 segmentation model.
 CLIENT = InferenceHTTPClient(
     api_url="https://serverless.roboflow.com",
     api_key=API_KEY,
@@ -53,6 +54,7 @@ def process_image(image_path: Path):
 
 
 def main():
+    # Score jpgs that do not already have a JSON sidecar. Skip macOS ._ files.
     files = sorted(
         p
         for p in SCORING_DIR.glob("*.jpg")
@@ -68,6 +70,7 @@ def main():
         return
 
     print(f"Scoring {len(files)} images ({already} already have JSON) in {SCORING_DIR}")
+    # Up to five images at once. Append failures to roboflow_failures.csv.
     max_workers = min(5, len(files))
     n_ok = 0
     n_fail = 0

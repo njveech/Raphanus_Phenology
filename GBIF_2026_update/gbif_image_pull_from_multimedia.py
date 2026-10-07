@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = ROOT / "GBIF_2026_update" / "new_gbif_images_to_download.csv"
 FAILED_PATH = ROOT / "GBIF_2026_update" / "failed_downloads.csv"
 
+# One session so image hosts see a normal browser request.
 session = requests.Session()
 session.headers.update(
     {
@@ -28,11 +29,13 @@ session.headers.update(
 
 
 def main():
+    # The R script writes this CSV. Do not download without it.
     if not CSV_PATH.exists():
         raise SystemExit(
             f"Missing {CSV_PATH}. Run Rscript GBIF_2026_update/download_new_gbif_images.R first."
         )
 
+    # One row per new gbifID, with image_url and dest_path already filled.
     with CSV_PATH.open(newline="") as f:
         rows = list(csv.DictReader(f))
 
@@ -40,6 +43,7 @@ def main():
     downloaded = 0
     skipped = 0
 
+    # Skip a row with no id or URL, and skip a file that is already on disk.
     for row in rows:
         gbif_id = (row.get("gbifID") or "").strip()
         url = (row.get("image_url") or row.get("url") or "").strip().strip('"')
@@ -53,6 +57,7 @@ def main():
         if dest.exists():
             skipped += 1
             continue
+        # Save the image bytes. A failure is recorded and the rest of the list still runs.
         try:
             response = session.get(url, timeout=30)
             response.raise_for_status()
@@ -63,6 +68,7 @@ def main():
             print(f"Failed {gbif_id}: {exc}")
             failed.append({"gbifID": gbif_id, "url": url, "error": str(exc)})
 
+    # Rewrite the failure list, including a header when nothing failed.
     with FAILED_PATH.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["gbifID", "url", "error"])
         writer.writeheader()
