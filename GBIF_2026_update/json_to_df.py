@@ -20,11 +20,13 @@ SCORING_DIR = Path(
 )
 OUT_PATH = Path(__file__).resolve().parent / "gbif_repro_counts"
 
+# Count classes in this order so every row has the same columns.
 CLASS_ORDER = ["Bud Cluster", "Flower", "Fruit"]
 
 
 def main():
     rows = []
+    # One row per JSON sidecar. A leading SML_ is stripped so the image id is the gbifID.
     for path in sorted(SCORING_DIR.glob("*.json")):
         with path.open() as f:
             result = json.load(f)
@@ -38,6 +40,7 @@ def main():
             row[cls] = counts.get(cls, 0)
         rows.append(row)
 
+    # Write the counts table next to this script. The merge script reads this path with no .csv suffix.
     df = pd.DataFrame(rows, columns=["image"] + CLASS_ORDER)
     df.to_csv(OUT_PATH, index=False)
     print(f"Saved {len(df)} rows to {OUT_PATH}")

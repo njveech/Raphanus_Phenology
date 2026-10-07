@@ -3,6 +3,7 @@
 
 this_dir <- "GBIF_2026_update"
 
+# Inputs: fresh and original GBIF downloads, the CCH2 workbook, researched coordinates, and the SD barcode map.
 path_fresh_occ <- "GBIF_fresh_download_09.10.2026/occurrence.txt"
 path_fresh_media <- "GBIF_fresh_download_09.10.2026/multimedia.txt"
 path_old_occ <- "original_gbif_download/occurrence.txt"
@@ -13,6 +14,7 @@ path_researched_coords <- "Datasheet_mis-sort_fix_files/updated_csv_only_coordin
 path_old_added_coords <- "GBIF_data_combining/occurence_w_added_coords.csv"
 path_sd_map <- "/Volumes/Radishes/Code/UCD_imaged_SDid_to_COREid.txt"
 
+# Local image folders on the Radishes drive.
 dir_cch2_images <- "/Volumes/Radishes/OG_CCH2_phenology_scored_specimen_images"
 dir_gbif_prev_images <- "/Volumes/Radishes/GBIF_phenology_scored_specimen_images"
 dir_sd_images <- "/Volumes/Radishes/locally_imaged_herbarium_sheets/SD"
@@ -32,6 +34,7 @@ image_source_priority <- c(
   "gbif_fresh_download"
 )
 
+# Files this pipeline writes under GBIF_2026_update/.
 path_occ_unified <- file.path(this_dir, "occurrence_unified.csv")
 path_occ_added_coords <- file.path(this_dir, "occurrence_w_added_coords.csv")
 path_crosswalk <- file.path(this_dir, "cch2_gbif_crosswalk.csv")
@@ -45,6 +48,7 @@ path_merged <- file.path(this_dir, "gbif_repro_counts_merged.csv")
 path_filter_breakdown <- file.path(this_dir, "filter_removals_breakdown.csv")
 path_local_move_log <- file.path(this_dir, "local_image_move_log.csv")
 
+# stateProvince values dropped from the analysis table.
 states_exclude <- c(
   "Alaska (State)", "Arizona", "Arkansas", "Colorado",
   "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
@@ -53,19 +57,23 @@ states_exclude <- c(
   "Tennessee", "Utah", "West Virginia", "Wisconsin", "Wyoming", "0"
 )
 
+# Coordinate columns overlaid from researched and completed-specimen files.
 coord_cols <- c("decimalLatitude", "decimalLongitude", "coordinateUncertaintyInMeters")
 
+# function to convert a vector of strings characters and to NA if they are blank, empty, or "0"
 norm_chr <- function(x) {
   x <- trimws(as.character(x))
   x[is.na(x) | x %in% c("", "NA", "0")] <- NA_character_
   x
 }
 
+# function to test whether values are missing after treating blanks, "NA", and "0" as NA
 is_blank <- function(x) {
   x <- norm_chr(x)
   is.na(x)
 }
 
+# function to pull the numeric CCH2 occid out of strings that contain "occid=..."
 extract_cch2_occid_vec <- function(x) {
   vapply(x, function(s) {
     if (is.na(s) || !nzchar(s)) {
@@ -76,12 +84,14 @@ extract_cch2_occid_vec <- function(x) {
   }, character(1), USE.NAMES = FALSE)
 }
 
+# function to reduce a path to its filename stem, dropping the extension and a leading "SML_"
 stem_filename <- function(x) {
   x <- basename(as.character(x))
   x <- sub("\\.[^.]+$", "", x)
   sub("^SML_", "", x)
 }
 
+# function to return the first http or https URL among the supplied values, or NA if none
 first_http_url <- function(...) {
   vals <- unlist(list(...), use.names = FALSE)
   vals <- trimws(as.character(vals))
@@ -90,6 +100,7 @@ first_http_url <- function(...) {
   if (length(hit) == 0) NA_character_ else hit[[1]]
 }
 
+# function to test whether the first word of a comma-separated string is "yes"
 match_yes <- function(x) {
   x <- trimws(as.character(x))
   x[is.na(x)] <- ""
@@ -101,6 +112,7 @@ match_yes <- function(x) {
   tolower(first) == "yes"
 }
 
+# function to list JPEG files in a directory, skipping macOS "._" sidecar files
 list_jpgs <- function(dir, recursive = FALSE) {
   if (!dir.exists(dir)) {
     return(character(0))
@@ -114,6 +126,7 @@ list_jpgs <- function(dir, recursive = FALSE) {
   files[!startsWith(basename(files), "._")]
 }
 
+# function to read the CCH2 occurrence workbook and keep the ID and locality columns
 load_cch2_excel <- function() {
   readxl::read_excel(path_cch2_full_occ, sheet = 1, col_types = "text") %>%
     dplyr::transmute(
@@ -126,6 +139,7 @@ load_cch2_excel <- function() {
     )
 }
 
+# function to load the SD barcode to CCH2 occid map, falling back to the local image move log
 load_sd_map <- function() {
   if (file.exists(path_sd_map)) {
     return(
@@ -170,6 +184,7 @@ load_sd_map <- function() {
   )
 }
 
+# function to split ID strings on ";", ",", or "|" and return the unique non-blank tokens
 split_id_tokens <- function(x) {
   x <- norm_chr(x)
   x <- x[!is.na(x)]
@@ -181,6 +196,7 @@ split_id_tokens <- function(x) {
   unique(toks[!is.na(toks)])
 }
 
+# function to read a GBIF TSV with every column kept as character
 read_gbif_tsv <- function(path) {
   readr::read_tsv(
     path,
@@ -192,7 +208,7 @@ read_gbif_tsv <- function(path) {
   )
 }
 
-# multimedia.txt can have extra trailing fields (license URLs) that break vroom.
+# function to read multimedia.txt into gbifID and image_url; extra trailing fields break vroom
 read_gbif_multimedia <- function(path) {
   lines <- readLines(path, warn = FALSE, encoding = "UTF-8")
     if (length(lines) < 2) {

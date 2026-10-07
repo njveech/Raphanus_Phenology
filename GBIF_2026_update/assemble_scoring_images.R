@@ -8,15 +8,18 @@ library(readr)
 
 source("GBIF_2026_update/paths.R")
 
+# Stop until the audit sheet exists, then make the scoring folder.
 if (!file.exists(path_audit)) {
   stop("Run GBIF_2026_update/build_image_id_audit.R first.")
 }
 
 dir.create(dir_scoring, showWarnings = FALSE, recursive = TRUE)
 
+# selected_for_scoring is stored as text in the CSV.
 audit <- read_csv(path_audit, col_types = cols(.default = col_character()), show_col_types = FALSE) %>%
   mutate(selected_for_scoring = as.logical(selected_for_scoring))
 
+# Copy only ID-checked rows that were chosen as the scoring photo.
 to_copy <- audit %>%
   filter(selected_for_scoring %in% TRUE, id_check_status == "ok", !is_blank(gbifID))
 
@@ -24,6 +27,7 @@ if (nrow(to_copy) == 0) {
   stop("No audit rows selected for scoring.")
 }
 
+# Source path, destination gbifID.jpg path, and a place to record whether the copy worked.
 copy_log <- to_copy %>%
   mutate(
     from_path = file.path(source_dir, original_filename),
@@ -32,6 +36,8 @@ copy_log <- to_copy %>%
     copy_note = NA_character_
   )
 
+# Copy each file. A missing source is a failure. A file already at the destination
+# is left in place. Any other existing destination is overwritten.
 for (i in seq_len(nrow(copy_log))) {
   from <- copy_log$from_path[[i]]
   to <- copy_log$to_path[[i]]
@@ -49,6 +55,7 @@ for (i in seq_len(nrow(copy_log))) {
   copy_log$copy_note[[i]] <- ifelse(ok, "copied", "file.copy failed")
 }
 
+# Record what was copied and what failed.
 write_csv(
   copy_log %>% select(
     gbifID, image_source, original_filename, scoring_filename,
@@ -57,6 +64,7 @@ write_csv(
   file.path(this_dir, "scoring_image_copy_log.csv")
 )
 
+# Report how many copies succeeded, and list any that did not.
 message(
   "Copied ", sum(copy_log$copied), " / ", nrow(copy_log),
   " images to ", dir_scoring
