@@ -36,9 +36,6 @@ image_source_priority <- c(
 
 # Files this pipeline writes under GBIF_2026_update/.
 path_occ_unified <- file.path(this_dir, "occurrence_unified.csv")
-path_occ_added_coords <- file.path(this_dir, "occurrence_w_added_coords.csv")
-path_crosswalk <- file.path(this_dir, "cch2_gbif_crosswalk.csv")
-path_unmatched_review <- file.path(this_dir, "unmatched_cch2_sd_for_review.csv")
 path_audit <- file.path(this_dir, "image_id_audit.csv")
 path_audit_review <- file.path(this_dir, "image_id_audit_needs_review.csv")
 path_new_downloads <- file.path(this_dir, "new_gbif_images_to_download.csv")
@@ -48,7 +45,8 @@ path_merged <- file.path(this_dir, "gbif_repro_counts_merged.csv")
 path_filter_breakdown <- file.path(this_dir, "filter_removals_breakdown.csv")
 path_local_move_log <- file.path(this_dir, "local_image_move_log.csv")
 
-# stateProvince values dropped from the analysis table.
+# stateProvince values to drop later, after Roboflow phenology scores exist.
+# Not applied in build_unified_occurrence.R.
 states_exclude <- c(
   "Alaska (State)", "Arizona", "Arkansas", "Colorado",
   "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",

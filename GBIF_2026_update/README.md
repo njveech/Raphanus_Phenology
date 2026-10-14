@@ -47,9 +47,9 @@ excluded CCH2 occid-named photos get into scoring (Excel `id` → catalogNumber
 
 ## Filters
 
-- Drop excluded `stateProvince` values (`paths.R`)
-- `countryCode == "US"`, `basisOfRecord == "PRESERVED_SPECIMEN"`
+- Do **not** drop excluded `stateProvince` values yet (`states_exclude` in `paths.R` is for after Roboflow scores)
 - Drop only when locality, verbatimLocality, **and** county are blank
+- No country or `basisOfRecord` filter: this download is already all `US` preserved specimens
 - Do **not** drop CCH2 catalog overlap; no StillImage filter
 
 ## Image matching (fail closed)
