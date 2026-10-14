@@ -11,8 +11,7 @@ source("GBIF_2026_update/paths.R")
 # Numeric image IDs with no occurrence row are written here.
 path_unmatched_no_metadata <- file.path(this_dir, "gbif_repro_counts_unmatched_no_metadata.csv")
 
-# Occurrence columns copied onto each count row, and the coordinate columns
-# that can be filled from the added-coords file.
+# Occurrence columns copied onto each count row.
 occ_cols <- c(
   "institutionCode", "recordedBy", "eventDate", "startDayOfYear", "endDayOfYear",
   "year", "month", "day", "verbatimEventDate", "stateProvince", "county",
@@ -20,14 +19,6 @@ occ_cols <- c(
   "coordinateUncertaintyInMeters", "scientificName", "specificEpithet",
   "cch2_occid"
 )
-coord_cols <- c("decimalLatitude", "decimalLongitude", "coordinateUncertaintyInMeters")
-
-# Prefer the first string when it is non-blank; otherwise use the second.
-coalesce_char <- function(primary, secondary) {
-  primary <- na_if(trimws(as.character(primary)), "")
-  secondary <- na_if(trimws(as.character(secondary)), "")
-  coalesce(primary, secondary)
-}
 
 # CDA, YOSE, and SD filenames are catalog numbers, not gbifIDs.
 is_catalog_image <- function(x) {
@@ -53,19 +44,9 @@ counts <- read_csv(path_counts, show_col_types = FALSE) %>%
   mutate(image = sub("^SML_", "", image)) %>%
   filter(!image %in% unscorable_image_ids, !paste0("SML_", image) %in% unscorable_image_ids)
 
-# Unified occurrence, and the added-coords copy of that same table.
+# Unified occurrence. Coordinates are already overlaid in that table.
 occ <- read_csv(
   path_occ_unified,
-  col_types = cols(.default = col_character()),
-  show_col_types = FALSE
-) %>%
-  mutate(
-    gbifID = as.character(gbifID),
-    catalogNumber = as.character(catalogNumber)
-  )
-
-added_full <- read_csv(
-  path_occ_added_coords,
   col_types = cols(.default = col_character()),
   show_col_types = FALSE
 ) %>%
@@ -80,11 +61,9 @@ if (file.exists(path_audit)) {
   audit <- read_csv(path_audit, col_types = cols(.default = col_character()), show_col_types = FALSE)
 }
 
-# catalogNumber to gbifID. The unified table is listed first, so a repeated catalog keeps that gbifID.
-catalog_to_gbif <- bind_rows(
-  occ %>% select(gbifID, catalogNumber),
-  added_full %>% select(gbifID, catalogNumber)
-) %>%
+# catalogNumber to gbifID. A repeated catalog keeps the first gbifID.
+catalog_to_gbif <- occ %>%
+  select(gbifID, catalogNumber) %>%
   filter(!is.na(catalogNumber), catalogNumber != "") %>%
   distinct(catalogNumber, .keep_all = TRUE)
 
@@ -94,12 +73,6 @@ occ_by_gbif <- occ %>%
   select(gbifID, all_of(intersect(occ_cols, names(.))))
 
 occ_gbif_ids <- occ_by_gbif$gbifID
-
-# Added coordinates, renamed so they do not collide with the GBIF coordinate columns.
-added_coords <- added_full %>%
-  distinct(gbifID, .keep_all = TRUE) %>%
-  select(gbifID, all_of(coord_cols)) %>%
-  rename_with(~ paste0(.x, "__added"), -gbifID)
 
 # Resolve each count row to a gbifID: catalog match first, otherwise the image
 # stem when the filename is not a CDA, YOSE, or SD catalog.
@@ -144,18 +117,9 @@ if (!is.null(audit)) {
   counts_with_gbif <- counts_with_gbif %>% filter(audit_ok) %>% select(-audit_ok)
 }
 
-# Join occurrence fields, fill blank coordinates from the added-coords file,
-# and flag rows whose gbifID is in the unified table.
+# Join occurrence fields and flag rows whose gbifID is in the unified table.
 merged <- counts_with_gbif %>%
   left_join(occ_by_gbif, by = "gbifID") %>%
-  left_join(added_coords, by = "gbifID") %>%
-  mutate(
-    across(
-      all_of(coord_cols),
-      ~ coalesce_char(.x, get(paste0(cur_column(), "__added")))
-    )
-  ) %>%
-  select(-ends_with("__added")) %>%
   mutate(matched_occurrence = !is.na(gbifID) & gbifID %in% occ_gbif_ids)
 
 # Write the merged table without the temporary match flag.

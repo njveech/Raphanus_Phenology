@@ -1,8 +1,0 @@
-cch2_occid,catalogNumber,institutionCode,occurrenceID,otherCatalogNumbers,locality,source,matched_by_occid,matched_by_catalog,matched_by_occurrenceID,match_fail_reason
-3584664,BSCA4416,BSCA,NA,4161,Anza-Borrego Desert State Park. South side of San Felipe Wash about 0.1 mi west of the intersection with County Hwy S-3 near emergency call box #78-671.,cch2_full_download,FALSE,FALSE,FALSE,"CCH2 occid, catalogNumber, and occurrenceID all absent from full 09.10.2026 GBIF occurrence.txt"
-5723178,PINN-00287,PINN,PINN-00287,PINN: 1555,"NW 1/4 OF SW 1/4 OF SEC 4, N FACING SLOPE BELOW CHAPARRAL ENTRANCE",cch2_full_download,FALSE,FALSE,FALSE,"CCH2 occid, catalogNumber, and occurrenceID all absent from full 09.10.2026 GBIF occurrence.txt"
-5840581,87142,MBNHM,1269590f-3397-4201-9c5d-cee451696dce,NA,"Waste field, Santa Maria",cch2_full_download,FALSE,FALSE,FALSE,"CCH2 occid, catalogNumber, and occurrenceID all absent from full 09.10.2026 GBIF occurrence.txt"
-NA,YOSE109090,YOSE,NA,NA,NA,locally_imaged_cda_yose,FALSE,FALSE,FALSE,catalogNumber not found in full 09.10.2026 GBIF occurrence.txt
-NA,YOSE109091,YOSE,NA,NA,NA,locally_imaged_cda_yose,FALSE,FALSE,FALSE,catalogNumber not found in full 09.10.2026 GBIF occurrence.txt
-NA,YOSE225087,YOSE,NA,NA,NA,locally_imaged_cda_yose,FALSE,FALSE,FALSE,catalogNumber not found in full 09.10.2026 GBIF occurrence.txt
-NA,YOSE65260,YOSE,NA,NA,NA,locally_imaged_cda_yose,FALSE,FALSE,FALSE,catalogNumber not found in full 09.10.2026 GBIF occurrence.txt

@@ -28,6 +28,8 @@ def main():
     rows = []
     # One row per JSON sidecar. A leading SML_ is stripped so the image id is the gbifID.
     for path in sorted(SCORING_DIR.glob("*.json")):
+        if path.name.startswith("._"):
+            continue
         with path.open() as f:
             result = json.load(f)
         classes = [pred["class"] for pred in result.get("predictions", [])]

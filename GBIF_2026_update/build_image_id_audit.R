@@ -110,12 +110,15 @@ match_cch2 <- function(stem, filename) {
       if (!is_blank(cat)) {
         hits <- occ_small %>% filter(catalogNumber == cat)
         label <- paste0("CCH2 occid=", stem, " via Excel catalogNumber=", cat)
-        if (nrow(hits) > 1 && !is_blank(inst)) {
-          inst_hits <- hits %>% filter(institutionCode == inst)
-          if (nrow(inst_hits) == 1) {
+        # Same catalog number at two institutions is not the same sheet.
+        # A blank GBIF institutionCode still matches.
+        if (!is_blank(inst)) {
+          inst_hits <- hits %>%
+            filter(is_blank(institutionCode) | institutionCode == inst)
+          if (nrow(inst_hits) < nrow(hits)) {
             hits <- inst_hits
             label <- paste0(
-              "CCH2 occid=", stem, " via Excel institutionCode+", "catalogNumber=", cat
+              "CCH2 occid=", stem, " via Excel institutionCode+catalogNumber=", cat
             )
           }
         }
@@ -297,3 +300,12 @@ message(
   "PAUSE here. Review ", path_audit, " (especially cch2_original / selected_for_scoring) ",
   "and ", path_audit_review, " before assembling images."
 )
+
+# gbif_previous_download rows in image_id_audit_needs_review.csv (157 on 14 Oct 2026):
+# 149 filenames are still the current gbifID in GBIF_fresh_download_09.10.2026/occurrence.txt.
+# They are absent from occurrence_unified.csv because locality, verbatimLocality, and county
+# are all blank (the same geography is blank in the old download; 111 also have a blank stateProvince).
+# 7 filenames are RENO catalog numbers, not gbifIDs: 75601, 77908, 77910, 77913, 77914, 77919, 77920.
+# Those sheets are in the unified table under gbifIDs 4404866744 and 440492…/440498….
+# This matcher treats a previous-GBIF filename as a gbifID, so it does not look those up as catalogs.
+# 51063638087.jpg is not a gbifID, catalog number, or occurrenceID in either download.

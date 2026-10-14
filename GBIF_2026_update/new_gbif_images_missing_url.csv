@@ -41,13 +41,21 @@ gbifID,catalogNumber,institutionCode,scientificName,match_fail_reason
 6503148717,GMUF-0057062,GMUF,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6503075050,TAES0130791,TAES,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6502494303,NA,SD,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6491605809,UWEC07486,UWEC,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6491605798,UWEC07488,UWEC,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6491605523,UWEC07485,UWEC,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6491605506,UWEC07487,UWEC,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6491605335,UWEC07489,UWEC,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490909350,BRYV0408666,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6490899444,BRYV0408672,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6490894548,BRYV0408673,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490890601,BRYV0408649,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490890406,BRYV0408667,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490890333,BRYV0408664,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6490889028,BRYV0408675,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490888462,BRYV0408668,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490887625,BRYV0408656,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6490885445,BRYV0408662,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490885360,BRYV0408659,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490884718,BRYV0408654,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490884667,BRYV0408651,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
@@ -59,6 +67,7 @@ gbifID,catalogNumber,institutionCode,scientificName,match_fail_reason
 6490879393,BRYV0408650,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490877971,BRYV0408661,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490877749,BRYV0408670,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6490875297,BRYV0408671,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490875055,BRYV0408663,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490874468,BRYV0408676,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490872435,BRYV0408680,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
@@ -67,9 +76,12 @@ gbifID,catalogNumber,institutionCode,scientificName,match_fail_reason
 6490871761,BRYV0408681,BRY,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490871596,BRYV0408652,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6490871395,BRYV0408669,BRY,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6456564323,446576,KU,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6439468736,NMC044603,NMC-NMCR,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6439456959,NMC044607,NMC-NMCR,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6439424651,NMC044602,NMC-NMCR,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6439379526,NMC044604,NMC-NMCR,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6439371139,NMC044601,NMC-NMCR,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6415723330,SD00102985,SD,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6415567317,NA,IRVC,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6410260358,NBYC003698,NBYC,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
@@ -101,6 +113,7 @@ gbifID,catalogNumber,institutionCode,scientificName,match_fail_reason
 6351891304,NCU00467322,NCU,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6351888310,NCU00467319,NCU,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6341315367,NA,US,Raphanus raphanistrum var. sativus (L.) Schmalh.,new to 09.10.2026 download but no http URL in multimedia identifier/references
+6326826153,TRT-VASC3630,ROM,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6227344498,3953,COCC,Raphanus sativus L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6176537422,CM557645,CM,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
 6176433317,WTU-V-469073,WTU,Raphanus raphanistrum L.,new to 09.10.2026 download but no http URL in multimedia identifier/references
