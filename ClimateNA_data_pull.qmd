@@ -17,10 +17,6 @@ editor_options:
 
 ## Pulling ClimateNA Data
 
-This script is modified from XXX . It uses GPS coordinates and a calculated 'lived climate' time period for each specimen to pull data for each herbarium specimen independently.
-
-First, set working directory and load packages.
-
 ```{r}
 #| include: false
 # load packages
@@ -44,24 +40,53 @@ Then, we load the specimen data and make a new csv with coordinates and IDs in t
 #| label: climate input data
 #| eval: false
 #| include: false
+setwd("/Users/natalieveech/Desktop/EVE_2025/Raphanus_Phenology")
 
 # load the data
-specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
+fullspecimens <- read.csv("./GBIF_2026_update/gbif_repro_counts_merged.csv", header = T)
+
+states_exclude <- c(
+  "Alaska (State)", "Arizona", "Arkansas", "Colorado",
+  "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
+  "Michigan", "Minnesota", "Missouri", "Montana", "Nebraska", "Nevada",
+  "New Mexico", "North Dakota", "Ohio", "Oklahoma", "South Dakota",
+  "Tennessee", "Utah", "West Virginia", "Wisconsin", "Wyoming", "0"
+)
+
+statespecimens <- fullspecimens %>% filter(!stateProvince %in% states_exclude)
+
+nrow(statespecimens)
+
+nocoords <- statespecimens %>% filter(is.na(decimalLatitude) | is.na(decimalLongitude))
+
+nrow(nocoords) 
+
+
+
+write_csv(nocoords, "./GBIF_2026_update/gbif_nocoords_2026_Oct.csv")
+
+old_CCH2_clim <- read.csv("CCH2_climateNA_locations.csv")
+
+old_CCH2_clim <- old_CCH2_clim %>% mutate(across(c(lat, long), ~ as.numeric(str_replace_all(as.character(.x), "\u2212", "-"))))
+
+finishing_up_climdata <- statespecimens %>% filter(!is.na(decimalLatitude), !is.na(decimalLongitude)) %>% anti_join(old_CCH2_clim, by = c("decimalLatitude" = "lat", "decimalLongitude" = "long"))
 
 # make specific dataframe for pulling data from climateNA
 # ClimateNA requires an input csv containing the columns ID1, ID2, lat, long, and (optionally) el.
 # ID1 and ID2 can be anything you want 
 # currently not including elevation, but could calculate this from the gps and add it in later
 
-locs <- specimens %>% 
+get_gbif_locs <- finishing_up_climdata %>% 
   mutate(id2 = NA,
-         elev = NA) %>% # add a blank ID2 col
-  dplyr::select(id1 = id, id2, lat = decimalLatitude, long = decimalLongitude, elev)
+         elev = NA) %>% # add a blank ID2 col and empty elevation column
+  dplyr::select(id1 = gbifID, id2, lat = decimalLatitude, long = decimalLongitude, elev)
 
-head(locs) # peak at the new df to check; looks good!
+#sanity check that get gbif data had same rows as finishing clim data
+
+head(get_gbif_locs) # peak at the new df to check; looks good!
 
 # Write out the new df as a csv for input into the ClimateNA program
-write.csv(locs[,], "climateNA_locations.csv", row.names = FALSE, quote = FALSE)
+write.csv(get_gbif_locs[,], "./GBIF_2026_update/GBIF_climateNA_locations.csv", row.names = FALSE, quote = FALSE)
 # NOTE!! This csv does NOT work for pulling the location data because it is in Mac not windows format. I solved by copying all the data EXCEPT the last, empty line (using sublime) from this saved .csv location file into a copy of the test location file included in the ClimateNA download. Hypothetically I should be able to convert the format of my file, but my one attempt failed and the copy paste worked.
 ```
 
