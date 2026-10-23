@@ -130,13 +130,27 @@ old_occ <- read_gbif_tsv(path_old_occ) %>%
 # match_yes is true when the first word of a comma-separated string is "yes".
 # Here it keeps researched coordinate rows marked as a match.
 # norm_chr turns blanks, "NA", and "0" into NA.
-# Here it cleans coordinates and builds locality_key from locality and verbatimLocality.
+# locality_key_of keeps a missing locality as NA. paste() would turn that NA into
+# the string "NA", and "NA||NA" would then match every other blank locality.
+locality_key_of <- function(locality, verbatimLocality) {
+  loc <- norm_chr(locality)
+  verb <- norm_chr(verbatimLocality)
+  both <- !is.na(loc) & !is.na(verb)
+  loc_only <- !is.na(loc) & is.na(verb)
+  verb_only <- is.na(loc) & !is.na(verb)
+  ifelse(
+    both, paste(loc, verb, sep = "||"),
+    ifelse(loc_only, paste0(loc, "||"),
+           ifelse(verb_only, paste0("||", verb), NA_character_))
+  )
+}
+
 researched <- coords_raw %>%
   filter(match_yes(.data[[match_col[[1]]]])) %>%
   mutate(
     gbifID = as.character(gbifID),
     across(all_of(coord_cols), norm_chr),
-    locality_key = paste(norm_chr(locality), norm_chr(verbatimLocality), sep = "||")
+    locality_key = locality_key_of(locality, verbatimLocality)
   ) %>%
   left_join(
     old_occ %>% rename(
@@ -187,7 +201,11 @@ apply_coords <- function(df, donor, by_cols, replace = FALSE) {
   }
   donor_small <- donor %>%
     select(all_of(present_by), all_of(present_coords)) %>%
+    mutate(across(all_of(present_by), norm_chr)) %>%
+    # A missing id or locality must not match other missing values.
+    # "NA||NA" is the blank locality key that paste() used to create.
     filter(if_all(all_of(present_by), ~ !is_blank(.x))) %>%
+    filter(if_all(all_of(present_by), ~ !grepl("^(NA)?\\|\\|(NA)?$", .x))) %>%
     distinct(across(all_of(present_by)), .keep_all = TRUE) %>%
     rename_with(~ paste0(.x, "__res"), all_of(present_coords))
   if (nrow(donor_small) == 0) {
@@ -212,7 +230,7 @@ apply_coords <- function(df, donor, by_cols, replace = FALSE) {
 occ_unified <- occ_unified %>%
   mutate(
     across(all_of(coord_cols), norm_chr),
-    locality_key = paste(norm_chr(locality), norm_chr(verbatimLocality), sep = "||")
+    locality_key = locality_key_of(locality, verbatimLocality)
   )
 
 # is_blank counts unified rows that still lack a latitude before the coordinate overlay.
@@ -221,7 +239,7 @@ n_coords_before <- sum(!is_blank(occ_unified$decimalLatitude))
 # Overlay coordinates in this order:
 # previous added-coords by gbifID, then by catalogNumber (fill blanks only);
 # researched yes-rows by gbifID, occurrenceID, and institutionCode + catalogNumber (blanks only);
-# researched locality text (fill blanks only);
+# researched locality text, only when the locality text itself is present (fill blanks only);
 # completed CCH2 specimens by cch2_occid (blanks only).
 occ_unified <- apply_coords(
   occ_unified,

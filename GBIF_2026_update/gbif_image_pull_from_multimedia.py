@@ -1,4 +1,4 @@
-"""Download images listed in GBIF_2026_update/new_gbif_images_to_download.csv.
+"""Download images listed in a CSV of gbifID, image_url, and dest_path.
 
 The 09.10.2026 multimedia.txt file is column-shifted relative to its header:
 the image URL is often in `references` rather than `identifier`. The R script
@@ -7,16 +7,28 @@ already resolved a single http(s) URL per gbifID into that CSV.
 Run from project root after download_new_gbif_images.R:
 
     python3 GBIF_2026_update/gbif_image_pull_from_multimedia.py
+
+Optional arguments are the download CSV and the failure CSV. Defaults keep the
+new-ID pull. The recovery list is:
+
+    python3 GBIF_2026_update/gbif_image_pull_from_multimedia.py \
+        GBIF_2026_update/images_to_recover.csv \
+        GBIF_2026_update/recover_failed_downloads.csv
 """
 
 import csv
+import sys
 from pathlib import Path
 
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
-CSV_PATH = ROOT / "GBIF_2026_update" / "new_gbif_images_to_download.csv"
-FAILED_PATH = ROOT / "GBIF_2026_update" / "failed_downloads.csv"
+CSV_PATH = Path(sys.argv[1]) if len(sys.argv) > 1 else (
+    ROOT / "GBIF_2026_update" / "new_gbif_images_to_download.csv"
+)
+FAILED_PATH = Path(sys.argv[2]) if len(sys.argv) > 2 else (
+    ROOT / "GBIF_2026_update" / "failed_downloads.csv"
+)
 
 # One session so image hosts see a normal browser request.
 session = requests.Session()
