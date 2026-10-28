@@ -40,20 +40,23 @@ Then, we load the specimen data and make a new csv with coordinates and IDs in t
 #| label: climate input data
 #| eval: false
 #| include: false
-setwd("/Users/natalieveech/Desktop/EVE_2025/Raphanus_Phenology")
+# Working directory is the project root. Paths below are relative to it.
 
 # load the data
 fullspecimens <- read.csv("./GBIF_2026_update/gbif_repro_counts_merged.csv", header = T)
 
+# "0", "NA", and "" are the same missing values as norm_chr in GBIF_2026_update/paths.R.
 states_exclude <- c(
   "Alaska (State)", "Arizona", "Arkansas", "Colorado",
   "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
   "Michigan", "Minnesota", "Missouri", "Montana", "Nebraska", "Nevada",
   "New Mexico", "North Dakota", "Ohio", "Oklahoma", "South Dakota",
-  "Tennessee", "Utah", "West Virginia", "Wisconsin", "Wyoming", "0"
+  "Tennessee", "Utah", "West Virginia", "Wisconsin", "Wyoming",
+  "0", "NA", ""
 )
 
-statespecimens <- fullspecimens %>% filter(!stateProvince %in% states_exclude)
+statespecimens <- fullspecimens %>%
+  filter(!trimws(as.character(stateProvince)) %in% states_exclude)
 
 nrow(statespecimens)
 
@@ -61,51 +64,96 @@ nocoords <- statespecimens %>% filter(is.na(decimalLatitude) | is.na(decimalLong
 
 nrow(nocoords) 
 
-
-
 write_csv(nocoords, "./GBIF_2026_update/gbif_nocoords_2026_Oct.csv")
 
-old_CCH2_clim <- read.csv("CCH2_climateNA_locations.csv")
+# Keep every specimen that still has coordinates, including locations already present in the older climate file.
+finishing_up_climdata <- statespecimens %>% filter(!is.na(decimalLatitude), !is.na(decimalLongitude))
 
-old_CCH2_clim <- old_CCH2_clim %>% mutate(across(c(lat, long), ~ as.numeric(str_replace_all(as.character(.x), "\u2212", "-"))))
+# ClimateNA requires ID1, ID2, lat, long, el, in that order.
+# A missing ID2 or elevation has to be "." . Elevation can be added from the coordinates later.
+get_gbif_locs <- finishing_up_climdata %>%
+  transmute(
+    ID1 = gbifID,
+    ID2 = ".",
+    lat = decimalLatitude,
+    long = decimalLongitude,
+    el = "."
+  )
 
-finishing_up_climdata <- statespecimens %>% filter(!is.na(decimalLatitude), !is.na(decimalLongitude)) %>% anti_join(old_CCH2_clim, by = c("decimalLatitude" = "lat", "decimalLongitude" = "long"))
+head(get_gbif_locs)
 
-# make specific dataframe for pulling data from climateNA
-# ClimateNA requires an input csv containing the columns ID1, ID2, lat, long, and (optionally) el.
-# ID1 and ID2 can be anything you want 
-# currently not including elevation, but could calculate this from the gps and add it in later
-
-get_gbif_locs <- finishing_up_climdata %>% 
-  mutate(id2 = NA,
-         elev = NA) %>% # add a blank ID2 col and empty elevation column
-  dplyr::select(id1 = gbifID, id2, lat = decimalLatitude, long = decimalLongitude, elev)
-
-#sanity check that get gbif data had same rows as finishing clim data
-
-head(get_gbif_locs) # peak at the new df to check; looks good!
-
-# Write out the new df as a csv for input into the ClimateNA program
-write.csv(get_gbif_locs[,], "./GBIF_2026_update/GBIF_climateNA_locations.csv", row.names = FALSE, quote = FALSE)
-# NOTE!! This csv does NOT work for pulling the location data because it is in Mac not windows format. I solved by copying all the data EXCEPT the last, empty line (using sublime) from this saved .csv location file into a copy of the test location file included in the ClimateNA download. Hypothetically I should be able to convert the format of my file, but my one attempt failed and the copy paste worked.
+# Windows CSV: CRLF between rows, and no blank row after the last location.
+clim_path <- "./GBIF_2026_update/GBIF_climateNA_locations.csv"
+clim_txt <- paste(
+  c(
+    paste(names(get_gbif_locs), collapse = ","),
+    paste(get_gbif_locs$ID1, get_gbif_locs$ID2, get_gbif_locs$lat, get_gbif_locs$long, get_gbif_locs$el, sep = ",")
+  ),
+  collapse = "\r\n"
+)
+con <- file(clim_path, open = "wb")
+writeChar(clim_txt, con, eos = NULL, useBytes = TRUE)
+close(con)
 ```
 
 #### Get ClimateNA data
 
-I downloaded the ClimateNA program and wine to run on mac. I run the below command line prompt to
+This pull uses the R package `climr`. The monthly series is saved at `GBIF_2026_update/gbif_climate_1902-2023_monthly.csv`. When that file is already present, the download chunk leaves it in place. A new download runs only if the file is missing, and that run needs the location table from the chunk above in the same R session.
 
-```{bash}
-# open ClimateNA gui on my mac
-  # arch -x86_64 wine Z:\\Users\\juliaharencar\\Documents\\Software\\ClimateNA_v760\\ClimateNA_v7.60.exe
+Install `climr` once, in the console, before a new download. Leave these two lines out of the chunk so a later run does not reinstall the package:
+
+```r
+install.packages("remotes")
+remotes::install_github("bcgov/climr")
 ```
 
-To get the data, I select "Historical time series" in the dropdown menu under "multiple locations". Select "monthly all variables (180)". Specify the input file we just created above and an output file. Generate monthly climate data for the time window of interest. Save output file. [Definitions of each variable acronym can be found here.](https://climatebc.ca/help/climateBC/help.htm#_Toc410137604)
+The ClimateNA series in `climr` 0.2.2 is monthly data for 1902–2023. The package rejects 2025, and 2024 belongs to its separate MSWX series, not to `climatena`. Sand Island specimen 5956578887 is left out. With that sheet included, the reference map and the time series came back with different numbers of rows. The other locations use one request. The result is written to `GBIF_2026_update/gbif_climate_1902-2023_monthly.csv`. The reformatting chunk below reads that file. [Definitions of each variable acronym can be found here.](https://climatebc.ca/help/climateBC/help.htm#_Toc410137604)
+
+```{r}
+#| label: download climate
+#| eval: false
+
+clim_out <- "./GBIF_2026_update/gbif_climate_1902-2023_monthly.csv"
+
+if (file.exists(clim_out)) {
+  message("Saved climate file found. Skipping download: ", clim_out)
+} else {
+  library(climr)
+
+  # gbifIDs above 2147483647 do not fit in an R integer.
+  # climr converts a numeric id with as.integer(), so the id has to be text.
+  # 5956578887 is the Sand Island sheet at longitude -177.4.
+  locs <- data.frame(
+    id = as.character(get_gbif_locs$ID1),
+    lon = get_gbif_locs$long,
+    lat = get_gbif_locs$lat,
+    elev = NA_real_
+  )
+  locs <- locs[locs$id != "5956578887", ] # exclude bad line - mismatched columns
+
+  # A missing elevation uses the elevation on the ClimateNA reference map.
+  # climatena in this package is 1902-2023.
+  # The database path still returns a 1961-1990 row, which is dropped before saving.
+  clim_monthly <- downscale(
+    xyz = locs,
+    which_refmap = "refmap_climatena",
+    obs_years = 1902:2023,
+    obs_ts_dataset = "climatena",
+    vars = list_vars("Monthly"),
+    return_refperiod = FALSE
+  )
+  data.table::fwrite(
+    clim_monthly[clim_monthly$PERIOD != "1961_1990", ],
+    clim_out
+  )
+}
+```
 
 Note, growing degree days marked as days \> 5°C: DD5_01 – DD5_12     January - December degree-days above 5°C
 
 ### Reformat ClimateNA data
 
-NOTE - eval is false here because generating the all_data df takes a long time (like, minutes), so we will only run when we need to modify the saved output climateNA_full_data_tall.csv.
+NOTE - eval is false here because generating the all_data df takes a long time (like, minutes). Run this chunk in the same session before a subset chunk. all_data stays in memory, and only the subset chunks write a csv.
 
 **Climate Variable Key:**----NATALIE UPDATE LATER, IS MESSED UP
 
@@ -127,61 +175,52 @@ kable(legend, format = "markdown")
 
 # 3. Reformat ClimateNA data ----------------------------------------------
 
-# Data is formatted with one row per site/year, one column per variable/month
+# One row per site/year in the climr file. Month is the suffix on each variable.
+# id is the gbifID. climr has no solar radiation column.
+library(tidyverse)
 
-all_data <- read_csv("Input_Files/Raph_locs_1901-2024Mfull.csv") %>%
-  dplyr::select(-id2,-Elevation) %>%
+all_data <- read_csv(
+  "./GBIF_2026_update/gbif_climate_1902-2023_monthly.csv",
+  col_types = cols(
+    id = col_character(),
+    DATASET = col_character(),
+    PERIOD = col_character(),
+    .default = col_double()
+  )
+) %>%
+  select(-DATASET) %>%
   # Make data tall (one row per variable/site/month/year)
-  gather(variable, value, -Year, -id1, -Latitude, -Longitude) %>%
-  # Split month from variable name
-  separate(variable, -2, into = c("variable", "month"), convert = TRUE) %>%
+  gather(variable, value, -id, -PERIOD) %>%
+  # PPT_01 -> PPT and 01
+  separate(variable, into = c("variable", "month"), sep = "_", convert = TRUE) %>%
   # Spread again so that there is one row per site/year/month, one column per variable type
   spread(variable, value) %>%
   # Make a climate date column
-  mutate(Year = as.numeric(Year),
-         month = as.numeric(month),
-         month_pad = str_pad(month, 2, pad = "0"),
-         clim_date = as.numeric(paste0(Year, month_pad))) %>%
-  # Drop unnecessary columns
-  select(-month_pad) %>%
+  mutate(
+    clim_year = as.numeric(PERIOD),
+    clim_month = as.numeric(month),
+    clim_date = as.numeric(paste0(clim_year, str_pad(clim_month, 2, pad = "0")))
+  ) %>%
+  select(-PERIOD, -month) %>%
   # Rename to standard variable names
-  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax, CMD_mm = CMD, CMI_mm = CMI, chillDD = DD_0_, heatDD = DD_18_, coolDD = DD18_, growDD= DD5_, FFD = NFFD)
-
-# Rearrange columns
-all_data %<>%
-  dplyr::select(-latitude,-longitude) %>%
-  dplyr::select(id, clim_year, clim_month, clim_date, everything())
-
-# adding in data that was originally missing due to bad gps coordinate format 
-missing_data <- read_csv("Input_Files/missing_redo_1901-2024M.csv") %>%
-  dplyr::select(-id2,-Elevation) %>%
-  # Make data tall (one row per variable/site/month/year)
-  gather(variable, value, -Year, -id1, -Latitude, -Longitude) %>%
-  # Split month from variable name
-  separate(variable, -2, into = c("variable", "month"), convert = TRUE) %>%
-  # Spread again so that there is one row per site/year/month, one column per variable type
-  spread(variable, value) %>%
-  # Make a climate date column
-  mutate(Year = as.numeric(Year),
-         month = as.numeric(month),
-         month_pad = str_pad(month, 2, pad = "0"),
-         clim_date = as.numeric(paste0(Year, month_pad))) %>%
-  # Drop unnecessary columns
-  select(-month_pad) %>%
-  # Rename to standard variable names
-  rename(id = id1, longitude = Longitude, latitude = Latitude, clim_year = Year, clim_month = month, ppt_mm = PPT, srad = rsds, tmin = Tmin, tave = Tave, tmax = Tmax, CMD_mm = CMD, CMI_mm = CMI, chillDD = DD_0_, heatDD = DD_18_, coolDD = DD18_, growDD= DD5_, FFD = NFFD)
-
-# Rearrange columns
-missing_data %<>%
-  dplyr::select(-latitude,-longitude) %>%
-  dplyr::select(id, clim_year, clim_month, clim_date, everything())
-
-# Add missing data back into main df
-all_data <- all_data %>% 
-  rows_update(missing_data, by = c("id", "clim_date"))
-
-# Now save this data
-write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FALSE)
+  rename(
+    ppt_mm = PPT,
+    tmin = Tmin,
+    tave = Tave,
+    tmax = Tmax,
+    CMD_mm = CMD,
+    CMI_mm = CMI,
+    chillDD = DDsub0,
+    heatDD = DDsub18,
+    coolDD = DD18,
+    growDD = DD5,
+    FFD = NFFD
+  ) %>%
+  select(
+    id, clim_year, clim_month, clim_date,
+    CMD_mm, CMI_mm, chillDD, heatDD, coolDD, growDD,
+    Eref, FFD, PAS, ppt_mm, RH, tave, tmax, tmin
+  )
 
 ```
 
@@ -192,29 +231,38 @@ write.csv(all_data, "Output_Files/climateNA_full_data_tall.csv", row.names = FAL
 ```{r}
 #| label: subsetting 1 year climate data
 
-# load the data
-clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
-specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
-
-#Note: Will eventually need to combine back in at least phenology scoring data(maybe not coords, etc from CCH2). This could likely best be done using the full entire class dataset from earlier code that is within Raphanus Phenology markdown
-
-
-#subset to keep just the columns we need 
-specimens <- specimens %>% dplyr::select(id, year, month, day)
+# New session, when all_data is not already in memory:
+# clim <- read_csv("./GBIF_2026_update/climateNA_full_data_tall_2026.csv", col_types = cols(id = col_character(), .default = col_guess()))
+# id is the gbifID in both files. The location file has coordinates only, so collection dates come from the merged GBIF table.
+clim <- all_data
+specimens <- read_csv(
+  "./GBIF_2026_update/gbif_repro_counts_merged.csv",
+  col_types = cols(gbifID = col_character(), .default = col_guess())
+) %>%
+  rename(id = gbifID, Bud.Cluster = `Bud Cluster`) %>%
+  mutate(county = trimws(gsub("\\s*[Cc]ounty\\s*$", "", county))) %>%
+  dplyr::select(
+    id, institutionCode, specificEpithet, year, month, day, county,
+    decimalLatitude, decimalLongitude, Bud.Cluster, Flower, Fruit
+  )
 
 
 #WUsing the full year (12 months) of data starting with the day and month of collection, but in the previous year, and ending with the date of collection. 
 
-# METHODS: First, we need to calculate the date range. We will only include the month of collection in the year of collection if it was collected after the first week, so on the 8th or later. If it was collected before the 8th (1-7th), we do NOT include that month for the year of collection, and instead begin from the full month completed prior to the specimen's collection Additionally, if a specimen did not have a specific date of collection listed (n = 17), whcih displays as day=0 in the data frame, we do not feel confident in assuming that we should use said listed month as the end date, so the specimen will be treated the same as a specimen collected on the 1st-7th of the month. 
+# METHODS: First, we need to calculate the date range. We will only include the month of collection in the year of collection if it was collected after the first week, so on the 8th or later. If it was collected before the 8th (1-7th), we do NOT include that month for the year of collection, and instead begin from the full month completed prior to the specimen's collection. A specimen with no collection day (blank, or the old day=0 code) is treated as collected within the first 7 days of its month. 
 
 
 # Step 1: Identify the start and end month for the "climate year" for each specimen within the specimen df.These new columns should be in the clim_date format with year and month together (e.g. 202412 for December 2024).
 
-# Step 1a: Identify the end month (this will then define the start month as 11 mo before). The newly coded end_mo column should contain the month of collection ( = month) if the day of collection column has a value >7. Otherwise, the end_mo column is assigned the month previous to collection (month -1). Special care was taken to address the cyclical nature of the calendar year, where Janaury is preceded by December.
+# Step 1a: Identify the end month (this will then define the start month as 11 mo before). The newly coded end_mo column should contain the month of collection ( = month) if the day of collection column has a value >7. A blank day or day=0 is treated as day 1, so the end month is the month previous to collection. Special care was taken to address the cyclical nature of the calendar year, where Janaury is preceded by December.
 
 specimens <- specimens %>% mutate(
-  end_mo = if_else(day > 7, month, 
-if_else(month == 1, 12, month - 1))) 
+  day_for_window = suppressWarnings(as.numeric(day)),
+  day_for_window = if_else(is.na(day_for_window) | day_for_window == 0, 1, day_for_window),
+  end_mo = if_else(day_for_window > 7, month,
+    if_else(month == 1, 12, month - 1))
+) %>%
+  select(-day_for_window) 
 
 # Step 1b: Identify the start month and create its column; this will simply be the end month + 1 in order to capture the full 12 month (1 year) cycle. Once again, special care was taken to address the cyclical nature of the calendar year, where Janaury is preceded by December.
 
@@ -225,10 +273,10 @@ specimens <- specimens %>% mutate(start_mo = if_else(end_mo != 12, end_mo + 1, 1
 
 
 #For End Date:
-specimens <- specimens %>% mutate(end_date = if_else(end_mo == 12 & month == 1, paste0(year-1, str_pad(end_mo, 2, pad = "0")), paste0(year, str_pad(end_mo, 2, pad = "0"))), end_mo = as.integer(end_mo))
+specimens <- specimens %>% mutate(end_date = as.numeric(if_else(end_mo == 12 & month == 1, paste0(year-1, str_pad(end_mo, 2, pad = "0")), paste0(year, str_pad(end_mo, 2, pad = "0")))), end_mo = as.integer(end_mo))
 
 #For Start Date:
-specimens <- specimens %>% mutate(start_date = if_else(month == 12 & end_mo == 12, paste0(year, str_pad(start_mo, 2, pad = "0")), paste0(year -1, str_pad(start_mo, 2, pad = "0"))), start_mo = as.integer(start_mo))
+specimens <- specimens %>% mutate(start_date = as.numeric(if_else(month == 12 & end_mo == 12, paste0(year, str_pad(start_mo, 2, pad = "0")), paste0(year -1, str_pad(start_mo, 2, pad = "0")))), start_mo = as.integer(start_mo))
 
 # Step 2: Join the specimens and clim dataframes to combine the newly adjusted CCH2 Data with the unfiltered ClimateNA data frame.
 
@@ -250,34 +298,16 @@ filter_comb <- filter_comb %>%
 
 wide_final_clim_subset <- filter_comb %>% pivot_wider(
     names_from = clim_month,
-    values_from = c("CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD", 
-"growDD", "Eref", "FFD", "PAS", "ppt_mm", "RH", "srad", "tave", "tmax", "tmin")
+    values_from = c("CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD",
+"growDD", "Eref", "FFD", "PAS", "ppt_mm", "RH", "tave", "tmax", "tmin")
   )
 
 
 # Step 5: Write out the combined project csv... not going to write until I hopefully figure out the weird missing data
 
-write.csv(wide_final_clim_subset, "Output_Files/climateNA_subset_data_tall.csv", row.names = FALSE)
+phen_1yr <- wide_final_clim_subset
+write.csv(phen_1yr, "./GBIF_2026_update/climateNA_1yr_subset_data_tall_2026.csv", row.names = FALSE)
 
-```
-
-#### Join and clean data
-
-```{r}
-#| label: join and clean
-
-# read in the data
-oneyr_clim <- read.csv("Output_Files/climateNA_subset_data_tall.csv")
-fulldata<- read.csv("Output_Files/completed_specimen_data.csv")
-
-# clean the county names in the phenology data
-fulldata$county <- gsub("\\s*[Cc]ounty\\s*$", "", fulldata$county) # remove "county"
-fulldata$county <- trimws(fulldata$county) # trim whitespace
-
-# combine with climate data
-phen_1yr <- fulldata %>% 
-  select(id, institutionCode, specificEpithet, year, month, day, county, decimalLatitude, decimalLongitude, Bud.Cluster, Flower, Fruit) %>% # select only necessary cols
-  full_join(oneyr_clim) # join with climate data
 ```
 
 #### PCA of climate
@@ -305,7 +335,6 @@ clim_1yr <- phen_1yr %>%
     ave_CMI = rowMeans(across(starts_with("CMI_")), na.rm = TRUE), # clim moisture index
     ave_Eref = rowMeans(across(starts_with("Eref_")), na.rm = TRUE), # evaporation
     ave_RH   = rowMeans(across(starts_with("RH_")), na.rm = TRUE), # relative humidity
-    ave_srad = rowMeans(across(starts_with("srad_")), na.rm = TRUE), # solar rad
     ave_tave = rowMeans(across(starts_with("tave_")), na.rm = TRUE),
 
     # Hot/cold extremes (row-wise)
@@ -321,7 +350,7 @@ clim_1yr_clean <- clim_1yr[complete.cases(clim_1yr), ]
 
 # subset for jsut climate data to run prcomp
 clim_only_1yr_clean <- clim_1yr_clean %>% 
-  select(sum_heatDD, sum_coolDD, sum_growDD, sum_FFD, sum_PAS, sum_ppt_mm, ave_CMD, ave_CMI, sum_chillDD, ave_Eref, ave_RH, ave_srad, ave_tave, max_tmax, min_tmin)
+  select(sum_heatDD, sum_coolDD, sum_growDD, sum_FFD, sum_PAS, sum_ppt_mm, ave_CMD, ave_CMI, sum_chillDD, ave_Eref, ave_RH, ave_tave, max_tmax, min_tmin)
 
 # calculate principal components
 clim_pca <- prcomp(clim_only_1yr_clean, center = TRUE, scale = TRUE)
@@ -805,27 +834,45 @@ ggplot(phen_sub_3_yr_groups, aes(x = month, fill = specificEpithet)) +
 ```{r}
 #| label: subsetting 9 month climate data
 
-# load the data
-clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
-specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
-
-#Note: Will eventually need to combine back in at least phenology scoring data(maybe not coords, etc from CCH2). This could likely best be done using the full entire class dataset from earlier code that is within Raphanus Phenology markdown
-
-
-#subset to keep just the columns we need 
-specimens <- specimens %>% dplyr::select(id, year, month, day)
+# New session, when all_data is not already in memory:
+# clim <- read_csv("./GBIF_2026_update/climateNA_full_data_tall_2026.csv", col_types = cols(id = col_character(), .default = col_guess()))
+# id is the gbifID. Collection dates come from the merged GBIF table.
+clim <- all_data
+specimens <- read_csv(
+  "./GBIF_2026_update/gbif_repro_counts_merged.csv",
+  col_types = cols(gbifID = col_character(), .default = col_guess())
+) %>%
+  rename(id = gbifID) %>%
+  dplyr::select(id, year, month, day)
 
 library(dplyr)
 library(zoo)
 specimens <- specimens %>%
   mutate(
+    day_for_window = suppressWarnings(as.numeric(day)),
+    day_for_window = if_else(is.na(day_for_window) | day_for_window == 0, 1, day_for_window),
     # Construct a "yearmon" object from year+month
     ym = as.yearmon(paste(year, month), "%Y %m"),
-    # If day <= 7, subtract one month, else keep the same
-    end_ym = if_else(day > 7, ym, ym - 1/12),
-    # Convert back to Date (first day of month)
-    end_mo = as.Date(end_ym)
-  )
+    # A blank day is treated as day 1. If day <= 7, subtract one month, else keep the same.
+    end_ym = if_else(day_for_window > 7, ym, ym - 1/12),
+    # Nine months ending at end_ym, including that month.
+    start_ym = end_ym - 8/12,
+    end_date = as.numeric(format(as.Date(end_ym), "%Y%m")),
+    start_date = as.numeric(format(as.Date(start_ym), "%Y%m"))
+  ) %>%
+  select(-day_for_window, -ym, -end_ym, -start_ym)
+
+big_comb <- left_join(clim, specimens, by = "id")
+filter_comb <- big_comb %>% filter(clim_date >= start_date, clim_date <= end_date)
+filter_comb <- filter_comb %>% select(-clim_year, -clim_date)
+
+wide_9mo_clim_subset <- filter_comb %>% pivot_wider(
+  names_from = clim_month,
+  values_from = c("CMD_mm", "CMI_mm", "chillDD", "heatDD", "coolDD",
+    "growDD", "Eref", "FFD", "PAS", "ppt_mm", "RH", "tave", "tmax", "tmin")
+)
+
+write.csv(wide_9mo_clim_subset, "./GBIF_2026_update/climateNA_9mo_subset_data_tall.csv", row.names = FALSE)
 ```
 
 ### 5-Year Timeframe
@@ -833,28 +880,45 @@ specimens <- specimens %>%
 ```{r}
 #| label: subsetting 5 year climate data
 
-# load the data
-clim <- read.csv("Output_Files/climateNA_full_data_tall.csv", header = T)
-specimens <- read.csv("Input_Files/FullSpecimenCCH2Data.csv", header = T)
-
-#Note: Will eventually need to combine back in at least phenology scoring data(maybe not coords, etc from CCH2). This could likely best be done using the full entire class dataset from earlier code that is within Raphanus Phenology markdown
-
-#subset to keep just the columns we need 
-specimens <- specimens %>% dplyr::select(id, year, month, day)
-
-#Change clim_date column from integer to date
+# New session, when all_data is not already in memory:
+# clim <- read_csv("./GBIF_2026_update/climateNA_full_data_tall_2026.csv", col_types = cols(id = col_character(), .default = col_guess()))
+# id is the gbifID. Collection dates come from the merged GBIF table.
+clim <- all_data
+specimens <- read_csv(
+  "./GBIF_2026_update/gbif_repro_counts_merged.csv",
+  col_types = cols(gbifID = col_character(), .default = col_guess())
+) %>%
+  rename(id = gbifID) %>%
+  dplyr::select(id, year, month, day)
 
 library(dplyr)
 library(zoo)
 specimens <- specimens %>%
   mutate(
+    day_for_window = suppressWarnings(as.numeric(day)),
+    day_for_window = if_else(is.na(day_for_window) | day_for_window == 0, 1, day_for_window),
     # Construct a "yearmon" object from year+month
     ym = as.yearmon(paste(year, month), "%Y %m"),
-    # If day <= 7, subtract one month, else keep the same
-    end_ym = if_else(day > 7, ym, ym - 1/12),
-    # Convert back to Date (first day of month)
-    end_mo = as.Date(end_ym)
+    # A blank day is treated as day 1. If day <= 7, subtract one month, else keep the same.
+    end_ym = if_else(day_for_window > 7, ym, ym - 1/12),
+    # Sixty months ending at end_ym, including that month.
+    start_ym = end_ym - 59/12,
+    end_date = as.numeric(format(as.Date(end_ym), "%Y%m")),
+    start_date = as.numeric(format(as.Date(start_ym), "%Y%m"))
+  ) %>%
+  select(-day_for_window, -ym, -end_ym, -start_ym)
+
+# Calendar months repeat across five years, so this subset stays one row per specimen per month.
+big_comb <- left_join(clim, specimens, by = "id")
+filter_comb <- big_comb %>%
+  filter(clim_date >= start_date, clim_date <= end_date) %>%
+  select(
+    id, year, month, day, clim_year, clim_month, clim_date, start_date, end_date,
+    CMD_mm, CMI_mm, chillDD, heatDD, coolDD, growDD,
+    Eref, FFD, PAS, ppt_mm, RH, tave, tmax, tmin
   )
+
+write.csv(filter_comb, "./GBIF_2026_update/climateNA_5yr_subset_data_tall.csv", row.names = FALSE)
 ```
 
 ## Examine Climate Correlations
@@ -880,8 +944,14 @@ specimens <- specimens %>%
 check_up <- wide_final_clim_subset %>% filter(CMD_mm_1 < 0) 
 check_up <- as.list(check_up$id)
 
-#Filter the CCH2 data frame (specimens) to only get the latitude and longitude for the messed up specimen IDs
-bad_clim <- specimens %>% filter( id %in% check_up) %>% select(id, decimalLatitude, decimalLongitude)
+# Latitude and longitude for those ids, from the merged GBIF table.
+bad_clim <- read_csv(
+  "./GBIF_2026_update/gbif_repro_counts_merged.csv",
+  col_types = cols(gbifID = col_character(), .default = col_guess())
+) %>%
+  rename(id = gbifID) %>%
+  filter(id %in% check_up) %>%
+  select(id, decimalLatitude, decimalLongitude)
 
 
 

@@ -39,6 +39,7 @@ vignettes/*.pdf
 *.knit.md
 
 climateNA_full_data_tall.csv
+climateNA_full_data_tall_2026.csv
 *pdf
 *html
 *jpeg
@@ -50,3 +51,5 @@ climateNA_full_data_tall.csv
 # 2026 redo: generated occurrence dumps (rebuild with build_unified_occurrence.R)
 GBIF_2026_update/occurrence_unified.csv
 GBIF_2026_update/occurrence_w_added_coords.csv
+GBIF_2026_update/gbif_climate_1902-2023_monthly.csv
+GBIF_2026_update/clim_batch_*.csv

@@ -1,0 +1,49 @@
+gbifID,institutionCode,catalogNumber,year,month,day,eventDate,verbatimEventDate,stateProvince,county,locality
+3865092215,ANSP,3865092215,NA,NA,NA,NA,s.d.,Pennsylvania,Chester,Coatesville
+3865109354,ANSP,3865109354,NA,NA,NA,NA,s.d.,New Jersey,Camden,Kaighns Point
+3865362261,ANSP,3865362261,NA,NA,NA,NA,s.d.,Pennsylvania,Philadelphia,Philadelphia
+3865375349,ANSP,3865375349,1887,NA,NA,1887,1887-0-0,Pennsylvania,Northampton,"College Hill, Easton"
+3807940304,CAS,3807940304,NA,NA,NA,NA,NA,California,Humboldt County,"McKinleyville, near Redwood Forest"
+2859088734,CM,2859088734,1838,NA,NA,1838,1838,Pennsylvania,Northampton,Bethlehem
+2859095120,CM,2859095120,1929,NA,NA,1929,Jul-Aug 1929,New York,Suffolk,"Long Island, Wading River"
+2421741296,DAV,2421741296,1942,NA,NA,1942,6-9 Apr 1942,California,Monterey,Monterey County: Berglund Ranch near Corralitos.
+2861418301,DES,2861418301,NA,NA,NA,NA,NA,California,San Diego County,Fallbrook
+1998603327,ECON,1998603327,NA,NA,NA,NA,NA,Massachusetts,Suffolk County,at Bussey Inst.
+4527845145,FSC,4527845145,NA,NA,NA,NA,NA,California,Madera,NA
+3709848955,GA,3709848955,NA,NA,NA,NA,NA,Alabama,Geneva County,"Geneva County, AL"
+3709849798,GA,3709849798,NA,NA,NA,NA,NA,Alabama,Mobile County,"Mobile County, AL"
+3709852246,GA,3709852246,NA,NA,NA,NA,NA,Alabama,Geneva County,"Geneva County, AL"
+3709996871,GA,3709996871,NA,NA,NA,NA,NA,Alabama,Baldwin County,"Baldwin County, AL"
+1998462696,GH,1998462696,NA,NA,NA,NA,NA,Massachusetts,Middlesex County,Waltham
+1999066003,GH,1999066003,NA,NA,NA,NA,NA,Massachusetts,Suffolk County,Jamaica Plain
+3503181903,IRVC,3503181903,1965,NA,NA,1965,1965,California,Orange,"Santa Ana Heights, Spruce and Palisades"
+5886605349,IRVC,5886605349,NA,NA,NA,NA,s.d.,California,Orange,"Newport Beach, Upper Newport Back Bay"
+5074461250,KIRI,5074461250,1975,NA,NA,1975,75-6-5,Rhode Island,Washington,"University of Rhode Island, Kingston"
+5068043243,Keene State University,5068043243,NA,NA,NA,NA,NA,Massachusetts,Hampshire,NA
+5068043255,Keene State University,5068043255,NA,NA,NA,NA,6/13/69,New Hampshire,Cheshire,NA
+5070880613,MARY,5070880613,NA,NA,NA,NA,s.d.,Maryland,Prince George's,College Park
+3925803512,MISS,3925803512,NA,NA,NA,NA,3-Mar,Mississippi,Lafayette,"""Just N of Old Taylor Rd on E side of South Lamar, Oxford. 34:21'30""""N 089:31'12""""W"""
+4856246033,NA,4856246033,1901,NA,NA,1901-05-17/1901-06-01,"May 17, 1901-June 1, 1901",California,Riverside,"San Jacinto Valley, (journey) from Riverside to Santa Rosa Peak and Palomar San Jacinto Valley"
+4856886286,NA,4856886286,NA,NA,NA,NA,3 May 1998,California,Contra Costa,"Pine Canyon/Stage Road upstream from Dusty Road junction, southwest flank of Mount Diablo."
+4856888955,NA,4856888955,NA,NA,NA,NA,11 February 1997,California,Contra Costa,"North base of Mount Diablo, vacant lot on Regency Drive (en route to Donner Canyon trailhead)."
+4856889022,NA,4856889022,NA,NA,NA,NA,"June 20, 1998",California,Contra Costa,"Shell Ridge Open Space on NW side of Mount Diablo, roadside near Old Borges Ranch."
+4856896393,NA,4856896393,NA,NA,NA,NA,16 July 2000,California,Contra Costa,Little Pine Creek Road on west side of Mount Diablo.
+4857080999,NA,4857080999,NA,NA,NA,NA,"June 12, 1998",California,Contra Costa,"North Gate Road on west flank of Mount Diablo, dogleg in road above ranches opposite Angel Kerley trailhead."
+1990201134,NCSC,1990201134,NA,NA,NA,NA,NA,South Carolina,Orangeburg,NA
+1990244799,NCSC,1990244799,NA,NA,NA,NA,6/21/'70,New York,Ulster,Woodstock.
+1998677184,NEBC,1998677184,1915,NA,NA,1915,July 1915,Massachusetts,Essex County,Manchester
+1998722120,NEBC,1998722120,NA,NA,NA,NA,NA,Massachusetts,Bristol County,New Bedford
+1999082584,NEBC,1999082584,1902,NA,NA,1902,1902,Massachusetts,Middlesex County,Wilmington
+1999137144,NEBC,1999137144,1881,NA,NA,1881,"July, 1881",Massachusetts,Norfolk County,Cohasset
+1999431458,NEBC,1999431458,NA,NA,NA,NA,'98,Massachusetts,NA,Magnolia
+2430138655,RSA,2430138655,1932,NA,NA,1932,Spring 1932,California,Los Angeles,"Bryant Ranch, near Long Beach, Station no.3. Plat. 3."
+3341236057,SIM,3341236057,NA,NA,NA,NA,July,New York,Richmond,Staten Island
+5028857010,UTC,5028857010,NA,NA,NA,NA,NA,Georgia,Laurens,NA
+5067923812,University of New Hampshire,5067923812,NA,NA,NA,NA,NA,New Hampshire,Grafton,[no precise locality]
+5067926809,University of New Hampshire,5067926809,1897,NA,NA,1897,NA,Maine,Androscoggin,East Livermore
+2573101872,VT,2573101872,NA,NA,NA,NA,NA,Vermont,Rutland,NA
+2573103026,VT,2573103026,NA,NA,NA,NA,NA,Vermont,Grand Isle,NA
+1038957958,YPM,1038957958,1856,NA,NA,1856,NA,Connecticut,New Haven County,NA
+1038958768,YPM,1038958768,1859,NA,NA,1859,NA,Connecticut,New Haven County,NA
+1038964643,YPM,1038964643,1858,NA,NA,1858,NA,Connecticut,New Haven County,NA
+1038978550,YPM,1038978550,1857,NA,NA,1857,NA,Connecticut,New Haven County,NA
