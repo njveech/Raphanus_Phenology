@@ -11,6 +11,7 @@ path_old_media <- "original_gbif_download/multimedia.txt"
 path_cch2_full_occ <- "Input_Files/CCH2FullOcurrencesDownload20250707_oldcopy.xlsx"
 path_cch2_completed <- "Output_Files/completed_specimen_data.csv"
 path_researched_coords <- "Datasheet_mis-sort_fix_files/updated_csv_only_coordinates_for_adding_back.csv"
+path_cch2_sampled_coords <- "GBIF_2026_update/CA_rad_spec_sampled.to.251114_missing.coords.csv"
 path_old_added_coords <- "GBIF_data_combining/occurence_w_added_coords.csv"
 path_sd_map <- "/Volumes/Radishes/Code/UCD_imaged_SDid_to_COREid.txt"
 
@@ -192,6 +193,141 @@ split_id_tokens <- function(x) {
   toks <- trimws(unlist(strsplit(x, "[;,|]"), use.names = FALSE))
   toks <- norm_chr(toks)
   unique(toks[!is.na(toks)])
+}
+
+# Match the Nov 2025 CCH2 coordinate sheet onto current gbifIDs.
+# occurrenceID first, then CCH2 occid, then institution + catalog,
+# then a catalog number that belongs to only one unified row
+# (UCJEPS rows have a blank institutionCode, so institution + catalog misses them).
+# Locality text is not used: many of these sheets share a county-level locality.
+match_cch2_sampled_coords <- function(occ_df) {
+  if (!file.exists(path_cch2_sampled_coords)) {
+    message("CCH2 sampled coordinate file not found; skipping: ", path_cch2_sampled_coords)
+    return(tibble::tibble(
+      donor_row = integer(),
+      gbifID = character(),
+      match_how = character(),
+      decimalLatitude = character(),
+      decimalLongitude = character(),
+      coordinateUncertaintyInMeters = character()
+    ))
+  }
+  donor <- readr::read_csv(
+    path_cch2_sampled_coords,
+    col_types = readr::cols(.default = readr::col_character()),
+    show_col_types = FALSE
+  ) %>%
+    dplyr::transmute(
+      donor_row = dplyr::row_number(),
+      cch2_occid = norm_chr(id),
+      institutionCode = norm_chr(institutionCode),
+      catalogNumber = norm_chr(catalogNumber),
+      occurrenceID = norm_chr(occurrenceID),
+      decimalLatitude = norm_chr(decimalLatitude),
+      decimalLongitude = norm_chr(decimalLongitude),
+      coordinateUncertaintyInMeters = norm_chr(coordinateUncertaintyInMeters)
+    ) %>%
+    dplyr::filter(!is_blank(decimalLatitude), !is_blank(decimalLongitude)) %>%
+    dplyr::filter(
+      !is.na(suppressWarnings(as.numeric(decimalLatitude))),
+      !is.na(suppressWarnings(as.numeric(decimalLongitude)))
+    )
+  keys <- occ_df %>%
+    dplyr::transmute(
+      gbifID = norm_chr(gbifID),
+      cch2_occid = norm_chr(cch2_occid),
+      institutionCode = norm_chr(institutionCode),
+      catalogNumber = norm_chr(catalogNumber),
+      occurrenceID = norm_chr(occurrenceID)
+    )
+  pick_unique <- function(matched, how) {
+    matched %>%
+      dplyr::distinct(donor_row, gbifID) %>%
+      dplyr::add_count(donor_row, name = "n_gbif") %>%
+      dplyr::filter(n_gbif == 1) %>%
+      dplyr::transmute(donor_row, gbifID, match_how = how)
+  }
+  by_oid <- donor %>%
+    dplyr::filter(!is_blank(occurrenceID)) %>%
+    dplyr::inner_join(
+      keys %>% dplyr::filter(!is_blank(occurrenceID)) %>% dplyr::select(gbifID, occurrenceID),
+      by = "occurrenceID",
+      relationship = "many-to-many"
+    ) %>%
+    pick_unique("occurrenceID")
+  by_occid <- donor %>%
+    dplyr::filter(!is_blank(cch2_occid)) %>%
+    dplyr::inner_join(
+      keys %>% dplyr::filter(!is_blank(cch2_occid)) %>% dplyr::select(gbifID, cch2_occid),
+      by = "cch2_occid",
+      relationship = "many-to-many"
+    ) %>%
+    pick_unique("cch2_occid")
+  by_ic <- donor %>%
+    dplyr::filter(!is_blank(institutionCode), !is_blank(catalogNumber)) %>%
+    dplyr::inner_join(
+      keys %>%
+        dplyr::filter(!is_blank(institutionCode), !is_blank(catalogNumber)) %>%
+        dplyr::select(gbifID, institutionCode, catalogNumber),
+      by = c("institutionCode", "catalogNumber"),
+      relationship = "many-to-many"
+    ) %>%
+    pick_unique("institution_catalog")
+  unique_cats <- keys %>%
+    dplyr::filter(!is_blank(catalogNumber)) %>%
+    dplyr::count(catalogNumber, name = "n_cat") %>%
+    dplyr::filter(n_cat == 1)
+  by_cat <- donor %>%
+    dplyr::filter(!is_blank(catalogNumber)) %>%
+    dplyr::inner_join(unique_cats, by = "catalogNumber") %>%
+    dplyr::inner_join(
+      keys %>% dplyr::filter(!is_blank(catalogNumber)) %>% dplyr::select(gbifID, catalogNumber),
+      by = "catalogNumber"
+    ) %>%
+    pick_unique("unique_catalog")
+  resolved <- dplyr::bind_rows(by_oid, by_occid, by_ic, by_cat) %>%
+    dplyr::mutate(priority = dplyr::case_when(
+      match_how == "occurrenceID" ~ 1L,
+      match_how == "cch2_occid" ~ 2L,
+      match_how == "institution_catalog" ~ 3L,
+      match_how == "unique_catalog" ~ 4L,
+      TRUE ~ 9L
+    )) %>%
+    dplyr::arrange(donor_row, priority) %>%
+    dplyr::distinct(donor_row, .keep_all = TRUE) %>%
+    dplyr::select(-priority)
+  resolved %>%
+    dplyr::inner_join(
+      donor %>% dplyr::select(donor_row, dplyr::all_of(coord_cols)),
+      by = "donor_row"
+    )
+}
+
+# Fill blank coordinates from the CCH2 sampled sheet. Existing coordinates stay.
+overlay_cch2_sampled_coords <- function(occ_df) {
+  matched <- match_cch2_sampled_coords(occ_df)
+  if (nrow(matched) == 0) {
+    return(occ_df)
+  }
+  donor_small <- matched %>%
+    dplyr::select(gbifID, dplyr::all_of(coord_cols)) %>%
+    dplyr::distinct(gbifID, .keep_all = TRUE) %>%
+    dplyr::rename_with(~ paste0(.x, "__cch2"), dplyr::all_of(coord_cols))
+  out <- dplyr::left_join(occ_df, donor_small, by = "gbifID")
+  n_filled <- 0L
+  for (col in coord_cols) {
+    res <- paste0(col, "__cch2")
+    fill <- is_blank(out[[col]]) & !is_blank(out[[res]])
+    if (col == "decimalLatitude") {
+      n_filled <- sum(fill)
+    }
+    out[[col]] <- ifelse(fill, out[[res]], as.character(out[[col]]))
+  }
+  message(
+    "CCH2 sampled coordinates filled blank latitudes on ", n_filled, " gbifIDs ",
+    "(", nrow(matched), " sheet rows matched)."
+  )
+  out %>% dplyr::select(-dplyr::ends_with("__cch2"))
 }
 
 # function to read a GBIF TSV with every column kept as character

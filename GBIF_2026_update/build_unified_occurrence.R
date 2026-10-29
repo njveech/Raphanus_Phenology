@@ -240,7 +240,8 @@ n_coords_before <- sum(!is_blank(occ_unified$decimalLatitude))
 # previous added-coords by gbifID, then by catalogNumber (fill blanks only);
 # researched yes-rows by gbifID, occurrenceID, and institutionCode + catalogNumber (blanks only);
 # researched locality text, only when the locality text itself is present (fill blanks only);
-# completed CCH2 specimens by cch2_occid (blanks only).
+# completed CCH2 specimens by cch2_occid (blanks only);
+# then the Nov 2025 CCH2 sampled coordinate sheet, by resolved gbifID only (blanks only).
 occ_unified <- apply_coords(
   occ_unified,
   old_added %>% select(gbifID, all_of(coord_cols)),
@@ -283,6 +284,7 @@ occ_unified <- apply_coords(
   "cch2_occid",
   replace = FALSE
 )
+occ_unified <- overlay_cch2_sampled_coords(occ_unified)
 
 # is_blank counts unified rows that have a latitude after the coordinate overlay.
 n_coords_after <- sum(!is_blank(occ_unified$decimalLatitude))

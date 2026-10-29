@@ -98,7 +98,7 @@ close(con)
 
 #### Get ClimateNA data
 
-This pull uses the R package `climr`. The monthly series is saved at `GBIF_2026_update/gbif_climate_1902-2023_monthly.csv`. When that file is already present, the download chunk leaves it in place. A new download runs only if the file is missing, and that run needs the location table from the chunk above in the same R session.
+This pull uses the R package `climr`. The monthly series is saved at `GBIF_2026_update/gbif_climate_1902-2023_monthly.csv`. When that file is already present, the download chunk pulls only location IDs that are not in it yet and appends those rows. A run needs the location table from the chunk above in the same R session.
 
 Install `climr` once, in the console, before a new download. Leave these two lines out of the chunk so a later run does not reinstall the package:
 
@@ -115,22 +115,28 @@ The ClimateNA series in `climr` 0.2.2 is monthly data for 1902–2023. The packa
 
 clim_out <- "./GBIF_2026_update/gbif_climate_1902-2023_monthly.csv"
 
+library(climr)
+
+# gbifIDs above 2147483647 do not fit in an R integer.
+# climr converts a numeric id with as.integer(), so the id has to be text.
+# 5956578887 is the Sand Island sheet at longitude -177.4.
+locs <- data.frame(
+  id = as.character(get_gbif_locs$ID1),
+  lon = get_gbif_locs$long,
+  lat = get_gbif_locs$lat,
+  elev = NA_real_
+)
+locs <- locs[locs$id != "5956578887", ] # exclude bad line - mismatched columns
+
 if (file.exists(clim_out)) {
-  message("Saved climate file found. Skipping download: ", clim_out)
+  have <- unique(as.character(data.table::fread(clim_out, select = "id")$id))
+  locs <- locs[!locs$id %in% have, ]
+}
+
+if (nrow(locs) == 0) {
+  message("Saved climate file already includes every location. Skipping download: ", clim_out)
 } else {
-  library(climr)
-
-  # gbifIDs above 2147483647 do not fit in an R integer.
-  # climr converts a numeric id with as.integer(), so the id has to be text.
-  # 5956578887 is the Sand Island sheet at longitude -177.4.
-  locs <- data.frame(
-    id = as.character(get_gbif_locs$ID1),
-    lon = get_gbif_locs$long,
-    lat = get_gbif_locs$lat,
-    elev = NA_real_
-  )
-  locs <- locs[locs$id != "5956578887", ] # exclude bad line - mismatched columns
-
+  message("Downloading climate for ", nrow(locs), " locations.")
   # A missing elevation uses the elevation on the ClimateNA reference map.
   # climatena in this package is 1902-2023.
   # The database path still returns a 1961-1990 row, which is dropped before saving.
@@ -142,10 +148,23 @@ if (file.exists(clim_out)) {
     vars = list_vars("Monthly"),
     return_refperiod = FALSE
   )
-  data.table::fwrite(
-    clim_monthly[clim_monthly$PERIOD != "1961_1990", ],
-    clim_out
-  )
+  clim_new <- clim_monthly[clim_monthly$PERIOD != "1961_1990", ]
+  if (file.exists(clim_out)) {
+    # Append only if the saved file does not already end in a newline.
+    size <- file.info(clim_out)$size
+    con <- file(clim_out, open = "rb")
+    if (size > 0) seek(con, where = size - 1, origin = "start")
+    last <- if (size > 0) readBin(con, "raw", 1) else raw(0)
+    close(con)
+    if (length(last) == 0 || last != charToRaw("\n")) {
+      con <- file(clim_out, open = "ab")
+      writeChar("\n", con, eos = NULL, useBytes = TRUE)
+      close(con)
+    }
+    data.table::fwrite(clim_new, clim_out, append = TRUE, col.names = FALSE)
+  } else {
+    data.table::fwrite(clim_new, clim_out)
+  }
 }
 ```
 
