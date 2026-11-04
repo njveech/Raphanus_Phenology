@@ -102,7 +102,7 @@ This pull uses the R package `climr`. The monthly series is saved at `GBIF_2026_
 
 Install `climr` once, in the console, before a new download. Leave these two lines out of the chunk so a later run does not reinstall the package:
 
-```r
+``` r
 install.packages("remotes")
 remotes::install_github("bcgov/climr")
 ```
@@ -297,7 +297,7 @@ specimens <- specimens %>% mutate(end_date = as.numeric(if_else(end_mo == 12 & m
 #For Start Date:
 specimens <- specimens %>% mutate(start_date = as.numeric(if_else(month == 12 & end_mo == 12, paste0(year, str_pad(start_mo, 2, pad = "0")), paste0(year -1, str_pad(start_mo, 2, pad = "0")))), start_mo = as.integer(start_mo))
 
-# Step 2: Join the specimens and clim dataframes to combine the newly adjusted CCH2 Data with the unfiltered ClimateNA data frame.
+# Step 2: Join the specimens and clim dataframes to combine the newly adjusted full GBIF Data with the unfiltered ClimateNA data frame.
 
 big_comb <- left_join(clim, specimens, by = "id")
 
@@ -325,6 +325,7 @@ wide_final_clim_subset <- filter_comb %>% pivot_wider(
 # Step 5: Write out the combined project csv... not going to write until I hopefully figure out the weird missing data
 
 phen_1yr <- wide_final_clim_subset
+
 write.csv(phen_1yr, "./GBIF_2026_update/climateNA_1yr_subset_data_tall_2026.csv", row.names = FALSE)
 
 ```
@@ -333,12 +334,14 @@ write.csv(phen_1yr, "./GBIF_2026_update/climateNA_1yr_subset_data_tall_2026.csv"
 
 ```{r}
 
+pca_readin <- read.csv("./GBIF_2026_update/climateNA_1yr_subset_data_tall_2026.csv")
+
 # change -9999 to NA
-phen_1yr[phen_1yr == -9999] <- NA
+pca_readin[pca_readin == -9999] <- NA
 
 # calculate some reasonable per year/individual values from the monthly data (NATALIE - please look up what yearly variables are available through climateNA and write out how we would calculate each with our data - assuming it is a variable I didn't calculate below)
 
-clim_1yr <- phen_1yr %>%
+clim_1yr <- pca_readin %>%
   mutate(
     # Summations
     sum_heatDD = rowSums(across(starts_with("heatDD_")), na.rm = TRUE),
